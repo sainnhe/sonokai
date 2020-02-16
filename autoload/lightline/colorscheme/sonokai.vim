@@ -11,15 +11,15 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 
 if get(g:, 'sonokai_style', 'default') ==# 'default'
     if &background ==# 'dark'
-        let s:foreground = [ '#dad7db', 250 ]
+        let s:foreground = [ '#e3e1e4', 250 ]
         let s:background = [ '#2d2a2e', 235 ]
         let s:background_alt = [ '#353236', 236 ]
         let s:background_grey = [ '#474448', 238 ]
-        let s:red = [ '#f55d83', 203 ]
-        let s:purple = [ '#f55d83', 176 ]
-        let s:yellow = [ '#e2c262', 179 ]
-        let s:green = [ '#9eca72', 107 ]
-        let s:blue = [ '#71c5cf', 110 ]
+        let s:red = [ '#ff6188', 203 ]
+        let s:purple = [ '#ff6188', 176 ]
+        let s:yellow = [ '#ffd866', 179 ]
+        let s:green = [ '#a9dc76', 107 ]
+        let s:blue = [ '#78dce8', 110 ]
     else
         let s:foreground = [ '#4b505b', 241 ]
         let s:background = [ '#fafafa', 231 ]
