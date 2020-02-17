@@ -75,7 +75,32 @@ elseif s:configuration.style ==# 'maia'
         \ 'grey':       ['#82878b',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
+elseif s:configuration.style ==# 'neon'
+  let s:palette = {
+        \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
+        \ 'bg0':        ['#2b2d37',   '235',  'Black'],
+        \ 'bg1':        ['#2f323e',   '236',  'DarkGrey'],
+        \ 'bg2':        ['#363a49',   '236',  'DarkGrey'],
+        \ 'bg3':        ['#3a3e4e',   '237',  'DarkGrey'],
+        \ 'bg4':        ['#404455',   '237',  'Grey'],
+        \ 'bg_red':     ['#ff6188',   '203',  'Red'],
+        \ 'diff_red':   ['#473536',   '52',   'DarkRed'],
+        \ 'bg_green':   ['#a9dc76',   '107',  'Green'],
+        \ 'diff_green': ['#384034',   '22',   'DarkGreen'],
+        \ 'bg_blue':    ['#77d5f0',   '110',  'Blue'],
+        \ 'diff_blue':  ['#323e47',   '17',   'DarkBlue'],
+        \ 'fg':         ['#e3e1e4',   '250',  'White'],
+        \ 'red':        ['#fb617e',   '203',  'Red'],
+        \ 'orange':     ['#f89860',   '215',  'Orange'],
+        \ 'yellow':     ['#efc372',   '179',  'Yellow'],
+        \ 'green':      ['#9ccd6b',   '107',  'Green'],
+        \ 'blue':       ['#70c5e0',   '110',  'Blue'],
+        \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
+        \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
+        \ 'none':       ['NONE',      'NONE', 'NONE']
+        \ }
 endif
+        " \ 'yellow':     ['#eabe66',   '179',  'Yellow'],
 " }}}
 " Function: {{{
 " call s:HL(group, foreground, background)
