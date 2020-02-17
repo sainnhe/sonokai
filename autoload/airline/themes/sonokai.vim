@@ -7,92 +7,21 @@
 " =============================================================================
 
 "{{{Palette
-let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:style = get(g:, 'sonokai_style', 'shusia')
 
-if get(g:, 'sonokai_style', 'default') ==# 'default'
-    if &background ==# 'dark'
-        let s:foreground = [ '#c5cdd9', 250 ]
-        let s:background = [ '#2c2e34', 235 ]
-        let s:background_alt = [ '#30323a', 236 ]
-        let s:background_grey = [ '#414550', 238 ]
-        let s:red_sel = [ '#f27a7a', 203 ]
-        let s:purple_sel = [ '#d798e9', 176 ]
-        let s:green_sel = [ '#a0c582', 107 ]
-        let s:blue_sel = [ '#75b8eb', 110 ]
-        let s:red_fg = [ '#f27a7a', 203 ]
-        let s:purple_fg = [ '#d798e9', 176 ]
-        let s:green_fg = [ '#a0c582', 107 ]
-        let s:blue_fg = [ '#75b8eb', 110 ]
-    else
-        let s:foreground = [ '#4b505b', 241 ]
-        let s:background = [ '#fafafa', 231 ]
-        let s:background_alt = [ '#eef1f4', 255 ]
-        let s:background_grey = [ '#dde2e7', 253 ]
-        let s:red_sel = [ '#e17373', 167 ]
-        let s:purple_sel = [ '#bf75d6', 134 ]
-        let s:green_sel = [ '#76af6f', 107 ]
-        let s:blue_sel = [ '#6996e0', 68 ]
-        let s:red_fg = [ '#d15f5f', 167 ]
-        let s:purple_fg = [ '#b05ccc', 134 ]
-        let s:green_fg = [ '#608e32', 107 ]
-        let s:blue_fg = [ '#5079be', 68 ]
-    endif
-elseif get(g:, 'sonokai_style', 'default') ==# 'proton'
-    if &background ==# 'dark'
-        let s:foreground = [ '#c5cdd9', 250 ]
-        let s:background = [ '#2b2d37', 235 ]
-        let s:background_alt = [ '#2f323e', 236 ]
-        let s:background_grey = [ '#404455', 238 ]
-        let s:red_sel = [ '#f27a7a', 203 ]
-        let s:purple_sel = [ '#d798e9', 176 ]
-        let s:green_sel = [ '#a0c582', 107 ]
-        let s:blue_sel = [ '#75b8eb', 110 ]
-        let s:red_fg = [ '#f27a7a', 203 ]
-        let s:purple_fg = [ '#d798e9', 176 ]
-        let s:green_fg = [ '#a0c582', 107 ]
-        let s:blue_fg = [ '#75b8eb', 110 ]
-    else
-        let s:foreground = [ '#4b505b', 241 ]
-        let s:background = [ '#fafafa', 231 ]
-        let s:background_alt = [ '#eef2f6', 255 ]
-        let s:background_grey = [ '#dde4ea', 253 ]
-        let s:red_sel = [ '#e17373', 167 ]
-        let s:purple_sel = [ '#bf75d6', 134 ]
-        let s:green_sel = [ '#76af6f', 107 ]
-        let s:blue_sel = [ '#6996e0', 68 ]
-        let s:red_fg = [ '#d15f5f', 167 ]
-        let s:purple_fg = [ '#b05ccc', 134 ]
-        let s:green_fg = [ '#608e32', 107 ]
-        let s:blue_fg = [ '#5079be', 68 ]
-    endif
-elseif get(g:, 'sonokai_style', 'default') ==# 'neon'
-    if &background ==# 'dark'
-        let s:foreground = [ '#c5cdd9', 250 ]
-        let s:background = [ '#2b2d3a', 235 ]
-        let s:background_alt = [ '#2f3242', 236 ]
-        let s:background_grey = [ '#3f445b', 238 ]
-        let s:red_sel = [ '#f27a7a', 203 ]
-        let s:purple_sel = [ '#d798e9', 176 ]
-        let s:green_sel = [ '#a0c582', 107 ]
-        let s:blue_sel = [ '#75b8eb', 110 ]
-        let s:red_fg = [ '#f27a7a', 203 ]
-        let s:purple_fg = [ '#d798e9', 176 ]
-        let s:green_fg = [ '#a0c582', 107 ]
-        let s:blue_fg = [ '#75b8eb', 110 ]
-    else
-        let s:foreground = [ '#4b505b', 241 ]
-        let s:background = [ '#fafafa', 231 ]
-        let s:background_alt = [ '#eef2f6', 255 ]
-        let s:background_grey = [ '#dde4ea', 253 ]
-        let s:red_sel = [ '#e17373', 167 ]
-        let s:purple_sel = [ '#bf75d6', 134 ]
-        let s:green_sel = [ '#76af6f', 107 ]
-        let s:blue_sel = [ '#6996e0', 68 ]
-        let s:red_fg = [ '#d15f5f', 167 ]
-        let s:purple_fg = [ '#b05ccc', 134 ]
-        let s:green_fg = [ '#608e32', 107 ]
-        let s:blue_fg = [ '#5079be', 68 ]
-    endif
+if s:style ==# 'shusia'
+    let s:foreground = [ '#e3e1e4', 250 ]
+    let s:background = [ '#2d2a2e', 235 ]
+    let s:background_alt = [ '#343136', 236 ]
+    let s:background_grey = [ '#49464e', 238 ]
+    let s:red_sel = [ '#ff6188', 203 ]
+    let s:green_sel = [ '#a9dc76', 107 ]
+    let s:blue_sel = [ '#78dce8', 110 ]
+    let s:purple_sel = [ '#ab9df2', 176 ]
+    let s:red_fg = [ '#f85e84', 203 ]
+    let s:green_fg = [ '#9ecd6f', 107 ]
+    let s:blue_fg = [ '#6fc6d1', 110 ]
+    let s:purple_fg = [ '#ab9df2', 176 ]
 endif
 "}}}
 
@@ -100,12 +29,12 @@ endif
 let s:accents = s:red_fg
 
 let s:normal_side_fg = s:background
-let s:normal_side_bg = s:purple_sel
+let s:normal_side_bg = s:red_sel
 let s:normal_sub_fg = s:foreground
 let s:normal_sub_bg = s:background_grey
 let s:normal_mid_fg = s:foreground
 let s:normal_mid_bg = s:background_alt
-let s:normal_mod_fg = s:purple_fg
+let s:normal_mod_fg = s:red_fg
 let s:normal_mod_bg = s:background_alt
 
 let s:insert_side_fg = s:background
@@ -118,12 +47,12 @@ let s:insert_mod_fg = s:blue_fg
 let s:insert_mod_bg = s:background_alt
 
 let s:visual_side_fg = s:background
-let s:visual_side_bg = s:red_sel
+let s:visual_side_bg = s:purple_sel
 let s:visual_sub_fg = s:foreground
 let s:visual_sub_bg = s:background_grey
 let s:visual_mid_fg = s:foreground
 let s:visual_mid_bg = s:background_alt
-let s:visual_mod_fg = s:red_fg
+let s:visual_mod_fg = s:purple_fg
 let s:visual_mod_bg = s:background_alt
 
 let s:replace_side_fg = s:background

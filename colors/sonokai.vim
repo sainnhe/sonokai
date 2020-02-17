@@ -19,7 +19,7 @@ let g:colors_name = 'sonokai'
 " }}}
 " Configuration: {{{
 let s:configuration = {}
-let s:configuration.style = get(g:, 'sonokai_style', 'default')
+let s:configuration.style = get(g:, 'sonokai_style', 'shusia')
 let s:configuration.transparent_background = get(g:, 'sonokai_transparent_background', 0)
 let s:configuration.menu_selection_background = get(g:, 'sonokai_menu_selection_background', 'green')
 let s:configuration.disable_italic_comment = get(g:, 'sonokai_disable_italic_comment', 0)
@@ -27,7 +27,7 @@ let s:configuration.enable_italic = get(g:, 'sonokai_enable_italic', 0)
 let s:configuration.current_word = get(g:, 'sonokai_current_word', get(g:, 'sonokai_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
 " Palette: {{{
-if s:configuration.style ==# 'default'
+if s:configuration.style ==# 'shusia'
   let s:palette = {
         \ 'black':      ['#1a181a',   '237',  'DarkGrey'],
         \ 'bg0':        ['#2d2a2e',   '235',  'Black'],
