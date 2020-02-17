@@ -22,6 +22,19 @@ if s:style ==# 'shusia'
     let s:green_fg = [ '#9ecd6f', 107 ]
     let s:blue_fg = [ '#6fc6d1', 110 ]
     let s:purple_fg = [ '#ab9df2', 176 ]
+elseif s:style ==# 'maia'
+    let s:foreground = [ '#e1e2e3', 250 ]
+    let s:background = [ '#273136', 235 ]
+    let s:background_alt = [ '#2e383e', 236 ]
+    let s:background_grey = [ '#414b53', 238 ]
+    let s:red_sel = [ '#ff6d7e', 203 ]
+    let s:green_sel = [ '#a2e57b', 107 ]
+    let s:blue_sel = [ '#7cd5f1', 110 ]
+    let s:purple_sel = [ '#baa0f8', 176 ]
+    let s:red_fg = [ '#f76c7c', 203 ]
+    let s:green_fg = [ '#9cd57b', 107 ]
+    let s:blue_fg = [ '#7dcfe9', 110 ]
+    let s:purple_fg = [ '#baa0f8', 176 ]
 endif
 "}}}
 
