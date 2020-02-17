@@ -13,8 +13,8 @@ if get(g:, 'sonokai_style', 'default') ==# 'default'
     if &background ==# 'dark'
         let s:foreground = [ '#e3e1e4', 250 ]
         let s:background = [ '#2d2a2e', 235 ]
-        let s:background_alt = [ '#353236', 236 ]
-        let s:background_grey = [ '#474448', 238 ]
+        let s:background_alt = [ '#343136', 236 ]
+        let s:background_grey = [ '#49464e', 238 ]
         let s:red = [ '#ff6188', 203 ]
         let s:purple = [ '#ff6188', 176 ]
         let s:yellow = [ '#ffd866', 179 ]

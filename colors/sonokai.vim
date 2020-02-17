@@ -30,12 +30,12 @@ let s:configuration.current_word = get(g:, 'sonokai_current_word', get(g:, 'sono
 if s:configuration.style ==# 'default'
   let s:palette = {
         \ 'bg0':        ['#2d2a2e',   '235',  'Black'],
-        \ 'bg1':        ['#353236',   '236',  'DarkGrey'],
-        \ 'bg2':        ['#353236',   '236',  'DarkGrey'],
-        \ 'bg3':        ['#3a383b',   '237',  'DarkGrey'],
-        \ 'bg4':        ['#3f3d40',   '237',  'Grey'],
-        \ 'bg5':        ['#474448',   '238',  'Grey'],
-        \ 'bg_grey':    ['#6b666c',   '246',  'LightGrey'],
+        \ 'bg1':        ['#343136',   '236',  'DarkGrey'],
+        \ 'bg2':        ['#343136',   '236',  'DarkGrey'],
+        \ 'bg3':        ['#3b383e',   '237',  'DarkGrey'],
+        \ 'bg4':        ['#423f46',   '237',  'Grey'],
+        \ 'bg5':        ['#49464e',   '238',  'Grey'],
+        \ 'bg_grey':    ['#848089',   '246',  'LightGrey'],
         \ 'bg_red':     ['#ff6188',   '203',  'Red'],
         \ 'bg_red1':    ['#473536',   '52',   'DarkRed'],
         \ 'bg_red2':    ['#573c3d',   '52',   'DarkRed'],
@@ -56,7 +56,7 @@ if s:configuration.style ==# 'default'
         \ 'cyan':       ['#ef9062',   '72',   'Cyan'],
         \ 'blue':       ['#6fc6d1',   '110',  'Blue'],
         \ 'purple':     ['#ab9df2',   '176',  'Magenta'],
-        \ 'grey':       ['#7d787e',   '246',  'LightGrey'],
+        \ 'grey':       ['#848089',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
 endif
