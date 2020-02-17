@@ -29,6 +29,7 @@ let s:configuration.current_word = get(g:, 'sonokai_current_word', get(g:, 'sono
 " Palette: {{{
 if s:configuration.style ==# 'default'
   let s:palette = {
+        \ 'black':      ['#1a181a',   '237',  'DarkGrey'],
         \ 'bg0':        ['#2d2a2e',   '235',  'Black'],
         \ 'bg1':        ['#343136',   '236',  'DarkGrey'],
         \ 'bg2':        ['#343136',   '236',  'DarkGrey'],
@@ -198,7 +199,7 @@ call s:HL('StatusLineTermNC', s:palette.grey, s:palette.bg2)
 call s:HL('TabLine', s:palette.fg, s:palette.bg5)
 call s:HL('TabLineFill', s:palette.grey, s:palette.bg2)
 call s:HL('TabLineSel', s:palette.bg0, s:palette.bg_purple)
-call s:HL('VertSplit', s:palette.bg5, s:palette.none)
+call s:HL('VertSplit', s:palette.black, s:palette.none)
 call s:HL('Visual', s:palette.none, s:palette.bg4)
 call s:HL('VisualNOS', s:palette.none, s:palette.bg4, 'italic')
 call s:HL('CursorIM', s:palette.none, s:palette.fg)
