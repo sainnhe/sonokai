@@ -53,7 +53,7 @@ if s:configuration.style ==# 'shusia'
         \ }
 elseif s:configuration.style ==# 'maia'
   let s:palette = {
-        \ 'black':      ['#1C1E1F',   '237',  'DarkGrey'],
+        \ 'black':      ['#1c1e1f',   '237',  'DarkGrey'],
         \ 'bg0':        ['#273136',   '235',  'Black'],
         \ 'bg1':        ['#2e383e',   '236',  'DarkGrey'],
         \ 'bg2':        ['#353f46',   '236',  'DarkGrey'],
@@ -68,7 +68,7 @@ elseif s:configuration.style ==# 'maia'
         \ 'fg':         ['#e1e2e3',   '250',  'White'],
         \ 'red':        ['#f76c7c',   '203',  'Red'],
         \ 'orange':     ['#f3a96a',   '215',  'Orange'],
-        \ 'yellow':     ['#e6d465',   '179',  'Yellow'],
+        \ 'yellow':     ['#e3d367',   '179',  'Yellow'],
         \ 'green':      ['#9cd57b',   '107',  'Green'],
         \ 'blue':       ['#7dcfe9',   '110',  'Blue'],
         \ 'purple':     ['#baa0f8',   '176',  'Magenta'],
