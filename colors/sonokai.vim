@@ -388,14 +388,21 @@ highlight! link mkdDelimiter Grey
 highlight! link mkdId Yellow
 " }}}
 " }}}
-" " ReStructuredText: {{{
-" " builtin: https://github.com/marshallward/vim-restructuredtext{{{
-" call s:HL('rstStandaloneHyperlink', s:palette.purple, s:palette.none, 'underline')
-" highlight! link rstSubstitutionReference Blue
-" highlight! link rstInterpretedTextOrHyperlinkReference Aqua
-" highlight! link rstTableLines Grey
-" " }}}
-" " }}}
+" ReStructuredText: {{{
+" builtin: https://github.com/marshallward/vim-restructuredtext{{{
+call s:HL('rstStandaloneHyperlink', s:palette.purple, s:palette.none, 'underline')
+call s:HL('rstEmphasis', s:palette.none, s:palette.none, 'italic')
+call s:HL('rstStrongEmphasis', s:palette.none, s:palette.none, 'bold')
+call s:HL('rstStandaloneHyperlink', s:palette.blue, s:palette.none, 'underline')
+call s:HL('rstHyperlinkTarget', s:palette.blue, s:palette.none, 'underline')
+highlight! link rstSubstitutionReference Blue
+highlight! link rstInterpretedTextOrHyperlinkReference Green
+highlight! link rstTableLines Grey
+highlight! link rstInlineLiteral Green
+highlight! link rstLiteralBlock Green
+highlight! link rstQuotedLiteralBlock Green
+" }}}
+" }}}
 " " LaTex: {{{
 " " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_TEX{{{
 " highlight! link texStatement Green
