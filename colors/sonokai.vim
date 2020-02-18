@@ -92,7 +92,7 @@ elseif s:configuration.style ==# 'neon'
         \ 'fg':         ['#e3e1e4',   '250',  'White'],
         \ 'red':        ['#fb617e',   '203',  'Red'],
         \ 'orange':     ['#f89860',   '215',  'Orange'],
-        \ 'yellow':     ['#efc372',   '179',  'Yellow'],
+        \ 'yellow':     ['#f1c573',   '179',  'Yellow'],
         \ 'green':      ['#9dd06a',   '107',  'Green'],
         \ 'blue':       ['#6dcae8',   '110',  'Blue'],
         \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
@@ -100,7 +100,6 @@ elseif s:configuration.style ==# 'neon'
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
 endif
-        " \ 'yellow':     ['#eabe66',   '179',  'Yellow'],
 " }}}
 " Function: {{{
 " call s:HL(group, foreground, background)
