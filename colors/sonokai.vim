@@ -459,74 +459,60 @@ highlight! link xmlCdataCdata Purple
 highlight! link xmlString Green
 " }}}
 " }}}
-" " CSS: {{{
-" " builtin: https://github.com/JulesWang/css.vim{{{
-" highlight! link cssAttrComma Fg
-" highlight! link cssBraces Fg
-" highlight! link cssTagName PurpleItalic
-" highlight! link cssClassNameDot Red
-" highlight! link cssClassName RedItalic
-" highlight! link cssFunctionName Yellow
-" highlight! link cssAttr Orange
-" highlight! link cssProp Aqua
-" highlight! link cssCommonAttr Yellow
-" highlight! link cssPseudoClassId Blue
-" highlight! link cssPseudoClassFn Green
-" highlight! link cssPseudoClass Purple
-" highlight! link cssImportant RedItalic
-" highlight! link cssSelectorOp Orange
-" highlight! link cssSelectorOp2 Orange
-" highlight! link cssColor Green
-" highlight! link cssAttributeSelector Aqua
-" highlight! link cssUnitDecorators Orange
-" highlight! link cssValueLength Green
-" highlight! link cssValueInteger Green
-" highlight! link cssValueNumber Green
-" highlight! link cssValueAngle Green
-" highlight! link cssValueTime Green
-" highlight! link cssValueFrequency Green
-" highlight! link cssVendor Grey
-" highlight! link cssNoise Grey
-" " }}}
-" " }}}
-" " SASS: {{{
-" " builtin: {{{
-" highlight! link sassProperty Aqua
-" highlight! link sassAmpersand Orange
-" highlight! link sassClass RedItalic
-" highlight! link sassClassChar Red
-" highlight! link sassMixing PurpleItalic
-" highlight! link sassMixinName Orange
-" highlight! link sassCssAttribute Yellow
-" highlight! link sassInterpolationDelimiter Green
-" highlight! link sassFunction Yellow
-" highlight! link sassControl RedItalic
-" highlight! link sassFor RedItalic
-" highlight! link sassFunctionName GreenBold
-" " }}}
-" " scss-syntax: https://github.com/cakebaker/scss-syntax.vim{{{
-" highlight! link scssMixinName Yellow
-" highlight! link scssSelectorChar Red
-" highlight! link scssSelectorName RedItalic
-" highlight! link scssInterpolationDelimiter Green
-" highlight! link scssVariableValue Green
-" highlight! link scssNull Purple
-" highlight! link scssBoolean Purple
-" highlight! link scssVariableAssignment Grey
-" highlight! link scssForKeyword PurpleItalic
-" highlight! link scssAttribute Orange
-" highlight! link scssFunctionName Yellow
-" " }}}
-" " }}}
-" " LESS: {{{
-" " vim-less: https://github.com/groenewege/vim-less{{{
-" highlight! link lessMixinChar Grey
-" highlight! link lessClass RedItalic
-" highlight! link lessVariable Blue
-" highlight! link lessAmpersandChar Orange
-" highlight! link lessFunction Yellow
-" " }}}
-" " }}}
+" CSS: {{{
+" builtin: https://github.com/JulesWang/css.vim{{{
+highlight! link cssStringQ Green
+highlight! link cssStringQQ Green
+highlight! link cssAttrComma Grey
+highlight! link cssBraces Grey
+highlight! link cssTagName Purple
+highlight! link cssClassNameDot Grey
+highlight! link cssClassName Red
+highlight! link cssFunctionName Orange
+highlight! link cssAttr Green
+highlight! link cssCommonAttr Green
+highlight! link cssProp Blue
+highlight! link cssPseudoClassId Yellow
+highlight! link cssPseudoClassFn Green
+highlight! link cssPseudoClass Yellow
+highlight! link cssImportant Red
+highlight! link cssSelectorOp Orange
+highlight! link cssSelectorOp2 Orange
+highlight! link cssColor Green
+highlight! link cssUnitDecorators Green
+highlight! link cssValueLength Green
+highlight! link cssValueInteger Green
+highlight! link cssValueNumber Green
+highlight! link cssValueAngle Green
+highlight! link cssValueTime Green
+highlight! link cssValueFrequency Green
+highlight! link cssVendor Grey
+highlight! link cssNoise Grey
+" }}}
+" }}}
+" SASS: {{{
+" scss-syntax: https://github.com/cakebaker/scss-syntax.vim{{{
+highlight! link scssMixinName Orange
+highlight! link scssSelectorChar Grey
+highlight! link scssSelectorName Red
+highlight! link scssInterpolationDelimiter Yellow
+highlight! link scssVariableValue Green
+highlight! link scssNull Purple
+highlight! link scssBoolean Purple
+highlight! link scssVariableAssignment Grey
+highlight! link scssAttribute Green
+highlight! link scssFunctionName Orange
+highlight! link scssVariable Fg
+highlight! link scssAmpersand Purple
+" }}}
+" }}}
+" LESS: {{{
+" vim-less: https://github.com/groenewege/vim-less{{{
+highlight! link lessMixinChar Grey
+highlight! link lessClass Red
+highlight! link lessFunction Orange
+" }}}
+" }}}
 " " JavaScript: {{{
 " " builtin: http://www.fleiner.com/vim/syntax/javascript.vim{{{
 " highlight! link javaScriptNull Aqua
