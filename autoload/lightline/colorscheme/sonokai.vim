@@ -31,7 +31,7 @@ elseif s:style ==# 'maia'
     let s:green = [ '#a2e57b', 107 ]
     let s:blue = [ '#7cd5f1', 110 ]
     let s:purple = [ '#baa0f8', 176 ]
-elseif s:style ==# 'galaxy'
+elseif s:style ==# 'andromeda'
     let s:foreground = [ '#e3e1e4', 250 ]
     let s:background = [ '#2b2d37', 235 ]
     let s:background_alt = [ '#2f323e', 236 ]
