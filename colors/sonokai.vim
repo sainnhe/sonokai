@@ -343,6 +343,326 @@ else
 endif
 " }}}
 " }}}
+" Plugins: {{{
+" vim-plug: {{{
+call s:HL('plug1', s:palette.red, s:palette.none, 'bold')
+call s:HL('plugNumber', s:palette.yellow, s:palette.none, 'bold')
+highlight! link plug2 Blue
+highlight! link plugBracket Blue
+highlight! link plugName Green
+highlight! link plugDash Red
+highlight! link plugNotLoaded Grey
+highlight! link plugH2 Purple
+highlight! link plugMessage Purple
+highlight! link plugError Red
+highlight! link plugRelDate Grey
+highlight! link plugStar Purple
+highlight! link plugUpdate Blue
+highlight! link plugDeleted Grey
+highlight! link plugEdge Purple
+" }}}
+" EasyMotion: {{{
+highlight! link EasyMotionTarget Search
+highlight! link EasyMotionShade Grey
+" }}}
+" Sneak: {{{
+highlight! link Sneak Cursor
+highlight! link SneakLabel Cursor
+highlight! link SneakScope DiffAdd
+" }}}
+" GitCommit: {{{
+highlight! link gitcommitSelectedFile Green
+highlight! link gitcommitDiscardedFile Red
+" }}}
+" GitGutter {{{
+if s:configuration.transparent_background
+  call s:HL('GitGutterAdd', s:palette.green, s:palette.none)
+  call s:HL('GitGutterChange', s:palette.blue, s:palette.none)
+  call s:HL('GitGutterDelete', s:palette.red, s:palette.none)
+  call s:HL('GitGutterChangeDelete', s:palette.purple, s:palette.none)
+else
+  call s:HL('GitGutterAdd', s:palette.green, s:palette.bg1)
+  call s:HL('GitGutterChange', s:palette.blue, s:palette.bg1)
+  call s:HL('GitGutterDelete', s:palette.red, s:palette.bg1)
+  call s:HL('GitGutterChangeDelete', s:palette.purple, s:palette.bg1)
+endif
+" }}}
+" Signify: {{{
+highlight! link SignifySignAdd GitGutterAdd
+highlight! link SignifySignChange GitGutterChange
+highlight! link SignifySignDelete GitGutterDelete
+highlight! link SignifySignChangeDelete GitGutterChangeDelete
+" }}}
+" Signature {{{
+if s:configuration.transparent_background
+  call s:HL('SignatureMarkText', s:palette.blue, s:palette.none)
+  call s:HL('SignatureMarkerText', s:palette.red, s:palette.none)
+else
+  call s:HL('SignatureMarkText', s:palette.blue, s:palette.bg1)
+  call s:HL('SignatureMarkerText', s:palette.red, s:palette.bg1)
+endif
+" }}}
+" LeaderF: {{{
+if !exists('g:Lf_StlColorscheme')
+  let g:Lf_StlColorscheme = 'one'
+endif
+call s:HL('Lf_hl_match', s:palette.green, s:palette.none, 'bold')
+call s:HL('Lf_hl_match0', s:palette.green, s:palette.none, 'bold')
+call s:HL('Lf_hl_match1', s:palette.blue, s:palette.none, 'bold')
+call s:HL('Lf_hl_match2', s:palette.red, s:palette.none, 'bold')
+call s:HL('Lf_hl_match3', s:palette.yellow, s:palette.none, 'bold')
+call s:HL('Lf_hl_match4', s:palette.purple, s:palette.none, 'bold')
+call s:HL('Lf_hl_matchRefine', s:palette.yellow, s:palette.none, 'bold')
+highlight! link Lf_hl_cursorline Fg
+highlight! link Lf_hl_selection DiffAdd
+highlight! link Lf_hl_rgHighlight Visual
+highlight! link Lf_hl_gtagsHighlight Visual
+" }}}
+" FZF: {{{
+let g:fzf_colors = {
+      \ 'fg': ['fg', 'Normal'],
+      \ 'bg': ['bg', 'Normal'],
+      \ 'hl': ['fg', 'Green'],
+      \ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+': ['fg', 'Green'],
+      \ 'info': ['fg', 'Yellow'],
+      \ 'prompt': ['fg', 'Red'],
+      \ 'pointer': ['fg', 'Blue'],
+      \ 'marker': ['fg', 'Blue'],
+      \ 'spinner': ['fg', 'Yellow'],
+      \ 'header': ['fg', 'Blue']
+      \ }
+" }}}
+" Denite{{{
+call s:HL('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
+call s:HL('deniteMatchedRange', s:palette.green, s:palette.none, 'bold,underline')
+call s:HL('deniteInput', s:palette.green, s:palette.bg1, 'bold')
+call s:HL('deniteStatusLineNumber', s:palette.purple, s:palette.bg1)
+call s:HL('deniteStatusLinePath', s:palette.fg, s:palette.bg1)
+highlight! link deniteSelectedLine Green
+" }}}
+" CtrlP: {{{
+call s:HL('CtrlPMatch', s:palette.green, s:palette.none, 'bold')
+call s:HL('CtrlPPrtBase', s:palette.grey, s:palette.none)
+call s:HL('CtrlPLinePre', s:palette.grey, s:palette.none)
+call s:HL('CtrlPMode1', s:palette.blue, s:palette.bg1, 'bold')
+call s:HL('CtrlPMode2', s:palette.bg1, s:palette.blue, 'bold')
+call s:HL('CtrlPStats', s:palette.grey, s:palette.bg1, 'bold')
+highlight! link CtrlPNoEntries Red
+highlight! link CtrlPPrtCursor Blue
+" }}}
+" Startify: {{{
+highlight! link StartifyBracket Grey
+highlight! link StartifyFile Green
+highlight! link StartifyNumber Orange
+highlight! link StartifyPath Grey
+highlight! link StartifySlash Grey
+highlight! link StartifySection Blue
+highlight! link StartifyHeader Red
+highlight! link StartifySpecial Grey
+" }}}
+" BufTabLine: {{{
+highlight! link BufTabLineCurrent TabLineSel
+highlight! link BufTabLineActive TabLine
+highlight! link BufTabLineHidden TabLineFill
+highlight! link BufTabLineFill TabLineFill
+" }}}
+" Netrw: {{{
+highlight! link netrwDir Green
+highlight! link netrwClassify Green
+highlight! link netrwLink Grey
+highlight! link netrwSymLink Fg
+highlight! link netrwExe Red
+highlight! link netrwComment Grey
+highlight! link netrwList Yellow
+highlight! link netrwHelpCmd Blue
+highlight! link netrwCmdSep Grey
+highlight! link netrwVersion Purple
+" }}}
+" NERDTree: {{{
+highlight! link NERDTreeDir Green
+highlight! link NERDTreeDirSlash Green
+highlight! link NERDTreeOpenable Blue
+highlight! link NERDTreeClosable Blue
+highlight! link NERDTreeFile Fg
+highlight! link NERDTreeExecFile Red
+highlight! link NERDTreeUp Grey
+highlight! link NERDTreeCWD Purple
+highlight! link NERDTreeHelp Grey
+highlight! link NERDTreeToggleOn Green
+highlight! link NERDTreeToggleOff Red
+highlight! link NERDTreeFlags Blue
+highlight! link NERDTreeLinkFile Grey
+highlight! link NERDTreeLinkTarget Green
+" }}}
+" Tagbar: {{{
+highlight! link TagbarFoldIcon Blue
+highlight! link TagbarSignature Green
+highlight! link TagbarKind Red
+highlight! link TagbarScope Orange
+highlight! link TagbarNestedKind Blue
+highlight! link TagbarVisibilityPrivate Red
+highlight! link TagbarVisibilityPublic Blue
+" }}}
+" Vista: {{{
+highlight! link VistaBracket Grey
+highlight! link VistaChildrenNr Yellow
+highlight! link VistaScope Red
+highlight! link VistaTag Green
+highlight! link VistaPrefix Grey
+highlight! link VistaColon Green
+highlight! link VistaIcon Purple
+highlight! link VistaLineNr Fg
+" }}}
+" Syntastic: {{{
+highlight! link SyntasticError ALEError
+highlight! link SyntasticWarning ALEWarning
+highlight! link SyntasticErrorSign ALEErrorSign
+highlight! link SyntasticWarningSign ALEWarningSign
+" }}}
+" ALE: {{{
+call s:HL('ALEError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
+call s:HL('ALEWarning', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
+call s:HL('ALEInfo', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
+if s:configuration.transparent_background
+  call s:HL('ALEErrorSign', s:palette.red, s:palette.none)
+  call s:HL('ALEWarningSign', s:palette.yellow, s:palette.none)
+  call s:HL('ALEInfoSign', s:palette.blue, s:palette.none)
+else
+  call s:HL('ALEErrorSign', s:palette.red, s:palette.bg1)
+  call s:HL('ALEWarningSign', s:palette.yellow, s:palette.bg1)
+  call s:HL('ALEInfoSign', s:palette.blue, s:palette.bg1)
+endif
+highlight! link ALEVirtualTextError Grey
+highlight! link ALEVirtualTextWarning Grey
+highlight! link ALEVirtualTextInfo Grey
+highlight! link ALEVirtualTextStyleError ALEVirtualTextError
+highlight! link ALEVirtualTextStyleWarning ALEVirtualTextWarning
+" }}}
+" Neomake: {{{
+highlight! link NeomakeError ALEError
+highlight! link NeomakeErrorSign ALEErrorSign
+highlight! link NeomakeWarning ALEWarning
+highlight! link NeomakeWarningSign ALEWarningSign
+highlight! link NeomakeInfo ALEInfo
+highlight! link NeomakeInfoSign ALEInfoSign
+highlight! link NeomakeMessage ALEInfo
+highlight! link NeomakeMessageSign CocHintSign
+highlight! link NeomakeVirtualtextError Grey
+highlight! link NeomakeVirtualtextWarning Grey
+highlight! link NeomakeVirtualtextInfo Grey
+highlight! link NeomakeVirtualtextMessag Grey
+" }}}
+" CoC: {{{
+if s:configuration.current_word ==# 'bold'
+  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'bold')
+elseif s:configuration.current_word ==# 'underline'
+  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'underline')
+elseif s:configuration.current_word ==# 'italic'
+  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'italic')
+elseif s:configuration.current_word ==# 'grey background'
+  call s:HL('CocHighlightText', s:palette.none, s:palette.bg1)
+endif
+call s:HL('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
+if s:configuration.transparent_background
+  call s:HL('CocHintSign', s:palette.purple, s:palette.none)
+else
+  call s:HL('CocHintSign', s:palette.purple, s:palette.bg1)
+endif
+highlight! link CocCodeLens Grey
+highlight! link CocErrorSign ALEErrorSign
+highlight! link CocWarningSign ALEWarningSign
+highlight! link CocInfoSign ALEInfoSign
+highlight! link CocHintSign Label
+highlight! link CocErrorHighlight ALEError
+highlight! link CocWarningHighlight ALEWarning
+highlight! link CocInfoHighlight ALEInfo
+highlight! link CocWarningVirtualText ALEVirtualTextWarning
+highlight! link CocErrorVirtualText ALEVirtualTextError
+highlight! link CocInfoVirtualText ALEVirtualTextInfo
+highlight! link CocHintVirtualText ALEVirtualTextInfo
+highlight! link CocGitAddedSign GitGutterAdd
+highlight! link CocGitChangeRemovedSign GitGutterChangeDelete
+highlight! link CocGitChangedSign GitGutterChange
+highlight! link CocGitRemovedSign GitGutterDelete
+highlight! link CocGitTopRemovedSign GitGutterDelete
+highlight! link CocExplorerBufferRoot Red
+highlight! link CocExplorerBufferExpandIcon Blue
+highlight! link CocExplorerBufferBufnr Yellow
+highlight! link CocExplorerBufferModified Red
+highlight! link CocExplorerBufferBufname Grey
+highlight! link CocExplorerFileRoot Red
+highlight! link CocExplorerFileExpandIcon Blue
+highlight! link CocExplorerFileFullpath Grey
+highlight! link CocExplorerFileDirectory Green
+highlight! link CocExplorerFileGitStage Blue
+highlight! link CocExplorerFileGitUnstage Yellow
+highlight! link CocExplorerFileSize Blue
+highlight! link CocExplorerTimeAccessed Purple
+highlight! link CocExplorerTimeCreated Purple
+highlight! link CocExplorerTimeModified Purple
+highlight! link CocExplorerFileRootName Orange
+highlight! link CocExplorerBufferNameVisible Green
+" }}}
+" UndoTree: {{{
+call s:HL('UndotreeSavedBig', s:palette.red, s:palette.none, 'bold')
+highlight! link UndotreeNode Blue
+highlight! link UndotreeNodeCurrent Purple
+highlight! link UndotreeSeq Green
+highlight! link UndotreeCurrent Blue
+highlight! link UndotreeNext Yellow
+highlight! link UndotreeTimeStamp Grey
+highlight! link UndotreeHead Purple
+highlight! link UndotreeBranch Blue
+highlight! link UndotreeSavedSmall Red
+" }}}
+" vim-matchup{{{
+call s:HL('MatchParenCur', s:palette.none, s:palette.none, 'bold')
+call s:HL('MatchWord', s:palette.none, s:palette.none, 'underline')
+call s:HL('MatchWordCur', s:palette.none, s:palette.none, 'underline')
+" }}}
+" Quick Scope {{{
+call s:HL('QuickScopePrimary', s:palette.green, s:palette.none, 'underline')
+call s:HL('QuickScopeSecondary', s:palette.blue, s:palette.none, 'underline')
+" }}}
+" QuickMenu: {{{
+highlight! link QuickmenuOption Green
+highlight! link QuickmenuNumber Orange
+highlight! link QuickmenuBracket Grey
+highlight! link QuickmenuHelp Blue
+highlight! link QuickmenuSpecial Grey
+highlight! link QuickmenuHeader Purple
+" }}}
+" WhichKey: {{{
+highlight! link WhichKey Red
+highlight! link WhichKeySeperator Green
+highlight! link WhichKeyGroup Purple
+highlight! link WhichKeyDesc Blue
+" }}}
+" Vim Multiple Cursors: {{{
+highlight! link multiple_cursors_cursor Cursor
+highlight! link multiple_cursors_visual Visual
+" }}}
+" Vim Visual Multi: {{{
+let g:VM_Mono_hl = 'Cursor'
+let g:VM_Extend_hl = 'Visual'
+let g:VM_Cursor_hl = 'Cursor'
+let g:VM_Insert_hl = 'Cursor'
+" }}}
+" Vim Current Word: {{{
+highlight! link CurrentWord CocHighlightText
+highlight! link CurrentWordTwins CocHighlightText
+" }}}
+" Vim Illuminate: {{{
+highlight! link illuminatedWord CocHighlightText
+" }}}
+" Vim Cursor Word: {{{
+let g:cursorword_highlight = 0
+highlight! link CursorWord0 CocHighlightText
+highlight! link CursorWord1 CocHighlightText
+" }}}
+" }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   " Definition
