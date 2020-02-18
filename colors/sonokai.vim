@@ -443,21 +443,22 @@ highlight! link htmlSpecialTagName RedItalic
 highlight! link htmlString Green
 " }}}
 " }}}
-" " Xml: {{{
-" " builtin: https://github.com/chrisbra/vim-xml-ftplugin{{{
-" highlight! link xmlTag Green
-" highlight! link xmlEndTag Blue
-" highlight! link xmlTagName OrangeItalic
-" highlight! link xmlEqual Orange
-" highlight! link xmlAttrib Aqua
-" highlight! link xmlEntity Red
-" highlight! link xmlEntityPunct Red
-" highlight! link xmlDocTypeDecl Grey
-" highlight! link xmlDocTypeKeyword PurpleItalic
-" highlight! link xmlCdataStart Grey
-" highlight! link xmlCdataCdata Purple
-" " }}}
-" " }}}
+" Xml: {{{
+" builtin: https://github.com/chrisbra/vim-xml-ftplugin{{{
+highlight! link xmlTag Green
+highlight! link xmlEndTag Blue
+highlight! link xmlTagName RedItalic
+highlight! link xmlEqual Orange
+highlight! link xmlAttrib Blue
+highlight! link xmlEntity Red
+highlight! link xmlEntityPunct Red
+highlight! link xmlDocTypeDecl Grey
+highlight! link xmlDocTypeKeyword RedItalic
+highlight! link xmlCdataStart Grey
+highlight! link xmlCdataCdata Purple
+highlight! link xmlString Green
+" }}}
+" }}}
 " " CSS: {{{
 " " builtin: https://github.com/JulesWang/css.vim{{{
 " highlight! link cssAttrComma Fg
