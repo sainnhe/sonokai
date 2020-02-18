@@ -21,6 +21,26 @@ if s:style ==# 'shusia'
     let s:green = [ '#a9dc76', 107 ]
     let s:blue = [ '#78dce8', 110 ]
     let s:purple = [ '#ab9df2', 176 ]
+elseif s:style ==# 'andromeda'
+    let s:foreground = [ '#e1e3e4', 250 ]
+    let s:background = [ '#2b2d37', 235 ]
+    let s:background_alt = [ '#2f323e', 236 ]
+    let s:background_grey = [ '#404455', 238 ]
+    let s:red = [ '#ff6188', 203 ]
+    let s:yellow = [ '#ffd866', 179 ]
+    let s:green = [ '#a9dc76', 107 ]
+    let s:blue = [ '#77d5f0', 110 ]
+    let s:purple = [ '#bb97ee', 176 ]
+elseif s:style ==# 'atlantis'
+    let s:foreground = [ '#e1e3e4', 250 ]
+    let s:background = [ '#2a2f38', 235 ]
+    let s:background_alt = [ '#303541', 236 ]
+    let s:background_grey = [ '#424b5b', 238 ]
+    let s:red = [ '#ff6d7e', 203 ]
+    let s:yellow = [ '#fade6a', 179 ]
+    let s:green = [ '#a5e179', 107 ]
+    let s:blue = [ '#7ad5f1', 110 ]
+    let s:purple = [ '#ba9cf3', 176 ]
 elseif s:style ==# 'maia'
     let s:foreground = [ '#e1e2e3', 250 ]
     let s:background = [ '#273136', 235 ]
@@ -31,16 +51,6 @@ elseif s:style ==# 'maia'
     let s:green = [ '#a2e57b', 107 ]
     let s:blue = [ '#7cd5f1', 110 ]
     let s:purple = [ '#baa0f8', 176 ]
-elseif s:style ==# 'andromeda'
-    let s:foreground = [ '#e3e1e4', 250 ]
-    let s:background = [ '#2b2d37', 235 ]
-    let s:background_alt = [ '#2f323e', 236 ]
-    let s:background_grey = [ '#404455', 238 ]
-    let s:red = [ '#ff6188', 203 ]
-    let s:yellow = [ '#ffd866', 179 ]
-    let s:green = [ '#a9dc76', 107 ]
-    let s:blue = [ '#77d5f0', 110 ]
-    let s:purple = [ '#bb97ee', 176 ]
 endif
 "}}}
 

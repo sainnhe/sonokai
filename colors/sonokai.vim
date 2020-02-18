@@ -51,6 +51,54 @@ if s:configuration.style ==# 'shusia'
         \ 'grey':       ['#848089',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
+elseif s:configuration.style ==# 'andromeda'
+  let s:palette = {
+        \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
+        \ 'bg0':        ['#2b2d37',   '235',  'Black'],
+        \ 'bg1':        ['#2f323e',   '236',  'DarkGrey'],
+        \ 'bg2':        ['#363a49',   '236',  'DarkGrey'],
+        \ 'bg3':        ['#3a3e4e',   '237',  'DarkGrey'],
+        \ 'bg4':        ['#404455',   '237',  'Grey'],
+        \ 'bg_red':     ['#ff6188',   '203',  'Red'],
+        \ 'diff_red':   ['#473536',   '52',   'DarkRed'],
+        \ 'bg_green':   ['#a9dc76',   '107',  'Green'],
+        \ 'diff_green': ['#384034',   '22',   'DarkGreen'],
+        \ 'bg_blue':    ['#77d5f0',   '110',  'Blue'],
+        \ 'diff_blue':  ['#323e47',   '17',   'DarkBlue'],
+        \ 'fg':         ['#e1e3e4',   '250',  'White'],
+        \ 'red':        ['#fb617e',   '203',  'Red'],
+        \ 'orange':     ['#f89860',   '215',  'Orange'],
+        \ 'yellow':     ['#edc161',   '179',  'Yellow'],
+        \ 'green':      ['#9ed06c',   '107',  'Green'],
+        \ 'blue':       ['#6dcae8',   '110',  'Blue'],
+        \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
+        \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
+        \ 'none':       ['NONE',      'NONE', 'NONE']
+        \ }
+elseif s:configuration.style ==# 'atlantis'
+  let s:palette = {
+        \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
+        \ 'bg0':        ['#2a2f38',   '235',  'Black'],
+        \ 'bg1':        ['#303541',   '236',  'DarkGrey'],
+        \ 'bg2':        ['#373c4b',   '236',  'DarkGrey'],
+        \ 'bg3':        ['#3d4455',   '237',  'DarkGrey'],
+        \ 'bg4':        ['#424b5b',   '237',  'Grey'],
+        \ 'bg_red':     ['#ff6d7e',   '203',  'Red'],
+        \ 'diff_red':   ['#473536',   '52',   'DarkRed'],
+        \ 'bg_green':   ['#a5e179',   '107',  'Green'],
+        \ 'diff_green': ['#384034',   '22',   'DarkGreen'],
+        \ 'bg_blue':    ['#7ad5f1',   '110',  'Blue'],
+        \ 'diff_blue':  ['#323e47',   '17',   'DarkBlue'],
+        \ 'fg':         ['#e1e3e4',   '250',  'White'],
+        \ 'red':        ['#fd6376',   '203',  'Red'],
+        \ 'orange':     ['#f69c5e',   '215',  'Orange'],
+        \ 'yellow':     ['#ebc65f',   '179',  'Yellow'],
+        \ 'green':      ['#9dd274',   '107',  'Green'],
+        \ 'blue':       ['#72cce8',   '110',  'Blue'],
+        \ 'purple':     ['#ba9cf3',   '176',  'Magenta'],
+        \ 'grey':       ['#828a9a',   '246',  'LightGrey'],
+        \ 'none':       ['NONE',      'NONE', 'NONE']
+        \ }
 elseif s:configuration.style ==# 'maia'
   let s:palette = {
         \ 'black':      ['#1c1e1f',   '237',  'DarkGrey'],
@@ -73,30 +121,6 @@ elseif s:configuration.style ==# 'maia'
         \ 'blue':       ['#78cee9',   '110',  'Blue'],
         \ 'purple':     ['#baa0f8',   '176',  'Magenta'],
         \ 'grey':       ['#82878b',   '246',  'LightGrey'],
-        \ 'none':       ['NONE',      'NONE', 'NONE']
-        \ }
-elseif s:configuration.style ==# 'andromeda'
-  let s:palette = {
-        \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
-        \ 'bg0':        ['#2b2d37',   '235',  'Black'],
-        \ 'bg1':        ['#2f323e',   '236',  'DarkGrey'],
-        \ 'bg2':        ['#363a49',   '236',  'DarkGrey'],
-        \ 'bg3':        ['#3a3e4e',   '237',  'DarkGrey'],
-        \ 'bg4':        ['#404455',   '237',  'Grey'],
-        \ 'bg_red':     ['#ff6188',   '203',  'Red'],
-        \ 'diff_red':   ['#473536',   '52',   'DarkRed'],
-        \ 'bg_green':   ['#a9dc76',   '107',  'Green'],
-        \ 'diff_green': ['#384034',   '22',   'DarkGreen'],
-        \ 'bg_blue':    ['#77d5f0',   '110',  'Blue'],
-        \ 'diff_blue':  ['#323e47',   '17',   'DarkBlue'],
-        \ 'fg':         ['#e3e1e4',   '250',  'White'],
-        \ 'red':        ['#fb617e',   '203',  'Red'],
-        \ 'orange':     ['#f89860',   '215',  'Orange'],
-        \ 'yellow':     ['#edc161',   '179',  'Yellow'],
-        \ 'green':      ['#9ed06c',   '107',  'Green'],
-        \ 'blue':       ['#6dcae8',   '110',  'Blue'],
-        \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
-        \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
 endif
