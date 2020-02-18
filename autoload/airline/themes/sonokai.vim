@@ -45,7 +45,7 @@ elseif s:style ==# 'andromeda'
     let s:blue_sel = [ '#77d5f0', 110 ]
     let s:purple_sel = [ '#bb97ee', 176 ]
     let s:red_fg = [ '#fb617e', 203 ]
-    let s:green_fg = [ '#9dd06a', 107 ]
+    let s:green_fg = [ '#9ed06c', 107 ]
     let s:blue_fg = [ '#6dcae8', 110 ]
     let s:purple_fg = [ '#bb97ee', 176 ]
 endif
