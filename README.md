@@ -8,7 +8,7 @@ The `shusia` and `maia` variants are based on `monokai pro` and `monokai machine
 
 ## Features
 
-- High contrast but safe for programming.
+- High contrast but within acceptable range.
 - Vivid colors.
 - Customizable.
 - Rich support for common file types and plugins.
