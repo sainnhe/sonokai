@@ -280,8 +280,6 @@ if s:configuration.enable_italic
   call s:HL('Type', s:palette.blue, s:palette.none, 'italic')
   call s:HL('Structure', s:palette.blue, s:palette.none, 'italic')
   call s:HL('StorageClass', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('Identifier', s:palette.orange, s:palette.none, 'italic')
-  call s:HL('Constant', s:palette.orange, s:palette.none, 'italic')
 else
   call s:HL('PreProc', s:palette.red, s:palette.none)
   call s:HL('PreCondit', s:palette.red, s:palette.none)
@@ -290,9 +288,9 @@ else
   call s:HL('Type', s:palette.blue, s:palette.none)
   call s:HL('Structure', s:palette.blue, s:palette.none)
   call s:HL('StorageClass', s:palette.blue, s:palette.none)
-  call s:HL('Identifier', s:palette.orange, s:palette.none)
-  call s:HL('Constant', s:palette.orange, s:palette.none)
 endif
+call s:HL('Identifier', s:palette.orange, s:palette.none)
+call s:HL('Constant', s:palette.orange, s:palette.none)
 call s:HL('Define', s:palette.red, s:palette.none)
 call s:HL('Typedef', s:palette.red, s:palette.none)
 call s:HL('Exception', s:palette.red, s:palette.none)
@@ -338,11 +336,9 @@ call s:HL('Blue', s:palette.blue, s:palette.none)
 call s:HL('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_italic
   call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
-  call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
   call s:HL('BlueItalic', s:palette.blue, s:palette.none, 'italic')
 else
   call s:HL('RedItalic', s:palette.red, s:palette.none)
-  call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
   call s:HL('BlueItalic', s:palette.blue, s:palette.none)
 endif
 " }}}
