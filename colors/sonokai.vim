@@ -1401,28 +1401,28 @@ highlight! link lessFunction Orange
 " highlight! link tomlBoolean Aqua
 " highlight! link tomlTableArray tomlTable
 " " }}}
-" " Diff: {{{
-" highlight! link diffAdded Green
-" highlight! link diffRemoved Red
-" highlight! link diffChanged Blue
-" highlight! link diffOldFile Yellow
-" highlight! link diffNewFile Orange
-" highlight! link diffFile Aqua
-" highlight! link diffLine Grey
-" highlight! link diffIndexLine Purple
-" " }}}
-" " Help: {{{
-" call s:HL('helpNote', s:palette.purple, s:palette.none, 'bold')
-" call s:HL('helpHeadline', s:palette.red, s:palette.none, 'bold')
-" call s:HL('helpHeader', s:palette.orange, s:palette.none, 'bold')
-" call s:HL('helpURL', s:palette.green, s:palette.none, 'underline')
-" call s:HL('helpHyperTextEntry', s:palette.yellow, s:palette.none, 'bold')
-" highlight! link helpHyperTextJump Yellow
-" highlight! link helpCommand Aqua
-" highlight! link helpExample Green
-" highlight! link helpSpecial Blue
-" highlight! link helpSectionDelim Grey
-" " }}}
+" Diff: {{{
+highlight! link diffAdded Green
+highlight! link diffRemoved Red
+highlight! link diffChanged Blue
+highlight! link diffOldFile Yellow
+highlight! link diffNewFile Orange
+highlight! link diffFile Purple
+highlight! link diffLine Grey
+highlight! link diffIndexLine Purple
+" }}}
+" Help: {{{
+call s:HL('helpNote', s:palette.purple, s:palette.none, 'bold')
+call s:HL('helpHeadline', s:palette.red, s:palette.none, 'bold')
+call s:HL('helpHeader', s:palette.orange, s:palette.none, 'bold')
+call s:HL('helpURL', s:palette.green, s:palette.none, 'underline')
+call s:HL('helpHyperTextEntry', s:palette.blue, s:palette.none, 'bold')
+highlight! link helpHyperTextJump Blue
+highlight! link helpCommand Yellow
+highlight! link helpExample Green
+highlight! link helpSpecial Purple
+highlight! link helpSectionDelim Grey
+" }}}
 " }}}
 " Plugins: {{{
 " junegunn/vim-plug{{{
