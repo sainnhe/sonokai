@@ -1,6 +1,6 @@
 " -----------------------------------------------------------------------------
 " Name:         Sonokai
-" Description:  Vivid Color Scheme based on Monokai Pro
+" Description:  High Contrast & Vivid Color Scheme based on Monokai Pro
 " Author:       Sainnhepark <sainnhe@gmail.com>
 " Website:      https://github.com/sainnhe/sonokai/
 " License:      MIT
