@@ -75,7 +75,7 @@ elseif s:configuration.style ==# 'maia'
         \ 'grey':       ['#82878b',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
         \ }
-elseif s:configuration.style ==# 'neon'
+elseif s:configuration.style ==# 'galaxy'
   let s:palette = {
         \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
         \ 'bg0':        ['#2b2d37',   '235',  'Black'],

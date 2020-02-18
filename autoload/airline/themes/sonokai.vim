@@ -35,7 +35,7 @@ elseif s:style ==# 'maia'
     let s:green_fg = [ '#9cd57b', 107 ]
     let s:blue_fg = [ '#78cee9', 110 ]
     let s:purple_fg = [ '#baa0f8', 176 ]
-elseif s:style ==# 'neon'
+elseif s:style ==# 'galaxy'
     let s:foreground = [ '#e3e1e4', 250 ]
     let s:background = [ '#2b2d37', 235 ]
     let s:background_alt = [ '#2f323e', 236 ]
