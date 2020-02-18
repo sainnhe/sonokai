@@ -92,7 +92,7 @@ elseif s:configuration.style ==# 'galaxy'
         \ 'fg':         ['#e3e1e4',   '250',  'White'],
         \ 'red':        ['#fb617e',   '203',  'Red'],
         \ 'orange':     ['#f89860',   '215',  'Orange'],
-        \ 'yellow':     ['#f1c573',   '179',  'Yellow'],
+        \ 'yellow':     ['#edc161',   '179',  'Yellow'],
         \ 'green':      ['#9dd06a',   '107',  'Green'],
         \ 'blue':       ['#6dcae8',   '110',  'Blue'],
         \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
