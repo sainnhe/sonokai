@@ -20,7 +20,7 @@ if s:style ==# 'shusia'
     let s:purple_sel = [ '#ab9df2', 176 ]
     let s:red_fg = [ '#f85e84', 203 ]
     let s:green_fg = [ '#9ecd6f', 107 ]
-    let s:blue_fg = [ '#6fc6d1', 110 ]
+    let s:blue_fg = [ '#7accd7', 110 ]
     let s:purple_fg = [ '#ab9df2', 176 ]
 elseif s:style ==# 'maia'
     let s:foreground = [ '#e1e2e3', 250 ]
@@ -33,7 +33,7 @@ elseif s:style ==# 'maia'
     let s:purple_sel = [ '#baa0f8', 176 ]
     let s:red_fg = [ '#f76c7c', 203 ]
     let s:green_fg = [ '#9cd57b', 107 ]
-    let s:blue_fg = [ '#7dcfe9', 110 ]
+    let s:blue_fg = [ '#78cee9', 110 ]
     let s:purple_fg = [ '#baa0f8', 176 ]
 elseif s:style ==# 'neon'
     let s:foreground = [ '#e3e1e4', 250 ]
@@ -45,8 +45,8 @@ elseif s:style ==# 'neon'
     let s:blue_sel = [ '#77d5f0', 110 ]
     let s:purple_sel = [ '#bb97ee', 176 ]
     let s:red_fg = [ '#fb617e', 203 ]
-    let s:green_fg = [ '#9ccd6b', 107 ]
-    let s:blue_fg = [ '#70c5e0', 110 ]
+    let s:green_fg = [ '#9dd06a', 107 ]
+    let s:blue_fg = [ '#6dcae8', 110 ]
     let s:purple_fg = [ '#bb97ee', 176 ]
 endif
 "}}}

@@ -46,7 +46,7 @@ if s:configuration.style ==# 'shusia'
         \ 'orange':     ['#ef9062',   '215',  'Orange'],
         \ 'yellow':     ['#e5c463',   '179',  'Yellow'],
         \ 'green':      ['#9ecd6f',   '107',  'Green'],
-        \ 'blue':       ['#6fc6d1',   '110',  'Blue'],
+        \ 'blue':       ['#7accd7',   '110',  'Blue'],
         \ 'purple':     ['#ab9df2',   '176',  'Magenta'],
         \ 'grey':       ['#848089',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
@@ -70,7 +70,7 @@ elseif s:configuration.style ==# 'maia'
         \ 'orange':     ['#f3a96a',   '215',  'Orange'],
         \ 'yellow':     ['#e3d367',   '179',  'Yellow'],
         \ 'green':      ['#9cd57b',   '107',  'Green'],
-        \ 'blue':       ['#7dcfe9',   '110',  'Blue'],
+        \ 'blue':       ['#78cee9',   '110',  'Blue'],
         \ 'purple':     ['#baa0f8',   '176',  'Magenta'],
         \ 'grey':       ['#82878b',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
@@ -93,8 +93,8 @@ elseif s:configuration.style ==# 'neon'
         \ 'red':        ['#fb617e',   '203',  'Red'],
         \ 'orange':     ['#f89860',   '215',  'Orange'],
         \ 'yellow':     ['#efc372',   '179',  'Yellow'],
-        \ 'green':      ['#9ccd6b',   '107',  'Green'],
-        \ 'blue':       ['#70c5e0',   '110',  'Blue'],
+        \ 'green':      ['#9dd06a',   '107',  'Green'],
+        \ 'blue':       ['#6dcae8',   '110',  'Blue'],
         \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
         \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
         \ 'none':       ['NONE',      'NONE', 'NONE']
