@@ -403,19 +403,20 @@ highlight! link rstLiteralBlock Green
 highlight! link rstQuotedLiteralBlock Green
 " }}}
 " }}}
-" " LaTex: {{{
-" " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_TEX{{{
-" highlight! link texStatement Green
-" highlight! link texOnlyMath Grey
-" highlight! link texDefName Yellow
-" highlight! link texNewCmd Orange
-" highlight! link texCmdName Blue
-" highlight! link texBeginEnd Red
-" highlight! link texBeginEndName Blue
-" highlight! link texDocType Purple
-" highlight! link texDocTypeArgs Orange
-" " }}}
-" " }}}
+" LaTex: {{{
+" builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_TEX{{{
+highlight! link texStatement BlueItalic
+highlight! link texOnlyMath Grey
+highlight! link texDefName Yellow
+highlight! link texNewCmd Orange
+highlight! link texCmdName Blue
+highlight! link texBeginEnd Red
+highlight! link texBeginEndName Green
+highlight! link texDocType RedItalic
+highlight! link texDocTypeArgs Orange
+highlight! link texInputFile Green
+" }}}
+" }}}
 " Html: {{{
 " builtin: https://notabug.org/jorgesumle/vim-html-syntax{{{
 call s:HL('htmlH1', s:palette.red, s:palette.none, 'bold')
