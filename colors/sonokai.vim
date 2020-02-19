@@ -1349,10 +1349,11 @@ highlight! link jsonNoise Grey
 highlight! link jsonQuote Grey
 highlight! link jsonBraces Fg
 " }}}
-" " Yaml: {{{
-" highlight! link yamlKey Orange
-" highlight! link yamlConstant Purple
-" " }}}
+" Yaml: {{{
+highlight! link yamlKey Red
+highlight! link yamlConstant BlueItalic
+highlight! link yamlString Green
+" }}}
 " " Toml: {{{
 " call s:HL('tomlTable', s:palette.purple, s:palette.none, 'bold')
 " highlight! link tomlKey Orange
