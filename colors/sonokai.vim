@@ -1202,14 +1202,14 @@ highlight! link zshSubst Orange
 highlight! link zshFunction Green
 " }}}
 " }}}
-" " PowerShell: {{{
-" " vim-ps1: https://github.com/PProvost/vim-ps1{{{
-" highlight! link ps1FunctionInvocation AquaBold
-" highlight! link ps1FunctionDeclaration AquaBold
-" highlight! link ps1InterpolationDelimiter Yellow
-" highlight! link ps1BuiltIn Yellow
-" " }}}
-" " }}}
+" PowerShell: {{{
+" vim-ps1: https://github.com/PProvost/vim-ps1{{{
+highlight! link ps1FunctionInvocation Green
+highlight! link ps1FunctionDeclaration Green
+highlight! link ps1InterpolationDelimiter Purple
+highlight! link ps1BuiltIn BlueItalic
+" }}}
+" }}}
 " " VimL: {{{
 " highlight! link vimLet Orange
 " highlight! link vimFunction GreenBold
