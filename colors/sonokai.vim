@@ -700,15 +700,15 @@ highlight! link javascriptBroadcastProp Fg
 highlight! link javascriptMathStaticProp Fg
 " }}}
 " }}}
-" " JavaScript React: {{{
-" " vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
-" highlight! link jsxTagName OrangeItalic
-" highlight! link jsxOpenPunct Green
-" highlight! link jsxClosePunct Blue
-" highlight! link jsxEscapeJs Blue
-" highlight! link jsxAttrib Aqua
-" " }}}
-" " }}}
+" JavaScript React: {{{
+" vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
+highlight! link jsxTagName RedItalic
+highlight! link jsxOpenPunct Green
+highlight! link jsxClosePunct Blue
+highlight! link jsxEscapeJs Purple
+highlight! link jsxAttrib Blue
+" }}}
+" }}}
 " " TypeScript: {{{
 " " vim-typescript: https://github.com/leafgarland/typescript-vim{{{
 " highlight! link typescriptSource PurpleItalic
