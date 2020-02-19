@@ -273,24 +273,22 @@ call s:HL('Debug', s:palette.yellow, s:palette.none)
 " }}}
 " Syntax: {{{
 if s:configuration.enable_italic
-  call s:HL('PreProc', s:palette.red, s:palette.none, 'italic')
-  call s:HL('PreCondit', s:palette.red, s:palette.none, 'italic')
-  call s:HL('Include', s:palette.red, s:palette.none, 'italic')
-  call s:HL('Keyword', s:palette.red, s:palette.none, 'italic')
   call s:HL('Type', s:palette.blue, s:palette.none, 'italic')
   call s:HL('Structure', s:palette.blue, s:palette.none, 'italic')
   call s:HL('StorageClass', s:palette.blue, s:palette.none, 'italic')
+  call s:HL('Identifier', s:palette.orange, s:palette.none, 'italic')
+  call s:HL('Constant', s:palette.orange, s:palette.none, 'italic')
 else
-  call s:HL('PreProc', s:palette.red, s:palette.none)
-  call s:HL('PreCondit', s:palette.red, s:palette.none)
-  call s:HL('Include', s:palette.red, s:palette.none)
-  call s:HL('Keyword', s:palette.red, s:palette.none)
   call s:HL('Type', s:palette.blue, s:palette.none)
   call s:HL('Structure', s:palette.blue, s:palette.none)
   call s:HL('StorageClass', s:palette.blue, s:palette.none)
+  call s:HL('Identifier', s:palette.orange, s:palette.none)
+  call s:HL('Constant', s:palette.orange, s:palette.none)
 endif
-call s:HL('Identifier', s:palette.orange, s:palette.none)
-call s:HL('Constant', s:palette.orange, s:palette.none)
+call s:HL('PreProc', s:palette.red, s:palette.none)
+call s:HL('PreCondit', s:palette.red, s:palette.none)
+call s:HL('Include', s:palette.red, s:palette.none)
+call s:HL('Keyword', s:palette.red, s:palette.none)
 call s:HL('Define', s:palette.red, s:palette.none)
 call s:HL('Typedef', s:palette.red, s:palette.none)
 call s:HL('Exception', s:palette.red, s:palette.none)
@@ -337,9 +335,11 @@ call s:HL('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_italic
   call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
   call s:HL('BlueItalic', s:palette.blue, s:palette.none, 'italic')
+  call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
 else
   call s:HL('RedItalic', s:palette.red, s:palette.none)
   call s:HL('BlueItalic', s:palette.blue, s:palette.none)
+  call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
 endif
 " }}}
 " }}}
@@ -515,7 +515,7 @@ highlight! link lessFunction Orange
 " }}}
 " JavaScript: {{{
 " builtin: http://www.fleiner.com/vim/syntax/javascript.vim{{{
-highlight! link javaScriptNull Orange
+highlight! link javaScriptNull OrangeItalic
 highlight! link javaScriptIdentifier BlueItalic
 highlight! link javaScriptParens Fg
 highlight! link javaScriptBraces Fg
@@ -531,12 +531,12 @@ highlight! link jsParens Fg
 highlight! link jsBrackets Fg
 highlight! link jsObjectBraces Fg
 highlight! link jsThis BlueItalic
-highlight! link jsUndefined Orange
-highlight! link jsNull Orange
-highlight! link jsNan Orange
-highlight! link jsSuper Orange
-highlight! link jsPrototype Orange
-highlight! link jsFunction RedItalic
+highlight! link jsUndefined OrangeItalic
+highlight! link jsNull OrangeItalic
+highlight! link jsNan OrangeItalic
+highlight! link jsSuper OrangeItalic
+highlight! link jsPrototype OrangeItalic
+highlight! link jsFunction Red
 highlight! link jsGlobalNodeObjects BlueItalic
 highlight! link jsGlobalObjects BlueItalic
 highlight! link jsArrowFunction Red
@@ -574,7 +574,7 @@ highlight! link javascriptObjectLabel Fg
 highlight! link javascriptPropertyNameString Fg
 highlight! link javascriptFuncArg Fg
 highlight! link javascriptObjectLiteral Green
-highlight! link javascriptIdentifier Orange
+highlight! link javascriptIdentifier OrangeItalic
 highlight! link javascriptArrowFunc Red
 highlight! link javascriptTemplate Purple
 highlight! link javascriptTemplateSubstitution Purple
@@ -582,7 +582,7 @@ highlight! link javascriptTemplateSB Purple
 highlight! link javascriptNodeGlobal BlueItalic
 highlight! link javascriptDocTags RedItalic
 highlight! link javascriptDocNotation Blue
-highlight! link javascriptClassSuper Orange
+highlight! link javascriptClassSuper OrangeItalic
 highlight! link javascriptClassName BlueItalic
 highlight! link javascriptClassSuperName BlueItalic
 highlight! link javascriptOperator Red
@@ -709,160 +709,162 @@ highlight! link jsxEscapeJs Purple
 highlight! link jsxAttrib Blue
 " }}}
 " }}}
-" " TypeScript: {{{
-" " vim-typescript: https://github.com/leafgarland/typescript-vim{{{
-" highlight! link typescriptSource PurpleItalic
-" highlight! link typescriptMessage Yellow
-" highlight! link typescriptGlobalObjects Aqua
-" highlight! link typescriptInterpolation Yellow
-" highlight! link typescriptInterpolationDelimiter Yellow
-" highlight! link typescriptBraces Fg
-" highlight! link typescriptParens Fg
-" " }}}
-" " yats: https:github.com/HerringtonDarkholme/yats.vim{{{
-" highlight! link typescriptMethodAccessor OrangeItalic
-" highlight! link typescriptVariable Orange
-" highlight! link typescriptVariableDeclaration Blue
-" highlight! link typescriptTypeReference Yellow
-" highlight! link typescriptBraces Fg
-" highlight! link typescriptEnumKeyword RedItalic
-" highlight! link typescriptEnum Yellow
-" highlight! link typescriptIdentifierName Aqua
-" highlight! link typescriptProp Aqua
-" highlight! link typescriptCall Blue
-" highlight! link typescriptInterfaceName Yellow
-" highlight! link typescriptEndColons Fg
-" highlight! link typescriptMember Aqua
-" highlight! link typescriptMemberOptionality Orange
-" highlight! link typescriptObjectLabel Aqua
-" highlight! link typescriptArrowFunc Purple
-" highlight! link typescriptAbstract Orange
-" highlight! link typescriptObjectColon Grey
-" highlight! link typescriptTypeAnnotation Grey
-" highlight! link typescriptAssign Orange
-" highlight! link typescriptBinaryOp Orange
-" highlight! link typescriptUnaryOp Orange
-" highlight! link typescriptFuncComma Fg
-" highlight! link typescriptClassName Yellow
-" highlight! link typescriptClassHeritage Yellow
-" highlight! link typescriptInterfaceHeritage Yellow
-" highlight! link typescriptIdentifier Purple
-" highlight! link typescriptGlobal Purple
-" highlight! link typescriptOperator RedItalic
-" highlight! link typescriptNodeGlobal PurpleItalic
-" highlight! link typescriptExport PurpleItalic
-" highlight! link typescriptDefaultParam Orange
-" highlight! link typescriptImport PurpleItalic
-" highlight! link typescriptTypeParameter Yellow
-" highlight! link typescriptReadonlyModifier Orange
-" highlight! link typescriptAccessibilityModifier Orange
-" highlight! link typescriptAmbientDeclaration RedItalic
-" highlight! link typescriptTemplateSubstitution Yellow
-" highlight! link typescriptTemplateSB Yellow
-" highlight! link typescriptExceptions RedItalic
-" highlight! link typescriptCastKeyword RedItalic
-" highlight! link typescriptOptionalMark Orange
-" highlight! link typescriptNull Aqua
-" highlight! link typescriptMappedIn RedItalic
-" highlight! link typescriptFuncTypeArrow Purple
-" highlight! link typescriptTernaryOp Orange
-" highlight! link typescriptParenExp Blue
-" highlight! link typescriptIndexExpr Blue
-" highlight! link typescriptDotNotation Grey
-" highlight! link typescriptGlobalNumberDot Grey
-" highlight! link typescriptGlobalStringDot Grey
-" highlight! link typescriptGlobalArrayDot Grey
-" highlight! link typescriptGlobalObjectDot Grey
-" highlight! link typescriptGlobalSymbolDot Grey
-" highlight! link typescriptGlobalMathDot Grey
-" highlight! link typescriptGlobalDateDot Grey
-" highlight! link typescriptGlobalJSONDot Grey
-" highlight! link typescriptGlobalRegExpDot Grey
-" highlight! link typescriptGlobalPromiseDot Grey
-" highlight! link typescriptGlobalURLDot Grey
-" highlight! link typescriptGlobalMethod GreenBold
-" highlight! link typescriptDOMStorageMethod GreenBold
-" highlight! link typescriptFileMethod GreenBold
-" highlight! link typescriptFileReaderMethod GreenBold
-" highlight! link typescriptFileListMethod GreenBold
-" highlight! link typescriptBlobMethod GreenBold
-" highlight! link typescriptURLStaticMethod GreenBold
-" highlight! link typescriptNumberStaticMethod GreenBold
-" highlight! link typescriptNumberMethod GreenBold
-" highlight! link typescriptDOMNodeMethod GreenBold
-" highlight! link typescriptPaymentMethod GreenBold
-" highlight! link typescriptPaymentResponseMethod GreenBold
-" highlight! link typescriptHeadersMethod GreenBold
-" highlight! link typescriptRequestMethod GreenBold
-" highlight! link typescriptResponseMethod GreenBold
-" highlight! link typescriptES6SetMethod GreenBold
-" highlight! link typescriptReflectMethod GreenBold
-" highlight! link typescriptBOMWindowMethod GreenBold
-" highlight! link typescriptGeolocationMethod GreenBold
-" highlight! link typescriptServiceWorkerMethod GreenBold
-" highlight! link typescriptCacheMethod GreenBold
-" highlight! link typescriptES6MapMethod GreenBold
-" highlight! link typescriptFunctionMethod GreenBold
-" highlight! link typescriptRegExpMethod GreenBold
-" highlight! link typescriptXHRMethod GreenBold
-" highlight! link typescriptBOMNavigatorMethod GreenBold
-" highlight! link typescriptServiceWorkerMethod GreenBold
-" highlight! link typescriptIntlMethod GreenBold
-" highlight! link typescriptDOMEventTargetMethod GreenBold
-" highlight! link typescriptDOMEventMethod GreenBold
-" highlight! link typescriptDOMDocMethod GreenBold
-" highlight! link typescriptStringStaticMethod GreenBold
-" highlight! link typescriptStringMethod GreenBold
-" highlight! link typescriptSymbolStaticMethod GreenBold
-" highlight! link typescriptObjectStaticMethod GreenBold
-" highlight! link typescriptObjectMethod GreenBold
-" highlight! link typescriptJSONStaticMethod GreenBold
-" highlight! link typescriptEncodingMethod GreenBold
-" highlight! link typescriptBOMLocationMethod GreenBold
-" highlight! link typescriptPromiseStaticMethod GreenBold
-" highlight! link typescriptPromiseMethod GreenBold
-" highlight! link typescriptSubtleCryptoMethod GreenBold
-" highlight! link typescriptCryptoMethod GreenBold
-" highlight! link typescriptBOMHistoryMethod GreenBold
-" highlight! link typescriptDOMFormMethod GreenBold
-" highlight! link typescriptConsoleMethod GreenBold
-" highlight! link typescriptDateStaticMethod GreenBold
-" highlight! link typescriptDateMethod GreenBold
-" highlight! link typescriptArrayStaticMethod GreenBold
-" highlight! link typescriptArrayMethod GreenBold
-" highlight! link typescriptMathStaticMethod GreenBold
-" highlight! link typescriptStringProperty Aqua
-" highlight! link typescriptDOMStorageProp Aqua
-" highlight! link typescriptFileReaderProp Aqua
-" highlight! link typescriptURLUtilsProp Aqua
-" highlight! link typescriptNumberStaticProp Aqua
-" highlight! link typescriptDOMNodeProp Aqua
-" highlight! link typescriptBOMWindowProp Aqua
-" highlight! link typescriptRequestProp Aqua
-" highlight! link typescriptResponseProp Aqua
-" highlight! link typescriptPaymentProp Aqua
-" highlight! link typescriptPaymentResponseProp Aqua
-" highlight! link typescriptPaymentAddressProp Aqua
-" highlight! link typescriptPaymentShippingOptionProp Aqua
-" highlight! link typescriptES6SetProp Aqua
-" highlight! link typescriptServiceWorkerProp Aqua
-" highlight! link typescriptES6MapProp Aqua
-" highlight! link typescriptRegExpStaticProp Aqua
-" highlight! link typescriptRegExpProp Aqua
-" highlight! link typescriptBOMNavigatorProp GreenBold
-" highlight! link typescriptXHRProp Aqua
-" highlight! link typescriptDOMEventProp Aqua
-" highlight! link typescriptDOMDocProp Aqua
-" highlight! link typescriptBOMNetworkProp Aqua
-" highlight! link typescriptSymbolStaticProp Aqua
-" highlight! link typescriptEncodingProp Aqua
-" highlight! link typescriptBOMLocationProp Aqua
-" highlight! link typescriptCryptoProp Aqua
-" highlight! link typescriptDOMFormProp Aqua
-" highlight! link typescriptBOMHistoryProp Aqua
-" highlight! link typescriptMathStaticProp Aqua
-" " }}}
-" " }}}
+" TypeScript: {{{
+" vim-typescript: https://github.com/leafgarland/typescript-vim{{{
+highlight! link typescriptStorageClass Red
+highlight! link typescriptEndColons Fg
+highlight! link typescriptSource BlueItalic
+highlight! link typescriptMessage Green
+highlight! link typescriptGlobalObjects BlueItalic
+highlight! link typescriptInterpolation Purple
+highlight! link typescriptInterpolationDelimiter Purple
+highlight! link typescriptBraces Fg
+highlight! link typescriptParens Fg
+" }}}
+" yats: https:github.com/HerringtonDarkholme/yats.vim{{{
+highlight! link typescriptMethodAccessor Red
+highlight! link typescriptVariable Red
+highlight! link typescriptVariableDeclaration Fg
+highlight! link typescriptTypeReference BlueItalic
+highlight! link typescriptBraces Fg
+highlight! link typescriptEnumKeyword Red
+highlight! link typescriptEnum BlueItalic
+highlight! link typescriptIdentifierName Fg
+highlight! link typescriptProp Fg
+highlight! link typescriptCall Fg
+highlight! link typescriptInterfaceName BlueItalic
+highlight! link typescriptEndColons Fg
+highlight! link typescriptMember Fg
+highlight! link typescriptMemberOptionality Red
+highlight! link typescriptObjectLabel Fg
+highlight! link typescriptDefaultParam Fg
+highlight! link typescriptArrowFunc Red
+highlight! link typescriptAbstract Red
+highlight! link typescriptObjectColon Grey
+highlight! link typescriptTypeAnnotation Grey
+highlight! link typescriptAssign Red
+highlight! link typescriptBinaryOp Red
+highlight! link typescriptUnaryOp Red
+highlight! link typescriptFuncComma Fg
+highlight! link typescriptClassName BlueItalic
+highlight! link typescriptClassHeritage BlueItalic
+highlight! link typescriptInterfaceHeritage BlueItalic
+highlight! link typescriptIdentifier OrangeItalic
+highlight! link typescriptGlobal BlueItalic
+highlight! link typescriptOperator Red
+highlight! link typescriptNodeGlobal BlueItalic
+highlight! link typescriptExport Red
+highlight! link typescriptImport Red
+highlight! link typescriptTypeParameter BlueItalic
+highlight! link typescriptReadonlyModifier Red
+highlight! link typescriptAccessibilityModifier Red
+highlight! link typescriptAmbientDeclaration Red
+highlight! link typescriptTemplateSubstitution Purple
+highlight! link typescriptTemplateSB Purple
+highlight! link typescriptExceptions Red
+highlight! link typescriptCastKeyword Red
+highlight! link typescriptOptionalMark Red
+highlight! link typescriptNull OrangeItalic
+highlight! link typescriptMappedIn Red
+highlight! link typescriptFuncTypeArrow Red
+highlight! link typescriptTernaryOp Red
+highlight! link typescriptParenExp Fg
+highlight! link typescriptIndexExpr Fg
+highlight! link typescriptDotNotation Grey
+highlight! link typescriptGlobalNumberDot Grey
+highlight! link typescriptGlobalStringDot Grey
+highlight! link typescriptGlobalArrayDot Grey
+highlight! link typescriptGlobalObjectDot Grey
+highlight! link typescriptGlobalSymbolDot Grey
+highlight! link typescriptGlobalMathDot Grey
+highlight! link typescriptGlobalDateDot Grey
+highlight! link typescriptGlobalJSONDot Grey
+highlight! link typescriptGlobalRegExpDot Grey
+highlight! link typescriptGlobalPromiseDot Grey
+highlight! link typescriptGlobalURLDot Grey
+highlight! link typescriptGlobalMethod Green
+highlight! link typescriptDOMStorageMethod Green
+highlight! link typescriptFileMethod Green
+highlight! link typescriptFileReaderMethod Green
+highlight! link typescriptFileListMethod Green
+highlight! link typescriptBlobMethod Green
+highlight! link typescriptURLStaticMethod Green
+highlight! link typescriptNumberStaticMethod Green
+highlight! link typescriptNumberMethod Green
+highlight! link typescriptDOMNodeMethod Green
+highlight! link typescriptPaymentMethod Green
+highlight! link typescriptPaymentResponseMethod Green
+highlight! link typescriptHeadersMethod Green
+highlight! link typescriptRequestMethod Green
+highlight! link typescriptResponseMethod Green
+highlight! link typescriptES6SetMethod Green
+highlight! link typescriptReflectMethod Green
+highlight! link typescriptBOMWindowMethod Green
+highlight! link typescriptGeolocationMethod Green
+highlight! link typescriptServiceWorkerMethod Green
+highlight! link typescriptCacheMethod Green
+highlight! link typescriptES6MapMethod Green
+highlight! link typescriptFunctionMethod Green
+highlight! link typescriptRegExpMethod Green
+highlight! link typescriptXHRMethod Green
+highlight! link typescriptBOMNavigatorMethod Green
+highlight! link typescriptServiceWorkerMethod Green
+highlight! link typescriptIntlMethod Green
+highlight! link typescriptDOMEventTargetMethod Green
+highlight! link typescriptDOMEventMethod Green
+highlight! link typescriptDOMDocMethod Green
+highlight! link typescriptStringStaticMethod Green
+highlight! link typescriptStringMethod Green
+highlight! link typescriptSymbolStaticMethod Green
+highlight! link typescriptObjectStaticMethod Green
+highlight! link typescriptObjectMethod Green
+highlight! link typescriptJSONStaticMethod Green
+highlight! link typescriptEncodingMethod Green
+highlight! link typescriptBOMLocationMethod Green
+highlight! link typescriptPromiseStaticMethod Green
+highlight! link typescriptPromiseMethod Green
+highlight! link typescriptSubtleCryptoMethod Green
+highlight! link typescriptCryptoMethod Green
+highlight! link typescriptBOMHistoryMethod Green
+highlight! link typescriptDOMFormMethod Green
+highlight! link typescriptConsoleMethod Green
+highlight! link typescriptDateStaticMethod Green
+highlight! link typescriptDateMethod Green
+highlight! link typescriptArrayStaticMethod Green
+highlight! link typescriptArrayMethod Green
+highlight! link typescriptMathStaticMethod Green
+highlight! link typescriptStringProperty Fg
+highlight! link typescriptDOMStorageProp Fg
+highlight! link typescriptFileReaderProp Fg
+highlight! link typescriptURLUtilsProp Fg
+highlight! link typescriptNumberStaticProp Fg
+highlight! link typescriptDOMNodeProp Fg
+highlight! link typescriptBOMWindowProp Fg
+highlight! link typescriptRequestProp Fg
+highlight! link typescriptResponseProp Fg
+highlight! link typescriptPaymentProp Fg
+highlight! link typescriptPaymentResponseProp Fg
+highlight! link typescriptPaymentAddressProp Fg
+highlight! link typescriptPaymentShippingOptionProp Fg
+highlight! link typescriptES6SetProp Fg
+highlight! link typescriptServiceWorkerProp Fg
+highlight! link typescriptES6MapProp Fg
+highlight! link typescriptRegExpStaticProp Fg
+highlight! link typescriptRegExpProp Fg
+highlight! link typescriptBOMNavigatorProp Green
+highlight! link typescriptXHRProp Fg
+highlight! link typescriptDOMEventProp Fg
+highlight! link typescriptDOMDocProp Fg
+highlight! link typescriptBOMNetworkProp Fg
+highlight! link typescriptSymbolStaticProp Fg
+highlight! link typescriptEncodingProp Fg
+highlight! link typescriptBOMLocationProp Fg
+highlight! link typescriptCryptoProp Fg
+highlight! link typescriptDOMFormProp Fg
+highlight! link typescriptBOMHistoryProp Fg
+highlight! link typescriptMathStaticProp Fg
+" }}}
+" }}}
 " " Dart: {{{
 " " dart-lang: https://github.com/dart-lang/dart-vim-plugin{{{
 " highlight! link dartCoreClasses Aqua
