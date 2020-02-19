@@ -1100,20 +1100,20 @@ highlight! link phpSuperglobals BlueItalic
 highlight! link phpNullValue OrangeItalic
 " }}}
 " }}}
-" " Ruby: {{{
-" " builtin: https://github.com/vim-ruby/vim-ruby{{{
-" highlight! link rubyKeywordAsMethod GreenBold
-" highlight! link rubyInterpolation Yellow
-" highlight! link rubyInterpolationDelimiter Yellow
-" highlight! link rubyStringDelimiter Green
-" highlight! link rubyBlockParameterList Blue
-" highlight! link rubyDefine RedItalic
-" highlight! link rubyModuleName Purple
-" highlight! link rubyAccess Orange
-" highlight! link rubyAttribute Yellow
-" highlight! link rubyMacro RedItalic
-" " }}}
-" " }}}
+" Ruby: {{{
+" builtin: https://github.com/vim-ruby/vim-ruby{{{
+highlight! link rubyKeywordAsMethod Green
+highlight! link rubyInterpolation Purple
+highlight! link rubyInterpolationDelimiter Purple
+highlight! link rubyStringDelimiter Yellow
+highlight! link rubyBlockParameterList Fg
+highlight! link rubyDefine Red
+highlight! link rubyModuleName Red
+highlight! link rubyAccess Red
+highlight! link rubyMacro Red
+highlight! link rubySymbol Fg
+" }}}
+" }}}
 " " Haskell: {{{
 " " haskell-vim: https://github.com/neovimhaskell/haskell-vim{{{
 " highlight! link haskellBrackets Blue
