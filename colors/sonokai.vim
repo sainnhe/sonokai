@@ -1160,13 +1160,13 @@ highlight! link elixirStructDefine Red
 highlight! link elixirExUnitMacro Red
 " }}}
 " }}}
-" " Common Lisp: {{{
-" " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_LISP{{{
-" highlight! link lispAtomMark Green
-" highlight! link lispKey Aqua
-" highlight! link lispFunc OrangeItalic
-" " }}}
-" " }}}
+" Common Lisp: {{{
+" builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_LISP{{{
+highlight! link lispAtomMark Purple
+highlight! link lispKey Orange
+highlight! link lispFunc Green
+" }}}
+" }}}
 " " Clojure: {{{
 " " builtin: https://github.com/guns/vim-clojure-static{{{
 " highlight! link clojureMacro PurpleItalic
