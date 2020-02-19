@@ -1229,12 +1229,12 @@ highlight! link vimAutoCmdSfxList Orange
 highlight! link vimSynType Orange
 highlight! link vimHiBang Orange
 " }}}
-" " Makefile: {{{
-" highlight! link makeIdent Aqua
-" highlight! link makeSpecTarget Yellow
-" highlight! link makeTarget Blue
-" highlight! link makeCommands Orange
-" " }}}
+" Makefile: {{{
+highlight! link makeIdent Purple
+highlight! link makeSpecTarget BlueItalic
+highlight! link makeTarget Orange
+highlight! link makeCommands Red
+" }}}
 " " CMake: {{{
 " highlight! link cmakeCommand Orange
 " highlight! link cmakeKWconfigure_package_config_file Yellow
