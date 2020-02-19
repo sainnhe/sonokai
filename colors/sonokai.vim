@@ -907,43 +907,43 @@ highlight! link typescriptMathStaticProp Fg
 " highlight! link purescriptType Aqua
 " " }}}
 " " }}}
-" " C/C++: {{{
-" " vim-cpp-enhanced-highlight: https://github.com/octol/vim-cpp-enhanced-highlight{{{
-" highlight! link cppSTLnamespace Purple
-" highlight! link cppSTLtype Yellow
-" highlight! link cppAccess PurpleItalic
-" highlight! link cppStructure RedItalic
-" highlight! link cppSTLios Aqua
-" highlight! link cppSTLiterator PurpleItalic
-" highlight! link cppSTLexception Purple
-" " }}}
-" " vim-cpp-modern: https://github.com/bfrg/vim-cpp-modern{{{
-" highlight! link cppSTLVariable Aqua
-" " }}}
-" " }}}
-" " ObjectiveC: {{{
-" " builtin: {{{
-" highlight! link objcModuleImport PurpleItalic
-" highlight! link objcException RedItalic
-" highlight! link objcProtocolList Aqua
-" highlight! link objcObjDef PurpleItalic
-" highlight! link objcDirective RedItalic
-" highlight! link objcPropertyAttribute Orange
-" highlight! link objcHiddenArgument Aqua
-" " }}}
-" " }}}
-" " C#: {{{
-" " builtin: https://github.com/nickspoons/vim-cs{{{
-" highlight! link csUnspecifiedStatement PurpleItalic
-" highlight! link csStorage RedItalic
-" highlight! link csClass RedItalic
-" highlight! link csNewType Aqua
-" highlight! link csContextualStatement PurpleItalic
-" highlight! link csInterpolationDelimiter Yellow
-" highlight! link csInterpolation Yellow
-" highlight! link csEndColon Fg
-" " }}}
-" " }}}
+" C/C++: {{{
+" vim-cpp-enhanced-highlight: https://github.com/octol/vim-cpp-enhanced-highlight{{{
+highlight! link cLabel Red
+highlight! link cppSTLnamespace BlueItalic
+highlight! link cppSTLtype BlueItalic
+highlight! link cppAccess Red
+highlight! link cppStructure Red
+highlight! link cppSTLios BlueItalic
+highlight! link cppSTLiterator BlueItalic
+highlight! link cppSTLexception Red
+" }}}
+" vim-cpp-modern: https://github.com/bfrg/vim-cpp-modern{{{
+highlight! link cppSTLVariable BlueItalic
+" }}}
+" }}}
+" ObjectiveC: {{{
+" builtin: {{{
+highlight! link objcModuleImport Red
+highlight! link objcException Red
+highlight! link objcProtocolList Fg
+highlight! link objcDirective Red
+highlight! link objcPropertyAttribute Purple
+highlight! link objcHiddenArgument Fg
+" }}}
+" }}}
+" C#: {{{
+" builtin: https://github.com/nickspoons/vim-cs{{{
+highlight! link csUnspecifiedStatement Red
+highlight! link csStorage Red
+highlight! link csClass Red
+highlight! link csNewType BlueItalic
+highlight! link csContextualStatement Red
+highlight! link csInterpolationDelimiter Purple
+highlight! link csInterpolation Purple
+highlight! link csEndColon Fg
+" }}}
+" }}}
 " " Python: {{{
 " " builtin: {{{
 " highlight! link pythonBuiltin Yellow
