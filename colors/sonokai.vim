@@ -1001,22 +1001,22 @@ highlight! link luaDocTag Green
 " highlight! link moonDotAccess Grey
 " " }}}
 " " }}}
-" " Java: {{{
-" " builtin: {{{
-" highlight! link javaClassDecl RedItalic
-" highlight! link javaMethodDecl RedItalic
-" highlight! link javaVarArg Green
-" highlight! link javaAnnotation Blue
-" highlight! link javaUserLabel Purple
-" highlight! link javaTypedef Aqua
-" highlight! link javaParen Fg
-" highlight! link javaParen1 Fg
-" highlight! link javaParen2 Fg
-" highlight! link javaParen3 Fg
-" highlight! link javaParen4 Fg
-" highlight! link javaParen5 Fg
-" " }}}
-" " }}}
+" Java: {{{
+" builtin: {{{
+highlight! link javaClassDecl Red
+highlight! link javaMethodDecl Red
+highlight! link javaVarArg Fg
+highlight! link javaAnnotation Purple
+highlight! link javaUserLabel Purple
+highlight! link javaTypedef BlueItalic
+highlight! link javaParen Fg
+highlight! link javaParen1 Fg
+highlight! link javaParen2 Fg
+highlight! link javaParen3 Fg
+highlight! link javaParen4 Fg
+highlight! link javaParen5 Fg
+" }}}
+" }}}
 " " Kotlin: {{{
 " " kotlin-vim: https://github.com/udalov/kotlin-vim{{{
 " highlight! link ktSimpleInterpolation Yellow
