@@ -1050,22 +1050,23 @@ highlight! link goPredefinedIdentifiers OrangeItalic
 highlight! link goVar Red
 " }}}
 " }}}
-" " Rust: {{{
-" " builtin: https://github.com/rust-lang/rust.vim{{{
-" highlight! link rustStructure Orange
-" highlight! link rustIdentifier Purple
-" highlight! link rustModPath Orange
-" highlight! link rustModPathSep Grey
-" highlight! link rustSelf Blue
-" highlight! link rustSuper Blue
-" highlight! link rustDeriveTrait PurpleItalic
-" highlight! link rustEnumVariant Purple
-" highlight! link rustMacroVariable Blue
-" highlight! link rustAssert Aqua
-" highlight! link rustPanic Aqua
-" highlight! link rustPubScopeCrate PurpleItalic
-" " }}}
-" " }}}
+" Rust: {{{
+" builtin: https://github.com/rust-lang/rust.vim{{{
+highlight! link rustStructure Red
+highlight! link rustIdentifier OrangeItalic
+highlight! link rustModPath BlueItalic
+highlight! link rustModPathSep Grey
+highlight! link rustSelf OrangeItalic
+highlight! link rustSuper OrangeItalic
+highlight! link rustDeriveTrait Purple
+highlight! link rustEnumVariant Purple
+highlight! link rustMacroVariable OrangeItalic
+highlight! link rustAssert Green
+highlight! link rustPanic Green
+highlight! link rustPubScopeCrate BlueItalic
+highlight! link rustAttribute Purple
+" }}}
+" }}}
 " " Swift: {{{
 " " swift.vim: https://github.com/keith/swift.vim{{{
 " highlight! link swiftInterpolatedWrapper Yellow
