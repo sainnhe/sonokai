@@ -1235,112 +1235,112 @@ highlight! link makeSpecTarget BlueItalic
 highlight! link makeTarget Orange
 highlight! link makeCommands Red
 " }}}
-" " CMake: {{{
-" highlight! link cmakeCommand Orange
-" highlight! link cmakeKWconfigure_package_config_file Yellow
-" highlight! link cmakeKWwrite_basic_package_version_file Yellow
-" highlight! link cmakeKWExternalProject Aqua
-" highlight! link cmakeKWadd_compile_definitions Aqua
-" highlight! link cmakeKWadd_compile_options Aqua
-" highlight! link cmakeKWadd_custom_command Aqua
-" highlight! link cmakeKWadd_custom_target Aqua
-" highlight! link cmakeKWadd_definitions Aqua
-" highlight! link cmakeKWadd_dependencies Aqua
-" highlight! link cmakeKWadd_executable Aqua
-" highlight! link cmakeKWadd_library Aqua
-" highlight! link cmakeKWadd_link_options Aqua
-" highlight! link cmakeKWadd_subdirectory Aqua
-" highlight! link cmakeKWadd_test Aqua
-" highlight! link cmakeKWbuild_command Aqua
-" highlight! link cmakeKWcmake_host_system_information Aqua
-" highlight! link cmakeKWcmake_minimum_required Aqua
-" highlight! link cmakeKWcmake_parse_arguments Aqua
-" highlight! link cmakeKWcmake_policy Aqua
-" highlight! link cmakeKWconfigure_file Aqua
-" highlight! link cmakeKWcreate_test_sourcelist Aqua
-" highlight! link cmakeKWctest_build Aqua
-" highlight! link cmakeKWctest_configure Aqua
-" highlight! link cmakeKWctest_coverage Aqua
-" highlight! link cmakeKWctest_memcheck Aqua
-" highlight! link cmakeKWctest_run_script Aqua
-" highlight! link cmakeKWctest_start Aqua
-" highlight! link cmakeKWctest_submit Aqua
-" highlight! link cmakeKWctest_test Aqua
-" highlight! link cmakeKWctest_update Aqua
-" highlight! link cmakeKWctest_upload Aqua
-" highlight! link cmakeKWdefine_property Aqua
-" highlight! link cmakeKWdoxygen_add_docs Aqua
-" highlight! link cmakeKWenable_language Aqua
-" highlight! link cmakeKWenable_testing Aqua
-" highlight! link cmakeKWexec_program Aqua
-" highlight! link cmakeKWexecute_process Aqua
-" highlight! link cmakeKWexport Aqua
-" highlight! link cmakeKWexport_library_dependencies Aqua
-" highlight! link cmakeKWfile Aqua
-" highlight! link cmakeKWfind_file Aqua
-" highlight! link cmakeKWfind_library Aqua
-" highlight! link cmakeKWfind_package Aqua
-" highlight! link cmakeKWfind_path Aqua
-" highlight! link cmakeKWfind_program Aqua
-" highlight! link cmakeKWfltk_wrap_ui Aqua
-" highlight! link cmakeKWforeach Aqua
-" highlight! link cmakeKWfunction Aqua
-" highlight! link cmakeKWget_cmake_property Aqua
-" highlight! link cmakeKWget_directory_property Aqua
-" highlight! link cmakeKWget_filename_component Aqua
-" highlight! link cmakeKWget_property Aqua
-" highlight! link cmakeKWget_source_file_property Aqua
-" highlight! link cmakeKWget_target_property Aqua
-" highlight! link cmakeKWget_test_property Aqua
-" highlight! link cmakeKWif Aqua
-" highlight! link cmakeKWinclude Aqua
-" highlight! link cmakeKWinclude_directories Aqua
-" highlight! link cmakeKWinclude_external_msproject Aqua
-" highlight! link cmakeKWinclude_guard Aqua
-" highlight! link cmakeKWinstall Aqua
-" highlight! link cmakeKWinstall_files Aqua
-" highlight! link cmakeKWinstall_programs Aqua
-" highlight! link cmakeKWinstall_targets Aqua
-" highlight! link cmakeKWlink_directories Aqua
-" highlight! link cmakeKWlist Aqua
-" highlight! link cmakeKWload_cache Aqua
-" highlight! link cmakeKWload_command Aqua
-" highlight! link cmakeKWmacro Aqua
-" highlight! link cmakeKWmark_as_advanced Aqua
-" highlight! link cmakeKWmath Aqua
-" highlight! link cmakeKWmessage Aqua
-" highlight! link cmakeKWoption Aqua
-" highlight! link cmakeKWproject Aqua
-" highlight! link cmakeKWqt_wrap_cpp Aqua
-" highlight! link cmakeKWqt_wrap_ui Aqua
-" highlight! link cmakeKWremove Aqua
-" highlight! link cmakeKWseparate_arguments Aqua
-" highlight! link cmakeKWset Aqua
-" highlight! link cmakeKWset_directory_properties Aqua
-" highlight! link cmakeKWset_property Aqua
-" highlight! link cmakeKWset_source_files_properties Aqua
-" highlight! link cmakeKWset_target_properties Aqua
-" highlight! link cmakeKWset_tests_properties Aqua
-" highlight! link cmakeKWsource_group Aqua
-" highlight! link cmakeKWstring Aqua
-" highlight! link cmakeKWsubdirs Aqua
-" highlight! link cmakeKWtarget_compile_definitions Aqua
-" highlight! link cmakeKWtarget_compile_features Aqua
-" highlight! link cmakeKWtarget_compile_options Aqua
-" highlight! link cmakeKWtarget_include_directories Aqua
-" highlight! link cmakeKWtarget_link_directories Aqua
-" highlight! link cmakeKWtarget_link_libraries Aqua
-" highlight! link cmakeKWtarget_link_options Aqua
-" highlight! link cmakeKWtarget_precompile_headers Aqua
-" highlight! link cmakeKWtarget_sources Aqua
-" highlight! link cmakeKWtry_compile Aqua
-" highlight! link cmakeKWtry_run Aqua
-" highlight! link cmakeKWunset Aqua
-" highlight! link cmakeKWuse_mangled_mesa Aqua
-" highlight! link cmakeKWvariable_requires Aqua
-" highlight! link cmakeKWvariable_watch Aqua
-" highlight! link cmakeKWwrite_file Aqua
-" " }}}
+" CMake: {{{
+highlight! link cmakeCommand Red
+highlight! link cmakeKWconfigure_package_config_file BlueItalic
+highlight! link cmakeKWwrite_basic_package_version_file BlueItalic
+highlight! link cmakeKWExternalProject Green
+highlight! link cmakeKWadd_compile_definitions Green
+highlight! link cmakeKWadd_compile_options Green
+highlight! link cmakeKWadd_custom_command Green
+highlight! link cmakeKWadd_custom_target Green
+highlight! link cmakeKWadd_definitions Green
+highlight! link cmakeKWadd_dependencies Green
+highlight! link cmakeKWadd_executable Green
+highlight! link cmakeKWadd_library Green
+highlight! link cmakeKWadd_link_options Green
+highlight! link cmakeKWadd_subdirectory Green
+highlight! link cmakeKWadd_test Green
+highlight! link cmakeKWbuild_command Green
+highlight! link cmakeKWcmake_host_system_information Green
+highlight! link cmakeKWcmake_minimum_required Green
+highlight! link cmakeKWcmake_parse_arguments Green
+highlight! link cmakeKWcmake_policy Green
+highlight! link cmakeKWconfigure_file Green
+highlight! link cmakeKWcreate_test_sourcelist Green
+highlight! link cmakeKWctest_build Green
+highlight! link cmakeKWctest_configure Green
+highlight! link cmakeKWctest_coverage Green
+highlight! link cmakeKWctest_memcheck Green
+highlight! link cmakeKWctest_run_script Green
+highlight! link cmakeKWctest_start Green
+highlight! link cmakeKWctest_submit Green
+highlight! link cmakeKWctest_test Green
+highlight! link cmakeKWctest_update Green
+highlight! link cmakeKWctest_upload Green
+highlight! link cmakeKWdefine_property Green
+highlight! link cmakeKWdoxygen_add_docs Green
+highlight! link cmakeKWenable_language Green
+highlight! link cmakeKWenable_testing Green
+highlight! link cmakeKWexec_program Green
+highlight! link cmakeKWexecute_process Green
+highlight! link cmakeKWexport Green
+highlight! link cmakeKWexport_library_dependencies Green
+highlight! link cmakeKWfile Green
+highlight! link cmakeKWfind_file Green
+highlight! link cmakeKWfind_library Green
+highlight! link cmakeKWfind_package Green
+highlight! link cmakeKWfind_path Green
+highlight! link cmakeKWfind_program Green
+highlight! link cmakeKWfltk_wrap_ui Green
+highlight! link cmakeKWforeach Green
+highlight! link cmakeKWfunction Green
+highlight! link cmakeKWget_cmake_property Green
+highlight! link cmakeKWget_directory_property Green
+highlight! link cmakeKWget_filename_component Green
+highlight! link cmakeKWget_property Green
+highlight! link cmakeKWget_source_file_property Green
+highlight! link cmakeKWget_target_property Green
+highlight! link cmakeKWget_test_property Green
+highlight! link cmakeKWif Green
+highlight! link cmakeKWinclude Green
+highlight! link cmakeKWinclude_directories Green
+highlight! link cmakeKWinclude_external_msproject Green
+highlight! link cmakeKWinclude_guard Green
+highlight! link cmakeKWinstall Green
+highlight! link cmakeKWinstall_files Green
+highlight! link cmakeKWinstall_programs Green
+highlight! link cmakeKWinstall_targets Green
+highlight! link cmakeKWlink_directories Green
+highlight! link cmakeKWlist Green
+highlight! link cmakeKWload_cache Green
+highlight! link cmakeKWload_command Green
+highlight! link cmakeKWmacro Green
+highlight! link cmakeKWmark_as_advanced Green
+highlight! link cmakeKWmath Green
+highlight! link cmakeKWmessage Green
+highlight! link cmakeKWoption Green
+highlight! link cmakeKWproject Green
+highlight! link cmakeKWqt_wrap_cpp Green
+highlight! link cmakeKWqt_wrap_ui Green
+highlight! link cmakeKWremove Green
+highlight! link cmakeKWseparate_arguments Green
+highlight! link cmakeKWset Green
+highlight! link cmakeKWset_directory_properties Green
+highlight! link cmakeKWset_property Green
+highlight! link cmakeKWset_source_files_properties Green
+highlight! link cmakeKWset_target_properties Green
+highlight! link cmakeKWset_tests_properties Green
+highlight! link cmakeKWsource_group Green
+highlight! link cmakeKWstring Green
+highlight! link cmakeKWsubdirs Green
+highlight! link cmakeKWtarget_compile_definitions Green
+highlight! link cmakeKWtarget_compile_features Green
+highlight! link cmakeKWtarget_compile_options Green
+highlight! link cmakeKWtarget_include_directories Green
+highlight! link cmakeKWtarget_link_directories Green
+highlight! link cmakeKWtarget_link_libraries Green
+highlight! link cmakeKWtarget_link_options Green
+highlight! link cmakeKWtarget_precompile_headers Green
+highlight! link cmakeKWtarget_sources Green
+highlight! link cmakeKWtry_compile Green
+highlight! link cmakeKWtry_run Green
+highlight! link cmakeKWunset Green
+highlight! link cmakeKWuse_mangled_mesa Green
+highlight! link cmakeKWvariable_requires Green
+highlight! link cmakeKWvariable_watch Green
+highlight! link cmakeKWwrite_file Green
+" }}}
 " " Json: {{{
 " highlight! link jsonKeyword Orange
 " highlight! link jsonQuote Grey
