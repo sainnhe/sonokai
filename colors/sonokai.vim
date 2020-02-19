@@ -1026,16 +1026,16 @@ highlight! link ktStructure Red
 highlight! link ktKeyword OrangeItalic
 " }}}
 " }}}
-" " Scala: {{{
-" " builtin: https://github.com/derekwyatt/vim-scala{{{
-" highlight! link scalaNameDefinition Aqua
-" highlight! link scalaInterpolationBoundary Yellow
-" highlight! link scalaInterpolation Blue
-" highlight! link scalaTypeOperator Orange
-" highlight! link scalaOperator Orange
-" highlight! link scalaKeywordModifier Orange
-" " }}}
-" " }}}
+" Scala: {{{
+" builtin: https://github.com/derekwyatt/vim-scala{{{
+highlight! link scalaNameDefinition Fg
+highlight! link scalaInterpolationBoundary Purple
+highlight! link scalaInterpolation Purple
+highlight! link scalaTypeOperator Red
+highlight! link scalaOperator Red
+highlight! link scalaKeywordModifier Red
+" }}}
+" }}}
 " Go: {{{
 " builtin: https://github.com/google/vim-ft-go{{{
 highlight! link goDirective Red
