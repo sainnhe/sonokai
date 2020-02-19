@@ -876,37 +876,6 @@ highlight! link dartLibrary Red
 highlight! link dartMetadata OrangeItalic
 " }}}
 " }}}
-" " CoffeeScript: {{{
-" " vim-coffee-script: https://github.com/kchmck/vim-coffee-script{{{
-" highlight! link coffeeExtendedOp Orange
-" highlight! link coffeeSpecialOp Fg
-" highlight! link coffeeDotAccess Grey
-" highlight! link coffeeCurly Fg
-" highlight! link coffeeParen Fg
-" highlight! link coffeeBracket Fg
-" highlight! link coffeeParens Blue
-" highlight! link coffeeBrackets Blue
-" highlight! link coffeeCurlies Blue
-" highlight! link coffeeOperator RedItalic
-" highlight! link coffeeStatement Orange
-" highlight! link coffeeSpecialIdent Purple
-" highlight! link coffeeObject Purple
-" highlight! link coffeeObjAssign Aqua
-" " }}}
-" " }}}
-" " PureScript: {{{
-" " purescript-vim: https://github.com/purescript-contrib/purescript-vim{{{
-" highlight! link purescriptModuleKeyword PurpleItalic
-" highlight! link purescriptModule Aqua
-" highlight! link purescriptModuleParams Blue
-" highlight! link purescriptAsKeyword OrangeItalic
-" highlight! link purescriptHidingKeyword OrangeItalic
-" highlight! link purescriptWhere OrangeItalic
-" highlight! link purescriptIdentifier Blue
-" highlight! link purescriptFunction Yellow
-" highlight! link purescriptType Aqua
-" " }}}
-" " }}}
 " C/C++: {{{
 " vim-cpp-enhanced-highlight: https://github.com/octol/vim-cpp-enhanced-highlight{{{
 highlight! link cLabel Red
@@ -990,17 +959,6 @@ highlight! link luaEllipsis Red
 highlight! link luaDocTag Green
 " }}}
 " }}}
-" " Moonscript: {{{
-" " moonscript-vim: https://github.com/leafo/moonscript-vim{{{
-" highlight! link moonInterpDelim Yellow
-" highlight! link moonInterp Blue
-" highlight! link moonFunction Green
-" highlight! link moonLuaFunc AquaBold
-" highlight! link moonSpecialVar Purple
-" highlight! link moonObject Yellow
-" highlight! link moonDotAccess Grey
-" " }}}
-" " }}}
 " Java: {{{
 " builtin: {{{
 highlight! link javaClassDecl Red
@@ -1067,15 +1025,16 @@ highlight! link rustPubScopeCrate BlueItalic
 highlight! link rustAttribute Purple
 " }}}
 " }}}
-" " Swift: {{{
-" " swift.vim: https://github.com/keith/swift.vim{{{
-" highlight! link swiftInterpolatedWrapper Yellow
-" highlight! link swiftInterpolatedString Blue
-" highlight! link swiftProperty Aqua
-" highlight! link swiftTypeDeclaration Orange
-" highlight! link swiftClosureArgument Purple
-" " }}}
-" " }}}
+" Swift: {{{
+" swift.vim: https://github.com/keith/swift.vim{{{
+highlight! link swiftInterpolatedWrapper Purple
+highlight! link swiftInterpolatedString Purple
+highlight! link swiftProperty Fg
+highlight! link swiftTypeDeclaration Red
+highlight! link swiftClosureArgument OrangeItalic
+highlight! link swiftStructure Red
+" }}}
+" }}}
 " PHP: {{{
 " builtin: https://jasonwoof.com/gitweb/?p=vim-syntax.git;a=blob;f=php.vim;hb=HEAD{{{
 highlight! link phpVarSelector Fg
