@@ -1,3 +1,27 @@
+<h2 align="center">
+𝐒𝐡𝐮𝐬𝐢𝐚
+</h2>
+
+![shusia](https://user-images.githubusercontent.com/37491630/74803125-bd8e0600-52d3-11ea-824e-842da1c20180.png)
+
+<h2 align="center">
+𝐀𝐧𝐝𝐫𝐨𝐦𝐞𝐝𝐚
+</h2>
+
+![andromeda](https://user-images.githubusercontent.com/37491630/74803129-bf57c980-52d3-11ea-9393-1892b80f5e9c.png)
+
+<h2 align="center">
+𝐀𝐭𝐥𝐚𝐧𝐭𝐢𝐬
+</h2>
+
+![atlantis](https://user-images.githubusercontent.com/37491630/74803131-c1218d00-52d3-11ea-80da-de2901bc4f84.png)
+
+<h2 align="center">
+𝐌𝐚𝐢𝐚
+</h2>
+
+![maia](https://user-images.githubusercontent.com/37491630/74803138-c383e700-52d3-11ea-85a0-7f814fa81f61.png)
+
 Sometimes I need a high contrast color scheme, and I think monokai is one of the best solutions, it's very beautiful and vivid.
 
 However there is one thing I can't stand -- the contrast is too high, which is totally unacceptable to me.
