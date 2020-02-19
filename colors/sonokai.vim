@@ -312,7 +312,7 @@ call s:HL('Operator', s:palette.red, s:palette.none)
 call s:HL('SpecialKey', s:palette.blue, s:palette.none)
 call s:HL('Title', s:palette.red, s:palette.none, 'bold')
 call s:HL('Tag', s:palette.orange, s:palette.none)
-call s:HL('Delimiter', s:palette.grey, s:palette.none)
+call s:HL('Delimiter', s:palette.fg, s:palette.none)
 if s:configuration.disable_italic_comment
   call s:HL('Comment', s:palette.grey, s:palette.none)
   call s:HL('SpecialComment', s:palette.grey, s:palette.none)
@@ -513,186 +513,193 @@ highlight! link lessClass Red
 highlight! link lessFunction Orange
 " }}}
 " }}}
-" " JavaScript: {{{
-" " builtin: http://www.fleiner.com/vim/syntax/javascript.vim{{{
-" highlight! link javaScriptNull Aqua
-" highlight! link javaScriptIdentifier Orange
-" highlight! link javaScriptParens Fg
-" highlight! link javaScriptBraces Fg
-" highlight! link javaScriptGlobal Purple
-" highlight! link javaScriptMessage Yellow
-" highlight! link javaScriptFunction RedItalic
-" highlight! link javaScriptOperator Orange
-" highlight! link javaScriptMember Aqua
-" " }}}
-" " vim-javascript: https://github.com/pangloss/vim-javascript{{{
-" highlight! link jsThis Purple
-" highlight! link jsUndefined Aqua
-" highlight! link jsNull Aqua
-" highlight! link jsNan Aqua
-" highlight! link jsSuper Purple
-" highlight! link jsPrototype Purple
-" highlight! link jsFunction RedItalic
-" highlight! link jsGlobalNodeObjects PurpleItalic
-" highlight! link jsGlobalObjects Yellow
-" highlight! link jsArrowFunction Purple
-" highlight! link jsArrowFuncArgs Blue
-" highlight! link jsFuncArgs Blue
-" highlight! link jsObjectProp Aqua
-" highlight! link jsVariableDef Blue
-" highlight! link jsObjectKey Aqua
-" highlight! link jsParen Blue
-" highlight! link jsParenIfElse Blue
-" highlight! link jsParenRepeat Blue
-" highlight! link jsParenSwitch Blue
-" highlight! link jsParenCatch Blue
-" highlight! link jsBracket Blue
-" highlight! link jsBlockLabel Aqua
-" highlight! link jsFunctionKey GreenBold
-" highlight! link jsClassDefinition Yellow
-" highlight! link jsDot Grey
-" highlight! link jsDestructuringBlock Blue
-" highlight! link jsSpreadExpression Purple
-" highlight! link jsSpreadOperator Green
-" highlight! link jsModuleKeyword Yellow
-" highlight! link jsObjectValue Blue
-" highlight! link jsTemplateExpression Yellow
-" highlight! link jsTemplateBraces Yellow
-" highlight! link jsClassMethodType Orange
-" " }}}
-" " yajs: https://github.com/othree/yajs.vim{{{
-" highlight! link javascriptEndColons Fg
-" highlight! link javascriptOpSymbol Orange
-" highlight! link javascriptOpSymbols Orange
-" highlight! link javascriptIdentifierName Blue
-" highlight! link javascriptVariable Orange
-" highlight! link javascriptObjectLabel Aqua
-" highlight! link javascriptObjectLabelColon Grey
-" highlight! link javascriptPropertyNameString Aqua
-" highlight! link javascriptFuncArg Blue
-" highlight! link javascriptIdentifier Purple
-" highlight! link javascriptArrowFunc Purple
-" highlight! link javascriptTemplate Yellow
-" highlight! link javascriptTemplateSubstitution Yellow
-" highlight! link javascriptTemplateSB Yellow
-" highlight! link javascriptNodeGlobal PurpleItalic
-" highlight! link javascriptDocTags PurpleItalic
-" highlight! link javascriptDocNotation Purple
-" highlight! link javascriptClassSuper Purple
-" highlight! link javascriptClassName Yellow
-" highlight! link javascriptClassSuperName Yellow
-" highlight! link javascriptBrackets Fg
-" highlight! link javascriptBraces Fg
-" highlight! link javascriptLabel Purple
-" highlight! link javascriptDotNotation Grey
-" highlight! link javascriptGlobalArrayDot Grey
-" highlight! link javascriptGlobalBigIntDot Grey
-" highlight! link javascriptGlobalDateDot Grey
-" highlight! link javascriptGlobalJSONDot Grey
-" highlight! link javascriptGlobalMathDot Grey
-" highlight! link javascriptGlobalNumberDot Grey
-" highlight! link javascriptGlobalObjectDot Grey
-" highlight! link javascriptGlobalPromiseDot Grey
-" highlight! link javascriptGlobalRegExpDot Grey
-" highlight! link javascriptGlobalStringDot Grey
-" highlight! link javascriptGlobalSymbolDot Grey
-" highlight! link javascriptGlobalURLDot Grey
-" highlight! link javascriptMethod GreenBold
-" highlight! link javascriptMethodName GreenBold
-" highlight! link javascriptObjectMethodName GreenBold
-" highlight! link javascriptGlobalMethod GreenBold
-" highlight! link javascriptDOMStorageMethod GreenBold
-" highlight! link javascriptFileMethod GreenBold
-" highlight! link javascriptFileReaderMethod GreenBold
-" highlight! link javascriptFileListMethod GreenBold
-" highlight! link javascriptBlobMethod GreenBold
-" highlight! link javascriptURLStaticMethod GreenBold
-" highlight! link javascriptNumberStaticMethod GreenBold
-" highlight! link javascriptNumberMethod GreenBold
-" highlight! link javascriptDOMNodeMethod GreenBold
-" highlight! link javascriptES6BigIntStaticMethod GreenBold
-" highlight! link javascriptBOMWindowMethod GreenBold
-" highlight! link javascriptHeadersMethod GreenBold
-" highlight! link javascriptRequestMethod GreenBold
-" highlight! link javascriptResponseMethod GreenBold
-" highlight! link javascriptES6SetMethod GreenBold
-" highlight! link javascriptReflectMethod GreenBold
-" highlight! link javascriptPaymentMethod GreenBold
-" highlight! link javascriptPaymentResponseMethod GreenBold
-" highlight! link javascriptTypedArrayStaticMethod GreenBold
-" highlight! link javascriptGeolocationMethod GreenBold
-" highlight! link javascriptES6MapMethod GreenBold
-" highlight! link javascriptServiceWorkerMethod GreenBold
-" highlight! link javascriptCacheMethod GreenBold
-" highlight! link javascriptFunctionMethod GreenBold
-" highlight! link javascriptXHRMethod GreenBold
-" highlight! link javascriptBOMNavigatorMethod GreenBold
-" highlight! link javascriptServiceWorkerMethod GreenBold
-" highlight! link javascriptDOMEventTargetMethod GreenBold
-" highlight! link javascriptDOMEventMethod GreenBold
-" highlight! link javascriptIntlMethod GreenBold
-" highlight! link javascriptDOMDocMethod GreenBold
-" highlight! link javascriptStringStaticMethod GreenBold
-" highlight! link javascriptStringMethod GreenBold
-" highlight! link javascriptSymbolStaticMethod GreenBold
-" highlight! link javascriptRegExpMethod GreenBold
-" highlight! link javascriptObjectStaticMethod GreenBold
-" highlight! link javascriptObjectMethod GreenBold
-" highlight! link javascriptBOMLocationMethod GreenBold
-" highlight! link javascriptJSONStaticMethod GreenBold
-" highlight! link javascriptGeneratorMethod GreenBold
-" highlight! link javascriptEncodingMethod GreenBold
-" highlight! link javascriptPromiseStaticMethod GreenBold
-" highlight! link javascriptPromiseMethod GreenBold
-" highlight! link javascriptBOMHistoryMethod GreenBold
-" highlight! link javascriptDOMFormMethod GreenBold
-" highlight! link javascriptClipboardMethod GreenBold
-" highlight! link javascriptTypedArrayStaticMethod GreenBold
-" highlight! link javascriptBroadcastMethod GreenBold
-" highlight! link javascriptDateStaticMethod GreenBold
-" highlight! link javascriptDateMethod GreenBold
-" highlight! link javascriptConsoleMethod GreenBold
-" highlight! link javascriptArrayStaticMethod GreenBold
-" highlight! link javascriptArrayMethod GreenBold
-" highlight! link javascriptMathStaticMethod GreenBold
-" highlight! link javascriptSubtleCryptoMethod GreenBold
-" highlight! link javascriptCryptoMethod GreenBold
-" highlight! link javascriptProp Aqua
-" highlight! link javascriptBOMWindowProp Aqua
-" highlight! link javascriptDOMStorageProp Aqua
-" highlight! link javascriptFileReaderProp Aqua
-" highlight! link javascriptURLUtilsProp Aqua
-" highlight! link javascriptNumberStaticProp Aqua
-" highlight! link javascriptDOMNodeProp Aqua
-" highlight! link javascriptRequestProp Aqua
-" highlight! link javascriptResponseProp Aqua
-" highlight! link javascriptES6SetProp Aqua
-" highlight! link javascriptPaymentProp Aqua
-" highlight! link javascriptPaymentResponseProp Aqua
-" highlight! link javascriptPaymentAddressProp Aqua
-" highlight! link javascriptPaymentShippingOptionProp Aqua
-" highlight! link javascriptTypedArrayStaticProp Aqua
-" highlight! link javascriptServiceWorkerProp Aqua
-" highlight! link javascriptES6MapProp Aqua
-" highlight! link javascriptRegExpStaticProp Aqua
-" highlight! link javascriptRegExpProp Aqua
-" highlight! link javascriptXHRProp Aqua
-" highlight! link javascriptBOMNavigatorProp GreenBold
-" highlight! link javascriptDOMEventProp Aqua
-" highlight! link javascriptBOMNetworkProp Aqua
-" highlight! link javascriptDOMDocProp Aqua
-" highlight! link javascriptSymbolStaticProp Aqua
-" highlight! link javascriptSymbolProp Aqua
-" highlight! link javascriptBOMLocationProp Aqua
-" highlight! link javascriptEncodingProp Aqua
-" highlight! link javascriptCryptoProp Aqua
-" highlight! link javascriptBOMHistoryProp Aqua
-" highlight! link javascriptDOMFormProp Aqua
-" highlight! link javascriptDataViewProp Aqua
-" highlight! link javascriptBroadcastProp Aqua
-" highlight! link javascriptMathStaticProp Aqua
-" " }}}
-" " }}}
+" JavaScript: {{{
+" builtin: http://www.fleiner.com/vim/syntax/javascript.vim{{{
+highlight! link javaScriptNull Orange
+highlight! link javaScriptIdentifier BlueItalic
+highlight! link javaScriptParens Fg
+highlight! link javaScriptBraces Fg
+highlight! link javaScriptNumber Purple
+highlight! link javaScriptLabel Red
+highlight! link javaScriptGlobal BlueItalic
+highlight! link javaScriptMessage BlueItalic
+" }}}
+" vim-javascript: https://github.com/pangloss/vim-javascript{{{
+highlight! link jsNoise Fg
+highlight! link Noise Fg
+highlight! link jsParens Fg
+highlight! link jsBrackets Fg
+highlight! link jsObjectBraces Fg
+highlight! link jsThis BlueItalic
+highlight! link jsUndefined Orange
+highlight! link jsNull Orange
+highlight! link jsNan Orange
+highlight! link jsSuper Orange
+highlight! link jsPrototype Orange
+highlight! link jsFunction RedItalic
+highlight! link jsGlobalNodeObjects BlueItalic
+highlight! link jsGlobalObjects BlueItalic
+highlight! link jsArrowFunction Red
+highlight! link jsArrowFuncArgs Fg
+highlight! link jsFuncArgs Fg
+highlight! link jsObjectProp Fg
+highlight! link jsVariableDef Fg
+highlight! link jsObjectKey Fg
+highlight! link jsParen Fg
+highlight! link jsParenIfElse Fg
+highlight! link jsParenRepeat Fg
+highlight! link jsParenSwitch Fg
+highlight! link jsParenCatch Fg
+highlight! link jsBracket Fg
+highlight! link jsObjectValue Fg
+highlight! link jsDestructuringBlock Fg
+highlight! link jsBlockLabel Purple
+highlight! link jsFunctionKey Green
+highlight! link jsClassDefinition BlueItalic
+highlight! link jsDot Grey
+highlight! link jsSpreadExpression Purple
+highlight! link jsSpreadOperator Green
+highlight! link jsModuleKeyword BlueItalic
+highlight! link jsTemplateExpression Purple
+highlight! link jsTemplateBraces Purple
+highlight! link jsClassMethodType BlueItalic
+highlight! link jsExceptions BlueItalic
+" }}}
+" yajs: https://github.com/othree/yajs.vim{{{
+highlight! link javascriptOpSymbol Red
+highlight! link javascriptOpSymbols Red
+highlight! link javascriptIdentifierName Fg
+highlight! link javascriptVariable BlueItalic
+highlight! link javascriptObjectLabel Fg
+highlight! link javascriptPropertyNameString Fg
+highlight! link javascriptFuncArg Fg
+highlight! link javascriptObjectLiteral Green
+highlight! link javascriptIdentifier Orange
+highlight! link javascriptArrowFunc Red
+highlight! link javascriptTemplate Purple
+highlight! link javascriptTemplateSubstitution Purple
+highlight! link javascriptTemplateSB Purple
+highlight! link javascriptNodeGlobal BlueItalic
+highlight! link javascriptDocTags RedItalic
+highlight! link javascriptDocNotation Blue
+highlight! link javascriptClassSuper Orange
+highlight! link javascriptClassName BlueItalic
+highlight! link javascriptClassSuperName BlueItalic
+highlight! link javascriptOperator Red
+highlight! link javascriptBrackets Fg
+highlight! link javascriptBraces Fg
+highlight! link javascriptLabel Purple
+highlight! link javascriptEndColons Grey
+highlight! link javascriptObjectLabelColon Grey
+highlight! link javascriptDotNotation Grey
+highlight! link javascriptGlobalArrayDot Grey
+highlight! link javascriptGlobalBigIntDot Grey
+highlight! link javascriptGlobalDateDot Grey
+highlight! link javascriptGlobalJSONDot Grey
+highlight! link javascriptGlobalMathDot Grey
+highlight! link javascriptGlobalNumberDot Grey
+highlight! link javascriptGlobalObjectDot Grey
+highlight! link javascriptGlobalPromiseDot Grey
+highlight! link javascriptGlobalRegExpDot Grey
+highlight! link javascriptGlobalStringDot Grey
+highlight! link javascriptGlobalSymbolDot Grey
+highlight! link javascriptGlobalURLDot Grey
+highlight! link javascriptMethod Green
+highlight! link javascriptMethodName Green
+highlight! link javascriptObjectMethodName Green
+highlight! link javascriptGlobalMethod Green
+highlight! link javascriptDOMStorageMethod Green
+highlight! link javascriptFileMethod Green
+highlight! link javascriptFileReaderMethod Green
+highlight! link javascriptFileListMethod Green
+highlight! link javascriptBlobMethod Green
+highlight! link javascriptURLStaticMethod Green
+highlight! link javascriptNumberStaticMethod Green
+highlight! link javascriptNumberMethod Green
+highlight! link javascriptDOMNodeMethod Green
+highlight! link javascriptES6BigIntStaticMethod Green
+highlight! link javascriptBOMWindowMethod Green
+highlight! link javascriptHeadersMethod Green
+highlight! link javascriptRequestMethod Green
+highlight! link javascriptResponseMethod Green
+highlight! link javascriptES6SetMethod Green
+highlight! link javascriptReflectMethod Green
+highlight! link javascriptPaymentMethod Green
+highlight! link javascriptPaymentResponseMethod Green
+highlight! link javascriptTypedArrayStaticMethod Green
+highlight! link javascriptGeolocationMethod Green
+highlight! link javascriptES6MapMethod Green
+highlight! link javascriptServiceWorkerMethod Green
+highlight! link javascriptCacheMethod Green
+highlight! link javascriptFunctionMethod Green
+highlight! link javascriptXHRMethod Green
+highlight! link javascriptBOMNavigatorMethod Green
+highlight! link javascriptServiceWorkerMethod Green
+highlight! link javascriptDOMEventTargetMethod Green
+highlight! link javascriptDOMEventMethod Green
+highlight! link javascriptIntlMethod Green
+highlight! link javascriptDOMDocMethod Green
+highlight! link javascriptStringStaticMethod Green
+highlight! link javascriptStringMethod Green
+highlight! link javascriptSymbolStaticMethod Green
+highlight! link javascriptRegExpMethod Green
+highlight! link javascriptObjectStaticMethod Green
+highlight! link javascriptObjectMethod Green
+highlight! link javascriptBOMLocationMethod Green
+highlight! link javascriptJSONStaticMethod Green
+highlight! link javascriptGeneratorMethod Green
+highlight! link javascriptEncodingMethod Green
+highlight! link javascriptPromiseStaticMethod Green
+highlight! link javascriptPromiseMethod Green
+highlight! link javascriptBOMHistoryMethod Green
+highlight! link javascriptDOMFormMethod Green
+highlight! link javascriptClipboardMethod Green
+highlight! link javascriptTypedArrayStaticMethod Green
+highlight! link javascriptBroadcastMethod Green
+highlight! link javascriptDateStaticMethod Green
+highlight! link javascriptDateMethod Green
+highlight! link javascriptConsoleMethod Green
+highlight! link javascriptArrayStaticMethod Green
+highlight! link javascriptArrayMethod Green
+highlight! link javascriptMathStaticMethod Green
+highlight! link javascriptSubtleCryptoMethod Green
+highlight! link javascriptCryptoMethod Green
+highlight! link javascriptProp Fg
+highlight! link javascriptBOMWindowProp Fg
+highlight! link javascriptDOMStorageProp Fg
+highlight! link javascriptFileReaderProp Fg
+highlight! link javascriptURLUtilsProp Fg
+highlight! link javascriptNumberStaticProp Fg
+highlight! link javascriptDOMNodeProp Fg
+highlight! link javascriptRequestProp Fg
+highlight! link javascriptResponseProp Fg
+highlight! link javascriptES6SetProp Fg
+highlight! link javascriptPaymentProp Fg
+highlight! link javascriptPaymentResponseProp Fg
+highlight! link javascriptPaymentAddressProp Fg
+highlight! link javascriptPaymentShippingOptionProp Fg
+highlight! link javascriptTypedArrayStaticProp Fg
+highlight! link javascriptServiceWorkerProp Fg
+highlight! link javascriptES6MapProp Fg
+highlight! link javascriptRegExpStaticProp Fg
+highlight! link javascriptRegExpProp Fg
+highlight! link javascriptXHRProp Fg
+highlight! link javascriptBOMNavigatorProp Green
+highlight! link javascriptDOMEventProp Fg
+highlight! link javascriptBOMNetworkProp Fg
+highlight! link javascriptDOMDocProp Fg
+highlight! link javascriptSymbolStaticProp Fg
+highlight! link javascriptSymbolProp Fg
+highlight! link javascriptBOMLocationProp Fg
+highlight! link javascriptEncodingProp Fg
+highlight! link javascriptCryptoProp Fg
+highlight! link javascriptBOMHistoryProp Fg
+highlight! link javascriptDOMFormProp Fg
+highlight! link javascriptDataViewProp Fg
+highlight! link javascriptBroadcastProp Fg
+highlight! link javascriptMathStaticProp Fg
+" }}}
+" }}}
 " " JavaScript React: {{{
 " " vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
 " highlight! link jsxTagName OrangeItalic
