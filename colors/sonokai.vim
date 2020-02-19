@@ -1114,19 +1114,18 @@ highlight! link rubyMacro Red
 highlight! link rubySymbol Fg
 " }}}
 " }}}
-" " Haskell: {{{
-" " haskell-vim: https://github.com/neovimhaskell/haskell-vim{{{
-" highlight! link haskellBrackets Blue
-" highlight! link haskellIdentifier Yellow
-" highlight! link haskellAssocType Aqua
-" highlight! link haskellQuotedType Aqua
-" highlight! link haskellType Aqua
-" highlight! link haskellDeclKeyword RedItalic
-" highlight! link haskellWhere RedItalic
-" highlight! link haskellDeriving PurpleItalic
-" highlight! link haskellForeignKeywords PurpleItalic
-" " }}}
-" " }}}
+" Haskell: {{{
+" haskell-vim: https://github.com/neovimhaskell/haskell-vim{{{
+highlight! link haskellBrackets Fg
+highlight! link haskellIdentifier OrangeItalic
+highlight! link haskellDecl Red
+highlight! link haskellType BlueItalic
+highlight! link haskellDeclKeyword Red
+highlight! link haskellWhere Red
+highlight! link haskellDeriving Red
+highlight! link haskellForeignKeywords Red
+" }}}
+" }}}
 " " Perl: {{{
 " " builtin: https://github.com/vim-perl/vim-perl{{{
 " highlight! link perlStatementPackage PurpleItalic
