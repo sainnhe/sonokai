@@ -1180,43 +1180,28 @@ highlight! link clojureMeta Purple
 highlight! link clojureDeref Purple
 " }}}
 " }}}
-" " Shell: {{{
-" " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_SH{{{
-" highlight! link shRange Fg
-" highlight! link shTestOpr Orange
-" highlight! link shOption Aqua
-" highlight! link bashStatement Orange
-" highlight! link shOperator Orange
-" highlight! link shQuote Green
-" highlight! link shSet Orange
-" highlight! link shSetList Blue
-" highlight! link shSnglCase Orange
-" highlight! link shVariable Blue
-" highlight! link shVarAssign Orange
-" highlight! link shCmdSubRegion Green
-" highlight! link shCommandSub Orange
-" highlight! link shFunctionOne GreenBold
-" highlight! link shFunctionKey RedItalic
-" " }}}
-" " }}}
-" " Zsh: {{{
-" " builtin: https://github.com/chrisbra/vim-zsh{{{
-" highlight! link zshOptStart PurpleItalic
-" highlight! link zshOption Blue
-" highlight! link zshSubst Yellow
-" highlight! link zshFunction GreenBold
-" highlight! link zshDeref Blue
-" highlight! link zshTypes Orange
-" highlight! link zshVariableDef Blue
-" " }}}
-" " }}}
-" " Fish: {{{
-" " vim-fish: https://github.com/georgewitteman/vim-fish{{{
-" highlight! link fishStatement Orange
-" highlight! link fishLabel RedItalic
-" highlight! link fishCommandSub Yellow
-" " }}}
-" " }}}
+" Shell: {{{
+" builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_SH{{{
+highlight! link shRange Fg
+highlight! link shOption Purple
+highlight! link shQuote Yellow
+highlight! link shVariable BlueItalic
+highlight! link shDerefSimple BlueItalic
+highlight! link shDerefVar BlueItalic
+highlight! link shDerefSpecial BlueItalic
+highlight! link shDerefOff BlueItalic
+highlight! link shVarAssign Red
+highlight! link shFunctionOne Green
+highlight! link shFunctionKey Red
+" }}}
+" }}}
+" Zsh: {{{
+" builtin: https://github.com/chrisbra/vim-zsh{{{
+highlight! link zshOption BlueItalic
+highlight! link zshSubst Orange
+highlight! link zshFunction Green
+" }}}
+" }}}
 " " PowerShell: {{{
 " " vim-ps1: https://github.com/PProvost/vim-ps1{{{
 " highlight! link ps1FunctionInvocation AquaBold
