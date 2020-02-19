@@ -1126,20 +1126,22 @@ highlight! link haskellDeriving Red
 highlight! link haskellForeignKeywords Red
 " }}}
 " }}}
-" " Perl: {{{
-" " builtin: https://github.com/vim-perl/vim-perl{{{
-" highlight! link perlStatementPackage PurpleItalic
-" highlight! link perlStatementInclude PurpleItalic
-" highlight! link perlStatementStorage Orange
-" highlight! link perlStatementList Orange
-" highlight! link perlMatchStartEnd Orange
-" highlight! link perlVarSimpleMemberName Aqua
-" highlight! link perlVarSimpleMember Fg
-" highlight! link perlMethod GreenBold
-" highlight! link podVerbatimLine Green
-" highlight! link podCmdText Yellow
-" " }}}
-" " }}}
+" Perl: {{{
+" builtin: https://github.com/vim-perl/vim-perl{{{
+highlight! link perlStatementPackage Red
+highlight! link perlStatementInclude Red
+highlight! link perlStatementStorage Red
+highlight! link perlStatementList Red
+highlight! link perlMatchStartEnd Red
+highlight! link perlVarSimpleMemberName Green
+highlight! link perlVarSimpleMember Fg
+highlight! link perlMethod Green
+highlight! link podVerbatimLine Green
+highlight! link podCmdText Yellow
+highlight! link perlVarPlain Fg
+highlight! link perlVarPlain2 Fg
+" }}}
+" }}}
 " " OCaml: {{{
 " " builtin: https://github.com/rgrinberg/vim-ocaml{{{
 " highlight! link ocamlArrow Orange
