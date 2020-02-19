@@ -865,17 +865,17 @@ highlight! link typescriptBOMHistoryProp Fg
 highlight! link typescriptMathStaticProp Fg
 " }}}
 " }}}
-" " Dart: {{{
-" " dart-lang: https://github.com/dart-lang/dart-vim-plugin{{{
-" highlight! link dartCoreClasses Aqua
-" highlight! link dartTypeName Aqua
-" highlight! link dartInterpolation Blue
-" highlight! link dartTypeDef RedItalic
-" highlight! link dartClassDecl RedItalic
-" highlight! link dartLibrary PurpleItalic
-" highlight! link dartMetadata Blue
-" " }}}
-" " }}}
+" Dart: {{{
+" dart-lang: https://github.com/dart-lang/dart-vim-plugin{{{
+highlight! link dartCoreClasses BlueItalic
+highlight! link dartTypeName BlueItalic
+highlight! link dartInterpolation Purple
+highlight! link dartTypeDef Red
+highlight! link dartClassDecl Red
+highlight! link dartLibrary Red
+highlight! link dartMetadata OrangeItalic
+" }}}
+" }}}
 " " CoffeeScript: {{{
 " " vim-coffee-script: https://github.com/kchmck/vim-coffee-script{{{
 " highlight! link coffeeExtendedOp Orange
