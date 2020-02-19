@@ -1210,25 +1210,25 @@ highlight! link ps1InterpolationDelimiter Purple
 highlight! link ps1BuiltIn BlueItalic
 " }}}
 " }}}
-" " VimL: {{{
-" highlight! link vimLet Orange
-" highlight! link vimFunction GreenBold
-" highlight! link vimIsCommand Fg
-" highlight! link vimUserFunc GreenBold
-" highlight! link vimFuncName GreenBold
-" highlight! link vimMap PurpleItalic
-" highlight! link vimNotation Aqua
-" highlight! link vimMapLhs Green
-" highlight! link vimMapRhs Green
-" highlight! link vimSetEqual Yellow
-" highlight! link vimSetSep Fg
-" highlight! link vimOption Aqua
-" highlight! link vimUserAttrbKey Yellow
-" highlight! link vimUserAttrb Green
-" highlight! link vimAutoCmdSfxList Aqua
-" highlight! link vimSynType Orange
-" highlight! link vimHiBang Orange
-" " }}}
+" VimL: {{{
+highlight! link vimLet Red
+highlight! link vimFunction Green
+highlight! link vimIsCommand Fg
+highlight! link vimUserFunc Green
+highlight! link vimFuncName Green
+highlight! link vimMap BlueItalic
+highlight! link vimNotation Purple
+highlight! link vimMapLhs Green
+highlight! link vimMapRhs Green
+highlight! link vimSetEqual BlueItalic
+highlight! link vimSetSep Fg
+highlight! link vimOption BlueItalic
+highlight! link vimUserAttrbKey BlueItalic
+highlight! link vimUserAttrb Green
+highlight! link vimAutoCmdSfxList Orange
+highlight! link vimSynType Orange
+highlight! link vimHiBang Orange
+" }}}
 " " Makefile: {{{
 " highlight! link makeIdent Aqua
 " highlight! link makeSpecTarget Yellow
