@@ -1341,11 +1341,14 @@ highlight! link cmakeKWvariable_requires Green
 highlight! link cmakeKWvariable_watch Green
 highlight! link cmakeKWwrite_file Green
 " }}}
-" " Json: {{{
-" highlight! link jsonKeyword Orange
-" highlight! link jsonQuote Grey
-" highlight! link jsonBraces Fg
-" " }}}
+" Json: {{{
+highlight! link jsonKeyword Red
+highlight! link jsonString Green
+highlight! link jsonBoolean Blue
+highlight! link jsonNoise Grey
+highlight! link jsonQuote Grey
+highlight! link jsonBraces Fg
+" }}}
 " " Yaml: {{{
 " highlight! link yamlKey Orange
 " highlight! link yamlConstant Purple
