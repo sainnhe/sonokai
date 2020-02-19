@@ -1167,19 +1167,19 @@ highlight! link lispKey Orange
 highlight! link lispFunc Green
 " }}}
 " }}}
-" " Clojure: {{{
-" " builtin: https://github.com/guns/vim-clojure-static{{{
-" highlight! link clojureMacro PurpleItalic
-" highlight! link clojureFunc AquaBold
-" highlight! link clojureConstant Yellow
-" highlight! link clojureSpecial RedItalic
-" highlight! link clojureDefine RedItalic
-" highlight! link clojureKeyword Orange
-" highlight! link clojureVariable Blue
-" highlight! link clojureMeta Yellow
-" highlight! link clojureDeref Yellow
-" " }}}
-" " }}}
+" Clojure: {{{
+" builtin: https://github.com/guns/vim-clojure-static{{{
+highlight! link clojureMacro Red
+highlight! link clojureFunc Green
+highlight! link clojureConstant OrangeItalic
+highlight! link clojureSpecial Red
+highlight! link clojureDefine Red
+highlight! link clojureKeyword Blue
+highlight! link clojureVariable Fg
+highlight! link clojureMeta Purple
+highlight! link clojureDeref Purple
+" }}}
+" }}}
 " " Shell: {{{
 " " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_SH{{{
 " highlight! link shRange Fg
