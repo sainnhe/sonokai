@@ -1354,12 +1354,13 @@ highlight! link yamlKey Red
 highlight! link yamlConstant BlueItalic
 highlight! link yamlString Green
 " }}}
-" " Toml: {{{
-" call s:HL('tomlTable', s:palette.purple, s:palette.none, 'bold')
-" highlight! link tomlKey Orange
-" highlight! link tomlBoolean Aqua
-" highlight! link tomlTableArray tomlTable
-" " }}}
+" Toml: {{{
+call s:HL('tomlTable', s:palette.purple, s:palette.none, 'bold')
+highlight! link tomlKey Red
+highlight! link tomlBoolean Blue
+highlight! link tomlString Green
+highlight! link tomlTableArray tomlTable
+" }}}
 " Diff: {{{
 highlight! link diffAdded Green
 highlight! link diffRemoved Red
