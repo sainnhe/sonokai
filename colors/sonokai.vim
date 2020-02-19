@@ -90,7 +90,7 @@ elseif s:configuration.style ==# 'atlantis'
         \ 'bg_blue':    ['#7ad5f1',   '110',  'Blue'],
         \ 'diff_blue':  ['#323e47',   '17',   'DarkBlue'],
         \ 'fg':         ['#e1e3e4',   '250',  'White'],
-        \ 'red':        ['#fd6376',   '203',  'Red'],
+        \ 'red':        ['#ff6578',   '203',  'Red'],
         \ 'orange':     ['#f69c5e',   '215',  'Orange'],
         \ 'yellow':     ['#eacb64',   '179',  'Yellow'],
         \ 'green':      ['#9dd274',   '107',  'Green'],

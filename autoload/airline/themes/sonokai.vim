@@ -44,7 +44,7 @@ elseif s:style ==# 'atlantis'
     let s:green_sel = [ '#a5e179', 107 ]
     let s:blue_sel = [ '#7ad5f1', 110 ]
     let s:purple_sel = [ '#ba9cf3', 176 ]
-    let s:red_fg = [ '#fd6376', 203 ]
+    let s:red_fg = [ '#ff6578', 203 ]
     let s:green_fg = [ '#9dd274', 107 ]
     let s:blue_fg = [ '#72cce8', 110 ]
     let s:purple_fg = [ '#ba9cf3', 176 ]
