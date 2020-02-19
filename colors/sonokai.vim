@@ -1036,21 +1036,20 @@ highlight! link pythonDot Grey
 " highlight! link scalaKeywordModifier Orange
 " " }}}
 " " }}}
-" " Go: {{{
-" " builtin: https://github.com/google/vim-ft-go{{{
-" highlight! link goDirective PurpleItalic
-" highlight! link goConstants Aqua
-" highlight! link goDeclType OrangeItalic
-" " }}}
-" " polyglot: {{{
-" highlight! link goPackage PurpleItalic
-" highlight! link goImport PurpleItalic
-" highlight! link goVarArgs Blue
-" highlight! link goBuiltins GreenBold
-" highlight! link goPredefinedIdentifiers Aqua
-" highlight! link goVar Orange
-" " }}}
-" " }}}
+" Go: {{{
+" builtin: https://github.com/google/vim-ft-go{{{
+highlight! link goDirective Red
+highlight! link goConstants OrangeItalic
+highlight! link goDeclType Red
+" }}}
+" polyglot: {{{
+highlight! link goPackage Red
+highlight! link goImport Red
+highlight! link goBuiltins Green
+highlight! link goPredefinedIdentifiers OrangeItalic
+highlight! link goVar Red
+" }}}
+" }}}
 " " Rust: {{{
 " " builtin: https://github.com/rust-lang/rust.vim{{{
 " highlight! link rustStructure Orange
