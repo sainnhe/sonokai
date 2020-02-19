@@ -1101,28 +1101,25 @@ highlight! link perlVarPlain Fg
 highlight! link perlVarPlain2 Fg
 " }}}
 " }}}
-" " OCaml: {{{
-" " builtin: https://github.com/rgrinberg/vim-ocaml{{{
-" highlight! link ocamlArrow Orange
-" highlight! link ocamlEqual Orange
-" highlight! link ocamlOperator Orange
-" highlight! link ocamlKeyChar Orange
-" highlight! link ocamlModPath Green
-" highlight! link ocamlFullMod Green
-" highlight! link ocamlModule Purple
-" highlight! link ocamlConstructor Aqua
-" highlight! link ocamlFuncWith Yellow
-" highlight! link ocamlWith Yellow
-" highlight! link ocamlModParam Fg
-" highlight! link ocamlModParam1 Fg
-" highlight! link ocamlAnyVar Blue
-" highlight! link ocamlPpxEncl Orange
-" highlight! link ocamlPpxIdentifier Blue
-" highlight! link ocamlSigEncl Orange
-" highlight! link ocamlStructEncl Aqua
-" highlight! link ocamlModParam1 Blue
-" " }}}
-" " }}}
+" OCaml: {{{
+" builtin: https://github.com/rgrinberg/vim-ocaml{{{
+highlight! link ocamlArrow Red
+highlight! link ocamlEqual Red
+highlight! link ocamlOperator Red
+highlight! link ocamlKeyChar Red
+highlight! link ocamlModPath Green
+highlight! link ocamlFullMod Green
+highlight! link ocamlModule BlueItalic
+highlight! link ocamlConstructor Orange
+highlight! link ocamlModParam Fg
+highlight! link ocamlModParam1 Fg
+highlight! link ocamlAnyVar Fg " aqua
+highlight! link ocamlPpxEncl Red
+highlight! link ocamlPpxIdentifier Fg
+highlight! link ocamlSigEncl Red
+highlight! link ocamlModParam1 Fg
+" }}}
+" }}}
 " " Erlang: {{{
 " " builtin: https://github.com/vim-erlang/vim-erlang-runtime{{{
 " highlight! link erlangAtom Aqua
