@@ -1076,26 +1076,30 @@ highlight! link rustAttribute Purple
 " highlight! link swiftClosureArgument Purple
 " " }}}
 " " }}}
-" " PHP: {{{
-" " builtin: https://jasonwoof.com/gitweb/?p=vim-syntax.git;a=blob;f=php.vim;hb=HEAD{{{
-" highlight! link phpVarSelector Blue
-" highlight! link phpDefine OrangeItalic
-" highlight! link phpStructure RedItalic
-" highlight! link phpSpecialFunction GreenBold
-" highlight! link phpInterpSimpleCurly Yellow
-" highlight! link phpComparison Orange
-" highlight! link phpMethodsVar Aqua
-" highlight! link phpMemberSelector Green
-" " }}}
-" " php.vim: https://github.com/StanAngeloff/php.vim{{{
-" highlight! link phpParent Fg
-" highlight! link phpNowDoc Green
-" highlight! link phpFunction GreenBold
-" highlight! link phpMethod GreenBold
-" highlight! link phpClass Orange
-" highlight! link phpSuperglobals Purple
-" " }}}
-" " }}}
+" PHP: {{{
+" builtin: https://jasonwoof.com/gitweb/?p=vim-syntax.git;a=blob;f=php.vim;hb=HEAD{{{
+highlight! link phpVarSelector Fg
+highlight! link phpIdentifier Fg
+highlight! link phpDefine Green
+highlight! link phpStructure Red
+highlight! link phpSpecialFunction Green
+highlight! link phpInterpSimpleCurly Purple
+highlight! link phpComparison Red
+highlight! link phpMethodsVar Fg
+highlight! link phpInterpVarname Fg
+highlight! link phpMemberSelector Red
+highlight! link phpLabel Red
+" }}}
+" php.vim: https://github.com/StanAngeloff/php.vim{{{
+highlight! link phpParent Fg
+highlight! link phpNowDoc Yellow
+highlight! link phpFunction Green
+highlight! link phpMethod Green
+highlight! link phpClass BlueItalic
+highlight! link phpSuperglobals BlueItalic
+highlight! link phpNullValue OrangeItalic
+" }}}
+" }}}
 " " Ruby: {{{
 " " builtin: https://github.com/vim-ruby/vim-ruby{{{
 " highlight! link rubyKeywordAsMethod GreenBold
