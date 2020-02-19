@@ -944,32 +944,31 @@ highlight! link csInterpolation Purple
 highlight! link csEndColon Fg
 " }}}
 " }}}
-" " Python: {{{
-" " builtin: {{{
-" highlight! link pythonBuiltin Yellow
-" highlight! link pythonExceptions Purple
-" highlight! link pythonDecoratorName Blue
-" " }}}
-" " python-syntax: https://github.com/vim-python/python-syntax{{{
-" highlight! link pythonExClass Purple
-" highlight! link pythonBuiltinType Yellow
-" highlight! link pythonBuiltinObj Blue
-" highlight! link pythonDottedName PurpleItalic
-" highlight! link pythonBuiltinFunc GreenBold
-" highlight! link pythonFunction AquaBold
-" highlight! link pythonDecorator Orange
-" highlight! link pythonInclude Include
-" highlight! link pythonImport PreProc
-" highlight! link pythonRun Blue
-" highlight! link pythonCoding Grey
-" highlight! link pythonOperator Orange
-" highlight! link pythonConditional RedItalic
-" highlight! link pythonRepeat RedItalic
-" highlight! link pythonException RedItalic
-" highlight! link pythonNone Aqua
-" highlight! link pythonDot Grey
-" " }}}
-" " }}}
+" Python: {{{
+" builtin: {{{
+highlight! link pythonBuiltin BlueItalic
+highlight! link pythonExceptions Red
+highlight! link pythonDecoratorName OrangeItalic
+" }}}
+" python-syntax: https://github.com/vim-python/python-syntax{{{
+highlight! link pythonExClass BlueItalic
+highlight! link pythonBuiltinType BlueItalic
+highlight! link pythonBuiltinObj OrangeItalic
+highlight! link pythonDottedName OrangeItalic
+highlight! link pythonBuiltinFunc Green
+highlight! link pythonFunction Green
+highlight! link pythonDecorator OrangeItalic
+highlight! link pythonInclude Include
+highlight! link pythonImport PreProc
+highlight! link pythonOperator Red
+highlight! link pythonConditional Red
+highlight! link pythonRepeat Red
+highlight! link pythonException Red
+highlight! link pythonNone OrangeItalic
+highlight! link pythonCoding Grey
+highlight! link pythonDot Grey
+" }}}
+" }}}
 " " Lua: {{{
 " " builtin: {{{
 " highlight! link luaFunc GreenBold
