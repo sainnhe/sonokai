@@ -1120,17 +1120,18 @@ highlight! link ocamlSigEncl Red
 highlight! link ocamlModParam1 Fg
 " }}}
 " }}}
-" " Erlang: {{{
-" " builtin: https://github.com/vim-erlang/vim-erlang-runtime{{{
-" highlight! link erlangAtom Aqua
-" highlight! link erlangLocalFuncRef GreenBold
-" highlight! link erlangLocalFuncCall GreenBold
-" highlight! link erlangGlobalFuncRef GreenBold
-" highlight! link erlangGlobalFuncCall GreenBold
-" highlight! link erlangAttribute PurpleItalic
-" highlight! link erlangPipe Orange
-" " }}}
-" " }}}
+" Erlang: {{{
+" builtin: https://github.com/vim-erlang/vim-erlang-runtime{{{
+highlight! link erlangAtom Fg
+highlight! link erlangVariable Fg
+highlight! link erlangLocalFuncRef Green
+highlight! link erlangLocalFuncCall Green
+highlight! link erlangGlobalFuncRef Green
+highlight! link erlangGlobalFuncCall Green
+highlight! link erlangAttribute BlueItalic
+highlight! link erlangPipe Red
+" }}}
+" }}}
 " " Elixir: {{{
 " " vim-elixir: https://github.com/elixir-editors/vim-elixir{{{
 " highlight! link elixirStringDelimiter Green
