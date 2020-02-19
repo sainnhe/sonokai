@@ -1132,34 +1132,34 @@ highlight! link erlangAttribute BlueItalic
 highlight! link erlangPipe Red
 " }}}
 " }}}
-" " Elixir: {{{
-" " vim-elixir: https://github.com/elixir-editors/vim-elixir{{{
-" highlight! link elixirStringDelimiter Green
-" highlight! link elixirKeyword Orange
-" highlight! link elixirInterpolation Yellow
-" highlight! link elixirInterpolationDelimiter Yellow
-" highlight! link elixirSelf Purple
-" highlight! link elixirPseudoVariable Purple
-" highlight! link elixirModuleDefine PurpleItalic
-" highlight! link elixirBlockDefinition RedItalic
-" highlight! link elixirDefine RedItalic
-" highlight! link elixirPrivateDefine RedItalic
-" highlight! link elixirGuard RedItalic
-" highlight! link elixirPrivateGuard RedItalic
-" highlight! link elixirProtocolDefine RedItalic
-" highlight! link elixirImplDefine RedItalic
-" highlight! link elixirRecordDefine RedItalic
-" highlight! link elixirPrivateRecordDefine RedItalic
-" highlight! link elixirMacroDefine RedItalic
-" highlight! link elixirPrivateMacroDefine RedItalic
-" highlight! link elixirDelegateDefine RedItalic
-" highlight! link elixirOverridableDefine RedItalic
-" highlight! link elixirExceptionDefine RedItalic
-" highlight! link elixirCallbackDefine RedItalic
-" highlight! link elixirStructDefine RedItalic
-" highlight! link elixirExUnitMacro RedItalic
-" " }}}
-" " }}}
+" Elixir: {{{
+" vim-elixir: https://github.com/elixir-editors/vim-elixir{{{
+highlight! link elixirStringDelimiter Yellow
+highlight! link elixirKeyword Red
+highlight! link elixirInterpolation Purple
+highlight! link elixirInterpolationDelimiter Purple
+highlight! link elixirSelf BlueItalic
+highlight! link elixirPseudoVariable OrangeItalic
+highlight! link elixirModuleDefine Red
+highlight! link elixirBlockDefinition Red
+highlight! link elixirDefine Red
+highlight! link elixirPrivateDefine Red
+highlight! link elixirGuard Red
+highlight! link elixirPrivateGuard Red
+highlight! link elixirProtocolDefine Red
+highlight! link elixirImplDefine Red
+highlight! link elixirRecordDefine Red
+highlight! link elixirPrivateRecordDefine Red
+highlight! link elixirMacroDefine Red
+highlight! link elixirPrivateMacroDefine Red
+highlight! link elixirDelegateDefine Red
+highlight! link elixirOverridableDefine Red
+highlight! link elixirExceptionDefine Red
+highlight! link elixirCallbackDefine Red
+highlight! link elixirStructDefine Red
+highlight! link elixirExUnitMacro Red
+" }}}
+" }}}
 " " Common Lisp: {{{
 " " builtin: http://www.drchip.org/astronaut/vim/index.html#SYNTAX_LISP{{{
 " highlight! link lispAtomMark Green
