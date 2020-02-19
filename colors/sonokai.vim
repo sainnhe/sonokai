@@ -1008,7 +1008,7 @@ highlight! link javaMethodDecl Red
 highlight! link javaVarArg Fg
 highlight! link javaAnnotation Purple
 highlight! link javaUserLabel Purple
-highlight! link javaTypedef BlueItalic
+highlight! link javaTypedef OrangeItalic
 highlight! link javaParen Fg
 highlight! link javaParen1 Fg
 highlight! link javaParen2 Fg
@@ -1017,15 +1017,15 @@ highlight! link javaParen4 Fg
 highlight! link javaParen5 Fg
 " }}}
 " }}}
-" " Kotlin: {{{
-" " kotlin-vim: https://github.com/udalov/kotlin-vim{{{
-" highlight! link ktSimpleInterpolation Yellow
-" highlight! link ktComplexInterpolation Yellow
-" highlight! link ktComplexInterpolationBrace Yellow
-" highlight! link ktStructure RedItalic
-" highlight! link ktKeyword Aqua
-" " }}}
-" " }}}
+" Kotlin: {{{
+" kotlin-vim: https://github.com/udalov/kotlin-vim{{{
+highlight! link ktSimpleInterpolation Purple
+highlight! link ktComplexInterpolation Purple
+highlight! link ktComplexInterpolationBrace Purple
+highlight! link ktStructure Red
+highlight! link ktKeyword OrangeItalic
+" }}}
+" }}}
 " " Scala: {{{
 " " builtin: https://github.com/derekwyatt/vim-scala{{{
 " highlight! link scalaNameDefinition Aqua
