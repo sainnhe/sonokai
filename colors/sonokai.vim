@@ -969,27 +969,27 @@ highlight! link pythonCoding Grey
 highlight! link pythonDot Grey
 " }}}
 " }}}
-" " Lua: {{{
-" " builtin: {{{
-" highlight! link luaFunc GreenBold
-" highlight! link luaFunction Aqua
-" highlight! link luaTable Fg
-" highlight! link luaIn RedItalic
-" " }}}
-" " vim-lua: https://github.com/tbastos/vim-lua{{{
-" highlight! link luaFuncCall GreenBold
-" highlight! link luaLocal Orange
-" highlight! link luaSpecialValue GreenBold
-" highlight! link luaBraces Fg
-" highlight! link luaBuiltIn Purple
-" highlight! link luaNoise Grey
-" highlight! link luaLabel Purple
-" highlight! link luaFuncTable Yellow
-" highlight! link luaFuncArgName Blue
-" highlight! link luaEllipsis Orange
-" highlight! link luaDocTag Green
-" " }}}
-" " }}}
+" Lua: {{{
+" builtin: {{{
+highlight! link luaFunc Green
+highlight! link luaFunction Red
+highlight! link luaTable Fg
+highlight! link luaIn Red
+" }}}
+" vim-lua: https://github.com/tbastos/vim-lua{{{
+highlight! link luaFuncCall Green
+highlight! link luaLocal Red
+highlight! link luaSpecialValue Green
+highlight! link luaBraces Fg
+highlight! link luaBuiltIn BlueItalic
+highlight! link luaNoise Grey
+highlight! link luaLabel Purple
+highlight! link luaFuncTable BlueItalic
+highlight! link luaFuncArgName Fg
+highlight! link luaEllipsis Red
+highlight! link luaDocTag Green
+" }}}
+" }}}
 " " Moonscript: {{{
 " " moonscript-vim: https://github.com/leafo/moonscript-vim{{{
 " highlight! link moonInterpDelim Yellow
