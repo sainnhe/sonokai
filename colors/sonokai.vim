@@ -1709,6 +1709,9 @@ highlight! link UndotreeSavedSmall Red
 call s:HL('QuickScopePrimary', s:palette.green, s:palette.none, 'underline')
 call s:HL('QuickScopeSecondary', s:palette.blue, s:palette.none, 'underline')
 " }}}
+" APZelos/blamer.nvim {{{
+highlight! link Blamer Grey
+" }}}
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
