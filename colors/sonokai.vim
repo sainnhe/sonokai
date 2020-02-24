@@ -1442,6 +1442,7 @@ highlight! link CocExplorerBufferExpandIcon Blue
 highlight! link CocExplorerBufferBufnr Yellow
 highlight! link CocExplorerBufferModified Red
 highlight! link CocExplorerBufferBufname Grey
+highlight! link CocExplorerBufferFullpath Grey
 highlight! link CocExplorerFileRoot Red
 highlight! link CocExplorerFileExpandIcon Blue
 highlight! link CocExplorerFileFullpath Grey
