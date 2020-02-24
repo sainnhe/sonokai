@@ -162,6 +162,10 @@ To apply it without reloading:
 2. Enable italic keywords in this color scheme: `let g:sonokai_enable_italic = 1`
 3. Disable italic comment(optional): `let g:sonokai_disable_italic_comment = 1`
 
+## Related Projects
+
+- [Kitty](https://github.com/rsaihe/sonokai-kitty) by [@rsaihe](https://github.com/rsaihe)
+
 ## Inspiration
 
 - [Monokai Pro](https://monokai.pro/vscode)
