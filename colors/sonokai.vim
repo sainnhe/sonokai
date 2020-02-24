@@ -1228,6 +1228,8 @@ highlight! link vimUserAttrb Green
 highlight! link vimAutoCmdSfxList Orange
 highlight! link vimSynType Orange
 highlight! link vimHiBang Orange
+highlight! link vimSet BlueItalic
+highlight! link vimSetSep Grey
 " }}}
 " Makefile: {{{
 highlight! link makeIdent Purple
