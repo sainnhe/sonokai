@@ -164,6 +164,7 @@ To apply it without reloading:
 
 ## Related Projects
 
+- [Alacritty](./alacritty/README.md) by [@sainnhe](https://github.com/sainnhe)
 - [Kitty](https://github.com/rsaihe/sonokai-kitty) by [@rsaihe](https://github.com/rsaihe)
 
 ## Inspiration
