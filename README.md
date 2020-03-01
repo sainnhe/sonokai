@@ -136,6 +136,9 @@ To apply it without reloading:
 - `g:sonokai_enable_italic`: Set to `1` to italicize keywords. This option is designed to use with fonts that support cursive italic styles, for example [Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
   - Available values: `0`, `1`
   - Default value: `0`
+- `g:sonokai_cursor`: Customize the cursor color, only works in GUI clients.
+  - Available values: `'auto'`, `'red'`, `'green'`, `'blue'`
+  - Default value: `'auto'`
 - `g:sonokai_current_word`: Some plugins can highlight the word under current cursor(for example [neoclide/coc-highlight](https://github.com/neoclide/coc-highlight)), you can use this option to control their behavior.
   - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
   - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
