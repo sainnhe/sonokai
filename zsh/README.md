@@ -18,22 +18,22 @@ source /path/to/sonokai/zsh/.zsh-theme-sonokai-atlantis
 source /path/to/sonokai/zsh/.zsh-theme-sonokai-maia
 ```
 
-Alternatively, if you are using [zplugin](https://github.com/zdharma/zplugin), you can install the theme like this:
+Alternatively, if you are using [zinit](https://github.com/zdharma/zinit)(formerly known as zplugin, [highly recommended](https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded)), you can install the theme like this:
 
 ```zsh
-zplugin light romkatv/powerlevel10k
+zinit light romkatv/powerlevel10k
 
 # shusia variant
-zplugin snippet https://github.com/sainnhe/sonokai/blob/master/zsh/.zsh-theme-sonokai-shusia
+zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-shusia
 
 # andromeda variant
-zplugin snippet https://github.com/sainnhe/sonokai/blob/master/zsh/.zsh-theme-sonokai-andromeda
+zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-andromeda
 
 # atlantis variant
-zplugin snippet https://github.com/sainnhe/sonokai/blob/master/zsh/.zsh-theme-sonokai-atlantis
+zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-atlantis
 
 # maia variant
-zplugin snippet https://github.com/sainnhe/sonokai/blob/master/zsh/.zsh-theme-sonokai-maia
+zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-maia
 ```
 
 ## Customization
