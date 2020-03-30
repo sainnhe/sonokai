@@ -167,6 +167,7 @@ To apply it without reloading:
 
 ## Related Projects
 
+- [Visual Studio Code](https://github.com/sainnhe/sonokai-vscode) by [@sainnhe](https://github.com/sainnhe)
 - [Alacritty](./alacritty/README.md) by [@sainnhe](https://github.com/sainnhe)
 - [Kitty](https://github.com/rsaihe/sonokai-kitty) by [@rsaihe](https://github.com/rsaihe)
 - [Tmux](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb) by [@sainnhe](https://github.com/sainnhe)
