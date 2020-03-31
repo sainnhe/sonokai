@@ -173,6 +173,12 @@ To apply it without reloading:
 - [Tmux](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb) by [@sainnhe](https://github.com/sainnhe)
 - [Zsh](./zsh/README.md) by [@sainnhe](https://github.com/sainnhe)
 
+## More Color Schemes
+
+- [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+- [Forest Night](https://github.com/sainnhe/forest-night)
+- [Edge](https://github.com/sainnhe/edge)
+
 ## Inspiration
 
 - [Monokai Pro](https://monokai.pro/vscode)
