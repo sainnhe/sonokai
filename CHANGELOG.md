@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Add port for kitty, alacritty, tmux and zsh.
 - Optimize `Yggdroot/indentLine`.
 - Optimize `arakashic/chromatica.nvim`.
+- Optimize `numirias/semshi`.
 
 ## [0.1.0] - 2020-02-19
 
