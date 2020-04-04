@@ -907,6 +907,18 @@ highlight! link cppSTLexception Red
 " vim-cpp-modern: https://github.com/bfrg/vim-cpp-modern{{{
 highlight! link cppSTLVariable BlueItalic
 " }}}
+" chromatica: https://github.com/arakashic/chromatica.nvim{{{
+highlight! link Member OrangeItalic
+highlight! link Variable Fg
+highlight! link Namespace BlueItalic
+highlight! link EnumConstant OrangeItalic
+highlight! link chromaticaException Red
+highlight! link chromaticaCast Red
+highlight! link OperatorOverload Red
+highlight! link AccessQual Red
+highlight! link Linkage Red
+highlight! link AutoType BlueItalic
+" }}}
 " }}}
 " ObjectiveC: {{{
 " builtin: {{{
