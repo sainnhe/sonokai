@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `Yggdroot/indentLine`.
 - Optimize `arakashic/chromatica.nvim`.
 - Optimize `numirias/semshi`.
+- Optimize `jackguo380/vim-lsp-cxx-highlight`.
 
 ## [0.1.0] - 2020-02-19
 

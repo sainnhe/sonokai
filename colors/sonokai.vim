@@ -919,6 +919,13 @@ highlight! link AccessQual Red
 highlight! link Linkage Red
 highlight! link AutoType BlueItalic
 " }}}
+" vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight{{{
+highlight! link LspCxxHlSkippedRegion Grey
+highlight! link LspCxxHlSkippedRegionBeginEnd Red
+highlight! link LspCxxHlGroupEnumConstant OrangeItalic
+highlight! link LspCxxHlGroupNamespace BlueItalic
+highlight! link LspCxxHlGroupMemberVariable OrangeItalic
+" }}}
 " }}}
 " ObjectiveC: {{{
 " builtin: {{{
