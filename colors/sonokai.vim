@@ -286,6 +286,18 @@ call s:HL('ToolbarLine', s:palette.none, s:palette.grey)
 call s:HL('ToolbarButton', s:palette.fg, s:palette.bg0, 'bold')
 call s:HL('QuickFixLine', s:palette.blue, s:palette.bg1)
 call s:HL('Debug', s:palette.yellow, s:palette.none)
+if has('nvim')
+  highlight! link healthError Red
+  highlight! link healthSuccess Green
+  highlight! link healthWarning Yellow
+  highlight! link LspDiagnosticsError Grey
+  highlight! link LspDiagnosticsWarning Grey
+  highlight! link LspDiagnosticInformation Grey
+  highlight! link LspDiagnosticHint Grey
+  highlight! link LspReferenceText CocHighlightText
+  highlight! link LspReferenceRead CocHighlightText
+  highlight! link LspReferenceWrite CocHighlightText
+endif
 " }}}
 " Syntax: {{{
 if s:configuration.enable_italic
