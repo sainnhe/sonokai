@@ -1445,6 +1445,12 @@ highlight! link gitcommitOnBranch Grey
 highlight! link gitcommitArrow Grey
 highlight! link gitcommitFile Green
 " }}}
+" INI: {{{
+call s:HL('dosiniHeader', s:palette.red, s:palette.none, 'bold')
+highlight! link dosiniLabel Blue
+highlight! link dosiniValue Green
+highlight! link dosiniNumber Green
+" }}}
 " Help: {{{
 call s:HL('helpNote', s:palette.purple, s:palette.none, 'bold')
 call s:HL('helpHeadline', s:palette.red, s:palette.none, 'bold')

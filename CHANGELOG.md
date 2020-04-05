@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Add hi groups for `iCursor` and `vCursor`.
 - Optimize gitcommit.
 - Add hi groups for builtin lsp and checkhealth.
+- Optimize DOS INI.
 
 ## [0.1.1] - 2020-04-04
 
