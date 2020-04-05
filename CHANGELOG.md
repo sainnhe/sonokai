@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Optimize Coc.
 - Add hi groups for `iCursor` and `vCursor`.
+- Optimize gitcommit.
 
 ## [0.1.1] - 2020-04-04
 
