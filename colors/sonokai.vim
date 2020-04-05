@@ -282,10 +282,10 @@ call s:HL('TabLineSel', s:palette.bg0, s:palette.bg_red)
 call s:HL('VertSplit', s:palette.black, s:palette.none)
 call s:HL('Visual', s:palette.none, s:palette.bg3)
 call s:HL('VisualNOS', s:palette.none, s:palette.bg3, 'underline')
-call s:HL('ToolbarLine', s:palette.none, s:palette.grey)
-call s:HL('ToolbarButton', s:palette.fg, s:palette.bg0, 'bold')
-call s:HL('QuickFixLine', s:palette.blue, s:palette.bg1)
+call s:HL('QuickFixLine', s:palette.blue, s:palette.none, 'bold')
 call s:HL('Debug', s:palette.yellow, s:palette.none)
+call s:HL('debugPC', s:palette.bg0, s:palette.green)
+call s:HL('debugBreakpoint', s:palette.bg0, s:palette.red)
 if has('nvim')
   highlight! link healthError Red
   highlight! link healthSuccess Green
@@ -1491,7 +1491,7 @@ call s:HL('CocHintHighlight', s:palette.none, s:palette.none, 'undercurl', s:pal
 call s:HL('CocErrorFloat', s:palette.red, s:palette.bg2)
 call s:HL('CocWarningFloat', s:palette.yellow, s:palette.bg2)
 call s:HL('CocInfoFloat', s:palette.blue, s:palette.bg2)
-call s:HL('CocHintFloat', s:palette.cyan, s:palette.bg2)
+call s:HL('CocHintFloat', s:palette.green, s:palette.bg2)
 if s:configuration.transparent_background
   call s:HL('CocHintSign', s:palette.purple, s:palette.none)
 else
