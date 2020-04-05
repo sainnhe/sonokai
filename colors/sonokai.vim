@@ -1466,6 +1466,11 @@ elseif s:configuration.current_word ==# 'grey background'
   call s:HL('CocHighlightText', s:palette.none, s:palette.bg1)
 endif
 call s:HL('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
+call s:HL('CocHintHighlight', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
+call s:HL('CocErrorFloat', s:palette.red, s:palette.bg2)
+call s:HL('CocWarningFloat', s:palette.yellow, s:palette.bg2)
+call s:HL('CocInfoFloat', s:palette.blue, s:palette.bg2)
+call s:HL('CocHintFloat', s:palette.cyan, s:palette.bg2)
 if s:configuration.transparent_background
   call s:HL('CocHintSign', s:palette.purple, s:palette.none)
 else
