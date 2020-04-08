@@ -165,12 +165,16 @@ To apply it without reloading:
 2. Enable italic keywords in this color scheme: `let g:sonokai_enable_italic = 1`
 3. Disable italic comment(optional): `let g:sonokai_disable_italic_comment = 1`
 
+**Q: What's your status line configuration?**
+
+**A:** See this [article](https://www.sainnhe.dev/post/status-line-config/).
+
 ## Related Projects
 
 - [Visual Studio Code](https://github.com/sainnhe/sonokai-vscode) by [@sainnhe](https://github.com/sainnhe)
 - [Alacritty](./alacritty/README.md) by [@sainnhe](https://github.com/sainnhe)
 - [Kitty](https://github.com/rsaihe/sonokai-kitty) by [@rsaihe](https://github.com/rsaihe)
-- [Tmux](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb) by [@sainnhe](https://github.com/sainnhe)
+- [Tmux](https://www.sainnhe.dev/post/status-line-config/) by [@sainnhe](https://github.com/sainnhe)
 - [Zsh](./zsh/README.md) by [@sainnhe](https://github.com/sainnhe)
 
 ## More Color Schemes
