@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file.
 - Optimize DOS INI.
 - Optimize Matlab.
 
+### Changed
+
+- Adjust `Search` and `IncSearch`.
+
 ## [0.1.1] - 2020-04-04
 
 ### Added
