@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Optimize DOS INI.
 - Optimize Matlab.
 - Optimize Airline.
+- Optimize `cohama/agit.vim`.
 
 ### Changed
 

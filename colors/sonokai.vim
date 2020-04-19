@@ -1816,6 +1816,22 @@ call s:HL('QuickScopeSecondary', s:palette.blue, s:palette.none, 'underline')
 " APZelos/blamer.nvim {{{
 highlight! link Blamer Grey
 " }}}
+" cohama/agit.vim {{{
+highlight! link agitTree Grey
+highlight! link agitDate Green
+highlight! link agitRemote Red
+highlight! link agitHead Blue
+highlight! link agitRef Orange
+highlight! link agitTag Blue
+highlight! link agitStatFile Blue
+highlight! link agitStatRemoved Red
+highlight! link agitStatAdded Green
+highlight! link agitStatMessage Orange
+highlight! link agitDiffRemove diffRemoved
+highlight! link agitDiffAdd diffAdded
+highlight! link agitDiffHeader Blue
+highlight! link agitAuthor Yellow
+" }}}
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
