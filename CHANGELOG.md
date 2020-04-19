@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - Add hi groups for builtin lsp and checkhealth.
 - Optimize DOS INI.
 - Optimize Matlab.
+- Optimize Airline.
 
 ### Changed
 

@@ -15,6 +15,7 @@ if s:style ==# 'shusia'
     let s:background_alt = [ '#343136', 236 ]
     let s:background_grey = [ '#49464e', 238 ]
     let s:red_sel = [ '#ff6188', 203 ]
+    let s:yellow = [ '#ffd866', 179 ]
     let s:green_sel = [ '#a9dc76', 107 ]
     let s:blue_sel = [ '#78dce8', 110 ]
     let s:purple_sel = [ '#ab9df2', 176 ]
@@ -28,6 +29,7 @@ elseif s:style ==# 'andromeda'
     let s:background_alt = [ '#2f323e', 236 ]
     let s:background_grey = [ '#404455', 238 ]
     let s:red_sel = [ '#ff6188', 203 ]
+    let s:yellow = [ '#ffd866', 179 ]
     let s:green_sel = [ '#a9dc76', 107 ]
     let s:blue_sel = [ '#77d5f0', 110 ]
     let s:purple_sel = [ '#bb97ee', 176 ]
@@ -41,6 +43,7 @@ elseif s:style ==# 'atlantis'
     let s:background_alt = [ '#303541', 236 ]
     let s:background_grey = [ '#424b5b', 238 ]
     let s:red_sel = [ '#ff6d7e', 203 ]
+    let s:yellow = [ '#fade6a', 179 ]
     let s:green_sel = [ '#a5e179', 107 ]
     let s:blue_sel = [ '#7ad5f1', 110 ]
     let s:purple_sel = [ '#ba9cf3', 176 ]
@@ -54,6 +57,7 @@ elseif s:style ==# 'maia'
     let s:background_alt = [ '#2e383e', 236 ]
     let s:background_grey = [ '#414b53', 238 ]
     let s:red_sel = [ '#ff6d7e', 203 ]
+    let s:yellow = [ '#f5e46d', 179 ]
     let s:green_sel = [ '#a2e57b', 107 ]
     let s:blue_sel = [ '#7cd5f1', 110 ]
     let s:purple_sel = [ '#baa0f8', 176 ]
@@ -67,22 +71,30 @@ endif
 "{{{Definition
 let s:accents = s:red_fg
 
+let s:error_fg = s:background
+let s:error_bg = s:red_sel
+let s:warning_fg = s:background
+let s:warning_bg = s:yellow
+
+let s:tab_sel_fg = s:background
+let s:tab_sel_bg = s:red_sel
+
 let s:normal_side_fg = s:background
-let s:normal_side_bg = s:red_sel
+let s:normal_side_bg = s:blue_sel
 let s:normal_sub_fg = s:foreground
 let s:normal_sub_bg = s:background_grey
 let s:normal_mid_fg = s:foreground
 let s:normal_mid_bg = s:background_alt
-let s:normal_mod_fg = s:red_fg
+let s:normal_mod_fg = s:blue_fg
 let s:normal_mod_bg = s:background_alt
 
 let s:insert_side_fg = s:background
-let s:insert_side_bg = s:blue_sel
+let s:insert_side_bg = s:green_sel
 let s:insert_sub_fg = s:foreground
 let s:insert_sub_bg = s:background_grey
 let s:insert_mid_fg = s:foreground
 let s:insert_mid_bg = s:background_alt
-let s:insert_mod_fg = s:blue_fg
+let s:insert_mod_fg = s:green_fg
 let s:insert_mod_bg = s:background_alt
 
 let s:visual_side_fg = s:background
@@ -95,12 +107,12 @@ let s:visual_mod_fg = s:purple_fg
 let s:visual_mod_bg = s:background_alt
 
 let s:replace_side_fg = s:background
-let s:replace_side_bg = s:green_sel
+let s:replace_side_bg = s:yellow
 let s:replace_sub_fg = s:foreground
 let s:replace_sub_bg = s:background_grey
 let s:replace_mid_fg = s:foreground
 let s:replace_mid_bg = s:background_alt
-let s:replace_mod_fg = s:green_fg
+let s:replace_mod_fg = s:yellow
 let s:replace_mod_bg = s:background_alt
 
 let s:inactive_side_fg = s:background
@@ -119,12 +131,23 @@ let g:airline#themes#sonokai#palette.accents = {
             \ 'red': [ s:accents[0] , '' , s:accents[1] , '' , '' ],
             \ }
 
+" TabLine
+let g:airline#themes#sonokai#palette.tabline = {}
+let g:airline#themes#sonokai#palette.tabline.airline_tabsel = [ s:tab_sel_fg[0] , s:tab_sel_bg[0] , s:tab_sel_fg[1] , s:tab_sel_bg[1] , 'bold' ]
+let g:airline#themes#sonokai#palette.tabline.airline_tabsel_right = [ s:tab_sel_fg[0] , s:tab_sel_bg[0] , s:tab_sel_fg[1] , s:tab_sel_bg[1] , 'bold' ]
+
 " Normal mode
 let s:N1 = [ s:normal_side_fg[0] , s:normal_side_bg[0] , s:normal_side_fg[1] , s:normal_side_bg[1] ]
 let s:N2 = [ s:normal_sub_fg[0] , s:normal_sub_bg[0] , s:normal_sub_fg[1] , s:normal_sub_bg[1] ]
 let s:N3 = [ s:normal_mid_fg[0] , s:normal_mid_bg[0] , s:normal_mid_fg[1] , s:normal_mid_bg[1] ]
 
 let g:airline#themes#sonokai#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
+let g:airline#themes#sonokai#palette.normal.airline_error = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.normal.airline_warning = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.normal.airline_error_inactive = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.normal.airline_warning_inactive = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.normal.airline_error_red = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.normal.airline_warning_red = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
 let g:airline#themes#sonokai#palette.normal_modified = {
             \ 'airline_c': [ s:normal_mod_fg[0] , s:normal_mod_bg[0] , s:normal_mod_fg[1] , s:normal_mod_bg[1] ] ,
             \ }
@@ -135,6 +158,12 @@ let s:I2 = [ s:insert_sub_fg[0] , s:insert_sub_bg[0] , s:insert_sub_fg[1] , s:in
 let s:I3 = [ s:insert_mid_fg[0] , s:insert_mid_bg[0] , s:insert_mid_fg[1] , s:insert_mid_bg[1] ]
 
 let g:airline#themes#sonokai#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+let g:airline#themes#sonokai#palette.insert.airline_error = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.insert.airline_warning = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.insert.airline_error_inactive = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.insert.airline_warning_inactive = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.insert.airline_error_red = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.insert.airline_warning_red = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
 let g:airline#themes#sonokai#palette.insert_modified = {
             \ 'airline_c': [ s:insert_mod_fg[0] , s:insert_mod_bg[0] , s:insert_mod_fg[1] , s:insert_mod_bg[1] ] ,
             \ }
@@ -145,6 +174,12 @@ let s:R2 = [ s:replace_sub_fg[0] , s:replace_sub_bg[0] , s:replace_sub_fg[1] , s
 let s:R3 = [ s:replace_mid_fg[0] , s:replace_mid_bg[0] , s:replace_mid_fg[1] , s:replace_mid_bg[1] ]
 
 let g:airline#themes#sonokai#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
+let g:airline#themes#sonokai#palette.replace.airline_error = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.replace.airline_warning = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.replace.airline_error_inactive = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.replace.airline_warning_inactive = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.replace.airline_error_red = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.replace.airline_warning_red = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
 let g:airline#themes#sonokai#palette.replace_modified = {
             \ 'airline_c': [ s:replace_mod_fg[0] , s:replace_mod_bg[0] , s:replace_mod_fg[1] , s:replace_mod_bg[1] ] ,
             \ }
@@ -155,6 +190,12 @@ let s:V2 = [ s:visual_sub_fg[0] , s:visual_sub_bg[0] , s:visual_sub_fg[1] , s:vi
 let s:V3 = [ s:visual_mid_fg[0] , s:visual_mid_bg[0] , s:visual_mid_fg[1] , s:visual_mid_bg[1] ]
 
 let g:airline#themes#sonokai#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
+let g:airline#themes#sonokai#palette.visual.airline_error = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.visual.airline_warning = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.visual.airline_error_inactive = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.visual.airline_warning_inactive = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.visual.airline_error_red = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.visual.airline_warning_red = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
 let g:airline#themes#sonokai#palette.visual_modified = {
             \ 'airline_c': [ s:visual_mod_fg[0] , s:visual_mod_bg[0] , s:visual_mod_fg[1] , s:visual_mod_bg[1] ] ,
             \ }
@@ -165,6 +206,12 @@ let s:IA2 = [ s:inactive_sub_fg[0] , s:inactive_sub_bg[0] , s:inactive_sub_fg[1]
 let s:IA3 = [ s:inactive_mid_fg[0] , s:inactive_mid_bg[0] , s:inactive_mid_fg[1] , s:inactive_mid_bg[1] ]
 
 let g:airline#themes#sonokai#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
+let g:airline#themes#sonokai#palette.inactive.airline_error = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.inactive.airline_warning = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.inactive.airline_error_inactive = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.inactive.airline_warning_inactive = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
+let g:airline#themes#sonokai#palette.inactive.airline_error_red = [ s:error_fg[0] , s:error_bg[0] , s:error_fg[1] , s:error_bg[1] ]
+let g:airline#themes#sonokai#palette.inactive.airline_warning_red = [ s:warning_fg[0] , s:warning_bg[0] , s:warning_fg[1] , s:warning_bg[1] ]
 let g:airline#themes#sonokai#palette.inactive_modified = {
             \ 'airline_c': [ s:inactive_mod_fg[0] , s:inactive_mod_bg[0] , s:inactive_mod_fg[1] , s:inactive_mod_bg[1] ] ,
             \ }
