@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Optimize Matlab.
 - Optimize Airline.
 - Optimize `cohama/agit.vim`.
+- Add `ToolbarLine` and `ToolbarButton`.
 
 ### Changed
 
