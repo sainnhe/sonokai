@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Adjust the background color in the `andromeda` variant.
+- Adjust yellow in the `andromeda` variant.
+
 ### Added
 
 - Optimize Coc.

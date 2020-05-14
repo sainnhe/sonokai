@@ -70,7 +70,7 @@ elseif s:configuration.style ==# 'andromeda'
         \ 'fg':         ['#e1e3e4',   '250',  'White'],
         \ 'red':        ['#fb617e',   '203',  'Red'],
         \ 'orange':     ['#f89860',   '215',  'Orange'],
-        \ 'yellow':     ['#f0c362',   '179',  'Yellow'],
+        \ 'yellow':     ['#edc763',   '179',  'Yellow'],
         \ 'green':      ['#9ed06c',   '107',  'Green'],
         \ 'blue':       ['#6dcae8',   '110',  'Blue'],
         \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
