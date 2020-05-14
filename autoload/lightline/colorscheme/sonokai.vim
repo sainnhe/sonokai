@@ -23,9 +23,9 @@ if s:style ==# 'shusia'
     let s:purple = [ '#ab9df2', 176 ]
 elseif s:style ==# 'andromeda'
     let s:foreground = [ '#e1e3e4', 250 ]
-    let s:background = [ '#2b2d37', 235 ]
-    let s:background_alt = [ '#2f323e', 236 ]
-    let s:background_grey = [ '#404455', 238 ]
+    let s:background = [ '#2b2d3a', 235 ]
+    let s:background_alt = [ '#2f3242', 236 ]
+    let s:background_grey = [ '#3f445b', 238 ]
     let s:red = [ '#ff6188', 203 ]
     let s:yellow = [ '#ffd866', 179 ]
     let s:green = [ '#a9dc76', 107 ]
