@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Adjust red and orange in the default variant.
+
 ## [0.2.0] - 2020-07-20
 
 ### Changed

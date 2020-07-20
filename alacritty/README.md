@@ -12,22 +12,22 @@ colors:
 
   normal:
     black: "0x181819"
-    red: "0xff5c74"
+    red: "0xfc5d7c"
     green: "0x9ed072"
     yellow: "0xe8c864"
     blue: "0x76cce0"
     magenta: "0xb39df3"
-    cyan: "0xf69c5e"
+    cyan: "0xf39660"
     white: "0xe2e2e3"
 
   bright:
     black: "0x181819"
-    red: "0xff5c74"
+    red: "0xfc5d7c"
     green: "0x9ed072"
     yellow: "0xe8c864"
     blue: "0x76cce0"
     magenta: "0xb39df3"
-    cyan: "0xf69c5e"
+    cyan: "0xf39660"
     white: "0xe2e2e3"
 ```
 
