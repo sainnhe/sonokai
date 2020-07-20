@@ -2,7 +2,7 @@
 𝐃𝐞𝐟𝐚𝐮𝐥𝐭
 </h2>
 
-![sonokai-default](https://user-images.githubusercontent.com/37491630/87914977-155bb380-caa4-11ea-961a-b7983beb5514.png)
+![sonokai-default](https://user-images.githubusercontent.com/37491630/87916859-a03dad80-caa6-11ea-9694-b34c4a980672.png)
 
 <h2 align="center">
 𝐀𝐭𝐥𝐚𝐧𝐭𝐢𝐬
