@@ -8,7 +8,7 @@
 
 function! sonokai#get_configuration() "{{{
   return {
-        \ 'style': get(g:, 'sonokai_style', 'shusia'),
+        \ 'style': get(g:, 'sonokai_style', 'default'),
         \ 'transparent_background': get(g:, 'sonokai_transparent_background', 0),
         \ 'disable_italic_comment': get(g:, 'sonokai_disable_italic_comment', 0),
         \ 'enable_italic': get(g:, 'sonokai_enable_italic', 0),
@@ -22,7 +22,31 @@ function! sonokai#get_configuration() "{{{
         \ }
 endfunction "}}}
 function! sonokai#get_palette(style) "{{{
-  if a:style ==# 'shusia'
+  if a:style ==# 'default'
+    let palette = {
+          \ 'black':      ['#181819',   '237',  'DarkGrey'],
+          \ 'bg0':        ['#2c2e34',   '235',  'Black'],
+          \ 'bg1':        ['#30323a',   '236',  'DarkGrey'],
+          \ 'bg2':        ['#363944',   '236',  'DarkGrey'],
+          \ 'bg3':        ['#3b3e48',   '237',  'DarkGrey'],
+          \ 'bg4':        ['#414550',   '237',  'Grey'],
+          \ 'bg_red':     ['#ff6077',   '203',  'Red'],
+          \ 'diff_red':   ['#473536',   '52',   'DarkRed'],
+          \ 'bg_green':   ['#a7df78',   '107',  'Green'],
+          \ 'diff_green': ['#384034',   '22',   'DarkGreen'],
+          \ 'bg_blue':    ['#85d3f2',   '110',  'Blue'],
+          \ 'diff_blue':  ['#323e47',   '17',   'DarkBlue'],
+          \ 'fg':         ['#e2e2e3',   '250',  'White'],
+          \ 'red':        ['#ff5c74',   '203',  'Red'],
+          \ 'orange':     ['#f69c5e',   '215',  'Orange'],
+          \ 'yellow':     ['#e8c864',   '179',  'Yellow'],
+          \ 'green':      ['#9ed072',   '107',  'Green'],
+          \ 'blue':       ['#76cce0',   '110',  'Blue'],
+          \ 'purple':     ['#b39df3',   '176',  'Magenta'],
+          \ 'grey':       ['#7f8490',   '246',  'LightGrey'],
+          \ 'none':       ['NONE',      'NONE', 'NONE']
+          \ }
+  elseif a:style ==# 'shusia'
     let palette = {
           \ 'black':      ['#1a181a',   '237',  'DarkGrey'],
           \ 'bg0':        ['#2d2a2e',   '235',  'Black'],

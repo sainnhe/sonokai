@@ -148,8 +148,8 @@ E.g.~
 
 The style of this color scheme.
 
-    Available values: `'shusia'`, `'andromeda'`, `'atlantis'`, `'maia'`
-    Default value: `'shusia'`
+    Available values: `'default'`, `'shusia'`, `'andromeda'`, `'atlantis'`, `'maia'`
+    Default value: `'default'`
 
 E.g.~
 >

@@ -2,6 +2,35 @@
 
 Add this to `~/.config/alacritty/alacritty.yml`
 
+## default
+
+```yaml
+colors:
+  primary:
+    background: "0x2c2e34"
+    foreground: "0xe2e2e3"
+
+  normal:
+    black: "0x181819"
+    red: "0xff5c74"
+    green: "0x9ed072"
+    yellow: "0xe8c864"
+    blue: "0x76cce0"
+    magenta: "0xb39df3"
+    cyan: "0xf69c5e"
+    white: "0xe2e2e3"
+
+  bright:
+    black: "0x181819"
+    red: "0xff5c74"
+    green: "0x9ed072"
+    yellow: "0xe8c864"
+    blue: "0x76cce0"
+    magenta: "0xb39df3"
+    cyan: "0xf69c5e"
+    white: "0xe2e2e3"
+```
+
 ## shusia
 
 ```yaml

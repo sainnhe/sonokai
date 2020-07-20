@@ -9,6 +9,8 @@ The prompt theme is sonokai version of pure power, it depends on [romkatv/powerl
 To use it, simply source this file in your zshrc after powerlevel10k has been load:
 
 ```sh
+source /path/to/sonokai/zsh/.zsh-theme-sonokai-default
+# or
 source /path/to/sonokai/zsh/.zsh-theme-sonokai-shusia
 # or
 source /path/to/sonokai/zsh/.zsh-theme-sonokai-andromeda
@@ -22,6 +24,9 @@ Alternatively, if you are using [zinit](https://github.com/zdharma/zinit)(former
 
 ```zsh
 zinit light romkatv/powerlevel10k
+
+# default variant
+zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-default
 
 # shusia variant
 zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-shusia
