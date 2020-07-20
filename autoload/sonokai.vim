@@ -39,7 +39,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'fg':         ['#e2e2e3',   '250',  'White'],
           \ 'red':        ['#fc5d7c',   '203',  'Red'],
           \ 'orange':     ['#f39660',   '215',  'Orange'],
-          \ 'yellow':     ['#e8c864',   '179',  'Yellow'],
+          \ 'yellow':     ['#e7c664',   '179',  'Yellow'],
           \ 'green':      ['#9ed072',   '107',  'Green'],
           \ 'blue':       ['#76cce0',   '110',  'Blue'],
           \ 'purple':     ['#b39df3',   '176',  'Magenta'],
