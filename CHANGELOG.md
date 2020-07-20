@@ -4,10 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.0] - 2020-07-20
+
 ### Changed
 
 - Adjust the background color in the `andromeda` variant.
 - Adjust yellow in the `andromeda` variant.
+- Adjust `Search` and `IncSearch`.
+- Adjust `NonText`, `Whitespace` and `SpecialKey`.
 - Rewrite based on gruvbox-material.
 - Add `default` variant.
 
@@ -22,11 +26,6 @@ All notable changes to this project will be documented in this file.
 - Optimize Airline.
 - Optimize `cohama/agit.vim`.
 - Add `ToolbarLine` and `ToolbarButton`.
-
-### Changed
-
-- Adjust `Search` and `IncSearch`.
-- Adjust `NonText`, `Whitespace` and `SpecialKey`.
 
 ## [0.1.1] - 2020-04-04
 
