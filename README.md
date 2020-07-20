@@ -34,7 +34,7 @@ The `shusia` and `maia` variants are based on `monokai pro` and `monokai machine
 
 - High contrast but within acceptable range.
 - Vivid colors.
-- Customizable.
+- Highly customizable.
 - Rich support for common file types and plugins.
 - [Italic support](https://github.com/sainnhe/icursive-nerd-font) 🎉
 
@@ -48,14 +48,16 @@ Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
 Plug 'sainnhe/sonokai'
 ```
 
-For better syntax highlighting support, please install [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot).
+For better syntax highlighting support, please install [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) or [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 
 ### Manually
 
 1. Clone this repository.
-2. Copy `/path/to/sonokai/colors/sonokai.vim` to `~/.vim/colors/` .
-3. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/sonokai/autoload/airline/themes/sonokai.vim` to `~/.vim/autoload/airline/themes/` .
-4. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim` to `~/.vim/autoload/lightline/colorscheme/` .
+2. Copy `/path/to/sonokai/autoload/sonokai.vim` to `~/.vim/autoload/`.
+3. Copy `/path/to/sonokai/colors/sonokai.vim` to `~/.vim/colors/` .
+4. Copy `/path/to/sonokai/doc/sonokai.txt` to `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
+5. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/sonokai/autoload/airline/themes/sonokai.vim` to `~/.vim/autoload/airline/themes/sonokai.vim` .
+6. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim` to `~/.vim/autoload/lightline/colorscheme/sonokai.vim` .
 
 ## Usage
 
@@ -64,10 +66,12 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 Put this in your vimrc:
 
 ```vim
-" important!!
-set termguicolors
+" Important!!
+if has('termguicolors')
+  set termguicolors
+endif
 
-" the configuration options should be placed before `colorscheme sonokai`
+" The configuration options should be placed before `colorscheme sonokai`.
 let g:sonokai_style = 'andromeda'
 let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
@@ -75,9 +79,9 @@ let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
 ```
 
-See [Configuration](https://github.com/sainnhe/sonokai#configuration) for more configuration options.
+See `:help sonokai-configuration` for more configuration options.
 
-If you want to apply this color scheme temporarily, run this command in vim(**this may cause colors to break**):
+If you want to apply this color scheme temporarily, run this command in vim(**this may cause broken colors**):
 
 ```vim
 :colorscheme sonokai
@@ -117,35 +121,6 @@ To apply it without reloading:
 :call lightline#colorscheme()
 ```
 
-#### Configuration
-
-**Note:** The configuration options should be placed before `colorscheme sonokai` .
-
-- `g:sonokai_style`: Customize the style of this color scheme.
-  - Available values: `'shusia'`, `'andromeda'`, `'atlantis'`, `'maia'`
-  - Default value: `'shusia'`
-- `g:sonokai_transparent_background`: Set to `1` to enable transparent background.
-  - Available values: `0`, `1`
-  - Default value: `0`
-- `g:sonokai_menu_selection_background`: Control the background color of `PmenuSel` and `WildMenu` .
-  - Available values: `'green'`, `'red'`, `'blue'`
-  - Default value: `'green'`
-- `g:sonokai_disable_italic_comment`: Set to `1` to disable italic in `Comment` .
-  - Available values: `0`, `1`
-  - Default value: `0`
-- `g:sonokai_enable_italic`: Set to `1` to italicize keywords. This option is designed to use with fonts that support cursive italic styles, for example [Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
-  - Available values: `0`, `1`
-  - Default value: `0`
-- `g:sonokai_cursor`: Customize the cursor color, only works in GUI clients.
-  - Available values: `'auto'`, `'red'`, `'green'`, `'blue'`
-  - Default value: `'auto'`
-- `g:sonokai_current_word`: Some plugins can highlight the word under current cursor(for example [neoclide/coc-highlight](https://github.com/neoclide/coc-highlight)), you can use this option to control their behavior.
-  - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
-  - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
-- `g:sonokai_lightline_disable_bold`: Set to `1` to disable bold in lightline theme.
-  - Available values: `0`, `1`
-  - Default value: `0`
-
 ### FAQ
 
 **Q: It doesn't work as expected.**
@@ -168,6 +143,10 @@ To apply it without reloading:
 **Q: What's your status line configuration?**
 
 **A:** See this [article](https://www.sainnhe.dev/post/status-line-config/).
+
+**Q: What's the font used here?**
+
+**A:** [Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
 
 ## Related Projects
 
