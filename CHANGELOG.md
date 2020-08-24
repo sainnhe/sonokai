@@ -14,6 +14,10 @@ All notable changes to this project will be documented in this file.
 - Adjust yellow in the default variant.
 - Remove duplicate docs in README.
 
+### Fixed
+
+- Fix errors when doesn't set `g:colors_name`.
+
 ## [0.2.0] - 2020-07-20
 
 ### Changed
