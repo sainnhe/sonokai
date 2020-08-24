@@ -68,6 +68,14 @@ Manually~
     copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim`
     to `~/.vim/autoload/lightline/colorscheme/` .
 
+------------------------------------------------------------------------------
+AUR~
+
+    There are some packages available for Arch Linux users in AUR:
+
+    - [vim-sonokai-git](https://aur.archlinux.org/pkgbase/vim-sonokai-git/)
+    - [neovim-sonokai-git](https://aur.archlinux.org/pkgbase/neovim-sonokai-git/)
+
 ==============================================================================
 USAGE                                                           *sonokai-usage*
 

@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- AUR packages.
+
 ### Changed
 
 - Adjust red and orange in the default variant.

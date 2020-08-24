@@ -65,6 +65,13 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 5. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/sonokai/autoload/airline/themes/sonokai.vim` to `~/.vim/autoload/airline/themes/` .
 6. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim` to `~/.vim/autoload/lightline/colorscheme/` .
 
+### AUR
+
+There are some packages available for Arch Linux users in AUR:
+
+- [vim-sonokai-git](https://aur.archlinux.org/pkgbase/vim-sonokai-git/)
+- [neovim-sonokai-git](https://aur.archlinux.org/pkgbase/neovim-sonokai-git/)
+
 ## Usage
 
 See [`:help sonokai.txt`](https://github.com/sainnhe/sonokai/blob/master/doc/sonokai.txt)
