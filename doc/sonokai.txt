@@ -62,11 +62,11 @@ Manually~
 
     5. To install [airline](https://github.com/vim-airline/vim-airline) theme,
     copy `/path/to/sonokai/autoload/airline/themes/sonokai.vim`
-    to `~/.vim/autoload/airline/themes/sonokai.vim` .
+    to `~/.vim/autoload/airline/themes/` .
 
     6. To install [lightline](https://github.com/itchyny/lightline.vim) theme,
     copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim`
-    to `~/.vim/autoload/lightline/colorscheme/sonokai.vim` .
+    to `~/.vim/autoload/lightline/colorscheme/` .
 
 ==============================================================================
 USAGE                                                           *sonokai-usage*
@@ -324,6 +324,54 @@ A:~
     2. Enable italic keywords in this color scheme: `let g:sonokai_enable_italic = 1`
 
     3. Disable italic comment(optional): `let g:sonokai_disable_italic_comment = 1`
+
+------------------------------------------------------------------------------
+Q:~
+    How to use custom colors?
+
+A:~
+>
+    function! s:sonokai_custom() abort
+      " Link a highlight group to a predefined highlight group.
+      " See `colors/sonokai.vim` for all predefined highlight groups.
+      highlight! link groupA groupB
+      highlight! link groupC groupD
+    
+      " Initialize the color palette.
+      " The parameter is a valid value for `g:sonokai_style`,
+      let l:palette = sonokai#get_palette('aura')
+      " Define a highlight group.
+      " The first parameter is the name of a highlight group,
+      " the second parameter is the foreground color,
+      " the third parameter is the background color,
+      " the fourth parameter is for UI highlighting which is optional,
+      " and the last parameter is for `guisp` which is also optional.
+      " See `autoload/sonokai.vim` for the format of `l:palette`.
+      call sonokai#highlight('groupE', l:palette.red, l:palette.none, 'undercurl', l:palette.red)
+    endfunction
+    
+    augroup SonokaiCustom
+      autocmd!
+      autocmd ColorScheme sonokai call s:sonokai_custom()
+    augroup END
+    
+    colorscheme sonokai
+<
+    Note: Make sure to define the `augroup` before declare the `colorscheme`.
+
+------------------------------------------------------------------------------
+Q:~
+    What's your status line configuration?
+
+A:~
+    See this [article](https://www.sainnhe.dev/post/status-line-config/).
+
+------------------------------------------------------------------------------
+Q:~
+    What's the font used here?
+
+A:~
+    [Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
 
 ==============================================================================
 vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:et:sw=4:fen:fdm=marker:fmr={{{,}}}:
