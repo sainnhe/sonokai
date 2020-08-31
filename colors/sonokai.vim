@@ -729,6 +729,7 @@ highlight! link markdownId Yellow
 " vim-markdown: https://github.com/gabrielelana/vim-markdown{{{
 call sonokai#highlight('mkdURL', s:palette.blue, s:palette.none, 'underline')
 call sonokai#highlight('mkdInlineURL', s:palette.blue, s:palette.none, 'underline')
+call sonokai#highlight('mkdBoldItalic', s:palette.grey, s:palette.none, 'bold,italic')
 call sonokai#highlight('mkdItalic', s:palette.grey, s:palette.none, 'italic')
 highlight! link mkdCodeDelimiter Green
 highlight! link mkdBold Grey
@@ -778,13 +779,13 @@ call sonokai#highlight('htmlH4', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('htmlH5', s:palette.blue, s:palette.none, 'bold')
 call sonokai#highlight('htmlH6', s:palette.purple, s:palette.none, 'bold')
 call sonokai#highlight('htmlLink', s:palette.none, s:palette.none, 'underline')
-call sonokai#highlight('htmlBold', s:palette.none, s:palette.none, 'bold')
-call sonokai#highlight('htmlBoldUnderline', s:palette.none, s:palette.none, 'bold,underline')
-call sonokai#highlight('htmlBoldItalic', s:palette.none, s:palette.none, 'bold,italic')
-call sonokai#highlight('htmlBoldUnderlineItalic', s:palette.none, s:palette.none, 'bold,underline,italic')
-call sonokai#highlight('htmlUnderline', s:palette.none, s:palette.none, 'underline')
-call sonokai#highlight('htmlUnderlineItalic', s:palette.none, s:palette.none, 'underline,italic')
-call sonokai#highlight('htmlItalic', s:palette.none, s:palette.none, 'italic')
+call sonokai#highlight('htmlBold', s:palette.orange, s:palette.none, 'bold')
+call sonokai#highlight('htmlBoldUnderline', s:palette.orange, s:palette.none, 'bold,underline')
+call sonokai#highlight('htmlBoldItalic', s:palette.orange, s:palette.none, 'bold,italic')
+call sonokai#highlight('htmlBoldUnderlineItalic', s:palette.bg_green, s:palette.none, 'bold,underline,italic')
+call sonokai#highlight('htmlUnderline', s:palette.yellow, s:palette.none, 'underline')
+call sonokai#highlight('htmlUnderlineItalic', s:palette.bg_green, s:palette.none, 'underline,italic')
+call sonokai#highlight('htmlItalic', s:palette.green, s:palette.none, 'italic')
 highlight! link htmlTag Green
 highlight! link htmlEndTag Blue
 highlight! link htmlTagN RedItalic
