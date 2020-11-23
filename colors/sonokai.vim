@@ -21,7 +21,7 @@ endif
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 23 02:48:25 AM UTC 2020'
+let s:last_modified = 'Mon Nov 23 03:17:36 AM UTC 2020'
 let g:sonokai_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
@@ -240,10 +240,10 @@ else
   call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
 if s:configuration.diagnostic_line_highlight
-  call sonokai#highlight('ErrorLine', s:palette.bg0, s:palette.red)
-  call sonokai#highlight('WarningLine', s:palette.bg0, s:palette.yellow)
-  call sonokai#highlight('InfoLine', s:palette.bg0, s:palette.blue)
-  call sonokai#highlight('HintLine', s:palette.bg0, s:palette.green)
+  call sonokai#highlight('ErrorLine', s:palette.none, s:palette.diff_red)
+  call sonokai#highlight('WarningLine', s:palette.none, s:palette.diff_yellow)
+  call sonokai#highlight('InfoLine', s:palette.none, s:palette.diff_blue)
+  call sonokai#highlight('HintLine', s:palette.none, s:palette.diff_green)
 else
   highlight clear ErrorLine
   highlight clear WarningLine
