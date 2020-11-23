@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - AUR packages.
+- Support neovim lsp diagnostics.
+- New highlight groups for coc-explorer.
 
 ### Changed
 
@@ -17,6 +19,9 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Fix errors when doesn't set `g:colors_name`.
+- Fix `DiffText` in Vim.
+- Fix `CurrentWord` in diff mode.
+- Fix `CursorColumn` in diff mode.
 
 ## [0.2.0] - 2020-07-20
 
