@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Dec 29 01:52:29 AM UTC 2020'
+let s:last_modified = 'Tue Dec 29 03:50:45 AM UTC 2020'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -305,37 +305,52 @@ endif
 " }}}
 " Plugins: {{{
 " nvim-treesitter/nvim-treesitter {{{
-highlight! link TSPunctDelimiter Grey
-highlight! link TSPunctBracket Fg
-highlight! link TSPunctSpecial Fg
-highlight! link TSConstant OrangeItalic
+highlight! link TSAnnotation BlueItalic
+highlight! link TSAttribute BlueItalic
+highlight! link TSBoolean Purple
+highlight! link TSCharacter Yellow
+highlight! link TSComment Grey
+highlight! link TSConditional Red
 highlight! link TSConstBuiltin OrangeItalic
 highlight! link TSConstMacro Orange
-highlight! link TSString Yellow
-highlight! link TSStringRegex Green
-highlight! link TSStringEscape Green
-highlight! link TSCharacter Yellow
-highlight! link TSNumber Purple
-highlight! link TSBoolean Purple
+highlight! link TSConstant OrangeItalic
+highlight! link TSConstructor Fg
+highlight! link TSError CocErrorHighlight
+highlight! link TSException Red
+highlight! link TSField Green
 highlight! link TSFloat Purple
-highlight! link TSFunction Green
 highlight! link TSFuncBuiltin Green
 highlight! link TSFuncMacro Green
-highlight! link TSParameter OrangeItalic
-highlight! link TSMethod Green
-highlight! link TSField Green
-highlight! link TSProperty Green
-highlight! link TSConstructor Fg
-highlight! link TSConditional Red
-highlight! link TSRepeat Red
-highlight! link TSLabel Red
-highlight! link TSOperator Red
+highlight! link TSFunction Green
+highlight! link TSInclude BlueItalic
 highlight! link TSKeyword Red
-highlight! link TSException Red
+highlight! link TSKeywordFunction Red
+highlight! link TSLabel Red
+highlight! link TSMethod Green
+highlight! link TSNamespace Purple
+highlight! link TSNumber Purple
+highlight! link TSOperator Red
+highlight! link TSParameter OrangeItalic
+highlight! link TSParameterReference OrangeItalic
+highlight! link TSProperty Green
+highlight! link TSPunctBracket Fg
+highlight! link TSPunctDelimiter Grey
+highlight! link TSPunctSpecial Fg
+highlight! link TSRepeat Red
+highlight! link TSString Yellow
+highlight! link TSStringEscape Green
+highlight! link TSStringRegex Green
+highlight! link TSStructure BlueItalic
+highlight! link TSTag BlueItalic
+highlight! link TSTagDelimiter Red
+highlight! link TSText Green
+call sonokai#highlight('TSEmphasis', s:palette.none, s:palette.none, 'bold')
+call sonokai#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
 highlight! link TSType BlueItalic
 highlight! link TSTypeBuiltin BlueItalic
-highlight! link TSStructure BlueItalic
-highlight! link TSInclude BlueItalic
+highlight! link TSURI markdownUrl
+highlight! link TSVariable Fg
+highlight! link TSVariableBuiltin OrangeItalic
 " }}}
 " neoclide/coc.nvim {{{
 call sonokai#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
