@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.1] - 2020-12-29
+
 ### Added
 
 - AUR packages.
@@ -64,6 +66,8 @@ All notable changes to this project will be documented in this file.
 
 - Basically finished.
 
-[unreleased]: https://github.com/sainnhe/sonokai/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/sainnhe/sonokai/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/sainnhe/sonokai/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/sainnhe/sonokai/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/sainnhe/sonokai/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/sainnhe/sonokai/releases/tag/v0.1.0
