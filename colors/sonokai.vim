@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Dec 29 01:38:17 AM UTC 2020'
+let s:last_modified = 'Tue Dec 29 01:52:29 AM UTC 2020'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -840,6 +840,11 @@ highlight! link htmlArg Blue
 highlight! link htmlScriptTag Purple
 highlight! link htmlSpecialTagName RedItalic
 highlight! link htmlString Green
+" }}}
+" ft_end }}}
+" ft_begin: htmldjango {{{
+" builtin: https://github.com/vim/vim/blob/master/runtime/syntax/htmldjango.vim{{{
+highlight! link djangoTagBlock Yellow
 " }}}
 " ft_end }}}
 " ft_begin: xml {{{
