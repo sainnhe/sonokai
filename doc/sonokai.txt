@@ -8,6 +8,8 @@ Usage                                        |sonokai-usage|
 Configuration                                |sonokai-configuration|
 FAQ                                          |sonokai-faq|
 
+Note: Type |gO| to show the outline of contents.
+
 ==============================================================================
 INTRODUCTION                                             *sonokai-introduction*
 
