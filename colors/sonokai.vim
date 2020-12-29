@@ -7,9 +7,17 @@
 " -----------------------------------------------------------------------------
 
 " Initialization: {{{
-highlight clear
-if exists('syntax_on')
-  syntax reset
+let s:configuration = sonokai#get_configuration()
+let s:palette = sonokai#get_palette(s:configuration.style)
+let s:path = expand('<sfile>:p') " the path of this script
+let s:last_modified = 'Mon Nov 23 03:17:36 AM UTC 2020'
+let g:sonokai_loaded_file_types = []
+
+if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
+  highlight clear
+  if exists('syntax_on')
+    syntax reset
+  endif
 endif
 
 let g:colors_name = 'sonokai'
@@ -17,12 +25,6 @@ let g:colors_name = 'sonokai'
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
 endif
-
-let s:configuration = sonokai#get_configuration()
-let s:palette = sonokai#get_palette(s:configuration.style)
-let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 23 03:17:36 AM UTC 2020'
-let g:sonokai_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
