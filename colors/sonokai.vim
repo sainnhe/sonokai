@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Dec 30 01:11:20 AM UTC 2020'
+let s:last_modified = 'Thu Dec 31 10:21:32 AM UTC 2020'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -837,6 +837,20 @@ highlight! link texBeginEndName Green
 highlight! link texDocType RedItalic
 highlight! link texDocTypeArgs Orange
 highlight! link texInputFile Green
+" }}}
+" vimtex: https://github.com/lervag/vimtex {{{
+highlight! link texFileArg Green
+highlight! link texCmd BlueItalic
+highlight! link texCmdPackage BlueItalic
+highlight! link texCmdDef Red
+highlight! link texDefArgName Yellow
+highlight! link texCmdNewcmd Red
+highlight! link texCmdClass Red
+highlight! link texCmdTitle Red
+highlight! link texCmdAuthor Red
+highlight! link texCmdEnv Red
+highlight! link texCmdPart Red
+highlight! link texEnvArgName Green
 " }}}
 " ft_end }}}
 " ft_begin: html/markdown/javascriptreact/typescriptreact {{{
