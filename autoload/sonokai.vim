@@ -214,7 +214,10 @@ function! sonokai#ft_write(rootpath, ft, content) "{{{
   " If there is something like `call sonokai#highlight()`, then add
   " code to initialize the palette and configuration.
   if matchstr(a:content, 'sonokai#highlight') !=# ''
-    call writefile(['let s:configuration = sonokai#get_configuration()', 'let s:palette = sonokai#get_palette(s:configuration.style)'], ft_path, 'a')
+    call writefile([
+          \ 'let s:configuration = sonokai#get_configuration()',
+          \ 'let s:palette = sonokai#get_palette(s:configuration.style)'
+          \ ], ft_path, 'a')
   endif
   " Append the content.
   call writefile(split(a:content, "\n"), ft_path, 'a')
