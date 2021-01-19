@@ -251,6 +251,19 @@ E.g.
     let g:sonokai_sign_column_background = 'none'
 <
 ------------------------------------------------------------------------------
+                                     *g:sonokai_diagnostic_background_highlight*
+g:sonokai_diagnostic_background_highlight~
+
+Whether to highlight the background of error/warning/info/hint.
+
+    Available values: `0`, `1`
+    Default value: `0`
+
+E.g.
+>
+    let g:sonokai_diagnostic_background_highlight = 1
+<
+------------------------------------------------------------------------------
                                            *g:sonokai_diagnostic_line_highlight*
 g:sonokai_diagnostic_line_highlight~
 
