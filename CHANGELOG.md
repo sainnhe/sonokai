@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Optimize lervag/vimtex.
-- Add `g:sonokai_diagnostic_background_highlight`
+- Add `g:sonokai_diagnostic_text_highlight`
 
 ### Changed
 

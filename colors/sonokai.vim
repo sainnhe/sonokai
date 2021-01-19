@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jan 19 10:41:21 AM UTC 2021'
+let s:last_modified = 'Tue Jan 19 10:49:00 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -244,7 +244,7 @@ else
   call sonokai#highlight('BlueSign', s:palette.blue, s:palette.bg1)
   call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
-if s:configuration.diagnostic_background_highlight
+if s:configuration.diagnostic_text_highlight
   call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
   call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
   call sonokai#highlight('InfoText', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
