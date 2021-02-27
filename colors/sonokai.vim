@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Feb 14 02:11:47 AM UTC 2021'
+let s:last_modified = 'Sat Feb 27 11:21:05 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -670,8 +670,10 @@ highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Blue
 highlight! link agitAuthor Yellow
 " }}}
+" }}}
+" Extended File Types: {{{
+" Whitelist: {{{ File type optimizations that will always be loaded.
 " netrw {{{
-" https://www.vim.org/scripts/script.php?script_id=1075
 highlight! link netrwDir Green
 highlight! link netrwClassify Green
 highlight! link netrwLink Grey
@@ -683,9 +685,17 @@ highlight! link netrwHelpCmd Blue
 highlight! link netrwCmdSep Grey
 highlight! link netrwVersion Purple
 " }}}
+" diff {{{
+highlight! link diffAdded Green
+highlight! link diffRemoved Red
+highlight! link diffChanged Blue
+highlight! link diffOldFile Yellow
+highlight! link diffNewFile Orange
+highlight! link diffFile Purple
+highlight! link diffLine Grey
+highlight! link diffIndexLine Purple
 " }}}
-" Extended File Types: {{{
-" Note: To ensure that the `s:last_modified` variable is always up to date, you need to copy `.githooks/pre-commit` to `.git/hooks/pre-commit`.
+" }}}
 " Generate the `after/ftplugin` directory based on the comment tags in this file.
 " For example, the content between `ft_begin: sh/zsh` and `ft_end` will be placed in `after/ftplugin/sh/sonokai.vim` and `after/ftplugin/zsh/sonokai.vim`.
 if sonokai#ft_exists(s:path) " If the ftplugin exists.
@@ -1888,16 +1898,6 @@ highlight! link tomlKey Red
 highlight! link tomlBoolean Blue
 highlight! link tomlString Green
 highlight! link tomlTableArray tomlTable
-" ft_end }}}
-" ft_begin: diff/git/gitcommit {{{
-highlight! link diffAdded Green
-highlight! link diffRemoved Red
-highlight! link diffChanged Blue
-highlight! link diffOldFile Yellow
-highlight! link diffNewFile Orange
-highlight! link diffFile Purple
-highlight! link diffLine Grey
-highlight! link diffIndexLine Purple
 " ft_end }}}
 " ft_begin: gitcommit {{{
 highlight! link gitcommitSummary Red
