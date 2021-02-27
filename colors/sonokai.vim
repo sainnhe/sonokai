@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Feb 27 11:21:05 AM UTC 2021'
+let s:last_modified = 'Sat Feb 27 11:32:25 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -673,18 +673,6 @@ highlight! link agitAuthor Yellow
 " }}}
 " Extended File Types: {{{
 " Whitelist: {{{ File type optimizations that will always be loaded.
-" netrw {{{
-highlight! link netrwDir Green
-highlight! link netrwClassify Green
-highlight! link netrwLink Grey
-highlight! link netrwSymLink Fg
-highlight! link netrwExe Red
-highlight! link netrwComment Grey
-highlight! link netrwList Yellow
-highlight! link netrwHelpCmd Blue
-highlight! link netrwCmdSep Grey
-highlight! link netrwVersion Purple
-" }}}
 " diff {{{
 highlight! link diffAdded Green
 highlight! link diffRemoved Red
@@ -779,6 +767,19 @@ highlight! link NERDTreeLinkTarget Green
 " https://github.com/justinmk/vim-dirvish
 highlight! link DirvishPathTail Blue
 highlight! link DirvishArg Yellow
+" ft_end }}}
+" ft_begin: netrw {{{
+" https://www.vim.org/scripts/script.php?script_id=1075
+highlight! link netrwDir Green
+highlight! link netrwClassify Green
+highlight! link netrwLink Grey
+highlight! link netrwSymLink Fg
+highlight! link netrwExe Red
+highlight! link netrwComment Grey
+highlight! link netrwList Yellow
+highlight! link netrwHelpCmd Blue
+highlight! link netrwCmdSep Grey
+highlight! link netrwVersion Purple
 " ft_end }}}
 " ft_begin: startify/quickmenu {{{
 " https://github.com/mhinz/vim-startify
