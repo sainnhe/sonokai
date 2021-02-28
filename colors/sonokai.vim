@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Feb 27 11:32:25 AM UTC 2021'
+let s:last_modified = 'Sun Feb 28 10:51:15 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -503,10 +503,26 @@ call sonokai#highlight('Lf_hl_match2', s:palette.red, s:palette.none, 'bold')
 call sonokai#highlight('Lf_hl_match3', s:palette.yellow, s:palette.none, 'bold')
 call sonokai#highlight('Lf_hl_match4', s:palette.purple, s:palette.none, 'bold')
 call sonokai#highlight('Lf_hl_matchRefine', s:palette.yellow, s:palette.none, 'bold')
+call sonokai#highlight('Lf_hl_popup_normalMode', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('Lf_hl_popup_inputMode', s:palette.bg0, s:palette.green, 'bold')
+call sonokai#highlight('Lf_hl_popup_category', s:palette.fg, s:palette.bg4)
+call sonokai#highlight('Lf_hl_popup_nameOnlyMode', s:palette.fg, s:palette.bg3)
+call sonokai#highlight('Lf_hl_popup_fullPathMode', s:palette.fg, s:palette.bg3)
+call sonokai#highlight('Lf_hl_popup_fuzzyMode', s:palette.fg, s:palette.bg3)
+call sonokai#highlight('Lf_hl_popup_regexMode', s:palette.fg, s:palette.bg3)
+call sonokai#highlight('Lf_hl_popup_lineInfo', s:palette.bg0, s:palette.blue)
+call sonokai#highlight('Lf_hl_popup_total', s:palette.bg0, s:palette.red)
+call sonokai#highlight('Lf_hl_popup_cursor', s:palette.bg0, s:palette.blue)
 highlight! link Lf_hl_cursorline Fg
 highlight! link Lf_hl_selection DiffAdd
 highlight! link Lf_hl_rgHighlight Visual
 highlight! link Lf_hl_gtagsHighlight Visual
+highlight! link Lf_hl_popup_inputText Pmenu
+highlight! link Lf_hl_popup_window Pmenu
+highlight! link Lf_hl_popup_prompt Blue
+highlight! link Lf_hl_popup_cwd Pmenu
+highlight! link Lf_hl_popup_blank Lf_hl_popup_window
+highlight! link Lf_hl_popup_spin Purple
 " }}}
 " liuchengxu/vim-clap {{{
 call sonokai#highlight('ClapSelected', s:palette.red, s:palette.bg2, 'bold')

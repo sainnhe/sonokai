@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Add `g:sonokai_diagnostic_text_highlight`
 - Optimize `liuchengxu/vim-clap`.
 - Add whitelist for extended file types.
+- Support for leaderf popup mode.
 
 ### Changed
 
