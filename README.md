@@ -83,7 +83,7 @@ See this [wiki page](https://github.com/sainnhe/sonokai/wiki/Related-Projects).
 ## More Color Schemes
 
 - [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
-- [Forest Night](https://github.com/sainnhe/forest-night)
+- [Everforest](https://github.com/sainnhe/everforest)
 - [Edge](https://github.com/sainnhe/edge)
 
 ## Inspiration
