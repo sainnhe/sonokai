@@ -112,7 +112,7 @@ call sonokai#highlight('StatusLine', s:palette.fg, s:palette.bg3)
 call sonokai#highlight('StatusLineTerm', s:palette.fg, s:palette.bg3)
 call sonokai#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
 call sonokai#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
-call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg4)
+call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg1)
 call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
 call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
 call sonokai#highlight('VertSplit', s:palette.black, s:palette.none)
@@ -558,7 +558,7 @@ highlight! link ClapProviderAbout ClapBlines
 " junegunn/fzf.vim {{{
 let g:fzf_colors = {
       \ 'fg': ['fg', 'Normal'],
-      \ 'bg': ['bg', 'Normal'],
+      \ 'bg': ['bg', 'Black'],
       \ 'hl': ['fg', 'Green'],
       \ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
       \ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
