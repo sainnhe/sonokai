@@ -280,6 +280,19 @@ Currently, the following plugins are supported:
 - https://github.com/vim-syntastic/syntastic
 
 ------------------------------------------------------------------------------
+                                                        *g:sonokai_virtual_text*
+g:sonokai_virtual_text~
+
+The virtual text colors in neovim.
+
+    Available values: `'grey'`, `'colored'`
+    Default value: `'grey'`
+
+E.g.
+>
+    let g:sonokai_virtual_text = 'colored'
+<
+------------------------------------------------------------------------------
                                                         *g:sonokai_current_word*
 g:sonokai_current_word~
 
