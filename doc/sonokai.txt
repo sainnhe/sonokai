@@ -251,7 +251,9 @@ E.g.
                                            *g:sonokai_diagnostic_text_highlight*
 g:sonokai_diagnostic_text_highlight~
 
-Whether to highlight the background of error/warning/info/hint text.
+Some plugins support highlighting error/warning/info/hint texts, by default
+these texts are only underlined, but you can use this option to also highlight
+the background of them.
 
     Available values: `0`, `1`
     Default value: `0`
@@ -260,6 +262,16 @@ E.g.
 >
     let g:sonokai_diagnostic_text_highlight = 1
 <
+Currently, the following plugins are supported:
+
+- neovim's built-in language server client
+- https://github.com/neoclide/coc.nvim
+- https://github.com/prabirshrestha/vim-lsp
+- https://github.com/ycm-core/YouCompleteMe
+- https://github.com/dense-analysis/ale
+- https://github.com/neomake/neomake
+- https://github.com/vim-syntastic/syntastic
+
 ------------------------------------------------------------------------------
                                            *g:sonokai_diagnostic_line_highlight*
 g:sonokai_diagnostic_line_highlight~
@@ -280,32 +292,34 @@ Currently, the following plugins are supported:
 - https://github.com/vim-syntastic/syntastic
 
 ------------------------------------------------------------------------------
-                                                        *g:sonokai_virtual_text*
-g:sonokai_virtual_text~
+                                             *g:sonokai_diagnostic_virtual_text*
+g:sonokai_diagnostic_virtual_text~
 
-The virtual text colors in neovim.
+Some plugins can use virtual text feature of neovim to display
+error/warning/info/hint information, you can use this option to adjust the
+colors of it.
 
     Available values: `'grey'`, `'colored'`
     Default value: `'grey'`
 
 E.g.
 >
-    let g:sonokai_virtual_text = 'colored'
+    let g:sonokai_diagnostic_virtual_text = 'colored'
 <
+Currently, the following plugins are supported:
+
+- neovim's built-in language server client
+- https://github.com/neoclide/coc.nvim
+- https://github.com/prabirshrestha/vim-lsp
+- https://github.com/dense-analysis/ale
+- https://github.com/neomake/neomake
+
 ------------------------------------------------------------------------------
                                                         *g:sonokai_current_word*
 g:sonokai_current_word~
 
 Some plugins can highlight the word under current cursor, you can use this
 option to control their behavior.
-
-Currently support:
-
-- https://github.com/neoclide/coc-highlight
-- https://github.com/dominikduda/vim_current_word
-- https://github.com/RRethy/vim-illuminate
-- https://github.com/itchyny/vim-cursorword
-- https://github.com/prabirshrestha/vim-lsp
 
     Available values: `'grey background'`, `'bold'`, `'underline'`, `'italic'`
     Default value: `'grey background'` when not in transparent mode, `'bold'`
@@ -315,6 +329,14 @@ E.g.
 >
     let g:sonokai_current_word = 'bold'
 <
+Currently, the following plugins are supported:
+
+- https://github.com/neoclide/coc-highlight
+- https://github.com/dominikduda/vim_current_word
+- https://github.com/RRethy/vim-illuminate
+- https://github.com/itchyny/vim-cursorword
+- https://github.com/prabirshrestha/vim-lsp
+
 ------------------------------------------------------------------------------
                                               *g:sonokai_lightline_disable_bold*
 g:sonokai_lightline_disable_bold~

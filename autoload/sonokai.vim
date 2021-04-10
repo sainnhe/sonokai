@@ -19,7 +19,7 @@ function! sonokai#get_configuration() "{{{
         \ 'lightline_disable_bold': get(g:, 'sonokai_lightline_disable_bold', 0),
         \ 'diagnostic_text_highlight': get(g:, 'sonokai_diagnostic_text_highlight', 0),
         \ 'diagnostic_line_highlight': get(g:, 'sonokai_diagnostic_line_highlight', 0),
-        \ 'virtual_text': get(g:, 'sonokai_virtual_text', 'grey'),
+        \ 'diagnostic_virtual_text': get(g:, 'sonokai_diagnostic_virtual_text', 'grey'),
         \ 'better_performance': get(g:, 'sonokai_better_performance', 0),
         \ }
 endfunction "}}}
