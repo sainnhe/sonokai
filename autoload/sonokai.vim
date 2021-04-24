@@ -6,6 +6,12 @@
 " License: MIT License
 " =============================================================================
 
+" g:sonokai#tmux: is in tmux < 2.9 or not {{{
+let g:sonokai#tmux = executable('tmux') && $TMUX !=# '' ?
+                  \ (str2float(system("tmux -V | grep -oE '[0-9]+\.[0-9]*'")) < 2.9 ?
+                    \ 1 :
+                    \ 0) :
+                  \ 0 "}}}
 function! sonokai#get_configuration() "{{{
   return {
         \ 'style': get(g:, 'sonokai_style', 'default'),
@@ -160,7 +166,7 @@ function! sonokai#highlight(group, fg, bg, ...) "{{{
         \ 'ctermbg=' . a:bg[1]
         \ 'gui=' . (a:0 >= 1 ?
           \ (a:1 ==# 'undercurl' ?
-            \ (executable('tmux') && $TMUX !=# '' ?
+            \ (g:sonokai#tmux ?
               \ 'underline' :
               \ 'undercurl') :
             \ a:1) :
