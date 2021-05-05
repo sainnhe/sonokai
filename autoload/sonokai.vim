@@ -34,7 +34,7 @@ function! sonokai#get_palette(style) "{{{
     let palette = {
           \ 'black':      ['#181819',   '237',  'DarkGrey'],
           \ 'bg0':        ['#2c2e34',   '235',  'Black'],
-          \ 'bg1':        ['#30323a',   '236',  'DarkGrey'],
+          \ 'bg1':        ['#33353f',   '236',  'DarkGrey'],
           \ 'bg2':        ['#363944',   '236',  'DarkGrey'],
           \ 'bg3':        ['#3b3e48',   '237',  'DarkGrey'],
           \ 'bg4':        ['#414550',   '237',  'Grey'],
@@ -59,7 +59,7 @@ function! sonokai#get_palette(style) "{{{
     let palette = {
           \ 'black':      ['#1a181a',   '237',  'DarkGrey'],
           \ 'bg0':        ['#2d2a2e',   '235',  'Black'],
-          \ 'bg1':        ['#343136',   '236',  'DarkGrey'],
+          \ 'bg1':        ['#37343a',   '236',  'DarkGrey'],
           \ 'bg2':        ['#3b383e',   '236',  'DarkGrey'],
           \ 'bg3':        ['#423f46',   '237',  'DarkGrey'],
           \ 'bg4':        ['#49464e',   '237',  'Grey'],
@@ -84,7 +84,7 @@ function! sonokai#get_palette(style) "{{{
     let palette = {
           \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
           \ 'bg0':        ['#2b2d3a',   '235',  'Black'],
-          \ 'bg1':        ['#2f3242',   '236',  'DarkGrey'],
+          \ 'bg1':        ['#333648',   '236',  'DarkGrey'],
           \ 'bg2':        ['#363a4e',   '236',  'DarkGrey'],
           \ 'bg3':        ['#393e53',   '237',  'DarkGrey'],
           \ 'bg4':        ['#3f445b',   '237',  'Grey'],
@@ -109,7 +109,7 @@ function! sonokai#get_palette(style) "{{{
     let palette = {
           \ 'black':      ['#181a1c',   '237',  'DarkGrey'],
           \ 'bg0':        ['#2a2f38',   '235',  'Black'],
-          \ 'bg1':        ['#303541',   '236',  'DarkGrey'],
+          \ 'bg1':        ['#333846',   '236',  'DarkGrey'],
           \ 'bg2':        ['#373c4b',   '236',  'DarkGrey'],
           \ 'bg3':        ['#3d4455',   '237',  'DarkGrey'],
           \ 'bg4':        ['#424b5b',   '237',  'Grey'],
@@ -134,7 +134,7 @@ function! sonokai#get_palette(style) "{{{
     let palette = {
           \ 'black':      ['#1c1e1f',   '237',  'DarkGrey'],
           \ 'bg0':        ['#273136',   '235',  'Black'],
-          \ 'bg1':        ['#2e383e',   '236',  'DarkGrey'],
+          \ 'bg1':        ['#313b42',   '236',  'DarkGrey'],
           \ 'bg2':        ['#353f46',   '236',  'DarkGrey'],
           \ 'bg3':        ['#3a444b',   '237',  'DarkGrey'],
           \ 'bg4':        ['#414b53',   '237',  'Grey'],

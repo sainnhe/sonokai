@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file.
 
 - Diagnostics text highlights.
 - `gui=undercurl` is enabled in tmux >= 2.9
+- Adjust status line bg.
 
 ## [0.2.1] - 2020-12-29
 
