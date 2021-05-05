@@ -240,8 +240,8 @@ g:sonokai_menu_selection_background~
 
 Customize the background color of |hl-PmenuSel| and |hl-WildMenu|.
 
-    Available values: `'green'`, `'blue'`, `'red'`
-    Default value: `'green'`
+    Available values: `'blue'`, `'green'`, `'red'`
+    Default value: `'blue'`
 
 E.g.
 >
