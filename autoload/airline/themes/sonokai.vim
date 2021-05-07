@@ -30,8 +30,8 @@ let s:tab_mod_fg = s:palette.bg0
 let s:tab_mod_bg = s:palette.bg_blue
 let s:tab_type_fg = s:palette.bg0
 let s:tab_type_bg = s:palette.purple
-let s:tab_label_fg = s:palette.bg0
-let s:tab_label_bg = s:palette.orange
+let s:tab_label_fg = s:palette.fg
+let s:tab_label_bg = s:palette.bg4
 
 let s:normal_side_fg = s:palette.bg0
 let s:normal_side_bg = s:palette.bg_blue
