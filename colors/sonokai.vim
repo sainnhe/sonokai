@@ -51,7 +51,7 @@ else
   endif
 endif
 call sonokai#highlight('IncSearch', s:palette.bg0, s:palette.bg_red)
-call sonokai#highlight('Search', s:palette.bg0, s:palette.bg_green)
+call sonokai#highlight('Search', s:palette.bg0, s:palette.bg_red)
 call sonokai#highlight('ColorColumn', s:palette.none, s:palette.bg1)
 call sonokai#highlight('Conceal', s:palette.grey, s:palette.none)
 if s:configuration.cursor ==# 'auto'
