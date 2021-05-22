@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May 19 12:29:29 AM UTC 2021'
+let s:last_modified = 'Sat May 22 02:34:04 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -331,6 +331,12 @@ endif
 " }}}
 " Plugins: {{{
 " nvim-treesitter/nvim-treesitter {{{
+call sonokai#highlight('TSStrong', s:palette.none, s:palette.none, 'bold')
+call sonokai#highlight('TSEmphasis', s:palette.none, s:palette.none, 'bold')
+call sonokai#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
+call sonokai#highlight('TSNote', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('TSWarning', s:palette.bg0, s:palette.yellow, 'bold')
+call sonokai#highlight('TSDanger', s:palette.bg0, s:palette.red, 'bold')
 highlight! link TSAnnotation BlueItalic
 highlight! link TSAttribute BlueItalic
 highlight! link TSBoolean Purple
@@ -348,12 +354,14 @@ highlight! link TSFloat Purple
 highlight! link TSFuncBuiltin Green
 highlight! link TSFuncMacro Green
 highlight! link TSFunction Green
-highlight! link TSInclude BlueItalic
+highlight! link TSInclude Red
 highlight! link TSKeyword Red
 highlight! link TSKeywordFunction Red
+highlight! link TSKeywordOperator Red
 highlight! link TSLabel Red
 highlight! link TSMethod Green
-highlight! link TSNamespace Purple
+highlight! link TSNamespace BlueItalic
+highlight! link TSNone Fg
 highlight! link TSNumber Purple
 highlight! link TSOperator Red
 highlight! link TSParameter OrangeItalic
@@ -367,11 +375,12 @@ highlight! link TSString Yellow
 highlight! link TSStringEscape Green
 highlight! link TSStringRegex Green
 highlight! link TSStructure BlueItalic
+highlight! link TSSymbol Fg
 highlight! link TSTag BlueItalic
 highlight! link TSTagDelimiter Red
 highlight! link TSText Green
-call sonokai#highlight('TSEmphasis', s:palette.none, s:palette.none, 'bold')
-call sonokai#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
+highlight! link TSStrike Grey
+highlight! link TSMath Yellow
 highlight! link TSType BlueItalic
 highlight! link TSTypeBuiltin BlueItalic
 highlight! link TSURI markdownUrl

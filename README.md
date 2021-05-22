@@ -42,6 +42,7 @@ The `shusia` and `maia` variants are based on `monokai pro` and `monokai machine
 - Vivid colors.
 - Highly customizable.
 - Rich support for common file types and plugins.
+- Tree-sitter support.
 - [Italic support](https://github.com/sainnhe/icursive-nerd-font) 🎉
 
 ## Documentation
