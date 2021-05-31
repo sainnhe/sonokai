@@ -155,6 +155,31 @@ function! sonokai#get_palette(style) "{{{
           \ 'grey':       ['#82878b',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
+  elseif a:style ==# 'espresso'
+    let palette = {
+          \ 'black':      ['#1f1e1c',   '237',  'DarkGrey'],
+          \ 'bg0':        ['#312a28',   '235',  'Black'],
+          \ 'bg1':        ['#39302e',   '236',  'DarkGrey'],
+          \ 'bg2':        ['#413734',   '236',  'DarkGrey'],
+          \ 'bg3':        ['#493d39',   '237',  'DarkGrey'],
+          \ 'bg4':        ['#4e403b',   '237',  'Grey'],
+          \ 'bg_red':     ['#fd6883',   '203',  'Red'],
+          \ 'diff_red':   ['#55393d',   '52',   'DarkRed'],
+          \ 'bg_green':   ['#adda78',   '107',  'Green'],
+          \ 'diff_green': ['#394634',   '22',   'DarkGreen'],
+          \ 'bg_blue':    ['#85dad2',   '110',  'Blue'],
+          \ 'diff_blue':  ['#354157',   '17',   'DarkBlue'],
+          \ 'diff_yellow':['#4e432f',   '54',   'DarkMagenta'],
+          \ 'fg':         ['#e4e3e1',   '250',  'White'],
+          \ 'red':        ['#f86882',   '203',  'Red'],
+          \ 'orange':     ['#f08d71',   '215',  'Orange'],
+          \ 'yellow':     ['#f0c66f',   '179',  'Yellow'],
+          \ 'green':      ['#a6cd77',   '107',  'Green'],
+          \ 'blue':       ['#81d0c9',   '110',  'Blue'],
+          \ 'purple':     ['#9fa0e1',   '176',  'Magenta'],
+          \ 'grey':       ['#937f78',   '246',  'LightGrey'],
+          \ 'none':       ['NONE',      'NONE', 'NONE']
+          \ }
   endif
   return palette
 endfunction "}}}

@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Add `g:sonokai_diagnostic_virtual_text`.
 - Optimize `kyazdani42/nvim-tree.lua`.
 - Add installation guide for using pack feature.
+- Add `espresso` variant.
 
 ### Changed
 

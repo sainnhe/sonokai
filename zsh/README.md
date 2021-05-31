@@ -18,6 +18,8 @@ source /path/to/sonokai/zsh/.zsh-theme-sonokai-andromeda
 source /path/to/sonokai/zsh/.zsh-theme-sonokai-atlantis
 # or
 source /path/to/sonokai/zsh/.zsh-theme-sonokai-maia
+# or
+source /path/to/sonokai/zsh/.zsh-theme-sonokai-espresso
 ```
 
 Alternatively, if you are using [zinit](https://github.com/zdharma/zinit)(formerly known as zplugin, [highly recommended](https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded)), you can install the theme like this:
@@ -39,6 +41,9 @@ zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonok
 
 # maia variant
 zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-maia
+
+# espresso variant
+zinit snippet https://github.com/sainnhe/sonokai/raw/master/zsh/.zsh-theme-sonokai-espresso
 ```
 
 ## Customization

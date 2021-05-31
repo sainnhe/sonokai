@@ -17,15 +17,15 @@ Sometimes I need a high contrast color scheme, and I think monokai is one of
 the best solutions, it's very beautiful and vivid.
 
 However there is one thing I can't stand -- the contrast is too high, which is
-totally unacceptable to me.
+totally unacceptable for me.
 
 This color scheme is based on Monokai Pro, the contrast is adjusted to be a
 bit lower while keeping the colors vivid enough.
 
-The `shusia` and `maia` variants are based on `monokai pro` and `monokai machine`
-respectively. I'm not going to port all variants of Monokai Pro because I
-don't like some of them. In addition, I designed some new variants inspired by
-other color schemes.
+The `shusia`, `maia` and `espresso` variants are basically modified versions of
+Monokai Pro. I'm not going to port all variants of Monokai Pro because I don't
+like some of them. In addition, I designed some new variants inspired by other
+color schemes.
 
 Features~
 
@@ -180,7 +180,7 @@ g:sonokai_style~
 
 The style of this color scheme.
 
-    Available values: `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`
+    Available values: `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`, `'espresso'`
     Default value: `'default'`
 
 E.g.

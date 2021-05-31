@@ -1,4 +1,4 @@
-# This theme is sonokai version of purepower(powerlevel10k)
+# This theme is sonokai-espresso version of purepower(powerlevel10k)
 # Upstream: https://github.com/romkatv/dotfiles-public/blob/master/.purepower
 
 # PURE_POWER_MODE=modern    use nerdfont characters in the prompt
@@ -56,8 +56,8 @@ fi
     p=$ins
   fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    local ok="%F{#76cce0}${p}%f"
-    local err="%F{#fc5d7c}${p}%f"
+    local ok="%F{#81d0c9}${p}%f"
+    local err="%F{#f86882}${p}%f"
   else
     local ok="%F{$(_pp_s 005 176)}${p}%f"
     local err="%F{$(_pp_s 001 203)}${p}%f"
@@ -68,7 +68,7 @@ fi
     typeset -g POWERLEVEL9K_RULER_CHAR=$(_pp_s '-' '─')
     typeset -g POWERLEVEL9K_RULER_BACKGROUND=none
     if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-      typeset -g POWERLEVEL9K_RULER_FOREGROUND='#181819'
+      typeset -g POWERLEVEL9K_RULER_FOREGROUND='#1f1e1c'
     else
       typeset -g POWERLEVEL9K_RULER_FOREGROUND=$(_pp_c 7 246)
     fi
@@ -90,7 +90,7 @@ fi
   typeset -g POWERLEVEL9K_DIR_{ETC,HOME,HOME_SUBFOLDER,DEFAULT,NOT_WRITABLE}_BACKGROUND=none
   typeset -g POWERLEVEL9K_{ETC,FOLDER,HOME,HOME_SUB}_ICON=
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR='#f39660'
+    typeset -g POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR='#f08d71'
   else
     typeset -g POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_VISUAL_IDENTIFIER_COLOR=$(_pp_c 006 72)
   fi
@@ -100,9 +100,9 @@ fi
     typeset -g POWERLEVEL9K_LOCK_ICON=
   fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND='#9ed072'
-    typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND='#9ed072'
-    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#fc5d7c'
+    typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND='#a6cd77'
+    typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND='#a6cd77'
+    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#f86882'
   else
     typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND=$(_pp_c 006 72)
     typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND=$(_pp_c 002 107)
@@ -112,10 +112,10 @@ fi
   typeset -g POWERLEVEL9K_VCS_{CLEAN,UNTRACKED,MODIFIED,LOADING}_BACKGROUND=none
   typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED}_MAX_NUM=99
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#76cce0'
-    typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#e7c664'
-    typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#b39df3'
-    typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND='#7f8490'
+    typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#81d0c9'
+    typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#f0c66f'
+    typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#9fa0e1'
+    typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND='#937f78'
   else
     typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$(_pp_c 004 110)
     typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=$(_pp_c 003 179)
@@ -161,7 +161,7 @@ fi
   typeset -g POWERLEVEL9K_STATUS_OK=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#fc5d7c'
+    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#f86882'
   else
     typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$(_pp_c 001 203)
   fi
@@ -170,7 +170,7 @@ fi
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#7f8490'
+    typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#937f78'
   else
     typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$(_pp_c 007 246)
   fi
@@ -178,8 +178,8 @@ fi
 
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,ROOT,REMOTE_SUDO,REMOTE,SUDO}_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND='#76cce0'
-    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#fc5d7c'
+    typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND='#81d0c9'
+    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#f86882'
   else
     typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND=$(_pp_c 004 110)
     typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=$(_pp_c 001 203)

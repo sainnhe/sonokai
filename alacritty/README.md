@@ -146,3 +146,32 @@ colors:
     cyan: "0xf3a96a"
     white: "0xe1e2e3"
 ```
+
+## espresso
+
+```yaml
+colors:
+  primary:
+    background: "0x312a28"
+    foreground: "0xe4e3e1"
+
+  normal:
+    black: "0x1f1e1c"
+    red: "0xf86882"
+    green: "0xa6cd77"
+    yellow: "0xf0c66f"
+    blue: "0x81d0c9"
+    magenta: "0x9fa0e1"
+    cyan: "0xf08d71"
+    white: "0xe4e3e1"
+
+  bright:
+    black: "0x1f1e1c"
+    red: "0xf86882"
+    green: "0xa6cd77"
+    yellow: "0xf0c66f"
+    blue: "0x81d0c9"
+    magenta: "0x9fa0e1"
+    cyan: "0xf08d71"
+    white: "0xe4e3e1"
+```
