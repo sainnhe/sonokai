@@ -32,7 +32,7 @@
 𝐄𝐬𝐩𝐫𝐞𝐬𝐬𝐨
 </h2>
 
-![sonokai-espresso](https://user-images.githubusercontent.com/37491630/120165307-04381300-c22e-11eb-952a-86e93db367b6.png)
+![sonokai-espresso](https://user-images.githubusercontent.com/37491630/120320919-49834000-c315-11eb-872c-230f78cf99a1.png)
 
 Sometimes I need a high contrast color scheme, and I think monokai is one of the best solutions, it's very beautiful and vivid.
 

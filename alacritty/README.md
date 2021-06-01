@@ -152,7 +152,7 @@ colors:
 ```yaml
 colors:
   primary:
-    background: "0x312a28"
+    background: "0x312c2b"
     foreground: "0xe4e3e1"
 
   normal:

@@ -158,11 +158,11 @@ function! sonokai#get_palette(style) "{{{
   elseif a:style ==# 'espresso'
     let palette = {
           \ 'black':      ['#1f1e1c',   '237',  'DarkGrey'],
-          \ 'bg0':        ['#312a28',   '235',  'Black'],
-          \ 'bg1':        ['#39302e',   '236',  'DarkGrey'],
-          \ 'bg2':        ['#413734',   '236',  'DarkGrey'],
-          \ 'bg3':        ['#493d39',   '237',  'DarkGrey'],
-          \ 'bg4':        ['#4e403b',   '237',  'Grey'],
+          \ 'bg0':        ['#312c2b',   '235',  'Black'],
+          \ 'bg1':        ['#393230',   '236',  'DarkGrey'],
+          \ 'bg2':        ['#413937',   '236',  'DarkGrey'],
+          \ 'bg3':        ['#49403c',   '237',  'DarkGrey'],
+          \ 'bg4':        ['#4e433f',   '237',  'Grey'],
           \ 'bg_red':     ['#fd6883',   '203',  'Red'],
           \ 'diff_red':   ['#55393d',   '52',   'DarkRed'],
           \ 'bg_green':   ['#adda78',   '107',  'Green'],
@@ -177,7 +177,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'green':      ['#a6cd77',   '107',  'Green'],
           \ 'blue':       ['#81d0c9',   '110',  'Blue'],
           \ 'purple':     ['#9fa0e1',   '176',  'Magenta'],
-          \ 'grey':       ['#937f78',   '246',  'LightGrey'],
+          \ 'grey':       ['#90817b',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif
