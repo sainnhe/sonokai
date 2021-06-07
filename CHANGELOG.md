@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `kyazdani42/nvim-tree.lua`.
 - Add installation guide for using pack feature.
 - Add `espresso` variant.
+- Add `g:sonokai_show_eob`.
 
 ### Changed
 

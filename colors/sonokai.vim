@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat May 22 02:43:35 AM UTC 2021'
+let s:last_modified = 'Mon Jun  7 08:25:03 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -31,7 +31,11 @@ endif
 if s:configuration.transparent_background
   call sonokai#highlight('Normal', s:palette.fg, s:palette.none)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.none)
-  call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.none)
+  if s:configuration.show_eob
+    call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.none)
+  else
+    call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.none)
+  endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.none)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.none)
   call sonokai#highlight('SignColumn', s:palette.fg, s:palette.none)
@@ -39,7 +43,11 @@ if s:configuration.transparent_background
 else
   call sonokai#highlight('Normal', s:palette.fg, s:palette.bg0)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.bg0)
-  call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+  if s:configuration.show_eob
+    call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
+  else
+    call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+  endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
   if s:configuration.sign_column_background ==# 'default'
