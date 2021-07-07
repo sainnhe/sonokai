@@ -1502,23 +1502,23 @@ highlight! link cppSTLexception Red
 highlight! link cppSTLVariable BlueItalic
 " }}}
 " chromatica: https://github.com/arakashic/chromatica.nvim{{{
-highlight! link Member OrangeItalic
-highlight! link Variable Fg
-highlight! link Namespace BlueItalic
-highlight! link EnumConstant OrangeItalic
-highlight! link chromaticaException Red
-highlight! link chromaticaCast Red
-highlight! link OperatorOverload Red
-highlight! link AccessQual Red
-highlight! link Linkage Red
-highlight! link AutoType BlueItalic
+highlight! link Member TSProperty
+highlight! link Variable TSVariable
+highlight! link Namespace TSNamespace
+highlight! link EnumConstant TSType
+highlight! link chromaticaException TSException
+highlight! link chromaticaCast TSLabel
+highlight! link OperatorOverload TSOperator
+highlight! link AccessQual TSOperator
+highlight! link Linkage TSOperator
+highlight! link AutoType TSType
 " }}}
 " vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight{{{
 highlight! link LspCxxHlSkippedRegion Grey
-highlight! link LspCxxHlSkippedRegionBeginEnd Red
-highlight! link LspCxxHlGroupEnumConstant OrangeItalic
-highlight! link LspCxxHlGroupNamespace BlueItalic
-highlight! link LspCxxHlGroupMemberVariable OrangeItalic
+highlight! link LspCxxHlSkippedRegionBeginEnd TSKeyword
+highlight! link LspCxxHlGroupEnumConstant TSType
+highlight! link LspCxxHlGroupNamespace TSNamespace
+highlight! link LspCxxHlGroupMemberVariable TSProperty
 " }}}
 " ft_end }}}
 " ft_begin: objc {{{
@@ -1569,18 +1569,18 @@ highlight! link pythonDot Grey
 " }}}
 " semshi: https://github.com/numirias/semshi{{{
 call sonokai#highlight('semshiUnresolved', s:palette.orange, s:palette.none, 'undercurl')
-highlight! link semshiImported BlueItalic
-highlight! link semshiParameter OrangeItalic
+highlight! link semshiImported TSInclude
+highlight! link semshiParameter TSParameter
 highlight! link semshiParameterUnused Grey
-highlight! link semshiSelf BlueItalic
-highlight! link semshiGlobal Green
-highlight! link semshiBuiltin Green
-highlight! link semshiAttribute OrangeItalic
-highlight! link semshiLocal Red
-highlight! link semshiFree Red
-highlight! link semshiSelected CocHighlightText
-highlight! link semshiErrorSign ALEErrorSign
-highlight! link semshiErrorChar ALEErrorSign
+highlight! link semshiSelf TSVariableBuiltin
+highlight! link semshiGlobal TSType
+highlight! link semshiBuiltin TSTypeBuiltin
+highlight! link semshiAttribute TSAttribute
+highlight! link semshiLocal TSKeyword
+highlight! link semshiFree TSKeyword
+highlight! link semshiSelected CurrentWord
+highlight! link semshiErrorSign RedSign
+highlight! link semshiErrorChar RedSign
 " }}}
 " ft_end }}}
 " ft_begin: lua {{{
