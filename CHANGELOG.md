@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Add `espresso` variant.
 - Add `g:sonokai_show_eob`.
 - Optimize `McSinyx/vim-octave`.
+- Support semantic highlight in coc.nvim .
 
 ### Changed
 
