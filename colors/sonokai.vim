@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Jul  8 01:23:11 AM UTC 2021'
+let s:last_modified = 'Thu Jul  8 01:34:37 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -352,7 +352,7 @@ highlight! link TSCharacter Yellow
 highlight! link TSComment Comment
 highlight! link TSConditional Red
 highlight! link TSConstBuiltin OrangeItalic
-highlight! link TSConstMacro Orange
+highlight! link TSConstMacro OrangeItalic
 highlight! link TSConstant OrangeItalic
 highlight! link TSConstructor Fg
 highlight! link TSError ErrorText
@@ -375,7 +375,7 @@ highlight! link TSOperator Red
 highlight! link TSParameter OrangeItalic
 highlight! link TSParameterReference OrangeItalic
 highlight! link TSProperty Green
-highlight! link TSPunctBracket Fg
+highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Yellow
 highlight! link TSRepeat Red
