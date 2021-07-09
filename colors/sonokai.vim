@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jul  9 10:59:03 AM UTC 2021'
+let s:last_modified = 'Fri Jul  9 11:17:18 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -355,8 +355,8 @@ highlight! link TSNamespace BlueItalic
 highlight! link TSNone Fg
 highlight! link TSNumber Purple
 highlight! link TSOperator Red
-highlight! link TSParameter OrangeItalic
-highlight! link TSParameterReference OrangeItalic
+highlight! link TSParameter Fg
+highlight! link TSParameterReference Fg
 highlight! link TSProperty Green
 highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Grey
@@ -365,7 +365,7 @@ highlight! link TSRepeat Red
 highlight! link TSString Yellow
 highlight! link TSStringEscape Green
 highlight! link TSStringRegex Green
-highlight! link TSStructure BlueItalic
+highlight! link TSStructure OrangeItalic
 highlight! link TSSymbol Fg
 highlight! link TSTag BlueItalic
 highlight! link TSTagDelimiter Red
@@ -397,7 +397,7 @@ highlight! link CocSem_comparison TSOperator
 highlight! link CocSem_constParameter TSParameter
 highlight! link CocSem_dependent TSInclude
 highlight! link CocSem_dot TSOperator
-highlight! link CocSem_enum TSType
+highlight! link CocSem_enum TSStructure
 highlight! link CocSem_enumMember TSProperty
 highlight! link CocSem_escapeSequence TSStringEscape
 highlight! link CocSem_event TSType
@@ -421,7 +421,7 @@ highlight! link CocSem_regexp TSStringRegex
 highlight! link CocSem_selfKeyword TSConstBuiltin
 highlight! link CocSem_semicolon TSPunctDelimiter
 highlight! link CocSem_string TSString
-highlight! link CocSem_struct TSConstMacro
+highlight! link CocSem_struct TSStructure
 highlight! link CocSem_type TSType
 highlight! link CocSem_typeAlias TSType
 highlight! link CocSem_typeParameter TSType
@@ -1490,7 +1490,7 @@ highlight! link cppSTLVariable BlueItalic
 highlight! link Member TSProperty
 highlight! link Variable TSVariable
 highlight! link Namespace TSNamespace
-highlight! link EnumConstant TSType
+highlight! link EnumConstant TSStructure
 highlight! link chromaticaException TSException
 highlight! link chromaticaCast TSLabel
 highlight! link OperatorOverload TSOperator
@@ -1501,7 +1501,7 @@ highlight! link AutoType TSType
 " vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight{{{
 highlight! link LspCxxHlSkippedRegion Grey
 highlight! link LspCxxHlSkippedRegionBeginEnd TSKeyword
-highlight! link LspCxxHlGroupEnumConstant TSType
+highlight! link LspCxxHlGroupEnumConstant TSStructure
 highlight! link LspCxxHlGroupNamespace TSNamespace
 highlight! link LspCxxHlGroupMemberVariable TSProperty
 " }}}
