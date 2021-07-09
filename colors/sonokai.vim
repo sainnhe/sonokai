@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Jul  8 01:34:37 AM UTC 2021'
+let s:last_modified = 'Fri Jul  9 04:58:29 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -417,6 +417,7 @@ highlight! link CocSem_dot TSOperator
 highlight! link CocSem_enum TSType
 highlight! link CocSem_enumMember TSProperty
 highlight! link CocSem_escapeSequence TSStringEscape
+highlight! link CocSem_event TSType
 highlight! link CocSem_formatSpecifier TSStringEscape
 highlight! link CocSem_function TSFunction
 highlight! link CocSem_interface TSType
@@ -425,6 +426,7 @@ highlight! link CocSem_label TSLabel
 highlight! link CocSem_logical TSOperator
 highlight! link CocSem_macro TSConstMacro
 highlight! link CocSem_method TSMethod
+highlight! link CocSem_modifier TSKeywordOperator
 highlight! link CocSem_namespace TSNamespace
 highlight! link CocSem_number TSNumber
 highlight! link CocSem_operator TSOperator
