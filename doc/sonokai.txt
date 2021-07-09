@@ -33,6 +33,7 @@ Features~
 - Vivid colors.
 - Highly customizable.
 - Rich support for common file types and plugins.
+- Semantic highlighting support.
 - Tree-sitter support.
 - Italic support 🎉
 
