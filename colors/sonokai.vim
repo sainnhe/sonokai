@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jul  9 04:58:29 AM UTC 2021'
+let s:last_modified = 'Fri Jul  9 10:59:03 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -38,7 +38,6 @@ if s:configuration.transparent_background
   endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.none)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.none)
-  call sonokai#highlight('SignColumn', s:palette.fg, s:palette.none)
   call sonokai#highlight('FoldColumn', s:palette.grey, s:palette.none)
 else
   call sonokai#highlight('Normal', s:palette.fg, s:palette.bg0)
@@ -50,14 +49,9 @@ else
   endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
-  if s:configuration.sign_column_background ==# 'default'
-    call sonokai#highlight('SignColumn', s:palette.fg, s:palette.bg1)
-    call sonokai#highlight('FoldColumn', s:palette.grey, s:palette.bg1)
-  else
-    call sonokai#highlight('SignColumn', s:palette.fg, s:palette.none)
-    call sonokai#highlight('FoldColumn', s:palette.grey, s:palette.none)
-  endif
+  call sonokai#highlight('FoldColumn', s:palette.grey, s:palette.none)
 endif
+call sonokai#highlight('SignColumn', s:palette.fg, s:palette.none)
 call sonokai#highlight('IncSearch', s:palette.bg0, s:palette.bg_red)
 call sonokai#highlight('Search', s:palette.bg0, s:palette.bg_green)
 call sonokai#highlight('ColorColumn', s:palette.none, s:palette.bg1)
@@ -81,10 +75,8 @@ endif
 call sonokai#highlight('LineNr', s:palette.grey, s:palette.none)
 if &diff
   call sonokai#highlight('CursorLineNr', s:palette.fg, s:palette.none, 'underline')
-elseif (&relativenumber == 1 && &cursorline == 0) || s:configuration.sign_column_background !=# 'default'
-  call sonokai#highlight('CursorLineNr', s:palette.fg, s:palette.none)
 else
-  call sonokai#highlight('CursorLineNr', s:palette.fg, s:palette.bg1)
+  call sonokai#highlight('CursorLineNr', s:palette.fg, s:palette.none)
 endif
 call sonokai#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call sonokai#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
@@ -237,21 +229,12 @@ else
   call sonokai#highlight('BlueItalic', s:palette.blue, s:palette.none)
   call sonokai#highlight('PurpleItalic', s:palette.purple, s:palette.none)
 endif
-if s:configuration.transparent_background || s:configuration.sign_column_background !=# 'default'
-  call sonokai#highlight('RedSign', s:palette.red, s:palette.none)
-  call sonokai#highlight('OrangeSign', s:palette.orange, s:palette.none)
-  call sonokai#highlight('YellowSign', s:palette.yellow, s:palette.none)
-  call sonokai#highlight('GreenSign', s:palette.green, s:palette.none)
-  call sonokai#highlight('BlueSign', s:palette.blue, s:palette.none)
-  call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.none)
-else
-  call sonokai#highlight('RedSign', s:palette.red, s:palette.bg1)
-  call sonokai#highlight('OrangeSign', s:palette.orange, s:palette.bg1)
-  call sonokai#highlight('YellowSign', s:palette.yellow, s:palette.bg1)
-  call sonokai#highlight('GreenSign', s:palette.green, s:palette.bg1)
-  call sonokai#highlight('BlueSign', s:palette.blue, s:palette.bg1)
-  call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
-endif
+call sonokai#highlight('RedSign', s:palette.red, s:palette.none)
+call sonokai#highlight('OrangeSign', s:palette.orange, s:palette.none)
+call sonokai#highlight('YellowSign', s:palette.yellow, s:palette.none)
+call sonokai#highlight('GreenSign', s:palette.green, s:palette.none)
+call sonokai#highlight('BlueSign', s:palette.blue, s:palette.none)
+call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.none)
 if s:configuration.diagnostic_text_highlight
   call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
   call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)

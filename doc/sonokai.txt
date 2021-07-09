@@ -250,20 +250,6 @@ E.g.
     let g:sonokai_menu_selection_background = 'green'
 <
 ------------------------------------------------------------------------------
-                                              *g:sonokai_sign_column_background*
-g:sonokai_sign_column_background~
-
-By default, the background color of sign column is different from normal text.
-If you want to make it the same as normal text, set this option to `'none'`.
-
-    Available values: `'default'`, `'none'`
-    Default value: `'default'`
-
-E.g.
->
-    let g:sonokai_sign_column_background = 'none'
-<
-------------------------------------------------------------------------------
                                                             *g:sonokai_show_eob*
 g:sonokai_show_eob~
 

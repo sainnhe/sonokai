@@ -20,7 +20,6 @@ function! sonokai#get_configuration() "{{{
         \ 'enable_italic': get(g:, 'sonokai_enable_italic', 0),
         \ 'cursor': get(g:, 'sonokai_cursor', 'auto'),
         \ 'menu_selection_background': get(g:, 'sonokai_menu_selection_background', 'blue'),
-        \ 'sign_column_background': get(g:, 'sonokai_sign_column_background', 'default'),
         \ 'show_eob': get(g:, 'sonokai_show_eob', 1),
         \ 'current_word': get(g:, 'sonokai_current_word', get(g:, 'sonokai_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
         \ 'lightline_disable_bold': get(g:, 'sonokai_lightline_disable_bold', 0),

@@ -28,6 +28,10 @@ All notable changes to this project will be documented in this file.
 - Adjust status line bg.
 - Redesign syntax logic of tree-sitter.
 
+### Removed
+
+- Remove `g:sonokai_sign_column_background`.
+
 ## [0.2.1] - 2020-12-29
 
 ### Added
