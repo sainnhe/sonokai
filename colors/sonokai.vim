@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jul  9 11:17:18 AM UTC 2021'
+let s:last_modified = 'Sat Jul 10 01:22:40 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -717,6 +717,26 @@ if get(g:, 'indent_guides_auto_colors', 1) == 0
   call sonokai#highlight('IndentGuidesOdd', s:palette.bg0, s:palette.bg1)
   call sonokai#highlight('IndentGuidesEven', s:palette.bg0, s:palette.bg2)
 endif
+" }}}
+" thiagoalessio/rainbow_levels.vim {{{
+highlight! link RainbowLevel0 Red
+highlight! link RainbowLevel1 Orange
+highlight! link RainbowLevel2 Yellow
+highlight! link RainbowLevel3 Green
+highlight! link RainbowLevel4 Blue
+highlight! link RainbowLevel5 Purple
+highlight! link RainbowLevel6 Yellow
+highlight! link RainbowLevel7 Green
+highlight! link RainbowLevel8 Blue
+" }}}
+" p00f/nvim-ts-rainbow {{{
+highlight! link rainbowcol1 Red
+highlight! link rainbowcol2 Orange
+highlight! link rainbowcol3 Yellow
+highlight! link rainbowcol4 Green
+highlight! link rainbowcol5 Blue
+highlight! link rainbowcol6 Purple
+highlight! link rainbowcol7 Green
 " }}}
 " kshenoy/vim-signature {{{
 highlight! link SignatureMarkText BlueSign
