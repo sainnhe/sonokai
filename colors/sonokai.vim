@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jul 10 01:22:40 AM UTC 2021'
+let s:last_modified = 'Sat Jul 10 05:41:33 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -381,6 +381,7 @@ highlight! link TSVariableBuiltin OrangeItalic
 " neoclide/coc.nvim {{{
 call sonokai#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
 highlight! link CocSem_angle TSTagDelimiter
+highlight! link CocSem_annotation TSOperator
 highlight! link CocSem_attribute TSAttribute
 highlight! link CocSem_bitwise TSOperator
 highlight! link CocSem_boolean TSBoolean
@@ -398,7 +399,7 @@ highlight! link CocSem_constParameter TSParameter
 highlight! link CocSem_dependent TSInclude
 highlight! link CocSem_dot TSOperator
 highlight! link CocSem_enum TSStructure
-highlight! link CocSem_enumMember TSProperty
+highlight! link CocSem_enumMember TSVariable
 highlight! link CocSem_escapeSequence TSStringEscape
 highlight! link CocSem_event TSType
 highlight! link CocSem_formatSpecifier TSStringEscape
@@ -415,7 +416,7 @@ highlight! link CocSem_number TSNumber
 highlight! link CocSem_operator TSOperator
 highlight! link CocSem_parameter TSParameter
 highlight! link CocSem_parenthesis TSPunctBracket
-highlight! link CocSem_property TSProperty
+highlight! link CocSem_property TSVariable
 highlight! link CocSem_punctuation TSOperator
 highlight! link CocSem_regexp TSStringRegex
 highlight! link CocSem_selfKeyword TSConstBuiltin
@@ -1507,7 +1508,7 @@ highlight! link cppSTLexception Red
 highlight! link cppSTLVariable BlueItalic
 " }}}
 " chromatica: https://github.com/arakashic/chromatica.nvim{{{
-highlight! link Member TSProperty
+highlight! link Member TSVariable
 highlight! link Variable TSVariable
 highlight! link Namespace TSNamespace
 highlight! link EnumConstant TSStructure
@@ -1523,7 +1524,7 @@ highlight! link LspCxxHlSkippedRegion Grey
 highlight! link LspCxxHlSkippedRegionBeginEnd TSKeyword
 highlight! link LspCxxHlGroupEnumConstant TSStructure
 highlight! link LspCxxHlGroupNamespace TSNamespace
-highlight! link LspCxxHlGroupMemberVariable TSProperty
+highlight! link LspCxxHlGroupMemberVariable TSVariable
 " }}}
 " ft_end }}}
 " ft_begin: objc {{{
