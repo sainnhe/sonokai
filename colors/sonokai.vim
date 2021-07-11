@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jul 11 01:43:35 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 10:38:58 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -699,7 +699,6 @@ let g:VM_Cursor_hl = 'Cursor'
 let g:VM_Insert_hl = 'Cursor'
 " }}}
 " dominikduda/vim_current_word {{{
-highlight! link CurrentWord CurrentWord
 highlight! link CurrentWordTwins CurrentWord
 " }}}
 " RRethy/vim-illuminate {{{
