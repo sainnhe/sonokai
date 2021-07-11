@@ -53,6 +53,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#76cce0',   '110',  'Blue'],
           \ 'purple':     ['#b39df3',   '176',  'Magenta'],
           \ 'grey':       ['#7f8490',   '246',  'LightGrey'],
+          \ 'grey_dim':   ['#4f5462',   '240',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   elseif a:style ==# 'shusia'
@@ -78,6 +79,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#7accd7',   '110',  'Blue'],
           \ 'purple':     ['#ab9df2',   '176',  'Magenta'],
           \ 'grey':       ['#848089',   '246',  'LightGrey'],
+          \ 'grey_dim':   ['#595660',   '240',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   elseif a:style ==# 'andromeda'
@@ -103,6 +105,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#6dcae8',   '110',  'Blue'],
           \ 'purple':     ['#bb97ee',   '176',  'Magenta'],
           \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
+          \ 'grey_dim':   ['#4c516d',   '240',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   elseif a:style ==# 'atlantis'
@@ -128,6 +131,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#72cce8',   '110',  'Blue'],
           \ 'purple':     ['#ba9cf3',   '176',  'Magenta'],
           \ 'grey':       ['#828a9a',   '246',  'LightGrey'],
+          \ 'grey_dim':   ['#4f5a6d',   '240',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   elseif a:style ==# 'maia'
@@ -153,6 +157,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#78cee9',   '110',  'Blue'],
           \ 'purple':     ['#baa0f8',   '176',  'Magenta'],
           \ 'grey':       ['#82878b',   '246',  'LightGrey'],
+          \ 'grey_dim':   ['#4f5b65',   '240',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   elseif a:style ==# 'espresso'
@@ -178,6 +183,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#81d0c9',   '110',  'Blue'],
           \ 'purple':     ['#9fa0e1',   '176',  'Magenta'],
           \ 'grey':       ['#90817b',   '246',  'LightGrey'],
+          \ 'grey_dim':   ['#60524d',   '240',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif

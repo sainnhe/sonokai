@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jul 10 05:41:33 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 01:43:35 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -38,7 +38,7 @@ if s:configuration.transparent_background
   endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.none)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.none)
-  call sonokai#highlight('FoldColumn', s:palette.grey, s:palette.none)
+  call sonokai#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 else
   call sonokai#highlight('Normal', s:palette.fg, s:palette.bg0)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.bg0)
@@ -49,13 +49,13 @@ else
   endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
-  call sonokai#highlight('FoldColumn', s:palette.grey, s:palette.none)
+  call sonokai#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 endif
 call sonokai#highlight('SignColumn', s:palette.fg, s:palette.none)
 call sonokai#highlight('IncSearch', s:palette.bg0, s:palette.bg_red)
 call sonokai#highlight('Search', s:palette.bg0, s:palette.bg_green)
 call sonokai#highlight('ColorColumn', s:palette.none, s:palette.bg1)
-call sonokai#highlight('Conceal', s:palette.grey, s:palette.none)
+call sonokai#highlight('Conceal', s:palette.grey_dim, s:palette.none)
 if s:configuration.cursor ==# 'auto'
   call sonokai#highlight('Cursor', s:palette.none, s:palette.none, 'reverse')
 else
@@ -72,7 +72,7 @@ else
   call sonokai#highlight('CursorLine', s:palette.none, s:palette.bg1)
   call sonokai#highlight('CursorColumn', s:palette.none, s:palette.bg1)
 endif
-call sonokai#highlight('LineNr', s:palette.grey, s:palette.none)
+call sonokai#highlight('LineNr', s:palette.grey_dim, s:palette.none)
 if &diff
   call sonokai#highlight('CursorLineNr', s:palette.fg, s:palette.none, 'underline')
 else
@@ -710,8 +710,14 @@ highlight! link CursorWord0 CurrentWord
 highlight! link CursorWord1 CurrentWord
 " }}}
 " Yggdroot/indentLine {{{
-let g:indentLine_color_gui = s:palette.grey[0]
-let g:indentLine_color_term = s:palette.grey[1]
+let g:indentLine_color_gui = s:palette.grey_dim[0]
+let g:indentLine_color_term = s:palette.grey_dim[1]
+" }}}
+" lukas-reineke/indent-blankline.nvim {{{
+highlight! link IndentBlanklineChar Conceal
+highlight! link IndentBlanklineSpaceChar Conceal
+highlight! link IndentBlanklineSpaceCharBlankline Conceal
+highlight! link IndentBlanklineContextChar Grey
 " }}}
 " nathanaelkane/vim-indent-guides {{{
 if get(g:, 'indent_guides_auto_colors', 1) == 0
