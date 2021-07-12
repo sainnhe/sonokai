@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jul 12 12:24:51 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 10:38:58 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -87,7 +87,7 @@ call sonokai#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underlin
 call sonokai#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
 call sonokai#highlight('ModeMsg', s:palette.fg, s:palette.none, 'bold')
 call sonokai#highlight('MoreMsg', s:palette.blue, s:palette.none, 'bold')
-call sonokai#highlight('MatchParen', s:palette.none, s:palette.grey_dim)
+call sonokai#highlight('MatchParen', s:palette.none, s:palette.bg4)
 call sonokai#highlight('NonText', s:palette.bg4, s:palette.none)
 call sonokai#highlight('Whitespace', s:palette.bg4, s:palette.none)
 call sonokai#highlight('SpecialKey', s:palette.bg4, s:palette.none)
