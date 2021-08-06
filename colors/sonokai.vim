@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Jul 29 01:18:40 AM UTC 2021'
+let s:last_modified = 'Fri Aug  6 11:26:03 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -435,6 +435,7 @@ highlight! link CocWarningHighlight WarningText
 highlight! link CocInfoHighlight InfoText
 highlight! link CocHintHighlight HintText
 highlight! link CocHighlightText CurrentWord
+highlight! link CocHoverRange CurrentWord
 highlight! link CocErrorSign RedSign
 highlight! link CocWarningSign YellowSign
 highlight! link CocInfoSign BlueSign
@@ -450,7 +451,37 @@ highlight! link CocHintLine HintLine
 highlight! link CocCodeLens Grey
 highlight! link CocFadeOut Grey
 highlight! link CocStrikeThrough Grey
+highlight! link CocListMode StatusLine
+highlight! link CocListPath StatusLine
+highlight! link CocTreeOpenClose Grey
 highlight! link HighlightedyankRegion Visual
+highlight! link CocSymbolFile Fg
+highlight! link CocSymbolModule TSNamespace
+highlight! link CocSymbolNamespace TSNamespace
+highlight! link CocSymbolPackage TSNamespace
+highlight! link CocSymbolClass TSType
+highlight! link CocSymbolMethod TSMethod
+highlight! link CocSymbolProperty TSProperty
+highlight! link CocSymbolField TSField
+highlight! link CocSymbolConstructor TSConstructor
+highlight! link CocSymbolEnum TSStructure
+highlight! link CocSymbolInterface TSType
+highlight! link CocSymbolFunction TSFunction
+highlight! link CocSymbolVariable TSVariable
+highlight! link CocSymbolConstant TSConstant
+highlight! link CocSymbolString TSString
+highlight! link CocSymbolNumber TSNumber
+highlight! link CocSymbolBoolean TSBoolean
+highlight! link CocSymbolArray TSVariable
+highlight! link CocSymbolObject TSVariable
+highlight! link CocSymbolKey TSKeyword
+highlight! link CocSymbolNull TSVariableBuiltin
+highlight! link CocSymbolEnumMember TSProperty
+highlight! link CocSymbolStruct TSStructure
+highlight! link CocSymbolEvent TSLabel
+highlight! link CocSymbolOperator TSOperator
+highlight! link CocSymbolTypeParameter TSType
+highlight! link CocSymbolDefault TSNone
 highlight! link CocGitAddedSign GreenSign
 highlight! link CocGitChangeRemovedSign PurpleSign
 highlight! link CocGitChangedSign BlueSign
