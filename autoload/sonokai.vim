@@ -53,7 +53,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#76cce0',   '110'],
           \ 'purple':     ['#b39df3',   '176'],
           \ 'grey':       ['#7f8490',   '246'],
-          \ 'grey_dim':   ['#4f5462',   '240'],
+          \ 'grey_dim':   ['#595f6f',   '240'],
           \ 'none':       ['NONE',      'NONE']
           \ }
   elseif a:style ==# 'shusia'
@@ -79,7 +79,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#7accd7',   '110'],
           \ 'purple':     ['#ab9df2',   '176'],
           \ 'grey':       ['#848089',   '246'],
-          \ 'grey_dim':   ['#595660',   '240'],
+          \ 'grey_dim':   ['#605d68',   '240'],
           \ 'none':       ['NONE',      'NONE']
           \ }
   elseif a:style ==# 'andromeda'
@@ -105,7 +105,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#6dcae8',   '110'],
           \ 'purple':     ['#bb97ee',   '176'],
           \ 'grey':       ['#7e8294',   '246'],
-          \ 'grey_dim':   ['#4c516d',   '240'],
+          \ 'grey_dim':   ['#5a5e7a',   '240'],
           \ 'none':       ['NONE',      'NONE']
           \ }
   elseif a:style ==# 'atlantis'
@@ -131,7 +131,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#72cce8',   '110'],
           \ 'purple':     ['#ba9cf3',   '176'],
           \ 'grey':       ['#828a9a',   '246'],
-          \ 'grey_dim':   ['#4f5a6d',   '240'],
+          \ 'grey_dim':   ['#5a6477',   '240'],
           \ 'none':       ['NONE',      'NONE']
           \ }
   elseif a:style ==# 'maia'
@@ -157,7 +157,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#78cee9',   '110'],
           \ 'purple':     ['#baa0f8',   '176'],
           \ 'grey':       ['#82878b',   '246'],
-          \ 'grey_dim':   ['#4f5b65',   '240'],
+          \ 'grey_dim':   ['#55626d',   '240'],
           \ 'none':       ['NONE',      'NONE']
           \ }
   elseif a:style ==# 'espresso'
@@ -183,7 +183,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'blue':       ['#81d0c9',   '110'],
           \ 'purple':     ['#9fa0e1',   '176'],
           \ 'grey':       ['#90817b',   '246'],
-          \ 'grey_dim':   ['#60524d',   '240'],
+          \ 'grey_dim':   ['#6a5e59',   '240'],
           \ 'none':       ['NONE',      'NONE']
           \ }
   endif
