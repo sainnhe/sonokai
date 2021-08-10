@@ -337,7 +337,7 @@ highlight! link TSConditional Red
 highlight! link TSConstBuiltin OrangeItalic
 highlight! link TSConstMacro OrangeItalic
 highlight! link TSConstant OrangeItalic
-highlight! link TSConstructor Fg
+highlight! link TSConstructor Green
 highlight! link TSException Red
 highlight! link TSField Green
 highlight! link TSFloat Purple
