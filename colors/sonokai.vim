@@ -718,6 +718,12 @@ highlight! link Sneak Search
 highlight! link SneakLabel Search
 highlight! link SneakScope DiffText
 " }}}
+" phaazon/hop.nvim {{{
+call sonokai#highlight('HopNextKey', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('HopNextKey1', s:palette.blue, s:palette.none, 'bold')
+highlight! link HopNextKey2 Blue
+highlight! link HopUnmatched Grey
+" }}}
 " terryma/vim-multiple-cursors {{{
 highlight! link multiple_cursors_cursor Cursor
 highlight! link multiple_cursors_visual Visual
