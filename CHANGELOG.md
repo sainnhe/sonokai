@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Optimize `fannheyward/coc-rust-analyzer`.
 - Add [Diagnostic*](https://github.com/neovim/neovim/pull/15585) highlight groups.
+- Optimize `vimwiki/vimwiki`.
 
 ## [0.3.0] - 2021-08-06
 

@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Aug  6 11:26:03 AM UTC 2021'
+let s:last_modified = 'Fri Sep 24 09:45:56 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1049,6 +1049,27 @@ highlight! link mkdRule Purple
 highlight! link mkdDelimiter Grey
 highlight! link mkdId Yellow
 " }}}
+" ft_end }}}
+" ft_begin: vimwiki {{{
+call sonokai#highlight('VimwikiHeader1', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiHeader2', s:palette.orange, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiHeader3', s:palette.yellow, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiHeader4', s:palette.green, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiHeader5', s:palette.blue, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiHeader6', s:palette.purple, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiLink', s:palette.blue, s:palette.none, 'underline')
+call sonokai#highlight('VimwikiItalic', s:palette.none, s:palette.none, 'italic')
+call sonokai#highlight('VimwikiBold', s:palette.none, s:palette.none, 'bold')
+call sonokai#highlight('VimwikiUnderline', s:palette.none, s:palette.none, 'underline')
+highlight! link VimwikiList Red
+highlight! link VimwikiTag Blue
+highlight! link VimwikiCode Green
+highlight! link VimwikiHR Yellow
+highlight! link VimwikiHeaderChar Grey
+highlight! link VimwikiMarkers Grey
+highlight! link VimwikiPre Green
+highlight! link VimwikiPreDelim Green
+highlight! link VimwikiNoExistsLink Red
 " ft_end }}}
 " ft_begin: rst {{{
 " builtin: https://github.com/marshallward/vim-restructuredtext{{{
