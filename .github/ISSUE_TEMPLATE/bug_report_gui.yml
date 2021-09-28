@@ -25,6 +25,11 @@ body:
       description: |
         - If you are using gvim, paste **ALL** the output of `vim --version` (execute this command in your terminal emulator)
         - If you are using a neovim GUI client, paste **ALL** the output of `:checkhealth` (execute this command in your neovim)
+        - Triple backticks is the syntax of creating fenced code blocks in markdown, you should paste your output inside the code block.
+      placeholder: |
+        ```text
+        Paste your output here.
+        ```
     validations:
       required: true
   - type: textarea
