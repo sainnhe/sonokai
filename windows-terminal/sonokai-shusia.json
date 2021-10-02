@@ -1,0 +1,21 @@
+{
+	"name": "Sonokai Shusia",
+	"background": "#2d2a2e",
+	"foreground": "#e3e1e4",
+	"black": "#1a181a",
+	"red": "#f85e84",
+	"green": "#9ecd6f",
+	"yellow": "#e5c463",
+	"blue": "#7accd7",
+	"purple": "#ab9df2",
+	"cyan": "#ef9062",
+	"white": "#e3e1e4",
+	"brightBlack": "#2d2a2e",
+	"brightRed": "#f85e84",
+	"brightGreen": "#9ecd6f",
+	"brightYellow": "#e5c463",
+	"brightBlue": "#7accd7",
+	"brightPurple": "#ab9df2",
+	"brightCyan": "#ef9062",
+	"brightWhite": "#e3e1e4"
+}

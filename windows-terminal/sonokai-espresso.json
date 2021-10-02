@@ -1,0 +1,21 @@
+{
+	"name": "Sonokai Espresso",
+	"background": "#312c2b",
+	"foreground": "#e4e3e1",
+	"black": "#1f1e1c",
+	"red": "#f86882",
+	"green": "#a6cd77",
+	"yellow": "#f0c66f",
+	"blue": "#81d0c9",
+	"purple": "#9fa0e1",
+	"cyan": "#f08d71",
+	"white": "#e4e3e1",
+	"brightBlack": "#1f1e1c",
+	"brightRed": "#f86882",
+	"brightGreen": "#a6cd77",
+	"brightYellow": "#f0c66f",
+	"brightBlue": "#81d0c9",
+	"brightPurple": "#9fa0e1",
+	"brightCyan": "#f08d71",
+	"brightWhite": "#e4e3e1"
+}

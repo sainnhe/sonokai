@@ -1,0 +1,21 @@
+{
+	"name": "Sonokai Andromeda",
+	"background": "#2b2d3a",
+	"foreground": "#e1e3e4",
+	"black": "#181a1c",
+	"red": "#fb617e",
+	"green": "#9ed06c",
+	"yellow": "#edc763",
+	"blue": "#6dcae8",
+	"purple": "#bb97ee",
+	"cyan": "#f89860",
+	"white": "#e1e3e4",
+	"brightBlack": "#2b2d3a",
+	"brightRed": "#fb617e",
+	"brightGreen": "#9ed06c",
+	"brightYellow": "#edc763",
+	"brightBlue": "#6dcae8",
+	"brightPurple": "#bb97ee",
+	"brightCyan": "#f89860",
+	"brightWhite": "#e1e3e4"
+}

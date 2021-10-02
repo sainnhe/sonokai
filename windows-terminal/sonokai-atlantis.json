@@ -1,0 +1,21 @@
+{
+	"name": "Sonokai Atlantis",
+	"background": "#2a2f38",
+	"foreground": "#e1e3e4",
+	"black": "#181a1c",
+	"red": "#ff6578",
+	"green": "#9dd274",
+	"yellow": "#eacb64",
+	"blue": "#72cce8",
+	"purple": "#ba9cf3",
+	"cyan": "#f69c5e",
+	"white": "#e1e3e4",
+	"brightBlack": "#2a2f38",
+	"brightRed": "#ff6578",
+	"brightGreen": "#9dd274",
+	"brightYellow": "#eacb64",
+	"brightBlue": "#72cce8",
+	"brightPurple": "#ba9cf3",
+	"brightCyan": "#f69c5e",
+	"brightWhite": "#e1e3e4"
+}

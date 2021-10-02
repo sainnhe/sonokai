@@ -1,0 +1,21 @@
+{
+	"name": "Sonokai Maia",
+	"background": "#273136",
+	"foreground": "#e1e2e3",
+	"black": "#1c1e1f",
+	"red": "#f76c7c",
+	"green": "#9cd57b",
+	"yellow": "#e3d367",
+	"blue": "#78cee9",
+	"purple": "#baa0f8",
+	"cyan": "#f3a96a",
+	"white": "#e1e2e3",
+	"brightBlack": "#273136",
+	"brightRed": "#f76c7c",
+	"brightGreen": "#9cd57b",
+	"brightYellow": "#e3d367",
+	"brightBlue": "#78cee9",
+	"brightPurple": "#baa0f8",
+	"brightCyan": "#f3a96a",
+	"brightWhite": "#e1e2e3"
+}
