@@ -72,7 +72,7 @@ Manually~
     1. Clone the repository: `git clone --depth 1 https://github.com/sainnhe/sonokai.git`
 
     2. Copy `/path/to/sonokai/autoload/sonokai.vim` to
-    `~/.vim/autoload/`.
+    `~/.vim/autoload/` .
 
     3. Copy `/path/to/sonokai/colors/sonokai.vim` to
     `~/.vim/colors/` .
