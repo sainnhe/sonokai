@@ -21,7 +21,7 @@ colors:
     white: "0xe2e2e3"
 
   bright:
-    black: "0x181819"
+    black: "0x7f8490"
     red: "0xfc5d7c"
     green: "0x9ed072"
     yellow: "0xe7c664"
@@ -50,7 +50,7 @@ colors:
     white: "0xe3e1e4"
 
   bright:
-    black: "0x1a181a"
+    black: "0x848089"
     red: "0xf85e84"
     green: "0x9ecd6f"
     yellow: "0xe5c463"
@@ -79,7 +79,7 @@ colors:
     white: "0xe1e3e4"
 
   bright:
-    black: "0x181a1c"
+    black: "0x7e8294"
     red: "0xfb617e"
     green: "0x9ed06c"
     yellow: "0xedc763"
@@ -108,7 +108,7 @@ colors:
     white: "0xe1e3e4"
 
   bright:
-    black: "0x181a1c"
+    black: "0x828a9a"
     red: "0xff6578"
     green: "0x9dd274"
     yellow: "0xeacb64"
@@ -137,7 +137,7 @@ colors:
     white: "0xe1e2e3"
 
   bright:
-    black: "0x1c1e1f"
+    black: "0x82878b"
     red: "0xf76c7c"
     green: "0x9cd57b"
     yellow: "0xe3d367"
@@ -166,7 +166,7 @@ colors:
     white: "0xe4e3e1"
 
   bright:
-    black: "0x1f1e1c"
+    black: "0x90817b"
     red: "0xf86882"
     green: "0xa6cd77"
     yellow: "0xf0c66f"
