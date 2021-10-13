@@ -50,7 +50,7 @@ colors:
     white: "0xe3e1e4"
 
   bright:
-	black: "0x848089"
+    black: "0x848089"
     red: "0xf85e84"
     green: "0x9ecd6f"
     yellow: "0xe5c463"
