@@ -92,7 +92,7 @@ function! sonokai#get_palette(style) "{{{
           \ 'bg4':        ['#3f445b',   '237'],
           \ 'bg_red':     ['#ff6188',   '203'],
           \ 'diff_red':   ['#55393d',   '52'],
-          \ 'bg_green':   ['#a9dc76',   '107'],
+          \ 'bg_green':   ['#87b05d',   '107'],
           \ 'diff_green': ['#394634',   '22'],
           \ 'bg_blue':    ['#77d5f0',   '110'],
           \ 'diff_blue':  ['#354157',   '17'],
