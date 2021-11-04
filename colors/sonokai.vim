@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  4 08:34:16 UTC 2021'
+let s:last_modified = 'Thu Nov  4 09:04:19 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -972,6 +972,19 @@ highlight! link NvimTreeGitMerge Orange
 highlight! link NvimTreeGitRenamed Purple
 highlight! link NvimTreeGitNew Green
 highlight! link NvimTreeGitDeleted Red
+" ft_end }}}
+" ft_begin: fern {{{
+" https://github.com/lambdalisue/fern.vim
+highlight! link FernMarkedLine None
+highlight! link FernMarkedText Purple
+highlight! link FernRootSymbol FernRootText
+highlight! link FernRootText Blue
+highlight! link FernLeafSymbol FernLeafText
+highlight! link FernLeafText Fg
+highlight! link FernBranchSymbol FernBranchText
+highlight! link FernBranchText Green
+highlight! link FernWindowSelectIndicator TabLineSel
+highlight! link FernWindowSelectStatusLine TabLine
 " ft_end }}}
 " ft_begin: netrw {{{
 " https://www.vim.org/scripts/script.php?script_id=1075
