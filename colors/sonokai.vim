@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  4 09:04:19 UTC 2021'
+let s:last_modified = 'Thu Nov  4 13:06:38 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -824,6 +824,25 @@ highlight! link BufTabLineCurrent TabLineSel
 highlight! link BufTabLineActive TabLine
 highlight! link BufTabLineHidden TabLineFill
 highlight! link BufTabLineFill TabLineFill
+" }}}
+" romgrk/barbar.nvim {{{
+call sonokai#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
+call sonokai#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
+call sonokai#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
+call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg4)
+call sonokai#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
+call sonokai#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
+call sonokai#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
+call sonokai#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
+call sonokai#highlight('BufferVisibleSign', s:palette.red, s:palette.bg2)
+call sonokai#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call sonokai#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
+call sonokai#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call sonokai#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
 " }}}
 " liuchengxu/vim-which-key {{{
 highlight! link WhichKey Red

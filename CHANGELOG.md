@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `folke/trouble.nvim`.
 - Optimize `TimUntersberger/neogit`.
 - Optimize `lambdalisue/fern.vim`.
+- Optimize `romgrk/barbar.nvim`.
 
 ## [0.3.0] - 2021-08-06
 
