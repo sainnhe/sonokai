@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  4 13:06:38 UTC 2021'
+let s:last_modified = 'Thu Nov  4 13:14:50 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -872,6 +872,23 @@ highlight! link agitDiffRemove Red
 highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Blue
 highlight! link agitAuthor Yellow
+" }}}
+" rcarriga/nvim-notify {{{
+highlight! link NotifyERRORBorder Red
+highlight! link NotifyWARNBorder Yellow
+highlight! link NotifyINFOBorder Green
+highlight! link NotifyDEBUGBorder Grey
+highlight! link NotifyTRACEBorder Purple
+highlight! link NotifyERRORIcon Red
+highlight! link NotifyWARNIcon Yellow
+highlight! link NotifyINFOIcon Green
+highlight! link NotifyDEBUGIcon Grey
+highlight! link NotifyTRACEIcon Purple
+highlight! link NotifyERRORTitle Red
+highlight! link NotifyWARNTitle Yellow
+highlight! link NotifyINFOTitle Green
+highlight! link NotifyDEBUGTitle Grey
+highlight! link NotifyTRACETitle Purple
 " }}}
 " }}}
 " Extended File Types: {{{
