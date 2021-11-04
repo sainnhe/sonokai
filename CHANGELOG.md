@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `vimwiki/vimwiki`.
 - Optimize `hrsh7th/nvim-cmp`.
 - Optimize `folke/trouble.nvim`.
+- Optimize `TimUntersberger/neogit`.
 
 ## [0.3.0] - 2021-08-06
 
