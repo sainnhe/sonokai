@@ -1,3 +1,11 @@
+-- =============================================================================
+-- URL: https://github.com/sainnhe/sonokai
+-- Filename: lua/lualine/themes/sonokai.lua
+-- Author: sainnhe
+-- Email: sainnhe@gmail.com
+-- License: MIT License
+-- =============================================================================
+
 local configuration = vim.fn['sonokai#get_configuration']()
 local palette = vim.fn['sonokai#get_palette'](configuration.style)
 
