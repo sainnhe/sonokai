@@ -88,6 +88,10 @@ Manually~
     copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim`
     to `~/.vim/autoload/lightline/colorscheme/` .
 
+    7. To install [lualine](https://github.com/nvim-lualine/lualine.nvim) theme,
+    copy `/path/to/sonokai/lua/lualine/themes/sonokai.lua`
+    to `~/.config/nvim/lua/lualine/themes/` .
+
 ------------------------------------------------------------------------------
 
 AUR~
@@ -156,6 +160,23 @@ Lightline~
         :let g:lightline.colorscheme = 'sonokai'
         :call lightline#init()
         :call lightline#colorscheme()
+<
+------------------------------------------------------------------------------
+
+Lualine~
+
+    To enable [lualine](https://github.com/nvim-lualine/lualine.nvim) color
+    scheme, put this in your init.lua:
+>
+        require'lualine'.setup {
+          options = {
+            theme = 'sonokai'
+          }
+        }
+<
+    To apply it without reloading:
+>
+        :lua require'lualine'.setup {options = {theme = 'sonokai'}}
 <
 ==============================================================================
 CONFIGURATION                                            *sonokai-configuration*
