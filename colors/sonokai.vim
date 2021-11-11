@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov 11 05:59:44 UTC 2021'
+let s:last_modified = 'Thu Nov 11 07:35:15 AM UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -546,14 +546,6 @@ highlight! link CocExplorerHelpDescription Grey
 highlight! link CocExplorerHelpHint Grey
 highlight! link CocRustChainingHint Grey
 " }}}
-" hrsh7th/nvim-cmp {{{
-call sonokai#highlight('CmpItemAbbrMatch', s:palette.green, s:palette.none, 'bold')
-call sonokai#highlight('CmpItemAbbrMatchFuzzy', s:palette.green, s:palette.none, 'bold')
-highlight! link CmpItemAbbr Fg
-highlight! link CmpItemAbbrDeprecated Fg
-highlight! link CmpItemMenu Fg
-highlight! link CmpItemKind Blue
-" }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtual VirtualTextError
 highlight! link LspWarningVirtual VirtualTextWarning
@@ -588,11 +580,6 @@ highlight! link ALEVirtualTextWarning VirtualTextWarning
 highlight! link ALEVirtualTextInfo VirtualTextInfo
 highlight! link ALEVirtualTextStyleError VirtualTextHint
 highlight! link ALEVirtualTextStyleWarning VirtualTextHint
-" }}}
-" folke/trouble.nvim {{{
-highlight! link TroubleText Fg
-highlight! link TroubleSource Grey
-highlight! link TroubleCode Grey
 " }}}
 " neomake/neomake {{{
 highlight! link NeomakeError ErrorText
@@ -696,12 +683,6 @@ let g:fzf_colors = {
       \ 'header': ['fg', 'Blue']
       \ }
 " }}}
-" nvim-telescope/telescope.nvim {{{
-call sonokai#highlight('TelescopeMatching', s:palette.green, s:palette.none, 'bold')
-highlight! link TelescopeBorder Grey
-highlight! link TelescopePromptPrefix Blue
-highlight! link TelescopeSelection DiffAdd
-" }}}
 " Shougo/denite.nvim{{{
 call sonokai#highlight('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('deniteMatchedRange', s:palette.green, s:palette.none, 'bold,underline')
@@ -732,12 +713,6 @@ highlight! link SignifySignChange BlueSign
 highlight! link SignifySignDelete RedSign
 highlight! link SignifySignChangeDelete PurpleSign
 " }}}
-" lewis6991/gitsigns.nvim {{{
-highlight! link GitSignsAdd GreenSign
-highlight! link GitSignsChange BlueSign
-highlight! link GitSignsDelete RedSign
-highlight! link GitSignsChangeDelete PurpleSign
-" }}}
 " andymass/vim-matchup {{{
 call sonokai#highlight('MatchParenCur', s:palette.none, s:palette.none, 'bold')
 call sonokai#highlight('MatchWord', s:palette.none, s:palette.none, 'underline')
@@ -752,12 +727,6 @@ call sonokai#highlight('SneakLabelMask', s:palette.bg_green, s:palette.bg_green)
 highlight! link Sneak Search
 highlight! link SneakLabel Search
 highlight! link SneakScope DiffText
-" }}}
-" phaazon/hop.nvim {{{
-call sonokai#highlight('HopNextKey', s:palette.red, s:palette.none, 'bold')
-call sonokai#highlight('HopNextKey1', s:palette.blue, s:palette.none, 'bold')
-highlight! link HopNextKey2 Blue
-highlight! link HopUnmatched Grey
 " }}}
 " terryma/vim-multiple-cursors {{{
 highlight! link multiple_cursors_cursor Cursor
@@ -783,12 +752,6 @@ highlight! link CursorWord1 CurrentWord
 let g:indentLine_color_gui = s:palette.grey_dim[0]
 let g:indentLine_color_term = s:palette.grey_dim[1]
 " }}}
-" lukas-reineke/indent-blankline.nvim {{{
-highlight! link IndentBlanklineChar Conceal
-highlight! link IndentBlanklineSpaceChar Conceal
-highlight! link IndentBlanklineSpaceCharBlankline Conceal
-highlight! link IndentBlanklineContextChar Grey
-" }}}
 " nathanaelkane/vim-indent-guides {{{
 if get(g:, 'indent_guides_auto_colors', 1) == 0
   call sonokai#highlight('IndentGuidesOdd', s:palette.bg0, s:palette.bg1)
@@ -806,15 +769,6 @@ highlight! link RainbowLevel6 Yellow
 highlight! link RainbowLevel7 Green
 highlight! link RainbowLevel8 Blue
 " }}}
-" p00f/nvim-ts-rainbow {{{
-highlight! link rainbowcol1 Red
-highlight! link rainbowcol2 Orange
-highlight! link rainbowcol3 Yellow
-highlight! link rainbowcol4 Green
-highlight! link rainbowcol5 Blue
-highlight! link rainbowcol6 Purple
-highlight! link rainbowcol7 Green
-" }}}
 " kshenoy/vim-signature {{{
 highlight! link SignatureMarkText BlueSign
 highlight! link SignatureMarkerText PurpleSign
@@ -824,25 +778,6 @@ highlight! link BufTabLineCurrent TabLineSel
 highlight! link BufTabLineActive TabLine
 highlight! link BufTabLineHidden TabLineFill
 highlight! link BufTabLineFill TabLineFill
-" }}}
-" romgrk/barbar.nvim {{{
-call sonokai#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
-call sonokai#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
-call sonokai#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
-call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg4)
-call sonokai#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
-call sonokai#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
-call sonokai#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
-call sonokai#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
-call sonokai#highlight('BufferVisibleSign', s:palette.red, s:palette.bg2)
-call sonokai#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
-call sonokai#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
-call sonokai#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
-call sonokai#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
-call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
-call sonokai#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
-call sonokai#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
-call sonokai#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
 " }}}
 " liuchengxu/vim-which-key {{{
 highlight! link WhichKey Red
@@ -873,6 +808,72 @@ highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Blue
 highlight! link agitAuthor Yellow
 " }}}
+if has('nvim')
+" hrsh7th/nvim-cmp {{{
+call sonokai#highlight('CmpItemAbbrMatch', s:palette.green, s:palette.none, 'bold')
+call sonokai#highlight('CmpItemAbbrMatchFuzzy', s:palette.green, s:palette.none, 'bold')
+highlight! link CmpItemAbbr Fg
+highlight! link CmpItemAbbrDeprecated Fg
+highlight! link CmpItemMenu Fg
+highlight! link CmpItemKind Blue
+" }}}
+" folke/trouble.nvim {{{
+highlight! link TroubleText Fg
+highlight! link TroubleSource Grey
+highlight! link TroubleCode Grey
+" }}}
+" nvim-telescope/telescope.nvim {{{
+call sonokai#highlight('TelescopeMatching', s:palette.green, s:palette.none, 'bold')
+highlight! link TelescopeBorder Grey
+highlight! link TelescopePromptPrefix Blue
+highlight! link TelescopeSelection DiffAdd
+" }}}
+" lewis6991/gitsigns.nvim {{{
+highlight! link GitSignsAdd GreenSign
+highlight! link GitSignsChange BlueSign
+highlight! link GitSignsDelete RedSign
+highlight! link GitSignsChangeDelete PurpleSign
+" }}}
+" phaazon/hop.nvim {{{
+call sonokai#highlight('HopNextKey', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('HopNextKey1', s:palette.blue, s:palette.none, 'bold')
+highlight! link HopNextKey2 Blue
+highlight! link HopUnmatched Grey
+" }}}
+" lukas-reineke/indent-blankline.nvim {{{
+highlight! link IndentBlanklineChar Conceal
+highlight! link IndentBlanklineSpaceChar Conceal
+highlight! link IndentBlanklineSpaceCharBlankline Conceal
+highlight! link IndentBlanklineContextChar Grey
+" }}}
+" p00f/nvim-ts-rainbow {{{
+highlight! link rainbowcol1 Red
+highlight! link rainbowcol2 Orange
+highlight! link rainbowcol3 Yellow
+highlight! link rainbowcol4 Green
+highlight! link rainbowcol5 Blue
+highlight! link rainbowcol6 Purple
+highlight! link rainbowcol7 Green
+" }}}
+" romgrk/barbar.nvim {{{
+call sonokai#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
+call sonokai#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
+call sonokai#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
+call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg4)
+call sonokai#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
+call sonokai#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
+call sonokai#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
+call sonokai#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
+call sonokai#highlight('BufferVisibleSign', s:palette.red, s:palette.bg2)
+call sonokai#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call sonokai#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
+call sonokai#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call sonokai#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
+" }}}
 " rcarriga/nvim-notify {{{
 highlight! link NotifyERRORBorder Red
 highlight! link NotifyWARNBorder Yellow
@@ -890,6 +891,7 @@ highlight! link NotifyINFOTitle Green
 highlight! link NotifyDEBUGTitle Grey
 highlight! link NotifyTRACETitle Purple
 " }}}
+endif
 " }}}
 " Extended File Types: {{{
 " Whitelist: {{{ File type optimizations that will always be loaded.

@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `romgrk/barbar.nvim`.
 - Optimize `rcarriga/nvim-notify`.
 - Support `nvim-lualine/lualine.nvim`.
+- Optimize performance in vim by disabling hi groups of neovim-only plugins.
 
 ## [0.3.0] - 2021-08-06
 
