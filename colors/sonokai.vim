@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Nov 30 07:52:50 UTC 2021'
+let s:last_modified = 'Tue Nov 30 08:06:39 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -376,7 +376,7 @@ highlight! link TSNumber Purple
 highlight! link TSOperator Red
 highlight! link TSParameter Fg
 highlight! link TSParameterReference Fg
-highlight! link TSProperty Green
+highlight! link TSProperty Fg
 highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Yellow
@@ -496,7 +496,7 @@ highlight! link CocSymbolArray TSVariable
 highlight! link CocSymbolObject TSVariable
 highlight! link CocSymbolKey TSKeyword
 highlight! link CocSymbolNull TSVariableBuiltin
-highlight! link CocSymbolEnumMember TSProperty
+highlight! link CocSymbolEnumMember TSNumber
 highlight! link CocSymbolStruct TSStructure
 highlight! link CocSymbolEvent TSLabel
 highlight! link CocSymbolOperator TSOperator
@@ -1703,7 +1703,7 @@ highlight! link cppSTLVariable BlueItalic
 highlight! link Member TSVariable
 highlight! link Variable TSVariable
 highlight! link Namespace TSNamespace
-highlight! link EnumConstant TSStructure
+highlight! link EnumConstant TSNumber
 highlight! link chromaticaException TSException
 highlight! link chromaticaCast TSLabel
 highlight! link OperatorOverload TSOperator
