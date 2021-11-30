@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Nov 30 02:43:20 AM UTC 2021'
+let s:last_modified = 'Tue Nov 30 07:39:35 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -816,6 +816,31 @@ highlight! link CmpItemAbbr Fg
 highlight! link CmpItemAbbrDeprecated Fg
 highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Blue
+highlight! link CmpItemKindText Fg
+highlight! link CmpItemKindMethod Green
+highlight! link CmpItemKindFunction Green
+highlight! link CmpItemKindConstructor Green
+highlight! link CmpItemKindField Green
+highlight! link CmpItemKindVariable Orange
+highlight! link CmpItemKindClass Blue
+highlight! link CmpItemKindInterface Blue
+highlight! link CmpItemKindModule Blue
+highlight! link CmpItemKindProperty Orange
+highlight! link CmpItemKindUnit Purple
+highlight! link CmpItemKindValue Purple
+highlight! link CmpItemKindEnum Blue
+highlight! link CmpItemKindKeyword Red
+highlight! link CmpItemKindSnippet Yellow
+highlight! link CmpItemKindColor Yellow
+highlight! link CmpItemKindFile Yellow
+highlight! link CmpItemKindReference Yellow
+highlight! link CmpItemKindFolder Yellow
+highlight! link CmpItemKindEnumMember Orange
+highlight! link CmpItemKindConstant Orange
+highlight! link CmpItemKindStruct Blue
+highlight! link CmpItemKindEvent Red
+highlight! link CmpItemKindOperator Red
+highlight! link CmpItemKindTypeParameter Blue
 " }}}
 " folke/trouble.nvim {{{
 highlight! link TroubleText Fg
