@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Nov 30 07:39:35 UTC 2021'
+let s:last_modified = 'Tue Nov 30 07:52:50 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -835,7 +835,7 @@ highlight! link CmpItemKindColor Yellow
 highlight! link CmpItemKindFile Yellow
 highlight! link CmpItemKindReference Yellow
 highlight! link CmpItemKindFolder Yellow
-highlight! link CmpItemKindEnumMember Orange
+highlight! link CmpItemKindEnumMember Purple
 highlight! link CmpItemKindConstant Orange
 highlight! link CmpItemKindStruct Blue
 highlight! link CmpItemKindEvent Red
