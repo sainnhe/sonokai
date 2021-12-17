@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Nov 30 08:06:39 UTC 2021'
+let s:last_modified = 'Fri Dec 17 01:55:19 UTC 2021'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -857,7 +857,13 @@ highlight! link TelescopeSelection DiffAdd
 highlight! link GitSignsAdd GreenSign
 highlight! link GitSignsChange BlueSign
 highlight! link GitSignsDelete RedSign
-highlight! link GitSignsChangeDelete PurpleSign
+highlight! link GitSignsAddNr Green
+highlight! link GitSignsChangeNr Blue
+highlight! link GitSignsDeleteNr Red
+highlight! link GitSignsAddLn DiffAdd
+highlight! link GitSignsChangeLn DiffChange
+highlight! link GitSignsDeleteLn DiffDelete
+highlight! link GitSignsCurrentLineBlame Grey
 " }}}
 " phaazon/hop.nvim {{{
 call sonokai#highlight('HopNextKey', s:palette.red, s:palette.none, 'bold')
