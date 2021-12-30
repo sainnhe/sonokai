@@ -305,14 +305,15 @@ endif
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   " Definition
   let s:terminal = {
-        \ 'black':    s:palette.black,
-        \ 'red':      s:palette.red,
-        \ 'yellow':   s:palette.yellow,
-        \ 'green':    s:palette.green,
-        \ 'cyan':     s:palette.orange,
-        \ 'blue':     s:palette.blue,
-        \ 'purple':   s:palette.purple,
-        \ 'white':    s:palette.fg
+        \ 'black':           s:palette.black,
+        \ 'red':             s:palette.red,
+        \ 'yellow':          s:palette.yellow,
+        \ 'green':           s:palette.green,
+        \ 'cyan':            s:palette.orange,
+        \ 'blue':            s:palette.blue,
+        \ 'purple':          s:palette.purple,
+        \ 'white':           s:palette.fg,
+        \ 'bright_black':    s:palette.grey,
         \ }
   " Implementation: {{{
   if !has('nvim')
@@ -328,7 +329,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     let g:terminal_color_5 = s:terminal.purple[0]
     let g:terminal_color_6 = s:terminal.cyan[0]
     let g:terminal_color_7 = s:terminal.white[0]
-    let g:terminal_color_8 = s:terminal.black[0]
+    let g:terminal_color_8 = s:terminal.bright_black[0]
     let g:terminal_color_9 = s:terminal.red[0]
     let g:terminal_color_10 = s:terminal.green[0]
     let g:terminal_color_11 = s:terminal.yellow[0]
