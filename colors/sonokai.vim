@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Dec 17 01:56:21 UTC 2021'
+let s:last_modified = 'Wed Jan  5 01:12:23 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -344,7 +344,7 @@ endif
 " Plugins: {{{
 " nvim-treesitter/nvim-treesitter {{{
 call sonokai#highlight('TSStrong', s:palette.none, s:palette.none, 'bold')
-call sonokai#highlight('TSEmphasis', s:palette.none, s:palette.none, 'bold')
+call sonokai#highlight('TSEmphasis', s:palette.none, s:palette.none, 'italic')
 call sonokai#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
 call sonokai#highlight('TSNote', s:palette.bg0, s:palette.blue, 'bold')
 call sonokai#highlight('TSWarning', s:palette.bg0, s:palette.yellow, 'bold')
