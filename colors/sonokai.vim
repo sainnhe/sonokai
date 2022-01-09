@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Jan  5 01:12:23 UTC 2022'
+let s:last_modified = 'Sun Jan  9 10:55:22 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1133,6 +1133,13 @@ highlight! link NeogitCommandCodeNormal Green
 highlight! link NeogitCommandCodeError Red
 highlight! link NeogitCommitViewHeader diffIndexLine
 highlight! link NeogitFilePath diffFile
+" ft_end }}}
+" ft_begin: dashboard {{{
+" https://github.com/glepnir/dashboard-nvim
+highlight! link DashboardHeader Blue
+highlight! link DashboardCenter Green
+highlight! link DashboardShortcut Red
+highlight! link DashboardFooter Yellow
 " ft_end }}}
 " ft_begin: markdown {{{
 " builtin: {{{
