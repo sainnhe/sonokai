@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jan  9 10:55:22 UTC 2022'
+let s:last_modified = 'Sun Jan  9 12:30:16 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -934,6 +934,34 @@ highlight! link NotifyWARNTitle Yellow
 highlight! link NotifyINFOTitle Green
 highlight! link NotifyDEBUGTitle Grey
 highlight! link NotifyTRACETitle Purple
+" }}}
+" glepnir/lspsaga.nvim {{{
+call sonokai#highlight('LspFloatWinBorder', s:palette.bg0, s:palette.bg0)
+call sonokai#highlight('LspSagaDiagnosticHeader', s:palette.orange, s:palette.none, 'bold')
+call sonokai#highlight('LspSagaCodeActionTitle', s:palette.blue, s:palette.none, 'bold')
+call sonokai#highlight('DefinitionPreviewTitle', s:palette.purple, s:palette.none, 'bold')
+highlight! link LspSagaDiagnosticBorder Orange
+highlight! link LspSagaDiagnosticTruncateLine Orange
+highlight! link LspSagaRenameBorder Blue
+highlight! link LspSagaRenamePromptPrefix Red
+highlight! link LspSagaCodeActionBorder Blue
+highlight! link LspSagaCodeActionTruncateLine Blue
+highlight! link LspSagaCodeActionContent Green
+highlight! link LspSagaHoverBorder Green
+highlight! link LspSagaDocTruncateLine Green
+highlight! link LspSagaSignatureHelpBorder Green
+highlight! link LspSagaShTruncateLine Green
+highlight! link LspSagaDefPreviewBorder Purple
+highlight! link DefinitionIcon Purple
+highlight! link LspLinesDiagBorder Yellow
+highlight! link LineDiagTuncateLine Yellow
+highlight! link LspSagaAutoPreview Blue
+highlight! link LspSagaFinderSelection Fg
+highlight! link DiagnosticWarning DiagnosticWarn
+highlight! link DiagnosticInformation DiagnosticInfo
+highlight! link ReferencesCount Grey
+highlight! link DefinitionCount Grey
+highlight! link TargetFileName Grey
 " }}}
 endif
 " }}}
