@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Redesign coc symbols.
+
 ## [0.3.1] - 2022-01-09
 
 ### Added
