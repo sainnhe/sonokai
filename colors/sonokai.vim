@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jan 16 12:16:02 UTC 2022'
+let s:last_modified = 'Sun Jan 16 12:16:28 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -969,19 +969,19 @@ highlight! link CocSymbolInterface Blue
 highlight! link CocSymbolFunction Green
 highlight! link CocSymbolVariable Orange
 highlight! link CocSymbolConstant Orange
-highlight! link CocSymbolString Purple
-highlight! link CocSymbolNumber Purple
-highlight! link CocSymbolBoolean Purple
-highlight! link CocSymbolArray Purple
-highlight! link CocSymbolObject Purple
+highlight! link CocSymbolString Yellow
+highlight! link CocSymbolNumber Yellow
+highlight! link CocSymbolBoolean Yellow
+highlight! link CocSymbolArray Yellow
+highlight! link CocSymbolObject Yellow
 highlight! link CocSymbolKey Red
-highlight! link CocSymbolNull Purple
+highlight! link CocSymbolNull Yellow
 highlight! link CocSymbolEnumMember Orange
 highlight! link CocSymbolStruct Blue
-highlight! link CocSymbolEvent Purple
-highlight! link CocSymbolOperator Purple
+highlight! link CocSymbolEvent Yellow
+highlight! link CocSymbolOperator Yellow
 highlight! link CocSymbolTypeParameter Blue
-highlight! link CocSymbolDefault Purple
+highlight! link CocSymbolDefault Yellow
 " ft_end }}}
 " ft_begin: coc-explorer {{{
 " https://github.com/weirongxu/coc-explorer
