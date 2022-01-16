@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jan 16 11:23:02 UTC 2022'
+let s:last_modified = 'Sun Jan 16 11:33:14 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -954,6 +954,7 @@ highlight! link plugEdge Purple
 " ft_begin: coctree {{{
 " https://github.com/neoclide/coc.nvim
 highlight! link CocTreeOpenClose Grey
+highlight! link CocTreeDescription Grey
 highlight! link CocSymbolFile Green
 highlight! link CocSymbolModule Red
 highlight! link CocSymbolNamespace Red
