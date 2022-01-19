@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jan 16 12:16:28 UTC 2022'
+let s:last_modified = 'Wed Jan 19 00:57:39 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1022,6 +1022,9 @@ highlight! link CocExplorerBufferNameVisible Green
 highlight! link CocExplorerIndentLine Conceal
 highlight! link CocExplorerHelpDescription Grey
 highlight! link CocExplorerHelpHint Grey
+highlight! link CocExplorerDiagnosticError Red
+highlight! link CocExplorerDiagnosticWarning Yellow
+highlight! link CocExplorerFileHidden Grey
 " ft_end }}}
 " ft_begin: tagbar {{{
 " https://github.com/majutsushi/tagbar
