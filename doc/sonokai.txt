@@ -271,6 +271,21 @@ E.g.
     let g:sonokai_menu_selection_background = 'green'
 <
 ------------------------------------------------------------------------------
+                                                    *g:sonokai_spell_foreground*
+g:sonokai_spell_foreground~
+
+By default, this color scheme won't color the foreground of |spell|, instead
+colored under curls will be used. If you also want to color the foreground,
+set this option to `'colored'`.
+
+    Available values: `'none'`, `'colored'`
+    Default value: `'none'`
+
+E.g.
+>
+    let g:sonokai_spell_foreground = 'colored'
+<
+------------------------------------------------------------------------------
                                                             *g:sonokai_show_eob*
 g:sonokai_show_eob~
 

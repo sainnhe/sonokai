@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Add `g:sonokai_spell_foreground`.
+
 ### Changed
 
 - Redesign coc symbols.
