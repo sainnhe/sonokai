@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jan 22 04:52:52 UTC 2022'
+let s:last_modified = 'Sat Jan 22 10:48:09 AM UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -534,17 +534,18 @@ highlight! link Lf_hl_popup_blank Lf_hl_popup_window
 highlight! link Lf_hl_popup_spin Purple
 " }}}
 " liuchengxu/vim-clap {{{
-call sonokai#highlight('ClapSelected', s:palette.red, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapCurrentSelection', s:palette.blue, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapBlines', s:palette.fg, s:palette.bg2)
-call sonokai#highlight('ClapProviderId', s:palette.fg, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapMatches1', s:palette.red, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapMatches2', s:palette.orange, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapMatches3', s:palette.yellow, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapMatches4', s:palette.blue, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapMatches5', s:palette.purple, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapFuzzyMatches', s:palette.green, s:palette.bg2, 'bold')
-call sonokai#highlight('ClapNoMatchesFound', s:palette.red, s:palette.bg2, 'bold')
+call sonokai#highlight('ClapSelected', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('ClapCurrentSelection', s:palette.none, s:palette.bg0, 'bold')
+call sonokai#highlight('ClapSpinner', s:palette.blue, s:palette.bg2, 'bold')
+call sonokai#highlight('ClapBlines', s:palette.fg, s:palette.none)
+call sonokai#highlight('ClapProviderId', s:palette.fg, s:palette.none, 'bold')
+call sonokai#highlight('ClapMatches1', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('ClapMatches2', s:palette.orange, s:palette.none, 'bold')
+call sonokai#highlight('ClapMatches3', s:palette.yellow, s:palette.none, 'bold')
+call sonokai#highlight('ClapMatches4', s:palette.blue, s:palette.none, 'bold')
+call sonokai#highlight('ClapMatches5', s:palette.purple, s:palette.none, 'bold')
+call sonokai#highlight('ClapFuzzyMatches', s:palette.green, s:palette.none, 'bold')
+call sonokai#highlight('ClapNoMatchesFound', s:palette.red, s:palette.none, 'bold')
 highlight! link ClapInput Pmenu
 highlight! link ClapDisplay Pmenu
 highlight! link ClapPreview Pmenu
@@ -564,6 +565,7 @@ highlight! link ClapBlinesLineNr Grey
 highlight! link ClapProviderColon ClapBlines
 highlight! link ClapProviderAbout ClapBlines
 highlight! link ClapFile Fg
+highlight! link ClapSearchText ClapFuzzyMatches
 " }}}
 " junegunn/fzf.vim {{{
 let g:fzf_colors = {
