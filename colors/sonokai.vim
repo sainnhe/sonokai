@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jan 22 10:48:09 AM UTC 2022'
+let s:last_modified = 'Sat Jan 22 11:04:48 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1093,11 +1093,11 @@ highlight! link netrwVersion Purple
 " https://github.com/skywind3000/quickmenu.vim
 highlight! link StartifyBracket Grey
 highlight! link StartifyFile Green
-highlight! link StartifyNumber Orange
+highlight! link StartifyNumber Red
 highlight! link StartifyPath Grey
 highlight! link StartifySlash Grey
 highlight! link StartifySection Blue
-highlight! link StartifyHeader Red
+highlight! link StartifyHeader Purple
 highlight! link StartifySpecial Grey
 " ft_end }}}
 " ft_begin: quickmenu {{{
