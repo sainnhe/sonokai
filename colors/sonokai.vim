@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jan 22 12:12:24 UTC 2022'
+let s:last_modified = 'Sun Jan 23 12:56:48 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -706,6 +706,10 @@ highlight! link WhichKey Red
 highlight! link WhichKeySeperator Green
 highlight! link WhichKeyGroup Orange
 highlight! link WhichKeyDesc Blue
+" }}}
+" junegunn/limelight.vim {{{
+let g:limelight_conceal_ctermfg = s:palette.grey_dim[1]
+let g:limelight_conceal_guifg = s:palette.grey_dim[0]
 " }}}
 " unblevable/quick-scope {{{
 call sonokai#highlight('QuickScopePrimary', s:palette.green, s:palette.none, 'underline')
