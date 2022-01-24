@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Add `g:sonokai_spell_foreground`.
 - Optimize `junegunn/limelight.vim`.
+- Generate `/after/syntax`.
 
 ### Changed
 
