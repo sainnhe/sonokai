@@ -219,6 +219,7 @@ function! sonokai#syn_gen(path, last_modified, msg) "{{{
   let syntax_relative_path = has('win32') ? '\after\syntax' : '/after/syntax'
   if a:msg ==# 'update'
     echohl WarningMsg | echom '[sonokai] Updated ' . rootpath . syntax_relative_path | echohl None
+    call sonokai#ftplugin_detect(a:path)
   else
     echohl WarningMsg | echom '[sonokai] Generated ' . rootpath . syntax_relative_path | echohl None
   endif
@@ -301,6 +302,16 @@ function! sonokai#syn_clean(path, msg) "{{{
 endfunction "}}}
 function! sonokai#syn_exists(path) "{{{
   return filereadable(sonokai#syn_rootpath(a:path) . '/after/syntax/text/sonokai.vim')
+endfunction "}}}
+function! sonokai#ftplugin_detect(path) "{{{
+  " Check if /after/ftplugin exists.
+  " This directory is generated in earlier versions, users may need to manually clean it.
+  let rootpath = sonokai#syn_rootpath(a:path)
+  if filereadable(sonokai#syn_rootpath(a:path) . '/after/ftplugin/text/sonokai.vim')
+    let ftplugin_relative_path = has('win32') ? '\after\ftplugin' : '/after/ftplugin'
+    echohl WarningMsg | echom '[sonokai] Detected ' . rootpath . ftplugin_relative_path | echohl None
+    echohl WarningMsg | echom '[sonokai] This directory is no longer used, you may need to manually delete it.' | echohl None
+  endif
 endfunction "}}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker fmr={{{,}}}:
