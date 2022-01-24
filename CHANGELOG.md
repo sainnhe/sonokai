@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file.
 - Redesign `liuchengxu/vim-clap`.
 - Redesign semantic hi groups in coc.nvim [neoclide/coc.nvim#3355](https://github.com/neoclide/coc.nvim/pull/3355).
 
+### Removed
+
+- Remove alacritty theme from this repo. [`a05e702`](https://github.com/sainnhe/sonokai/commit/a05e70254c63e5f5a896081932868f97765e36ac)
+
 ## [0.3.1] - 2022-01-09
 
 ### Added
