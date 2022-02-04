@@ -222,6 +222,7 @@ function! sonokai#syn_gen(path, last_modified, msg) "{{{
     call sonokai#ftplugin_detect(a:path)
   else
     echohl WarningMsg | echom '[sonokai] Generated ' . rootpath . syntax_relative_path | echohl None
+    execute 'set runtimepath+=' . fnamemodify(rootpath, ':p') . 'after'
   endif
 endfunction "}}}
 function! sonokai#syn_write(rootpath, syn, content) "{{{
