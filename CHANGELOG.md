@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Remove alacritty theme from this repo. [`a05e702`](https://github.com/sainnhe/sonokai/commit/a05e70254c63e5f5a896081932868f97765e36ac)
+- Remove examples of configuration options in help doc.
 
 ## [0.3.1] - 2022-01-09
 
