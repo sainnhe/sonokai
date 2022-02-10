@@ -1,6 +1,14 @@
 *sonokai.txt* High Contrast & Vivid Color Scheme based on Monokai Pro
 *sonokai*
+>
+                 _____                   __         _
+                / ___/____  ____  ____  / /______ _(_)
+                \__ \/ __ \/ __ \/ __ \/ //_/ __ `/ /
+               ___/ / /_/ / / / / /_/ / ,< / /_/ / /
+              /____/\____/_/ /_/\____/_/|_|\__,_/_/
+<
 
+==============================================================================
 CONTENTS                                     *sonokai-contents*
 
 Introduction                                 |sonokai-introduction|
