@@ -1,4 +1,5 @@
-*sonokai.txt*
+*sonokai.txt* High Contrast & Vivid Color Scheme based on Monokai Pro
+*sonokai*
 
 CONTENTS                                     *sonokai-contents*
 
@@ -8,7 +9,7 @@ Usage                                        |sonokai-usage|
 Configuration                                |sonokai-configuration|
 FAQ                                          |sonokai-faq|
 
-Note: Type |gO| to show the outline of contents.
+Note: Type |gO| in neovim to show the outline of contents.
 
 ==============================================================================
 INTRODUCTION                                              *sonokai-introduction*
