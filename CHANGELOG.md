@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 - Add FAQ for configuration options.
 - Optimize `rhysd/clever-f.vim`.
 - Optimize `rcarriga/nvim-dap-ui`.
+- Add `g:sonokai_disable_terminal_colors`.
 
 ### Changed
 
