@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Mar 21 12:08:07 UTC 2022'
+let s:last_modified = 'Mon Apr  4 01:48:39 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -736,6 +736,9 @@ highlight! link agitDiffRemove Red
 highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Blue
 highlight! link agitAuthor Yellow
+" }}}
+" voldikss/vim-floaterm {{{
+highlight! link FloatermBorder Grey
 " }}}
 if has('nvim')
 " hrsh7th/nvim-cmp {{{
