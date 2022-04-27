@@ -1100,7 +1100,7 @@ highlight! link NvimTreeLspDiagnosticsHint GreenSign
 " syn_end }}}
 " syn_begin: fern {{{
 " https://github.com/lambdalisue/fern.vim
-highlight! link FernMarkedLine None
+highlight! link FernMarkedLine Purple
 highlight! link FernMarkedText Purple
 highlight! link FernRootSymbol FernRootText
 highlight! link FernRootText Blue
