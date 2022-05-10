@@ -415,11 +415,12 @@ Enabling this option will reduce loading time by approximately 50%.
                                                      *g:sonokai_colors_override*
 g:sonokai_colors_override~
 
-Overwrite colors from g:sonokai_style
+Overwrite color palette. The available keys can be found in
+`/path/to/sonokai/autoload/sonokai.vim`.
+
 E.g.
 >
-    let g:sonokai_style = 'andromeda'
-    let g:sonokai_colors_override={'bg0':['#1e222a', '235'], 'bg2': ['#282c34', '236']}
+    let g:sonokai_colors_override = {'bg0': ['#1e222a', '235'], 'bg2': ['#282c34', '236']}
     colorscheme sonokai
 <
     Type:               |Dictionary|
