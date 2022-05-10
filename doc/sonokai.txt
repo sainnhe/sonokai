@@ -411,6 +411,20 @@ Enabling this option will reduce loading time by approximately 50%.
     Available values:   `0`, `1`
     Default value:      `0`
 
+------------------------------------------------------------------------------
+                                                     *g:sonokai_colors_override*
+g:sonokai_colors_override~
+
+Overwrite colors from g:sonokai_style
+E.g.
+>
+    let g:sonokai_style = 'andromeda'
+    let g:sonokai_colors_override={'bg0':['#1e222a', '235'], 'bg2': ['#282c34', '236']}
+    colorscheme sonokai
+<
+    Type:               |Dictionary|
+    Default value:      `{}`
+
 ==============================================================================
 FAQ                                                                *sonokai-faq*
 
