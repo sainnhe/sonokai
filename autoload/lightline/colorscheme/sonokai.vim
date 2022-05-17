@@ -9,8 +9,10 @@
 " Initialization: {{{
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
+
+let s:background = s:palette.bg1
 if s:configuration.transparent_background
-  let s:palette.bg1 = s:palette.none
+  let s:background = s:palette.bg0
 endif
 "}}}
 " Definition: {{{
@@ -21,7 +23,7 @@ let s:tab_r_bg = s:palette.bg4
 let s:tab_sel_fg = s:palette.bg0
 let s:tab_sel_bg = s:palette.bg_red
 let s:tab_middle_fg = s:palette.fg
-let s:tab_middle_bg = s:palette.bg1
+let s:tab_middle_bg = s:background
 
 let s:warningfg = s:palette.bg0
 let s:warningbg = s:palette.yellow
@@ -37,7 +39,7 @@ let s:normal_r1_bg = s:palette.bg_blue
 let s:normal_r2_fg = s:palette.fg
 let s:normal_r2_bg = s:palette.bg4
 let s:normal_middle_fg = s:palette.fg
-let s:normal_middle_bg = s:palette.bg1
+let s:normal_middle_bg = s:background
 
 let s:insert_l1_fg = s:palette.bg0
 let s:insert_l1_bg = s:palette.bg_green
@@ -48,7 +50,7 @@ let s:insert_r1_bg = s:palette.bg_green
 let s:insert_r2_fg = s:palette.fg
 let s:insert_r2_bg = s:palette.bg4
 let s:insert_middle_fg = s:palette.fg
-let s:insert_middle_bg = s:palette.bg1
+let s:insert_middle_bg = s:background
 
 let s:visual_l1_fg = s:palette.bg0
 let s:visual_l1_bg = s:palette.purple
@@ -59,7 +61,7 @@ let s:visual_r1_bg = s:palette.purple
 let s:visual_r2_fg = s:palette.fg
 let s:visual_r2_bg = s:palette.bg4
 let s:visual_middle_fg = s:palette.fg
-let s:visual_middle_bg = s:palette.bg1
+let s:visual_middle_bg = s:background
 
 let s:replace_l1_fg = s:palette.bg0
 let s:replace_l1_bg = s:palette.orange
@@ -70,7 +72,7 @@ let s:replace_r1_bg = s:palette.orange
 let s:replace_r2_fg = s:palette.fg
 let s:replace_r2_bg = s:palette.bg4
 let s:replace_middle_fg = s:palette.fg
-let s:replace_middle_bg = s:palette.bg1
+let s:replace_middle_bg = s:background
 
 let s:command_l1_fg = s:palette.bg0
 let s:command_l1_bg = s:palette.yellow
@@ -81,7 +83,7 @@ let s:command_r1_bg = s:palette.yellow
 let s:command_r2_fg = s:palette.fg
 let s:command_r2_bg = s:palette.bg4
 let s:command_middle_fg = s:palette.fg
-let s:command_middle_bg = s:palette.bg1
+let s:command_middle_bg = s:background
 
 let s:terminal_l1_fg = s:palette.bg0
 let s:terminal_l1_bg = s:palette.bg_red
@@ -92,18 +94,18 @@ let s:terminal_r1_bg = s:palette.bg_red
 let s:terminal_r2_fg = s:palette.fg
 let s:terminal_r2_bg = s:palette.bg4
 let s:terminal_middle_fg = s:palette.fg
-let s:terminal_middle_bg = s:palette.bg1
+let s:terminal_middle_bg = s:background
 
 let s:inactive_l1_fg = s:palette.grey
-let s:inactive_l1_bg = s:palette.bg1
+let s:inactive_l1_bg = s:background
 let s:inactive_l2_fg = s:palette.grey
-let s:inactive_l2_bg = s:palette.bg1
+let s:inactive_l2_bg = s:background
 let s:inactive_r1_fg = s:palette.grey
-let s:inactive_r1_bg = s:palette.bg1
+let s:inactive_r1_bg = s:background
 let s:inactive_r2_fg = s:palette.grey
-let s:inactive_r2_bg = s:palette.bg1
+let s:inactive_r2_bg = s:background
 let s:inactive_middle_fg = s:palette.grey
-let s:inactive_middle_bg = s:palette.bg1
+let s:inactive_middle_bg = s:background
 "}}}
 " Implementation: {{{
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'command': {}, 'terminal': {}, 'tabline': {}}
