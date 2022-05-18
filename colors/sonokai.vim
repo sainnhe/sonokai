@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue May 10 10:31:15 UTC 2022'
+let s:last_modified = 'Wed May 18 12:29:16 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -28,7 +28,7 @@ endif
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
-if s:configuration.transparent_background
+if s:configuration.transparent_background == 1
   call sonokai#highlight('Normal', s:palette.fg, s:palette.none)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.none)
   if s:configuration.show_eob
@@ -116,13 +116,23 @@ else
   call sonokai#highlight('SpellLocal', s:palette.blue, s:palette.none, 'undercurl', s:palette.blue)
   call sonokai#highlight('SpellRare', s:palette.purple, s:palette.none, 'undercurl', s:palette.purple)
 endif
-call sonokai#highlight('StatusLine', s:palette.fg, s:palette.bg3)
-call sonokai#highlight('StatusLineTerm', s:palette.fg, s:palette.bg3)
-call sonokai#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
-call sonokai#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
-call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg4)
-call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
-call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
+if s:configuration.transparent_background == 2
+  call sonokai#highlight('StatusLine', s:palette.fg, s:palette.none)
+  call sonokai#highlight('StatusLineTerm', s:palette.fg, s:palette.none)
+  call sonokai#highlight('StatusLineNC', s:palette.grey, s:palette.none)
+  call sonokai#highlight('StatusLineTermNC', s:palette.grey, s:palette.none)
+  call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg4)
+  call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.none)
+  call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
+else
+  call sonokai#highlight('StatusLine', s:palette.fg, s:palette.bg3)
+  call sonokai#highlight('StatusLineTerm', s:palette.fg, s:palette.bg3)
+  call sonokai#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
+  call sonokai#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
+  call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg4)
+  call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
+  call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
+endif
 call sonokai#highlight('VertSplit', s:palette.black, s:palette.none)
 call sonokai#highlight('Visual', s:palette.none, s:palette.bg3)
 call sonokai#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')

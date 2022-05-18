@@ -9,7 +9,7 @@
 " Initialization: {{{
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
-if s:configuration.transparent_background
+if s:configuration.transparent_background == 2
   let s:palette.bg1 = s:palette.none
 endif
 "}}}

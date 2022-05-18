@@ -9,7 +9,7 @@
 local configuration = vim.fn['sonokai#get_configuration']()
 local palette = vim.fn['sonokai#get_palette'](configuration.style, configuration.colors_override)
 
-if configuration.transparent_background == 1 then
+if configuration.transparent_background == 2 then
   palette.bg1 = palette.none
 end
 

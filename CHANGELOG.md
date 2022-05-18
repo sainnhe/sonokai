@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `rcarriga/nvim-dap-ui`.
 - Add `g:sonokai_disable_terminal_colors`.
 - Optimize `voldikss/vim-floaterm`.
+- Support `g:sonokai_transparent_background == 2`.
 
 ### Changed
 
