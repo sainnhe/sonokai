@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May 18 12:41:47 UTC 2022'
+let s:last_modified = 'Wed May 18 13:16:39 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1064,6 +1064,37 @@ highlight! link VistaHeadNr Fg
 highlight! link VistaPublic Green
 highlight! link VistaProtected Yellow
 highlight! link VistaPrivate Red
+" syn_end }}}
+" syn_begin: aerial {{{
+" https://github.com/stevearc/aerial.nvim
+highlight! link AerialLine CursorLine
+highlight! link AerialGuide LineNr
+highlight! link AerialFileIcon Green
+highlight! link AerialModuleIcon Red
+highlight! link AerialNamespaceIcon Red
+highlight! link AerialPackageIcon Red
+highlight! link AerialClassIcon Blue
+highlight! link AerialMethodIcon Green
+highlight! link AerialPropertyIcon Orange
+highlight! link AerialFieldIcon Green
+highlight! link AerialConstructorIcon Green
+highlight! link AerialEnumIcon Blue
+highlight! link AerialInterfaceIcon Blue
+highlight! link AerialFunctionIcon Green
+highlight! link AerialVariableIcon Orange
+highlight! link AerialConstantIcon Orange
+highlight! link AerialStringIcon Yellow
+highlight! link AerialNumberIcon Yellow
+highlight! link AerialBooleanIcon Yellow
+highlight! link AerialArrayIcon Yellow
+highlight! link AerialObjectIcon Yellow
+highlight! link AerialKeyIcon Red
+highlight! link AerialNullIcon Yellow
+highlight! link AerialEnumMemberIcon Orange
+highlight! link AerialStructIcon Blue
+highlight! link AerialEventIcon Yellow
+highlight! link AerialOperatorIcon Yellow
+highlight! link AerialTypeParameterIcon Blue
 " syn_end }}}
 " syn_begin: nerdtree {{{
 " https://github.com/preservim/nerdtree
