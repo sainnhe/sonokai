@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May 18 13:16:39 UTC 2022'
+let s:last_modified = 'Wed May 18 13:41:38 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -421,6 +421,12 @@ highlight! link TSVariableBuiltin OrangeItalic
 " }}}
 " neoclide/coc.nvim {{{
 call sonokai#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
+call sonokai#highlight('CocSearch', s:palette.green, s:palette.none, 'bold')
+highlight! link CocDisabled Grey
+highlight! link CocSnippetVisual DiffAdd
+highlight! link CocInlayHint Grey
+highlight! link CocNotificationProgress Green
+highlight! link CocNotificationButton PmenuSel
 highlight! link CocSemClass TSType
 highlight! link CocSemEnum TSType
 highlight! link CocSemInterface TSType
