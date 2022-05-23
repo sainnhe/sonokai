@@ -184,8 +184,7 @@ function! sonokai#get_palette(style, colors_override) "{{{
           \ 'none':       ['NONE',      'NONE']
           \ }
   endif
-  eval palette->extend(a:colors_override)
-  return palette
+  return extend(palette, a:colors_override)
 endfunction "}}}
 function! sonokai#highlight(group, fg, bg, ...) "{{{
   execute 'highlight' a:group
