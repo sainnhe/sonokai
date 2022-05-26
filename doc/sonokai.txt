@@ -488,8 +488,9 @@ How to use custom colors?~
       highlight! link groupC groupD
     
       " Initialize the color palette.
-      " The parameter is a valid value for `g:sonokai_style`,
-      let l:palette = sonokai#get_palette('atlantis')
+      " The first parameter is a valid value for `g:sonokai_style`,
+      " and the second parameter is a valid value for `g:sonokai_colors_override`.
+      let l:palette = sonokai#get_palette('atlantis', {})
       " Define a highlight group.
       " The first parameter is the name of a highlight group,
       " the second parameter is the foreground color,
