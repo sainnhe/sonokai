@@ -418,7 +418,7 @@ Enabling this option will reduce loading time by approximately 50%.
                                                      *g:sonokai_colors_override*
 g:sonokai_colors_override~
 
-Overwrite color palette. The available keys can be found in
+Override color palette. The available keys can be found in
 `/path/to/sonokai/autoload/sonokai.vim`.
 
 E.g.
