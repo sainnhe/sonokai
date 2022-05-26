@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `voldikss/vim-floaterm`.
 - Support `g:sonokai_transparent_background == 2`.
 - Optimize `stevearc/aerial.nvim`.
+- Optimize `wbthomason/packer.nvim`.
 
 ### Changed
 
