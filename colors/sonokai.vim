@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue May 31 11:48:01 AM UTC 2022'
+let s:last_modified = 'Sun Jun 12 10:58:01 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -403,6 +403,7 @@ highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Yellow
 highlight! link TSRepeat Red
+highlight! link TSStorageClass Red
 highlight! link TSString Yellow
 highlight! link TSStringEscape Green
 highlight! link TSStringRegex Green
