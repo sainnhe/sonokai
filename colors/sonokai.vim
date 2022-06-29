@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jun 12 10:58:01 UTC 2022'
+let s:last_modified = 'Wed Jun 29 09:29:55 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -920,6 +920,9 @@ highlight! link DiagnosticInformation DiagnosticInfo
 highlight! link ReferencesCount Grey
 highlight! link DefinitionCount Grey
 highlight! link TargetFileName Grey
+" }}}
+" b0o/incline.nvim {{{
+call sonokai#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 endif
 " }}}
