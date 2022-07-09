@@ -925,6 +925,57 @@ highlight! link TargetFileName Grey
 " b0o/incline.nvim {{{
 call sonokai#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
+" echasnovski/mini.nvim {{{
+highlight! link MiniCompletionActiveParameter LspSignatureActiveParameter
+
+highlight! link MiniCursorword CurrentWord
+highlight! link MiniCursorwordCurrent CurrentWord
+
+highlight! link MiniIndentscopeSymbol Grey
+call sonokai#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 'nocombine') " Make it invisible
+
+highlight! link MiniJump Search
+
+call sonokai#highlight('MiniJump2dSpot', s:palette.red, s:palette.none, 'bold,nocombine')
+
+call sonokai#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
+highlight! link MiniStarterFooter Yellow
+highlight! link MiniStarterHeader Purple
+highlight! link MiniStarterInactive Comment
+highlight! link MiniStarterItem Normal
+call sonokai#highlight('MiniStarterItemBullet', s:palette.grey, s:palette.none)
+call sonokai#highlight('MiniStarterItemPrefix', s:palette.yellow, s:palette.none)
+highlight! link MiniStarterSection Title
+call sonokai#highlight('MiniStarterQuery', s:palette.blue, s:palette.none)
+
+call sonokai#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg3)
+call sonokai#highlight('MiniStatuslineFileinfo', s:palette.fg, s:palette.bg3)
+call sonokai#highlight('MiniStatuslineFilename', s:palette.grey, s:palette.bg1)
+call sonokai#highlight('MiniStatuslineModeInactive', s:palette.grey, s:palette.bg1)
+call sonokai#highlight('MiniStatuslineModeCommand', s:palette.bg0, s:palette.yellow, 'bold')
+call sonokai#highlight('MiniStatuslineModeInsert', s:palette.bg0, s:palette.bg_green, 'bold')
+call sonokai#highlight('MiniStatuslineModeNormal', s:palette.bg0, s:palette.bg_blue, 'bold')
+call sonokai#highlight('MiniStatuslineModeOther', s:palette.bg0, s:palette.purple, 'bold')
+call sonokai#highlight('MiniStatuslineModeReplace', s:palette.bg0, s:palette.orange, 'bold')
+call sonokai#highlight('MiniStatuslineModeVisual', s:palette.bg0, s:palette.bg_red, 'bold')
+
+highlight! link MiniSurround IncSearch
+
+call sonokai#highlight('MiniTablineCurrent', s:palette.fg, s:palette.bg4)
+highlight! link MiniTablineFill TabLineFill
+call sonokai#highlight('MiniTablineHidden', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('MiniTablineModifiedCurrent', s:palette.blue, s:palette.bg4)
+call sonokai#highlight('MiniTablineModifiedHidden', s:palette.grey, s:palette.bg2)
+call sonokai#highlight('MiniTablineModifiedVisible', s:palette.blue, s:palette.bg2)
+call sonokai#highlight('MiniTablineTabpagesection', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('MiniTablineVisible', s:palette.fg, s:palette.bg2)
+
+call sonokai#highlight('MiniTestEmphasis', s:palette.none, s:palette.none, 'bold')
+call sonokai#highlight('MiniTestFail', s:palette.red, s:palette.none, 'bold')
+call sonokai#highlight('MiniTestPass', s:palette.green, s:palette.none, 'bold')
+
+call sonokai#highlight('MiniTrailspace', s:palette.none, s:palette.red)
+" }}}
 endif
 " }}}
 " Extended File Types: {{{
