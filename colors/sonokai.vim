@@ -28,7 +28,7 @@ endif
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
-if s:configuration.transparent_background == 1
+if s:configuration.transparent_background >= 1
   call sonokai#highlight('Normal', s:palette.fg, s:palette.none)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.none)
   if s:configuration.show_eob
