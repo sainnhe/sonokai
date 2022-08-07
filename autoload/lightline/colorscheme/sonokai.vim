@@ -2,7 +2,7 @@
 " URL: https://github.com/sainnhe/sonokai/
 " Filename: autoload/lightline/colorscheme/sonokai.vim
 " Author: Sainnhepark
-" Email: sainnhe@gmail.com
+" Email: i@sainnhe.dev
 " License: MIT License
 " =============================================================================
 
