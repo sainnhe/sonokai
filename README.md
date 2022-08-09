@@ -50,7 +50,7 @@ The `shusia`, `maia` and `espresso` variants are basically modified versions of 
 - Rich support for common file types and plugins.
 - Tree-sitter support.
 - Semantic highlighting support.
-- [Italic support](https://www.sainnhe.dev/post/patch-fonts-with-cursive-italic-styles/) 🎉
+- [Italic support](https://aka.sainnhe.dev/fonts) 🎉
 
 ## Documentation
 
