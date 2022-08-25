@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Aug 25 07:07:10 UTC 2022'
+let s:last_modified = 'Thu Aug 25 08:13:35 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -793,6 +793,12 @@ highlight! link agitAuthor Yellow
 " }}}
 " voldikss/vim-floaterm {{{
 highlight! link FloatermBorder Grey
+" }}}
+" MattesGroeger/vim-bookmarks {{{
+highlight! link BookmarkSign BlueSign
+highlight! link BookmarkAnnotationSign GreenSign
+highlight! link BookmarkLine DiffChange
+highlight! link BookmarkAnnotationLine DiffAdd
 " }}}
 if has('nvim')
 " hrsh7th/nvim-cmp {{{
