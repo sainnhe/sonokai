@@ -961,8 +961,16 @@ call sonokai#highlight('LspFloatWinBorder', s:palette.bg0, s:palette.bg0)
 call sonokai#highlight('LspSagaDiagnosticHeader', s:palette.orange, s:palette.none, 'bold')
 call sonokai#highlight('LspSagaCodeActionTitle', s:palette.blue, s:palette.none, 'bold')
 call sonokai#highlight('DefinitionPreviewTitle', s:palette.purple, s:palette.none, 'bold')
+highlight! link LspSagaDiagnosticError Red
+highlight! link LspSagaDiagnosticWarn Yellow
+highlight! link LspSagaDiagnosticInfo Blue
+highlight! link LspSagaDiagnosticHint Green
+highlight! link LspSagaErrorTrunCateLine LspSagaDiagnosticError
+highlight! link LspSagaWarnTrunCateLine LspSagaDiagnosticWarn
+highlight! link LspSagaInfoTrunCateLine LspSagaDiagnosticInfo
+highlight! link LspSagaHintTrunCateLine LspSagaDiagnosticHint
+highlight! link LspSagaDiagnosticSource Orange
 highlight! link LspSagaDiagnosticBorder Orange
-highlight! link LspSagaDiagnosticTruncateLine Orange
 highlight! link LspSagaRenameBorder Blue
 highlight! link LspSagaRenamePromptPrefix Red
 highlight! link LspSagaCodeActionBorder Blue
