@@ -881,7 +881,7 @@ if has('nvim')
 call sonokai#highlight('CmpItemAbbrMatch', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('CmpItemAbbrMatchFuzzy', s:palette.green, s:palette.none, 'bold')
 highlight! link CmpItemAbbr Fg
-highlight! link CmpItemAbbrDeprecated Fg
+highlight! link CmpItemAbbrDeprecated Grey
 highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Blue
 highlight! link CmpItemKindText Fg
