@@ -66,7 +66,7 @@ See this [wiki page](https://github.com/sainnhe/sonokai/wiki/Related-Projects).
 - [Everforest](https://github.com/sainnhe/everforest)
 - [Edge](https://github.com/sainnhe/edge)
 
-## Inspiration
+## Inspirations
 
 - [Monokai Pro](https://monokai.pro/vscode)
 - [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
