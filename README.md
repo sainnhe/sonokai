@@ -73,6 +73,12 @@ See this [wiki page](https://github.com/sainnhe/sonokai/wiki/Related-Projects).
 - [Material](https://github.com/equinusocio/material-theme)
 - [Nord](https://www.nordtheme.com)
 
+## Maintainers
+
+| [![Sainnhe Park](https://avatars1.githubusercontent.com/u/37491630?s=70&u=14e72916dcf467f393c532536387ec72a23747ec&v=4)](https://github.com/sainnhe) | [![Antoine Cotten](https://avatars.githubusercontent.com/u/3299086?v=4&s=70)](https://github.com/antoineco) |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Sainnhe Park](https://github.com/sainnhe)                                                                                                           | [Antoine Cotten](https://github.com/antoineco)                                                              |
+
 ## License
 
 [MIT](./LICENSE) © sainnhe
