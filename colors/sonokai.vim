@@ -942,7 +942,8 @@ highlight! link HopUnmatched Grey
 highlight! link IndentBlanklineChar Conceal
 highlight! link IndentBlanklineSpaceChar Conceal
 highlight! link IndentBlanklineSpaceCharBlankline Conceal
-highlight! link IndentBlanklineContextChar Grey
+highlight! link IndentBlanklineContextChar Red
+highlight! link IndentBlanklineContextSpaceChar Conceal
 " }}}
 " p00f/nvim-ts-rainbow {{{
 highlight! link rainbowcol1 Red
