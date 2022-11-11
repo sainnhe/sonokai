@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Sep  9 13:50:03 UTC 2022'
+let s:last_modified = 'Fri Nov 11 09:46:29 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -939,10 +939,10 @@ highlight! link HopNextKey2 Blue
 highlight! link HopUnmatched Grey
 " }}}
 " lukas-reineke/indent-blankline.nvim {{{
-highlight! link IndentBlanklineChar Conceal
-highlight! link IndentBlanklineSpaceChar Conceal
-highlight! link IndentBlanklineSpaceCharBlankline Conceal
-highlight! link IndentBlanklineContextChar Grey
+call sonokai#highlight('IndentBlanklineContextChar', s:palette.grey, s:palette.none, 'nocombine')
+call sonokai#highlight('IndentBlanklineChar', s:palette.grey_dim, s:palette.none, 'nocombine')
+highlight! link IndentBlanklineSpaceChar IndentBlanklineChar
+highlight! link IndentBlanklineSpaceCharBlankline IndentBlanklineChar
 " }}}
 " p00f/nvim-ts-rainbow {{{
 highlight! link rainbowcol1 Red
