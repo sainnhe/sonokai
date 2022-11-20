@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Nov 20 04:33:07 UTC 2022'
+let s:last_modified = 'Sun Nov 20 11:16:15 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -446,7 +446,7 @@ if has('nvim-0.8.0')
   highlight! link @character TSCharacter
   highlight! link @character.special TSCharacterSpecial
   highlight! link @comment TSComment
-  highlight! link @conceal Conceal
+  highlight! link @conceal Grey
   highlight! link @conditional TSConditional
   highlight! link @constant TSConstant
   highlight! link @constant.builtin TSConstBuiltin
