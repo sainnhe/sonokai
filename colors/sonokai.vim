@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Nov 20 02:16:06 UTC 2022'
+let s:last_modified = 'Sun Nov 20 02:34:10 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -544,7 +544,7 @@ highlight! link CocSemInterface TSType
 highlight! link CocSemStruct TSType
 highlight! link CocSemTypeParameter TSType
 highlight! link CocSemVariable TSVariable
-highlight! link CocSemEnumMember TSVariableBuiltin
+highlight! link CocSemEnumMember TSProperty
 highlight! link CocSemEvent TSLabel
 highlight! link CocSemModifier TSOperator
 highlight! link CocErrorFloat ErrorFloat
@@ -606,7 +606,7 @@ highlight! link LspSemanticTypeParameter TSType
 highlight! link LspSemanticParameter TSParameter
 highlight! link LspSemanticVariable TSVariable
 highlight! link LspSemanticProperty TSProperty
-highlight! link LspSemanticEnumMember TSVariableBuiltin
+highlight! link LspSemanticEnumMember TSProperty
 highlight! link LspSemanticEvents TSLabel
 highlight! link LspSemanticFunction TSFunction
 highlight! link LspSemanticMethod TSMethod
