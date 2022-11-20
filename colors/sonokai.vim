@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Nov 20 03:30:49 AM UTC 2022'
+let s:last_modified = 'Sun Nov 20 04:29:27 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1378,6 +1378,7 @@ highlight! link DirvishArg Yellow
 call sonokai#highlight('NvimTreeNormal', s:palette.fg, s:palette.bg_dim)
 call sonokai#highlight('NvimTreeEndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
 call sonokai#highlight('NvimTreeVertSplit', s:palette.bg0, s:palette.bg0)
+call sonokai#highlight('NvimTreeCursorLine', s:palette.none, s:palette.bg0)
 highlight! link NvimTreeSymlink Fg
 highlight! link NvimTreeFolderName Green
 highlight! link NvimTreeRootFolder Grey
