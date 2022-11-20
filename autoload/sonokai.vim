@@ -29,7 +29,8 @@ endfunction "}}}
 function! sonokai#get_palette(style, colors_override) "{{{
   if a:style ==# 'default'
     let palette = {
-          \ 'black':      ['#181819',   '237'],
+          \ 'black':      ['#181819',   '232'],
+          \ 'bg_dim':     ['#222327',   '232'],
           \ 'bg0':        ['#2c2e34',   '235'],
           \ 'bg1':        ['#33353f',   '236'],
           \ 'bg2':        ['#363944',   '236'],
@@ -55,7 +56,8 @@ function! sonokai#get_palette(style, colors_override) "{{{
           \ }
   elseif a:style ==# 'shusia'
     let palette = {
-          \ 'black':      ['#1a181a',   '237'],
+          \ 'black':      ['#1a181a',   '232'],
+          \ 'bg_dim':     ['#211f21',   '232'],
           \ 'bg0':        ['#2d2a2e',   '235'],
           \ 'bg1':        ['#37343a',   '236'],
           \ 'bg2':        ['#3b383e',   '236'],
@@ -81,7 +83,8 @@ function! sonokai#get_palette(style, colors_override) "{{{
           \ }
   elseif a:style ==# 'andromeda'
     let palette = {
-          \ 'black':      ['#181a1c',   '237'],
+          \ 'black':      ['#181a1c',   '232'],
+          \ 'bg_dim':     ['#252630',   '232'],
           \ 'bg0':        ['#2b2d3a',   '235'],
           \ 'bg1':        ['#333648',   '236'],
           \ 'bg2':        ['#363a4e',   '236'],
@@ -107,7 +110,8 @@ function! sonokai#get_palette(style, colors_override) "{{{
           \ }
   elseif a:style ==# 'atlantis'
     let palette = {
-          \ 'black':      ['#181a1c',   '237'],
+          \ 'black':      ['#181a1c',   '232'],
+          \ 'bg_dim':     ['#24272e',   '232'],
           \ 'bg0':        ['#2a2f38',   '235'],
           \ 'bg1':        ['#333846',   '236'],
           \ 'bg2':        ['#373c4b',   '236'],
@@ -133,7 +137,8 @@ function! sonokai#get_palette(style, colors_override) "{{{
           \ }
   elseif a:style ==# 'maia'
     let palette = {
-          \ 'black':      ['#1c1e1f',   '237'],
+          \ 'black':      ['#1c1e1f',   '232'],
+          \ 'bg_dim':     ['#21282c',   '232'],
           \ 'bg0':        ['#273136',   '235'],
           \ 'bg1':        ['#313b42',   '236'],
           \ 'bg2':        ['#353f46',   '236'],
@@ -159,7 +164,8 @@ function! sonokai#get_palette(style, colors_override) "{{{
           \ }
   elseif a:style ==# 'espresso'
     let palette = {
-          \ 'black':      ['#1f1e1c',   '237'],
+          \ 'black':      ['#1f1e1c',   '232'],
+          \ 'bg_dim':     ['#242120',   '232'],
           \ 'bg0':        ['#312c2b',   '235'],
           \ 'bg1':        ['#393230',   '236'],
           \ 'bg2':        ['#413937',   '236'],
