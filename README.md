@@ -60,6 +60,10 @@ See [`:help sonokai.txt`](https://github.com/sainnhe/sonokai/blob/master/doc/son
 
 See this [wiki page](https://github.com/sainnhe/sonokai/wiki/Related-Projects).
 
+## Contributing
+
+See this [post](https://www.sainnhe.dev/post/contributing-guide/).
+
 ## More Color Schemes
 
 - [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
