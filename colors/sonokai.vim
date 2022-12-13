@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 21 06:21:11 AM UTC 2022'
+let s:last_modified = 'Tue Dec 13 03:56:50 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -30,6 +30,7 @@ endif
 " UI: {{{
 if s:configuration.transparent_background >= 1
   call sonokai#highlight('Normal', s:palette.fg, s:palette.none)
+  call sonokai#highlight('NormalNC', s:palette.fg, s:palette.none)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.none)
   if s:configuration.show_eob
     call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.none)
@@ -41,11 +42,24 @@ if s:configuration.transparent_background >= 1
   call sonokai#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 else
   call sonokai#highlight('Normal', s:palette.fg, s:palette.bg0)
+  if s:configuration.dim_inactive_windows
+    call sonokai#highlight('NormalNC', s:palette.fg, s:palette.bg_dim)
+  else
+    call sonokai#highlight('NormalNC', s:palette.fg, s:palette.bg0)
+  endif
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.bg0)
   if s:configuration.show_eob
-    call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
+    if s:configuration.dim_inactive_windows
+      call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg_dim)
+    else
+      call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
+    endif
   else
-    call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+    if s:configuration.dim_inactive_windows
+      call sonokai#highlight('EndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
+    else
+      call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+    endif
   endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
@@ -133,7 +147,11 @@ else
   call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
 endif
-call sonokai#highlight('VertSplit', s:palette.black, s:palette.none)
+if s:configuration.dim_inactive_windows
+  call sonokai#highlight('VertSplit', s:palette.bg4, s:palette.bg_dim)
+else
+  call sonokai#highlight('VertSplit', s:palette.black, s:palette.none)
+endif
 highlight! link WinSeparator VertSplit
 call sonokai#highlight('Visual', s:palette.none, s:palette.bg3)
 call sonokai#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')

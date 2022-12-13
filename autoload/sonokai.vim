@@ -11,6 +11,7 @@ function! sonokai#get_configuration() "{{{
         \ 'style': get(g:, 'sonokai_style', 'default'),
         \ 'colors_override': get(g:, 'sonokai_colors_override', {}),
         \ 'transparent_background': get(g:, 'sonokai_transparent_background', 0),
+        \ 'dim_inactive_windows': get(g:, 'sonokai_dim_inactive_windows', 0),
         \ 'disable_italic_comment': get(g:, 'sonokai_disable_italic_comment', 0),
         \ 'enable_italic': get(g:, 'sonokai_enable_italic', 0),
         \ 'cursor': get(g:, 'sonokai_cursor', 'auto'),
