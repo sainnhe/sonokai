@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Dec 13 03:56:50 UTC 2022'
+let s:last_modified = 'Fri Dec 23 13:21:27 UTC 2022'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -644,6 +644,8 @@ highlight! link YcmWarningLine WarningLine
 highlight! link YcmErrorSection ErrorText
 highlight! link YcmWarningSection WarningText
 highlight! link YcmInlayHint LineNr
+highlight! link YcmErrorText VirtualTextError
+highlight! link YcmWarningText VirtualTextWarning
 if !has('nvim') && has('textprop') && !exists('g:YCM_HIGHLIGHT_GROUP')
   let g:YCM_HIGHLIGHT_GROUP = {
         \ 'typeParameter': 'TSType',
