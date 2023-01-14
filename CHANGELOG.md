@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.3.3] - 2023-01-14
+
 ### Added
 
 - Optimize `b0o/incline.nvim`.
@@ -172,7 +174,8 @@ All notable changes to this project will be documented in this file.
 
 - Basically finished.
 
-[unreleased]: https://github.com/sainnhe/sonokai/compare/v0.3.2...HEAD
+[unreleased]: https://github.com/sainnhe/sonokai/compare/v0.3.3...HEAD
+[0.3.3]: https://github.com/sainnhe/sonokai/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/sainnhe/sonokai/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/sainnhe/sonokai/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/sainnhe/sonokai/compare/v0.2.1...v0.3.0
