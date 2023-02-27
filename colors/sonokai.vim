@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jan  3 02:23:04 UTC 2023'
+let s:last_modified = 'Mon Feb 27 03:29:30 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -254,14 +254,13 @@ call sonokai#highlight('Operator', s:palette.red, s:palette.none)
 call sonokai#highlight('Title', s:palette.red, s:palette.none, 'bold')
 call sonokai#highlight('Tag', s:palette.orange, s:palette.none)
 call sonokai#highlight('Delimiter', s:palette.fg, s:palette.none)
+call sonokai#highlight('Todo', s:palette.bg0, s:palette.blue, 'bold')
 if s:configuration.disable_italic_comment
   call sonokai#highlight('Comment', s:palette.grey, s:palette.none)
   call sonokai#highlight('SpecialComment', s:palette.grey, s:palette.none)
-  call sonokai#highlight('Todo', s:palette.blue, s:palette.none)
 else
   call sonokai#highlight('Comment', s:palette.grey, s:palette.none, 'italic')
   call sonokai#highlight('SpecialComment', s:palette.grey, s:palette.none, 'italic')
-  call sonokai#highlight('Todo', s:palette.blue, s:palette.none, 'italic')
 endif
 call sonokai#highlight('Ignore', s:palette.grey, s:palette.none)
 call sonokai#highlight('Underlined', s:palette.none, s:palette.none, 'underline')
@@ -387,7 +386,7 @@ endif
 call sonokai#highlight('TSStrong', s:palette.none, s:palette.none, 'bold')
 call sonokai#highlight('TSEmphasis', s:palette.none, s:palette.none, 'italic')
 call sonokai#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
-call sonokai#highlight('TSNote', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('TSNote', s:palette.bg0, s:palette.green, 'bold')
 call sonokai#highlight('TSWarning', s:palette.bg0, s:palette.yellow, 'bold')
 call sonokai#highlight('TSDanger', s:palette.bg0, s:palette.red, 'bold')
 highlight! link TSAnnotation BlueItalic
