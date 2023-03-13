@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Feb 27 03:29:30 UTC 2023'
+let s:last_modified = 'Mon Mar 13 21:26:30 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -339,6 +339,44 @@ elseif s:configuration.current_word ==# 'grey background'
 else
   call sonokai#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
 endif
+" Define a color for each LSP item kind to create highlights for nvim-cmp, aerial.nvim, nvim-navic and coc.nvim
+let g:sonokai_lsp_kind_color = [
+      \ ["Array", "Yellow"],
+      \ ["Boolean", "Yellow"],
+      \ ["Class", "Blue"],
+      \ ["Color", "Yellow"],
+      \ ["Constant", "Orange"],
+      \ ["Constructor", "Green"],
+      \ ["Default", "Yellow"],
+      \ ["Enum", "Blue"],
+      \ ["EnumMember", "Purple"],
+      \ ["Event", "Yellow"],
+      \ ["Field", "Green"],
+      \ ["File", "Green"],
+      \ ["Folder", "Yellow"],
+      \ ["Function", "Green"],
+      \ ["Interface", "Blue"],
+      \ ["Key", "Red"],
+      \ ["Keyword", "Red"],
+      \ ["Method", "Green"],
+      \ ["Module", "Blue"],
+      \ ["Namespace", "Red"],
+      \ ["Null", "Yellow"],
+      \ ["Number", "Yellow"],
+      \ ["Object", "Yellow"],
+      \ ["Operator", "Red"],
+      \ ["Package", "Red"],
+      \ ["Property", "Orange"],
+      \ ["Reference", "Yellow"],
+      \ ["Snippet", "Yellow"],
+      \ ["String", "Yellow"],
+      \ ["Struct", "Blue"],
+      \ ["Text", "Fg"],
+      \ ["TypeParameter", "Blue"],
+      \ ["Unit", "Purple"],
+      \ ["Value", "Purple"],
+      \ ["Variable", "Orange"],
+      \ ]
 " }}}
 " }}}
 " Terminal: {{{
@@ -953,32 +991,16 @@ highlight! link CmpItemAbbr Fg
 highlight! link CmpItemAbbrDeprecated Grey
 highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Blue
-highlight! link CmpItemKindText Fg
-highlight! link CmpItemKindMethod Green
-highlight! link CmpItemKindFunction Green
-highlight! link CmpItemKindConstructor Green
-highlight! link CmpItemKindField Green
-highlight! link CmpItemKindVariable Orange
-highlight! link CmpItemKindClass Blue
-highlight! link CmpItemKindInterface Blue
-highlight! link CmpItemKindModule Blue
-highlight! link CmpItemKindProperty Orange
-highlight! link CmpItemKindUnit Purple
-highlight! link CmpItemKindValue Purple
-highlight! link CmpItemKindEnum Blue
-highlight! link CmpItemKindKeyword Red
-highlight! link CmpItemKindSnippet Yellow
-highlight! link CmpItemKindColor Yellow
-highlight! link CmpItemKindFile Yellow
-highlight! link CmpItemKindReference Yellow
-highlight! link CmpItemKindFolder Yellow
-highlight! link CmpItemKindEnumMember Purple
-highlight! link CmpItemKindConstant Orange
-highlight! link CmpItemKindStruct Blue
-highlight! link CmpItemKindEvent Red
-highlight! link CmpItemKindOperator Red
-highlight! link CmpItemKindTypeParameter Blue
+for kind in g:sonokai_lsp_kind_color
+  execute "highlight! link CmpItemKind" . kind[0] . " " . kind[1]
+endfor
 " }}}
+" SmiteshP/nvim-navic {{{
+highlight! link NavicText Fg
+highlight! link NavicSeparator Grey
+for kind in g:sonokai_lsp_kind_color
+  execute "highlight! link NavicIcons" . kind[0] . " " . kind[1]
+endfor
 " folke/trouble.nvim {{{
 highlight! link TroubleText Fg
 highlight! link TroubleSource Grey
@@ -1238,33 +1260,9 @@ highlight! link packerTimeLow Green
 " https://github.com/neoclide/coc.nvim
 highlight! link CocTreeOpenClose Purple
 highlight! link CocTreeDescription Grey
-highlight! link CocSymbolFile Green
-highlight! link CocSymbolModule Red
-highlight! link CocSymbolNamespace Red
-highlight! link CocSymbolPackage Red
-highlight! link CocSymbolClass Blue
-highlight! link CocSymbolMethod Green
-highlight! link CocSymbolProperty Orange
-highlight! link CocSymbolField Green
-highlight! link CocSymbolConstructor Green
-highlight! link CocSymbolEnum Blue
-highlight! link CocSymbolInterface Blue
-highlight! link CocSymbolFunction Green
-highlight! link CocSymbolVariable Orange
-highlight! link CocSymbolConstant Orange
-highlight! link CocSymbolString Yellow
-highlight! link CocSymbolNumber Yellow
-highlight! link CocSymbolBoolean Yellow
-highlight! link CocSymbolArray Yellow
-highlight! link CocSymbolObject Yellow
-highlight! link CocSymbolKey Red
-highlight! link CocSymbolNull Yellow
-highlight! link CocSymbolEnumMember Orange
-highlight! link CocSymbolStruct Blue
-highlight! link CocSymbolEvent Yellow
-highlight! link CocSymbolOperator Yellow
-highlight! link CocSymbolTypeParameter Blue
-highlight! link CocSymbolDefault Yellow
+for kind in g:sonokai_lsp_kind_color
+  execute "highlight! link CocSymbol" . kind[0] . " " . kind[1]
+endfor
 " syn_end }}}
 " syn_begin: coc-explorer {{{
 " https://github.com/weirongxu/coc-explorer
@@ -1343,32 +1341,9 @@ highlight! link FocusedSymbol NormalFloat
 " https://github.com/stevearc/aerial.nvim
 highlight! link AerialLine CursorLine
 highlight! link AerialGuide LineNr
-highlight! link AerialFileIcon Green
-highlight! link AerialModuleIcon Red
-highlight! link AerialNamespaceIcon Red
-highlight! link AerialPackageIcon Red
-highlight! link AerialClassIcon Blue
-highlight! link AerialMethodIcon Green
-highlight! link AerialPropertyIcon Orange
-highlight! link AerialFieldIcon Green
-highlight! link AerialConstructorIcon Green
-highlight! link AerialEnumIcon Blue
-highlight! link AerialInterfaceIcon Blue
-highlight! link AerialFunctionIcon Green
-highlight! link AerialVariableIcon Orange
-highlight! link AerialConstantIcon Orange
-highlight! link AerialStringIcon Yellow
-highlight! link AerialNumberIcon Yellow
-highlight! link AerialBooleanIcon Yellow
-highlight! link AerialArrayIcon Yellow
-highlight! link AerialObjectIcon Yellow
-highlight! link AerialKeyIcon Red
-highlight! link AerialNullIcon Yellow
-highlight! link AerialEnumMemberIcon Orange
-highlight! link AerialStructIcon Blue
-highlight! link AerialEventIcon Yellow
-highlight! link AerialOperatorIcon Yellow
-highlight! link AerialTypeParameterIcon Blue
+for kind in g:sonokai_lsp_kind_color
+  execute "highlight! link Aerial" . kind[0] . "Icon " . kind[1]
+endfor
 " syn_end }}}
 " syn_begin: nerdtree {{{
 " https://github.com/preservim/nerdtree
