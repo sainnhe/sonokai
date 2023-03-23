@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Mar 23 10:42:27 UTC 2023'
+let s:last_modified = 'Thu Mar 23 11:13:28 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -68,6 +68,7 @@ endif
 call sonokai#highlight('SignColumn', s:palette.fg, s:palette.none)
 call sonokai#highlight('IncSearch', s:palette.bg0, s:palette.bg_red)
 call sonokai#highlight('Search', s:palette.bg0, s:palette.bg_green)
+highlight! link CurSearch IncSearch
 call sonokai#highlight('ColorColumn', s:palette.none, s:palette.bg1)
 call sonokai#highlight('Conceal', s:palette.grey_dim, s:palette.none)
 if s:configuration.cursor ==# 'auto'
@@ -114,6 +115,8 @@ elseif s:configuration.menu_selection_background ==# 'green'
 elseif s:configuration.menu_selection_background ==# 'red'
   call sonokai#highlight('PmenuSel', s:palette.bg0, s:palette.bg_red)
 endif
+call sonokai#highlight('PmenuKind', s:palette.green, s:palette.bg2)
+call sonokai#highlight('PmenuExtra', s:palette.grey, s:palette.bg2)
 highlight! link WildMenu PmenuSel
 call sonokai#highlight('PmenuThumb', s:palette.none, s:palette.grey)
 call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
