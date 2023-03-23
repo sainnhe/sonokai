@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Optimize `github/copilot.vim`.
+
 ## [0.3.3] - 2023-01-14
 
 ### Added
