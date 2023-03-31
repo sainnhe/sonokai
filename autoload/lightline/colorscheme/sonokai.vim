@@ -2,13 +2,16 @@
 " URL: https://github.com/sainnhe/sonokai/
 " Filename: autoload/lightline/colorscheme/sonokai.vim
 " Author: Sainnhepark
-" Email: sainnhe@gmail.com
+" Email: i@sainnhe.dev
 " License: MIT License
 " =============================================================================
 
 " Initialization: {{{
 let s:configuration = sonokai#get_configuration()
-let s:palette = sonokai#get_palette(s:configuration.style)
+let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
+if s:configuration.transparent_background == 2
+  let s:palette.bg1 = s:palette.none
+endif
 "}}}
 " Definition: {{{
 let s:tab_l_fg = s:palette.fg
@@ -91,15 +94,15 @@ let s:terminal_r2_bg = s:palette.bg4
 let s:terminal_middle_fg = s:palette.fg
 let s:terminal_middle_bg = s:palette.bg1
 
-let s:inactive_l1_fg = s:palette.fg
-let s:inactive_l1_bg = s:palette.bg4
-let s:inactive_l2_fg = s:palette.fg
-let s:inactive_l2_bg = s:palette.bg4
-let s:inactive_r1_fg = s:palette.fg
-let s:inactive_r1_bg = s:palette.bg4
-let s:inactive_r2_fg = s:palette.fg
-let s:inactive_r2_bg = s:palette.bg4
-let s:inactive_middle_fg = s:palette.fg
+let s:inactive_l1_fg = s:palette.grey
+let s:inactive_l1_bg = s:palette.bg1
+let s:inactive_l2_fg = s:palette.grey
+let s:inactive_l2_bg = s:palette.bg1
+let s:inactive_r1_fg = s:palette.grey
+let s:inactive_r1_bg = s:palette.bg1
+let s:inactive_r2_fg = s:palette.grey
+let s:inactive_r2_bg = s:palette.bg1
+let s:inactive_middle_fg = s:palette.grey
 let s:inactive_middle_bg = s:palette.bg1
 "}}}
 " Implementation: {{{

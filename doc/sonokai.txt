@@ -1,5 +1,14 @@
-*sonokai.txt*
+*sonokai.txt* High Contrast & Vivid Color Scheme based on Monokai Pro
+*sonokai*
+>
+                 _____                   __         _
+                / ___/____  ____  ____  / /______ _(_)
+                \__ \/ __ \/ __ \/ __ \/ //_/ __ `/ /
+               ___/ / /_/ / / / / /_/ / ,< / /_/ / /
+              /____/\____/_/ /_/\____/_/|_|\__,_/_/
+<
 
+==============================================================================
 CONTENTS                                     *sonokai-contents*
 
 Introduction                                 |sonokai-introduction|
@@ -8,7 +17,7 @@ Usage                                        |sonokai-usage|
 Configuration                                |sonokai-configuration|
 FAQ                                          |sonokai-faq|
 
-Note: Type |gO| to show the outline of contents.
+Note: Type |gO| in neovim to show the outline of contents.
 
 ==============================================================================
 INTRODUCTION                                              *sonokai-introduction*
@@ -17,15 +26,15 @@ Sometimes I need a high contrast color scheme, and I think monokai is one of
 the best solutions, it's very beautiful and vivid.
 
 However there is one thing I can't stand -- the contrast is too high, which is
-totally unacceptable to me.
+totally unacceptable for me.
 
 This color scheme is based on Monokai Pro, the contrast is adjusted to be a
 bit lower while keeping the colors vivid enough.
 
-The `shusia` and `maia` variants are based on `monokai pro` and `monokai machine`
-respectively. I'm not going to port all variants of Monokai Pro because I
-don't like some of them. In addition, I designed some new variants inspired by
-other color schemes.
+The `shusia`, `maia` and `espresso` variants are basically modified versions of
+Monokai Pro. I'm not going to port all variants of Monokai Pro because I don't
+like some of them. In addition, I designed some new variants inspired by other
+color schemes.
 
 Features~
 
@@ -33,6 +42,8 @@ Features~
 - Vivid colors.
 - Highly customizable.
 - Rich support for common file types and plugins.
+- Tree-sitter support.
+- Semantic highlighting support.
 - Italic support 🎉
 
 ==============================================================================
@@ -51,12 +62,26 @@ Via Plugin Manager~
 
 ------------------------------------------------------------------------------
 
+Via Pack Feature~
+
+    1. Create a new directory: `$ mkdir -p ~/.vim/pack/colors/opt`
+
+    2. Clone this repository: `$ git clone --depth 1 https://github.com/sainnhe/sonokai.git ~/.vim/pack/colors/opt/sonokai`
+
+    3. Generate help tags: `:helptags ~/.vim/pack/colors/opt/sonokai/doc/`
+
+    4. Add `packadd! sonokai` to your vimrc.
+
+Note: If you install this color scheme to `pack/*/start`, you still need to add `packadd! sonokai` to your vimrc. [sainnhe/gruvbox-material#60](https://github.com/sainnhe/gruvbox-material/issues/60)
+
+------------------------------------------------------------------------------
+
 Manually~
 
     1. Clone the repository: `git clone --depth 1 https://github.com/sainnhe/sonokai.git`
 
     2. Copy `/path/to/sonokai/autoload/sonokai.vim` to
-    `~/.vim/autoload/`.
+    `~/.vim/autoload/` .
 
     3. Copy `/path/to/sonokai/colors/sonokai.vim` to
     `~/.vim/colors/` .
@@ -71,6 +96,10 @@ Manually~
     6. To install [lightline](https://github.com/itchyny/lightline.vim) theme,
     copy `/path/to/sonokai/autoload/lightline/colorscheme/sonokai.vim`
     to `~/.vim/autoload/lightline/colorscheme/` .
+
+    7. To install [lualine](https://github.com/nvim-lualine/lualine.nvim) theme,
+    copy `/path/to/sonokai/lua/lualine/themes/sonokai.lua`
+    to `~/.config/nvim/lua/lualine/themes/` .
 
 ------------------------------------------------------------------------------
 
@@ -97,8 +126,7 @@ Vim~
 
         " The configuration options should be placed before `colorscheme sonokai`.
         let g:sonokai_style = 'andromeda'
-        let g:sonokai_enable_italic = 1
-        let g:sonokai_disable_italic_comment = 1
+        let g:sonokai_better_performance = 1
 
         colorscheme sonokai
 <
@@ -141,6 +169,23 @@ Lightline~
         :call lightline#init()
         :call lightline#colorscheme()
 <
+------------------------------------------------------------------------------
+
+Lualine~
+
+    To enable [lualine](https://github.com/nvim-lualine/lualine.nvim) color
+    scheme, put this in your init.lua:
+>
+        require'lualine'.setup {
+          options = {
+            theme = 'sonokai'
+          }
+        }
+<
+    To apply it without reloading:
+>
+        :lua require'lualine'.setup {options = {theme = 'sonokai'}}
+<
 ==============================================================================
 CONFIGURATION                                            *sonokai-configuration*
 
@@ -153,8 +198,7 @@ E.g.
     endif
 
     let g:sonokai_style = 'andromeda'
-    let g:sonokai_enable_italic = 1
-    let g:sonokai_disable_italic_comment = 1
+    let g:sonokai_better_performance = 1
 
     colorscheme sonokai
     let g:lightline.colorscheme = 'sonokai'
@@ -165,13 +209,11 @@ g:sonokai_style~
 
 The style of this color scheme.
 
-    Available values: `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`
-    Default value: `'default'`
+    Type:               |String|
+    Available values:   `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`,
+    `'espresso'`
+    Default value:      `'default'`
 
-E.g.
->
-    let g:sonokai_style = 'atlantis'
-<
 ------------------------------------------------------------------------------
                                               *g:sonokai_disable_italic_comment*
 g:sonokai_disable_italic_comment~
@@ -179,20 +221,20 @@ g:sonokai_disable_italic_comment~
 By default, italic is enabled in `Comment`. To disable italic in `Comment`, set
 this option to `1`.
 
-E.g.
->
-    let g:sonokai_disable_italic_comment = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 ------------------------------------------------------------------------------
                                                        *g:sonokai_enable_italic*
 g:sonokai_enable_italic~
 
 To enable italic in this color scheme, set this option to `1`.
 
-E.g.
->
-    let g:sonokai_enable_italic = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 Note: This option is designed to use with fonts that support cursive italics.
 See |sonokai-faq| for more information.
 
@@ -202,64 +244,88 @@ g:sonokai_cursor~
 
 Customize the cursor color, only works in GUI clients.
 
-    Available values: `'auto'`, `'red'`, `'orange'`, `'yellow'`, `'green'`,
+    Type:               |String|
+    Available values:   `'auto'`, `'red'`, `'orange'`, `'yellow'`, `'green'`,
     `'blue'`, `'purple'`
-    Default value: `'auto'`
+    Default value:      `'auto'`
 
-E.g.
->
-    let g:sonokai_cursor = 'green'
-<
 ------------------------------------------------------------------------------
                                               *g:sonokai_transparent_background*
 g:sonokai_transparent_background~
 
 To use transparent background, set this option to `1`.
 
-E.g.
->
-    let g:sonokai_transparent_background = 1
-<
+If you want more ui components to be transparent (for example, status line
+background), set this option to `2`.
+
+    Type:               |Number|
+    Available values:   `0`, `1`, `2`
+    Default value:      `0`
+
+------------------------------------------------------------------------------
+                                                *g:sonokai_dim_inactive_windows*
+g:sonokai_dim_inactive_windows~
+
+Dim inactive windows. Only works in neovim currently.
+
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 ------------------------------------------------------------------------------
                                            *g:sonokai_menu_selection_background*
 g:sonokai_menu_selection_background~
 
 Customize the background color of |hl-PmenuSel| and |hl-WildMenu|.
 
-    Available values: `'green'`, `'blue'`, `'red'`
-    Default value: `'green'`
+    Type:               |String|
+    Available values:   `'blue'`, `'green'`, `'red'`
+    Default value:      `'blue'`
 
-E.g.
->
-    let g:sonokai_menu_selection_background = 'green'
-<
 ------------------------------------------------------------------------------
-                                              *g:sonokai_sign_column_background*
-g:sonokai_sign_column_background~
+                                                    *g:sonokai_spell_foreground*
+g:sonokai_spell_foreground~
 
-By default, the background color of sign column is different from normal text.
-If you want to make it the same as normal text, set this option to `'none'`.
+By default, this color scheme won't color the foreground of |spell|, instead
+colored under curls will be used. If you also want to color the foreground,
+set this option to `'colored'`.
 
-    Available values: `'default'`, `'none'`
-    Default value: `'default'`
+    Type:               |String|
+    Available values:   `'none'`, `'colored'`
+    Default value:      `'none'`
 
-E.g.
->
-    let g:sonokai_sign_column_background = 'none'
-<
+------------------------------------------------------------------------------
+                                                            *g:sonokai_show_eob*
+g:sonokai_show_eob~
+
+Whether to show |hl-EndOfBuffer|.
+
+    Type:               |Number|
+    Available values:   `1`, `0`
+    Default value:      `1`
+
 ------------------------------------------------------------------------------
                                            *g:sonokai_diagnostic_text_highlight*
 g:sonokai_diagnostic_text_highlight~
 
-Whether to highlight the background of error/warning/info/hint text.
+Some plugins support highlighting error/warning/info/hint texts, by default
+these texts are only underlined, but you can use this option to also highlight
+the background of them.
 
-    Available values: `0`, `1`
-    Default value: `0`
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
 
-E.g.
->
-    let g:sonokai_diagnostic_text_highlight = 1
-<
+Currently, the following plugins are supported:
+
+- neovim's built-in language server client
+- https://github.com/neoclide/coc.nvim
+- https://github.com/prabirshrestha/vim-lsp
+- https://github.com/ycm-core/YouCompleteMe
+- https://github.com/dense-analysis/ale
+- https://github.com/neomake/neomake
+- https://github.com/vim-syntastic/syntastic
+
 ------------------------------------------------------------------------------
                                            *g:sonokai_diagnostic_line_highlight*
 g:sonokai_diagnostic_line_highlight~
@@ -268,10 +334,10 @@ Some plugins support highlighting error/warning/info/hint lines, but this
 feature is disabled by default in this color scheme. To enable this feature,
 set this option to `1`.
 
-E.g.
->
-    let g:sonokai_diagnostic_line_highlight = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 Currently, the following plugins are supported:
 
 - https://github.com/neoclide/coc.nvim
@@ -280,13 +346,39 @@ Currently, the following plugins are supported:
 - https://github.com/vim-syntastic/syntastic
 
 ------------------------------------------------------------------------------
+                                             *g:sonokai_diagnostic_virtual_text*
+g:sonokai_diagnostic_virtual_text~
+
+Some plugins can use virtual text feature of neovim to display
+error/warning/info/hint information, you can use this option to adjust the
+colors of it.
+
+    Type:               |String|
+    Available values:   `'grey'`, `'colored'`
+    Default value:      `'grey'`
+
+Currently, the following plugins are supported:
+
+- neovim's built-in language server client
+- https://github.com/neoclide/coc.nvim
+- https://github.com/prabirshrestha/vim-lsp
+- https://github.com/dense-analysis/ale
+- https://github.com/neomake/neomake
+- https://github.com/ycm-core/YouCompleteMe
+
+------------------------------------------------------------------------------
                                                         *g:sonokai_current_word*
 g:sonokai_current_word~
 
 Some plugins can highlight the word under current cursor, you can use this
 option to control their behavior.
 
-Currently support:
+    Type:               |String|
+    Available values:   `'grey background'`, `'bold'`, `'underline'`, `'italic'`
+    Default value:      `'grey background'` when not in transparent mode, `'bold'`
+    when in transparent mode.
+
+Currently, the following plugins are supported:
 
 - https://github.com/neoclide/coc-highlight
 - https://github.com/dominikduda/vim_current_word
@@ -294,14 +386,18 @@ Currently support:
 - https://github.com/itchyny/vim-cursorword
 - https://github.com/prabirshrestha/vim-lsp
 
-    Available values: `'grey background'`, `'bold'`, `'underline'`, `'italic'`
-    Default value: `'grey background'` when not in transparent mode, `'bold'`
-    when in transparent mode.
+------------------------------------------------------------------------------
+                                             *g:sonokai_disable_terminal_colors*
+g:sonokai_disable_terminal_colors~
 
-E.g.
->
-    let g:sonokai_current_word = 'bold'
-<
+Setting this option to `1` will disable terminal colors provided by this color
+scheme so you can remain terminal colors the same when using |:terminal| in
+vim and outside of vim.
+
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 ------------------------------------------------------------------------------
                                               *g:sonokai_lightline_disable_bold*
 g:sonokai_lightline_disable_bold~
@@ -309,10 +405,10 @@ g:sonokai_lightline_disable_bold~
 By default, bold is enabled in lightline color scheme. To disable bold in
 lightline color scheme, set this option to `1`.
 
-E.g.
->
-    let g:sonokai_lightline_disable_bold = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 Note: this configuration option doesn't need to be placed before `colorscheme sonokai`
 
 ------------------------------------------------------------------------------
@@ -321,20 +417,35 @@ g:sonokai_better_performance~
 
 The loading time of this color scheme is very long because too many file types
 and plugins are optimized. This feature allows you to load part of the code on
-demand by placing them in the `after/ftplugin` directory.
+demand by placing them in the `after/syntax` directory.
 
 Enabling this option will reduce loading time by approximately 50%.
 
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
+------------------------------------------------------------------------------
+                                                     *g:sonokai_colors_override*
+g:sonokai_colors_override~
+
+Override color palette. The available keys can be found in
+`/path/to/sonokai/autoload/sonokai.vim`.
+
 E.g.
 >
-    let g:sonokai_better_performance = 1
+    let g:sonokai_colors_override = {'bg0': ['#1e222a', '235'], 'bg2': ['#282c34', '236']}
+    colorscheme sonokai
 <
+    Type:               |Dictionary|
+    Default value:      `{}`
+
 ==============================================================================
 FAQ                                                                *sonokai-faq*
 
 ------------------------------------------------------------------------------
 
-It doesn't work as expected.~
+The colors don't match those in the screenshots.~
 
 1. This color scheme is mainly designed for true colors, `set termguicolors`
 is required. Check output of `vim --version`, maybe your vim doesn't support
@@ -347,20 +458,28 @@ using [this script](https://unix.stackexchange.com/questions/404414/print-true-c
 tmux, as tmux cannot display true colors properly:
 [#1246 How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
 
-4. There are many highlight group links in syntax files while a color scheme
-may change them, enabling one color scheme based on another color scheme
-enabled is very likely to cause colors to break. If any color is broken, you
-can enable the color scheme in your vimrc instead of after vim startup.
+------------------------------------------------------------------------------
+
+The configuration options don't work.~
+
+You should place them before `colorscheme sonokai` .
+
+------------------------------------------------------------------------------
+
+A lot of errors are detected if I install with pack feature.~
+
+You'll need to add `packadd! sonokai` before applying this color scheme.
+Check [sainnhe/gruvbox-material#60](https://github.com/sainnhe/gruvbox-material/issues/60)
 
 ------------------------------------------------------------------------------
 
 How to enable cursive italic keywords?~
 
-1. Install a font that supports cursive italics, for example [icursive-nerd-font](https://github.com/sainnhe/icursive-nerd-font).
+1. Install a font that supports cursive italics, for example https://aka.sainnhe.dev/fonts
 
 2. Enable italic keywords in this color scheme: `let g:sonokai_enable_italic = 1`
 
-3. Disable italic comment(optional): `let g:sonokai_disable_italic_comment = 1`
+3. (Optional) Disable italic comment: `let g:sonokai_disable_italic_comment = 1`
 
 ------------------------------------------------------------------------------
 
@@ -368,6 +487,12 @@ The comment color looks weird.~
 
 Some terminal emulators don't support italics, which may cause the comment
 color looks weird. See https://github.com/sainnhe/gruvbox-material/issues/5#issuecomment-729586348
+
+A temporary solution is to disable italic comments via
+|g:sonokai_disable_italic_comment|.
+
+If you are using tmux, you may also need to override default true colors of
+tmux: https://github.com/tmux/tmux/issues/1246
 
 ------------------------------------------------------------------------------
 
@@ -380,8 +505,9 @@ How to use custom colors?~
       highlight! link groupC groupD
     
       " Initialize the color palette.
-      " The parameter is a valid value for `g:sonokai_style`,
-      let l:palette = sonokai#get_palette('atlantis')
+      " The first parameter is a valid value for `g:sonokai_style`,
+      " and the second parameter is a valid value for `g:sonokai_colors_override`.
+      let l:palette = sonokai#get_palette('atlantis', {})
       " Define a highlight group.
       " The first parameter is the name of a highlight group,
       " the second parameter is the foreground color,
@@ -405,13 +531,13 @@ Note: Make sure to define the `augroup` before declare the `colorscheme`.
 
 What's your status line configuration?~
 
-See this [article](https://www.sainnhe.dev/post/status-line-config/).
+See this post: https://aka.sainnhe.dev/statusline
 
 ------------------------------------------------------------------------------
 
 What's the font used here?~
 
-[Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
+See this post: https://aka.sainnhe.dev/fonts
 
 ==============================================================================
 vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:et:sw=4:fen:fdm=marker:fmr={{{,}}}:

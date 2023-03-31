@@ -2,13 +2,16 @@
 " URL: https://github.com/sainnhe/sonokai/
 " Filename: autoload/airline/themes/sonokai.vim
 " Author: Sainnhepark
-" Email: sainnhe@gmail.com
+" Email: i@sainnhe.dev
 " License: MIT License
 " =============================================================================
 
 " Initialization: {{{
 let s:configuration = sonokai#get_configuration()
-let s:palette = sonokai#get_palette(s:configuration.style)
+let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
+if s:configuration.transparent_background == 2
+  let s:palette.bg1 = s:palette.none
+endif
 "}}}
 " Definition: {{{
 let s:accents = s:palette.red
@@ -20,6 +23,8 @@ let s:warning_bg = s:palette.yellow
 let s:term_fg = s:palette.fg
 let s:term_bg = s:palette.bg1
 
+let s:tab_fg = s:palette.fg
+let s:tab_bg = s:palette.bg4
 let s:tab_sel_fg = s:palette.bg0
 let s:tab_sel_bg = s:palette.bg_red
 let s:tab_mid_fg = s:palette.fg
@@ -28,8 +33,8 @@ let s:tab_mod_fg = s:palette.bg0
 let s:tab_mod_bg = s:palette.bg_blue
 let s:tab_type_fg = s:palette.bg0
 let s:tab_type_bg = s:palette.purple
-let s:tab_label_fg = s:palette.bg0
-let s:tab_label_bg = s:palette.orange
+let s:tab_label_fg = s:palette.fg
+let s:tab_label_bg = s:palette.bg4
 
 let s:normal_side_fg = s:palette.bg0
 let s:normal_side_bg = s:palette.bg_blue
@@ -76,13 +81,13 @@ let s:commandline_mid_bg = s:palette.bg1
 let s:commandline_mod_fg = s:palette.orange
 let s:commandline_mod_bg = s:palette.bg1
 
-let s:inactive_side_fg = s:palette.fg
-let s:inactive_side_bg = s:palette.bg4
-let s:inactive_sub_fg = s:palette.fg
-let s:inactive_sub_bg = s:palette.bg4
-let s:inactive_mid_fg = s:palette.fg
+let s:inactive_side_fg = s:palette.grey
+let s:inactive_side_bg = s:palette.bg1
+let s:inactive_sub_fg = s:palette.grey
+let s:inactive_sub_bg = s:palette.bg1
+let s:inactive_mid_fg = s:palette.grey
 let s:inactive_mid_bg = s:palette.bg1
-let s:inactive_mod_fg = s:palette.orange
+let s:inactive_mod_fg = s:palette.grey
 let s:inactive_mod_bg = s:palette.bg1
 "}}}
 " Implementation: {{{
@@ -177,15 +182,19 @@ let s:IA2 = [ s:inactive_sub_fg[0] , s:inactive_sub_bg[0] , s:inactive_sub_fg[1]
 let s:IA3 = [ s:inactive_mid_fg[0] , s:inactive_mid_bg[0] , s:inactive_mid_fg[1] , s:inactive_mid_bg[1] ]
 
 let g:airline#themes#sonokai#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
+let g:airline#themes#sonokai#palette.inactive.airline_term = [ s:inactive_mid_fg[0] , s:inactive_mid_bg[0] , s:inactive_mid_fg[1] , s:inactive_mid_bg[1] ]
 let g:airline#themes#sonokai#palette.inactive_modified = deepcopy(g:airline#themes#sonokai#palette.inactive)
 let g:airline#themes#sonokai#palette.inactive_modified.airline_c = [ s:inactive_mod_fg[0] , s:inactive_mod_bg[0] , s:inactive_mod_fg[1] , s:inactive_mod_bg[1] ]
 
 " TabLine
 let g:airline#themes#sonokai#palette.tabline = {}
+let g:airline#themes#sonokai#palette.tabline.airline_tab = [ s:tab_fg[0] , s:tab_bg[0] , s:tab_fg[1] , s:tab_bg[1] ]
+let g:airline#themes#sonokai#palette.tabline.airline_tab_right = [ s:tab_fg[0] , s:tab_bg[0] , s:tab_fg[1] , s:tab_bg[1] ]
 let g:airline#themes#sonokai#palette.tabline.airline_tabsel = [ s:tab_sel_fg[0] , s:tab_sel_bg[0] , s:tab_sel_fg[1] , s:tab_sel_bg[1] , 'bold' ]
 let g:airline#themes#sonokai#palette.tabline.airline_tabsel_right = [ s:tab_sel_fg[0] , s:tab_sel_bg[0] , s:tab_sel_fg[1] , s:tab_sel_bg[1] , 'bold' ]
 let g:airline#themes#sonokai#palette.tabline.airline_tabfill = [ s:tab_mid_fg[0] , s:tab_mid_bg[0] , s:tab_mid_fg[1] , s:tab_mid_bg[1] ]
-let g:airline#themes#sonokai#palette.tabline.airline_tabmod = [ s:tab_mod_fg[0] , s:tab_mod_bg[0] , s:tab_mod_fg[1] , s:tab_mod_bg[1] ]
+let g:airline#themes#sonokai#palette.tabline.airline_tabmod = [ s:tab_mod_fg[0] , s:tab_mod_bg[0] , s:tab_mod_fg[1] , s:tab_mod_bg[1] , 'bold' ]
+let g:airline#themes#sonokai#palette.tabline.airline_tabmod_right = [ s:tab_mod_fg[0] , s:tab_mod_bg[0] , s:tab_mod_fg[1] , s:tab_mod_bg[1] , 'bold' ]
 let g:airline#themes#sonokai#palette.tabline.airline_tabtype = [ s:tab_type_fg[0] , s:tab_type_bg[0] , s:tab_type_fg[1] , s:tab_type_bg[1] ]
 let g:airline#themes#sonokai#palette.tabline.airline_tablabel = [ s:tab_label_fg[0] , s:tab_label_bg[0] , s:tab_label_fg[1] , s:tab_label_bg[1] ]
 let g:airline#themes#sonokai#palette.tabline.airline_tablabel_right = [ s:tab_label_fg[0] , s:tab_label_bg[0] , s:tab_label_fg[1] , s:tab_label_bg[1] ]
