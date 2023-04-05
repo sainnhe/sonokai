@@ -201,7 +201,7 @@ E.g.
     let g:sonokai_better_performance = 1
 
     colorscheme sonokai
-    let g:lightline.colorscheme = 'sonokai'
+    let g:lightline = {'colorscheme' : 'sonokai'}
 <
 ------------------------------------------------------------------------------
                                                                *g:sonokai_style*
