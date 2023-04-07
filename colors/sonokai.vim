@@ -579,6 +579,32 @@ if has('nvim-0.8.0')
   highlight! link @variable TSVariable
   highlight! link @variable.builtin TSVariableBuiltin
 endif
+if has('nvim-0.9.0')
+  highlight! link @lsp.type.class TSType
+  highlight! link @lsp.type.comment TSComment
+  highlight! link @lsp.type.decorator TSFunction
+  highlight! link @lsp.type.enum TSType
+  highlight! link @lsp.type.enumMember TSProperty
+  highlight! link @lsp.type.events TSLabel
+  highlight! link @lsp.type.function TSFunction
+  highlight! link @lsp.type.interface TSType
+  highlight! link @lsp.type.keyword TSKeyword
+  highlight! link @lsp.type.macro TSConstMacro
+  highlight! link @lsp.type.method TSMethod
+  highlight! link @lsp.type.modifier TSTypeQualifier
+  highlight! link @lsp.type.namespace TSNamespace
+  highlight! link @lsp.type.number TSNumber
+  highlight! link @lsp.type.operator TSOperator
+  highlight! link @lsp.type.parameter TSParameter
+  highlight! link @lsp.type.property TSProperty
+  highlight! link @lsp.type.regexp TSStringRegex
+  highlight! link @lsp.type.string TSString
+  highlight! link @lsp.type.struct TSType
+  highlight! link @lsp.type.type TSType
+  highlight! link @lsp.type.typeParameter TSTypeDefinition
+  highlight! link @lsp.type.variable TSVariable
+  highlight! link DiagnosticUnnecessary WarningText
+endif
 " }}}
 " github/copilot.vim {{{
 highlight! link CopilotSuggestion Grey
