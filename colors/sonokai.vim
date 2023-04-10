@@ -2655,6 +2655,7 @@ highlight! link tomlString Green
 highlight! link tomlTableArray tomlTable
 " syn_end }}}
 " syn_begin: gitcommit {{{
+" builtin {{{
 highlight! link gitcommitSummary Red
 highlight! link gitcommitUntracked Grey
 highlight! link gitcommitDiscarded Grey
@@ -2663,6 +2664,12 @@ highlight! link gitcommitUnmerged Grey
 highlight! link gitcommitOnBranch Grey
 highlight! link gitcommitArrow Grey
 highlight! link gitcommitFile Green
+" }}}
+" nvim-treesitter/nvim-treesitter {{{
+if has('nvim-0.8.0')
+  highlight! link @text.gitcommit Fg
+endif
+" }}}
 " syn_end }}}
 " syn_begin: dosini {{{
 call sonokai#highlight('dosiniHeader', s:palette.red, s:palette.none, 'bold')
