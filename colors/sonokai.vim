@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Mar 23 11:13:28 UTC 2023'
+let s:last_modified = 'Tue Apr 11 15:31:46 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1450,6 +1450,7 @@ if !s:configuration.transparent_background
   call sonokai#highlight('NeoTreeEndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
   call sonokai#highlight('NeoTreeVertSplit', s:palette.bg0, s:palette.bg0)
 endif
+highlight! link NeoTreeDirectoryIcon Blue
 highlight! link NeoTreeGitAdded Green
 highlight! link NeoTreeGitConflict Yellow
 highlight! link NeoTreeGitDeleted Red
