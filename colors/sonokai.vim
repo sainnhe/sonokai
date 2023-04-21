@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Apr 21 19:59:57 UTC 2023'
+let s:last_modified = 'Fri Apr 21 20:16:39 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -2239,7 +2239,7 @@ highlight! link luaFunction Red
 highlight! link luaTable Fg
 highlight! link luaIn Red
 " }}}
-" vim-lua: https://github.com/tbastos/vim-lua{{{
+" vim-lua: https://github.com/tbastos/vim-lua {{{
 highlight! link luaFuncCall Green
 highlight! link luaLocal Red
 highlight! link luaSpecialValue Green
@@ -2251,6 +2251,12 @@ highlight! link luaFuncTable BlueItalic
 highlight! link luaFuncArgName Fg
 highlight! link luaEllipsis Red
 highlight! link luaDocTag Green
+" }}}
+" nvim-treesitter/nvim-treesitter {{{
+highlight! link luaTSConstructor luaBraces
+if has('nvim-0.8.0')
+  highlight! link @constructor.lua luaTSConstructor
+endif
 " }}}
 " syn_end }}}
 " syn_begin: java {{{
