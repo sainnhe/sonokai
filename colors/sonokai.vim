@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Apr 22 21:12:18 UTC 2023'
+let s:last_modified = 'Mon Apr 24 19:33:44 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1704,6 +1704,12 @@ highlight! link htmlScriptTag Purple
 highlight! link htmlSpecialTagName RedItalic
 highlight! link htmlString Green
 " }}}
+" nvim-treesitter/nvim-treesitter {{{
+highlight! link htmlTSText TSNone
+if has('nvim-0.8.0')
+  highlight! link @text.html htmlTSText
+endif
+" }}}
 " syn_end }}}
 " syn_begin: htmldjango {{{
 " builtin: https://github.com/vim/vim/blob/master/runtime/syntax/htmldjango.vim{{{
@@ -1973,6 +1979,12 @@ highlight! link jsxClosePunct Blue
 highlight! link jsxEscapeJs Purple
 highlight! link jsxAttrib Blue
 " }}}
+" nvim-treesitter/nvim-treesitter {{{
+if has('nvim-0.9.0')
+  highlight! link @lsp.typemod.variable.defaultLibrary.javascript TSConstBuiltin
+  highlight! link @lsp.typemod.variable.defaultLibrary.javascriptreact TSConstBuiltin
+endif
+" }}}
 " syn_end }}}
 " syn_begin: typescript/typescriptreact {{{
 " vim-typescript: https://github.com/leafgarland/typescript-vim{{{
@@ -2128,6 +2140,18 @@ highlight! link typescriptCryptoProp Fg
 highlight! link typescriptDOMFormProp Fg
 highlight! link typescriptBOMHistoryProp Fg
 highlight! link typescriptMathStaticProp Fg
+" }}}
+" nvim-treesitter/nvim-treesitter {{{
+highlight! link tsxTSTag OrangeItalic
+highlight! link tsxTSConstructor TSType
+if has('nvim-0.8.0')
+  highlight! link @tag.tsx tsxTSTag
+  highlight! link @constructor.tsx tsxTSConstructor
+endif
+if has('nvim-0.9.0')
+  highlight! link @lsp.typemod.variable.defaultLibrary.typescript TSConstBuiltin
+  highlight! link @lsp.typemod.variable.defaultLibrary.typescriptreact TSConstBuiltin
+endif
 " }}}
 " syn_end }}}
 " syn_begin: dart {{{
@@ -2709,7 +2733,7 @@ highlight! link gitcommitFile Green
 " }}}
 " nvim-treesitter/nvim-treesitter {{{
 if has('nvim-0.8.0')
-  highlight! link @text.gitcommit Fg
+  highlight! link @text.gitcommit TSNone
 endif
 " }}}
 " syn_end }}}
