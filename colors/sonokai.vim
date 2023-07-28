@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Apr 24 19:33:44 UTC 2023'
+let s:last_modified = 'Fri Jul 28 07:40:12 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -49,17 +49,9 @@ else
   endif
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.bg0)
   if s:configuration.show_eob
-    if s:configuration.dim_inactive_windows
-      call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg_dim)
-    else
-      call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
-    endif
+    call sonokai#highlight('EndOfBuffer', s:palette.bg4, s:palette.none)
   else
-    if s:configuration.dim_inactive_windows
-      call sonokai#highlight('EndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
-    else
-      call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
-    endif
+    call sonokai#highlight('EndOfBuffer', s:palette.bg0, s:palette.none)
   endif
   call sonokai#highlight('Folded', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
