@@ -310,6 +310,22 @@ Whether to show |hl-EndOfBuffer|.
     Default value:      `1`
 
 ------------------------------------------------------------------------------
+                                                         *g:sonokai_float_style*
+g:sonokai_float_style~
+
+Style used to make floating windows stand out from other windows. `'bright'`
+makes the background of these windows lighter than |hl-Normal|, whereas
+`'dim'` makes it darker.
+
+Floating windows include for instance diagnostic pop-ups, scrollable
+documentation windows from completion engines, overlay windows from
+installers, etc.
+
+    Type:               |String|
+    Available values:   `'bright'`, `'dim'`
+    Default value:      `'bright'`
+
+------------------------------------------------------------------------------
                                            *g:sonokai_diagnostic_text_highlight*
 g:sonokai_diagnostic_text_highlight~
 

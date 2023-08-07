@@ -111,8 +111,13 @@ call sonokai#highlight('PmenuKind', s:palette.green, s:palette.bg2)
 call sonokai#highlight('PmenuExtra', s:palette.grey, s:palette.bg2)
 highlight! link WildMenu PmenuSel
 call sonokai#highlight('PmenuThumb', s:palette.none, s:palette.grey)
-call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
-call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
+if s:configuration.float_style ==# 'dim'
+  call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
+  call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
+else
+  call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
+  call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
+endif
 call sonokai#highlight('Question', s:palette.yellow, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
   call sonokai#highlight('SpellBad', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
@@ -639,6 +644,7 @@ highlight! link CocErrorFloat ErrorFloat
 highlight! link CocWarningFloat WarningFloat
 highlight! link CocInfoFloat InfoFloat
 highlight! link CocHintFloat HintFloat
+highlight! link CocFloating NormalFloat
 highlight! link CocFloatDividingLine Grey
 highlight! link CocErrorHighlight ErrorText
 highlight! link CocWarningHighlight WarningText
