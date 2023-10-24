@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Aug  7 07:21:35 UTC 2023'
+let s:last_modified = 'Tue Oct 24 15:50:35 UTC 2023'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -114,9 +114,11 @@ call sonokai#highlight('PmenuThumb', s:palette.none, s:palette.grey)
 if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
+  call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg_dim, 'bold')
 else
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
+  call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg2, 'bold')
 endif
 call sonokai#highlight('Question', s:palette.yellow, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
