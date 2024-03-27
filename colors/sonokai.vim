@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Mar 27 01:55:12 PM UTC 2024'
+let s:last_modified = 'Wed Mar 27 02:48:35 PM UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -498,7 +498,7 @@ highlight! link TSType BlueItalic
 highlight! link TSTypeBuiltin BlueItalic
 highlight! link TSTypeDefinition BlueItalic
 highlight! link TSTypeQualifier Red
-highlight! link TSURI markdownUrl
+call sonokai#highlight('TSURI', s:palette.blue, s:palette.none, 'underline')
 highlight! link TSVariable Fg
 highlight! link TSVariableBuiltin PurpleItalic
 if has('nvim-0.8.0')
@@ -1622,10 +1622,10 @@ call sonokai#highlight('markdownH3', s:palette.yellow, s:palette.none, 'bold')
 call sonokai#highlight('markdownH4', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('markdownH5', s:palette.blue, s:palette.none, 'bold')
 call sonokai#highlight('markdownH6', s:palette.purple, s:palette.none, 'bold')
-call sonokai#highlight('markdownUrl', s:palette.blue, s:palette.none, 'underline')
 call sonokai#highlight('markdownItalic', s:palette.none, s:palette.none, 'italic')
 call sonokai#highlight('markdownBold', s:palette.none, s:palette.none, 'bold')
 call sonokai#highlight('markdownItalicDelimiter', s:palette.grey, s:palette.none, 'italic')
+highlight! link markdownUrl TSURI
 highlight! link markdownCode Green
 highlight! link markdownCodeBlock Green
 highlight! link markdownCodeDelimiter Green
@@ -1658,7 +1658,7 @@ highlight! link mkdDelimiter Grey
 highlight! link mkdId Yellow
 " }}}
 " nvim-treesitter/nvim-treesitter {{{
-if has('nvim-0.8.0')
+if has('nvim-0.8')
   highlight! link @markup.heading.1.markdown markdownH1
   highlight! link @markup.heading.2.markdown markdownH2
   highlight! link @markup.heading.3.markdown markdownH3
