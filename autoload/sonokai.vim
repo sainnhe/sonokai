@@ -20,6 +20,7 @@ function! sonokai#get_configuration() "{{{
         \ 'show_eob': get(g:, 'sonokai_show_eob', 1),
         \ 'float_style': get(g:, 'sonokai_float_style', 'bright'),
         \ 'current_word': get(g:, 'sonokai_current_word', get(g:, 'sonokai_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
+        \ 'inlay_hints_background': get(g:, 'sonokai_inlay_hints_background', 'none'),
         \ 'lightline_disable_bold': get(g:, 'sonokai_lightline_disable_bold', 0),
         \ 'diagnostic_text_highlight': get(g:, 'sonokai_diagnostic_text_highlight', 0),
         \ 'diagnostic_line_highlight': get(g:, 'sonokai_diagnostic_line_highlight', 0),

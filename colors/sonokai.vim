@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May 15 02:11:59 PM UTC 2024'
+let s:last_modified = 'Sat May 18 06:17:18 UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -208,6 +208,7 @@ if has('nvim')
   highlight! link LspReferenceText CurrentWord
   highlight! link LspReferenceRead CurrentWord
   highlight! link LspReferenceWrite CurrentWord
+  highlight! link LspInlayHint InlayHints
   highlight! link LspCodeLens VirtualTextInfo
   highlight! link LspCodeLensSeparator VirtualTextHint
   highlight! link LspSignatureActiveParameter Search
@@ -345,6 +346,11 @@ elseif s:configuration.current_word ==# 'grey background'
   call sonokai#highlight('CurrentWord', s:palette.none, s:palette.bg2)
 else
   call sonokai#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
+endif
+if s:configuration.inlay_hints_background ==# 'none'
+  highlight! link InlayHints LineNr
+else
+  call sonokai#highlight('InlayHints', s:palette.grey, s:palette.bg_dim)
 endif
 " Define a color for each LSP item kind to create highlights for nvim-cmp, aerial.nvim, nvim-navic and coc.nvim
 let g:sonokai_lsp_kind_color = [
@@ -671,7 +677,7 @@ highlight! link CocPumMenu Pmenu
 highlight! link CocMenuSel PmenuSel
 highlight! link CocDisabled Grey
 highlight! link CocSnippetVisual DiffAdd
-highlight! link CocInlayHint LineNr
+highlight! link CocInlayHint InlayHints
 highlight! link CocNotificationProgress Green
 highlight! link CocNotificationButton PmenuSel
 highlight! link CocSemClass TSType
@@ -732,8 +738,8 @@ highlight! link LspWarningHighlight WarningText
 highlight! link LspInformationHighlight InfoText
 highlight! link LspHintHighlight HintText
 highlight! link lspReference CurrentWord
-highlight! link lspInlayHintsType LineNr
-highlight! link lspInlayHintsParameter LineNr
+highlight! link lspInlayHintsType InlayHints
+highlight! link lspInlayHintsParameter InlayHints
 highlight! link LspSemanticType TSType
 highlight! link LspSemanticClass TSType
 highlight! link LspSemanticEnum TSType
@@ -762,7 +768,7 @@ highlight! link YcmErrorLine ErrorLine
 highlight! link YcmWarningLine WarningLine
 highlight! link YcmErrorSection ErrorText
 highlight! link YcmWarningSection WarningText
-highlight! link YcmInlayHint LineNr
+highlight! link YcmInlayHint InlayHints
 highlight! link YcmErrorText VirtualTextError
 highlight! link YcmWarningText VirtualTextWarning
 if !has('nvim') && has('textprop') && !exists('g:YCM_HIGHLIGHT_GROUP')

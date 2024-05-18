@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Optimize `github/copilot.vim`.
+- Add `g:sonokai_inlay_hints_background`.
 
 ## [0.3.3] - 2023-01-14
 
