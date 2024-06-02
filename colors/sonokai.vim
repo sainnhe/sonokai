@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun May 19 07:10:55 PM UTC 2024'
+let s:last_modified = 'Sun Jun  2 08:33:34 UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -166,22 +166,33 @@ if has('nvim')
   call sonokai#highlight('Substitute', s:palette.bg0, s:palette.yellow)
   highlight! link WinBar StatusLine
   highlight! link WinBarNC StatusLineNC
+  if s:configuration.diagnostic_text_highlight
+    call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.bg_red)
+    call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.bg_red, 'undercurl', s:palette.red)
+    call sonokai#highlight('DiagnosticWarn', s:palette.yellow, s:palette.bg_yellow)
+    call sonokai#highlight('DiagnosticUnderlineWarn', s:palette.none, s:palette.bg_yellow, 'undercurl', s:palette.yellow)
+    call sonokai#highlight('DiagnosticInfo', s:palette.blue, s:palette.bg_blue)
+    call sonokai#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.bg_blue, 'undercurl', s:palette.blue)
+    call sonokai#highlight('DiagnosticHint', s:palette.green, s:palette.bg_green)
+    call sonokai#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.bg_green, 'undercurl', s:palette.green)
+  else
+    call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.none)
+    call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
+    call sonokai#highlight('DiagnosticWarn', s:palette.yellow, s:palette.none)
+    call sonokai#highlight('DiagnosticUnderlineWarn', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
+    call sonokai#highlight('DiagnosticInfo', s:palette.blue, s:palette.none)
+    call sonokai#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
+    call sonokai#highlight('DiagnosticHint', s:palette.green, s:palette.none)
+    call sonokai#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
+  endif
   highlight! link DiagnosticFloatingError ErrorFloat
   highlight! link DiagnosticFloatingWarn WarningFloat
   highlight! link DiagnosticFloatingInfo InfoFloat
   highlight! link DiagnosticFloatingHint HintFloat
-  highlight! link DiagnosticError ErrorText
-  highlight! link DiagnosticWarn WarningText
-  highlight! link DiagnosticInfo InfoText
-  highlight! link DiagnosticHint HintText
   highlight! link DiagnosticVirtualTextError VirtualTextError
   highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
   highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
   highlight! link DiagnosticVirtualTextHint VirtualTextHint
-  highlight! link DiagnosticUnderlineError ErrorText
-  highlight! link DiagnosticUnderlineWarn WarningText
-  highlight! link DiagnosticUnderlineInfo InfoText
-  highlight! link DiagnosticUnderlineHint HintText
   highlight! link DiagnosticSignError RedSign
   highlight! link DiagnosticSignWarn YellowSign
   highlight! link DiagnosticSignInfo BlueSign
