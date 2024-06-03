@@ -167,14 +167,14 @@ if has('nvim')
   highlight! link WinBar StatusLine
   highlight! link WinBarNC StatusLineNC
   if s:configuration.diagnostic_text_highlight
-    call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.bg_red)
-    call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.bg_red, 'undercurl', s:palette.red)
-    call sonokai#highlight('DiagnosticWarn', s:palette.yellow, s:palette.bg_yellow)
-    call sonokai#highlight('DiagnosticUnderlineWarn', s:palette.none, s:palette.bg_yellow, 'undercurl', s:palette.yellow)
-    call sonokai#highlight('DiagnosticInfo', s:palette.blue, s:palette.bg_blue)
-    call sonokai#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.bg_blue, 'undercurl', s:palette.blue)
-    call sonokai#highlight('DiagnosticHint', s:palette.green, s:palette.bg_green)
-    call sonokai#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.bg_green, 'undercurl', s:palette.green)
+    call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.diff_red)
+    call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
+    call sonokai#highlight('DiagnosticWarn', s:palette.yellow, s:palette.diff_yellow)
+    call sonokai#highlight('DiagnosticUnderlineWarn', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
+    call sonokai#highlight('DiagnosticInfo', s:palette.blue, s:palette.diff_blue)
+    call sonokai#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
+    call sonokai#highlight('DiagnosticHint', s:palette.green, s:palette.diff_green)
+    call sonokai#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
   else
     call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.none)
     call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
