@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jun 21 07:15:24 PM UTC 2024'
+let s:last_modified = 'Sat Jun 22 12:57:18 PM UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -140,6 +140,10 @@ if s:configuration.transparent_background == 2
   call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg4)
   call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.none)
   call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
+  if has('nvim')
+    call sonokai#highlight('WinBar', s:palette.fg, s:palette.none, 'bold')
+    call sonokai#highlight('WinBarNC', s:palette.grey, s:palette.none)
+  endif
 else
   call sonokai#highlight('StatusLine', s:palette.fg, s:palette.bg3)
   call sonokai#highlight('StatusLineTerm', s:palette.fg, s:palette.bg3)
@@ -148,6 +152,10 @@ else
   call sonokai#highlight('TabLine', s:palette.fg, s:palette.bg4)
   call sonokai#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
   call sonokai#highlight('TabLineSel', s:palette.bg0, s:palette.bg_red)
+  if has('nvim')
+    call sonokai#highlight('WinBar', s:palette.fg, s:palette.bg3, 'bold')
+    call sonokai#highlight('WinBarNC', s:palette.grey, s:palette.bg1)
+  endif
 endif
 if s:configuration.dim_inactive_windows
   call sonokai#highlight('VertSplit', s:palette.bg4, s:palette.bg_dim)
@@ -164,8 +172,6 @@ call sonokai#highlight('debugBreakpoint', s:palette.bg0, s:palette.red)
 call sonokai#highlight('ToolbarButton', s:palette.bg0, s:palette.bg_blue)
 if has('nvim')
   call sonokai#highlight('Substitute', s:palette.bg0, s:palette.yellow)
-  highlight! link WinBar StatusLine
-  highlight! link WinBarNC StatusLineNC
   if s:configuration.diagnostic_text_highlight
     call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.diff_red)
     call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
