@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jun 25 09:06:47 AM UTC 2024'
+let s:last_modified = 'Tue Jun 25 14:02:21 UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1247,13 +1247,34 @@ highlight! link TargetFileName Grey
 call sonokai#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 " echasnovski/mini.nvim {{{
+call sonokai#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
+if s:configuration.float_style ==# 'dim'
+  call sonokai#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg_dim, 'bold')
+else
+  call sonokai#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg2, 'bold')
+endif
+call sonokai#highlight('MiniHipatternsFixme', s:palette.bg0, s:palette.red, 'bold')
+call sonokai#highlight('MiniHipatternsHack', s:palette.bg0, s:palette.yellow, 'bold')
+call sonokai#highlight('MiniHipatternsNote', s:palette.bg0, s:palette.blue, 'bold')
+call sonokai#highlight('MiniHipatternsTodo', s:palette.bg0, s:palette.green, 'bold')
+call sonokai#highlight('MiniIconsAzure', s:palette.bg_blue, s:palette.none)
+call sonokai#highlight('MiniIconsBlue', s:palette.blue, s:palette.none)
+call sonokai#highlight('MiniIconsCyan', s:palette.blue, s:palette.none)
+call sonokai#highlight('MiniIconsGreen', s:palette.green, s:palette.none)
+call sonokai#highlight('MiniIconsGrey', s:palette.fg, s:palette.none)
+call sonokai#highlight('MiniIconsOrange', s:palette.orange, s:palette.none)
+call sonokai#highlight('MiniIconsPurple', s:palette.purple, s:palette.none)
+call sonokai#highlight('MiniIconsRed', s:palette.red, s:palette.none)
+call sonokai#highlight('MiniIconsYellow', s:palette.yellow, s:palette.none)
 call sonokai#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 'nocombine')
 call sonokai#highlight('MiniJump2dSpot', s:palette.red, s:palette.none, 'bold,nocombine')
+call sonokai#highlight('MiniJump2dSpotAhead', s:palette.blue, s:palette.none, 'nocombine')
+call sonokai#highlight('MiniJump2dSpotUnique', s:palette.yellow, s:palette.none, 'bold,nocombine')
 call sonokai#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
 call sonokai#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg3)
 call sonokai#highlight('MiniStatuslineFileinfo', s:palette.fg, s:palette.bg3)
 call sonokai#highlight('MiniStatuslineFilename', s:palette.grey, s:palette.bg1)
-call sonokai#highlight('MiniStatuslineModeInactive', s:palette.grey, s:palette.bg1)
+call sonokai#highlight('MiniStatuslineInactive', s:palette.grey, s:palette.bg1)
 call sonokai#highlight('MiniStatuslineModeCommand', s:palette.bg0, s:palette.yellow, 'bold')
 call sonokai#highlight('MiniStatuslineModeInsert', s:palette.bg0, s:palette.bg_green, 'bold')
 call sonokai#highlight('MiniStatuslineModeNormal', s:palette.bg0, s:palette.bg_blue, 'bold')
@@ -1271,18 +1292,72 @@ call sonokai#highlight('MiniTestEmphasis', s:palette.none, s:palette.none, 'bold
 call sonokai#highlight('MiniTestFail', s:palette.red, s:palette.none, 'bold')
 call sonokai#highlight('MiniTestPass', s:palette.green, s:palette.none, 'bold')
 call sonokai#highlight('MiniTrailspace', s:palette.none, s:palette.red)
-highlight! link MiniStarterItemBullet Grey
-highlight! link MiniStarterItemPrefix Yellow
-highlight! link MiniStarterQuery Blue
+highlight! link MiniAnimateNormalFloat NormalFloat
+highlight! link MiniClueBorder FloatBorder
+highlight! link MiniClueDescGroup DiagnosticFloatingWarn
+highlight! link MiniClueDescSingle NormalFloat
+highlight! link MiniClueNextKey DiagnosticFloatingHint
+highlight! link MiniClueNextKeyWithPostkeys DiagnosticFloatingError
+highlight! link MiniClueSeparator DiagnosticFloatingInfo
+highlight! link MiniClueTitle FloatTitle
 highlight! link MiniCompletionActiveParameter LspSignatureActiveParameter
 highlight! link MiniCursorword CurrentWord
 highlight! link MiniCursorwordCurrent CurrentWord
+highlight! link MiniDepsChangeAdded diffAdded
+highlight! link MiniDepsChangeRemoved diffRemoved
+highlight! link MiniDepsHint DiagnosticHint
+highlight! link MiniDepsInfo DiagnosticInfo
+highlight! link MiniDepsMsgBreaking DiagnosticWarn
+highlight! link MiniDepsPlaceholder Comment
+highlight! link MiniDepsTitle Title
+highlight! link MiniDepsTitleError DiffDelete
+highlight! link MiniDepsTitleSame DiffChange
+highlight! link MiniDepsTitleUpdate DiffAdd
+highlight! link MiniDiffOverAdd DiffAdd
+highlight! link MiniDiffOverChange DiffText
+highlight! link MiniDiffOverContext DiffChange
+highlight! link MiniDiffOverDelete DiffDelete
+highlight! link MiniDiffSignAdd GreenSign
+highlight! link MiniDiffSignChange BlueSign
+highlight! link MiniDiffSignDelete RedSign
+highlight! link MiniFilesBorder FloatBorder
+highlight! link MiniFilesBorderModified DiagnosticFloatingWarn
+highlight! link MiniFilesCursorLine CursorLine
+highlight! link MiniFilesDirectory Directory
+highlight! link MiniFilesFile NormalFloat
+highlight! link MiniFilesNormal NormalFloat
+highlight! link MiniFilesTitle FloatTitle
 highlight! link MiniIndentscopeSymbol Grey
 highlight! link MiniJump Search
+highlight! link MiniJump2dDim Comment
+highlight! link MiniMapNormal NormalFloat
+highlight! link MiniMapSymbolCount Special
+highlight! link MiniMapSymbolLine Title
+highlight! link MiniMapSymbolView Delimiter
+highlight! link MiniNotifyBorder FloatBorder
+highlight! link MiniNotifyNormal NormalFloat
+highlight! link MiniNotifyTitle FloatTitle
+highlight! link MiniOperatorsExchangeFrom IncSearch
+highlight! link MiniPickBorder FloatBorder
+highlight! link MiniPickBorderBusy DiagnosticFloatingWarn
+highlight! link MiniPickBorderText FloatTitle
+highlight! link MiniPickHeader DiagnosticFloatingHint
+highlight! link MiniPickIconDirectory Directory
+highlight! link MiniPickIconFile MiniPickNormal
+highlight! link MiniPickMatchCurrent CursorLine
+highlight! link MiniPickMatchMarked DiffChange
+highlight! link MiniPickMatchRanges DiagnosticFloatingHint
+highlight! link MiniPickNormal NormalFloat
+highlight! link MiniPickPreviewLine CursorLine
+highlight! link MiniPickPreviewRegion IncSearch
+highlight! link MiniPickPrompt DiagnosticFloatingInfo
 highlight! link MiniStarterFooter Yellow
 highlight! link MiniStarterHeader Purple
 highlight! link MiniStarterInactive Comment
 highlight! link MiniStarterItem Normal
+highlight! link MiniStarterItemBullet Grey
+highlight! link MiniStarterItemPrefix Yellow
+highlight! link MiniStarterQuery Blue
 highlight! link MiniStarterSection Title
 highlight! link MiniSurround IncSearch
 highlight! link MiniTablineFill TabLineFill
