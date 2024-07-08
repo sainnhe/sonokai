@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jun 25 14:02:21 UTC 2024'
+let s:last_modified = 'Mon Jul  8 07:28:42 UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -97,7 +97,7 @@ call sonokai#highlight('MoreMsg', s:palette.blue, s:palette.none, 'bold')
 call sonokai#highlight('MatchParen', s:palette.none, s:palette.bg4)
 call sonokai#highlight('NonText', s:palette.bg4, s:palette.none)
 call sonokai#highlight('Whitespace', s:palette.bg4, s:palette.none)
-call sonokai#highlight('SpecialKey', s:palette.bg4, s:palette.none)
+call sonokai#highlight('SpecialKey', s:palette.purple, s:palette.none)
 call sonokai#highlight('Pmenu', s:palette.fg, s:palette.bg2)
 call sonokai#highlight('PmenuSbar', s:palette.none, s:palette.bg2)
 if s:configuration.menu_selection_background ==# 'blue'
