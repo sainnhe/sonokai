@@ -1248,6 +1248,7 @@ call sonokai#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 " echasnovski/mini.nvim {{{
 call sonokai#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
+call sonokai#highlight('MiniFilesFile', s:palette.fg, s:palette.none)
 if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg_dim, 'bold')
 else
@@ -1270,6 +1271,11 @@ call sonokai#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 
 call sonokai#highlight('MiniJump2dSpot', s:palette.red, s:palette.none, 'bold,nocombine')
 call sonokai#highlight('MiniJump2dSpotAhead', s:palette.blue, s:palette.none, 'nocombine')
 call sonokai#highlight('MiniJump2dSpotUnique', s:palette.yellow, s:palette.none, 'bold,nocombine')
+if s:configuration.float_style ==# 'dim'
+  call sonokai#highlight('MiniPickPrompt', s:palette.blue, s:palette.bg_dim)
+else
+  call sonokai#highlight('MiniPickPrompt', s:palette.blue, s:palette.bg2)
+endif
 call sonokai#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
 call sonokai#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg3)
 call sonokai#highlight('MiniStatuslineFileinfo', s:palette.fg, s:palette.bg3)
@@ -1324,7 +1330,6 @@ highlight! link MiniFilesBorder FloatBorder
 highlight! link MiniFilesBorderModified DiagnosticFloatingWarn
 highlight! link MiniFilesCursorLine CursorLine
 highlight! link MiniFilesDirectory Directory
-highlight! link MiniFilesFile NormalFloat
 highlight! link MiniFilesNormal NormalFloat
 highlight! link MiniFilesTitle FloatTitle
 highlight! link MiniIndentscopeSymbol Grey
@@ -1350,7 +1355,6 @@ highlight! link MiniPickMatchRanges DiagnosticFloatingHint
 highlight! link MiniPickNormal NormalFloat
 highlight! link MiniPickPreviewLine CursorLine
 highlight! link MiniPickPreviewRegion IncSearch
-highlight! link MiniPickPrompt DiagnosticFloatingInfo
 highlight! link MiniStarterFooter Yellow
 highlight! link MiniStarterHeader Purple
 highlight! link MiniStarterInactive Comment
