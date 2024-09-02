@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jul 13 15:36:25 UTC 2024'
+let s:last_modified = 'Mon Sep  2 06:17:47 UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -366,6 +366,8 @@ if &diff
   call sonokai#highlight('CurrentWord', s:palette.bg0, s:palette.green)
 elseif s:configuration.current_word ==# 'grey background'
   call sonokai#highlight('CurrentWord', s:palette.none, s:palette.bg2)
+elseif s:configuration.current_word ==# 'high contrast background'
+  call sonokai#highlight('CurrentWord', s:palette.none, s:palette.bg4)
 else
   call sonokai#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
 endif
