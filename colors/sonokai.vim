@@ -88,7 +88,11 @@ endif
 call sonokai#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call sonokai#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
 call sonokai#highlight('DiffDelete', s:palette.none, s:palette.diff_red)
-call sonokai#highlight('DiffText', s:palette.bg0, s:palette.blue)
+if has('nvim')
+  call sonokai#highlight('DiffText', s:palette.bg0, s:palette.blue)
+else
+  call sonokai#highlight('DiffText', s:palette.blue, s:palette.bg0, 'reverse')
+endif
 call sonokai#highlight('Directory', s:palette.green, s:palette.none)
 call sonokai#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 call sonokai#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
