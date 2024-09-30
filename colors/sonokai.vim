@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Sep 25 13:51:11 UTC 2024'
+let s:last_modified = 'Mon Sep 30 10:09:56 UTC 2024'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -2734,7 +2734,7 @@ highlight! link shDerefVar BlueItalic
 highlight! link shDerefSpecial BlueItalic
 highlight! link shDerefOff BlueItalic
 highlight! link shVarAssign Red
-highlight! link shFunctionOne Green
+highlight! link shFunction Green
 highlight! link shFunctionKey Red
 " }}}
 " syn_end }}}
