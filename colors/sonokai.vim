@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Jan  2 09:48:08 UTC 2025'
+let s:last_modified = 'Sun Jan  5 07:46:10 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1114,6 +1114,13 @@ highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Blue
 for kind in g:sonokai_lsp_kind_color
   execute "highlight! link CmpItemKind" . kind[0] . " " . kind[1]
+endfor
+" }}}
+" Saghen/blink.cmp {{{
+call sonokai#highlight('BlinkCmpLabelMatch', s:palette.green, s:palette.none, 'bold')
+highlight! link BlinkCmpKind Blue
+for kind in g:sonokai_lsp_kind_color
+  execute "highlight! link BlinkCmpKind" . kind[0] . " " . kind[1]
 endfor
 " }}}
 " SmiteshP/nvim-navic {{{
