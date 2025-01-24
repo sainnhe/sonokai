@@ -1159,6 +1159,11 @@ highlight! link TelescopeBorder Grey
 highlight! link TelescopePromptPrefix Blue
 highlight! link TelescopeSelection DiffAdd
 " }}}
+" ibhagwan/fzf-lua {{{
+highlight! link FzfLuaBorder Grey
+highlight! link FzfLuaTitle Title
+highlight! link FzfLuaTitleFlags Yellow
+" }}}
 " folke/snacks.nvim {{{
 highlight! link SnacksDashboardDesc Yellow
 highlight! link SnacksDashboardDir Gray 
