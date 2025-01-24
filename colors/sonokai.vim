@@ -1159,6 +1159,15 @@ highlight! link TelescopeBorder Grey
 highlight! link TelescopePromptPrefix Blue
 highlight! link TelescopeSelection DiffAdd
 " }}}
+" folke/snacks.nvim {{{
+highlight! link SnacksDashboardDesc Yellow
+highlight! link SnacksDashboardDir Gray 
+highlight! link SnacksDashboardFile Blue
+highlight! link SnacksDashboardHeader Blue
+highlight! link SnacksDashboardIcon Blue
+highlight! link SnacksDashboardKey Green 
+highlight! link SnacksDashboardTitle RedItalic 
+" }}}
 " lewis6991/gitsigns.nvim {{{
 highlight! link GitSignsAdd GreenSign
 highlight! link GitSignsChange BlueSign
