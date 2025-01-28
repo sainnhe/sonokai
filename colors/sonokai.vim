@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jan 24 13:30:42 UTC 2025'
+let s:last_modified = 'Tue Jan 28 02:35:51 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -176,8 +176,8 @@ else
   call sonokai#highlight('VertSplit', s:palette.black, s:palette.none)
 endif
 highlight! link WinSeparator VertSplit
-call sonokai#highlight('Visual', s:palette.none, s:palette.bg3)
-call sonokai#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')
+call sonokai#highlight('Visual', s:palette.none, s:palette.bg4)
+call sonokai#highlight('VisualNOS', s:palette.none, s:palette.bg4, 'underline')
 call sonokai#highlight('QuickFixLine', s:palette.blue, s:palette.none, 'bold')
 call sonokai#highlight('Debug', s:palette.yellow, s:palette.none)
 call sonokai#highlight('debugPC', s:palette.bg0, s:palette.green)
