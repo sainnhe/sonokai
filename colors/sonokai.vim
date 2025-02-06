@@ -128,6 +128,10 @@ if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg_dim, 'bold')
+elseif s:configuration.float_style ==# 'none'
+  call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
+  call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
+  call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg0, 'bold')
 else
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
