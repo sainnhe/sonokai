@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jan 28 02:35:51 UTC 2025'
+let s:last_modified = 'Fri Feb  7 14:34:02 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -329,6 +329,9 @@ call sonokai#highlight('YellowSign', s:palette.yellow, s:palette.none)
 call sonokai#highlight('GreenSign', s:palette.green, s:palette.none)
 call sonokai#highlight('BlueSign', s:palette.blue, s:palette.none)
 call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.none)
+highlight! link Added Green
+highlight! link Removed Red
+highlight! link Changed Blue
 if s:configuration.diagnostic_text_highlight
   call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
   call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
@@ -1378,8 +1381,8 @@ highlight! link MiniClueTitle FloatTitle
 highlight! link MiniCompletionActiveParameter LspSignatureActiveParameter
 highlight! link MiniCursorword CurrentWord
 highlight! link MiniCursorwordCurrent CurrentWord
-highlight! link MiniDepsChangeAdded diffAdded
-highlight! link MiniDepsChangeRemoved diffRemoved
+highlight! link MiniDepsChangeAdded Added
+highlight! link MiniDepsChangeRemoved Removed
 highlight! link MiniDepsHint DiagnosticHint
 highlight! link MiniDepsInfo DiagnosticInfo
 highlight! link MiniDepsMsgBreaking DiagnosticWarn
@@ -1449,9 +1452,9 @@ endif
 " Extended File Types: {{{
 " Whitelist: {{{ File type optimizations that will always be loaded.
 " diff {{{
-highlight! link diffAdded Green
-highlight! link diffRemoved Red
-highlight! link diffChanged Blue
+highlight! link diffAdded Added
+highlight! link diffRemoved Removed
+highlight! link diffChanged Changed
 highlight! link diffOldFile Yellow
 highlight! link diffNewFile Orange
 highlight! link diffFile Purple
