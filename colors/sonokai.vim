@@ -1138,10 +1138,6 @@ endfor
 " Saghen/blink.cmp {{{
 call sonokai#highlight('BlinkCmpLabelMatch', s:palette.green, s:palette.none, 'bold')
 highlight! link BlinkCmpGhostText Grey
-highlight! link BlinkCmpSource Grey
-highlight! link BlinkCmpLabelDetail Grey
-highlight! link BlinkCmpLabelDescription Grey
-highlight! link BlinkCmpLabelDeprecated Grey
 highlight! link BlinkCmpKind Blue
 for kind in g:sonokai_lsp_kind_color
   execute "highlight! link BlinkCmpKind" . kind[0] . " " . kind[1]
