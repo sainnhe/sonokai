@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Feb 24 13:00:42 UTC 2025'
+let s:last_modified = 'Mon Feb 24 13:02:03 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1138,7 +1138,6 @@ endfor
 " Saghen/blink.cmp {{{
 call sonokai#highlight('BlinkCmpLabelMatch', s:palette.green, s:palette.none, 'bold')
 highlight! link BlinkCmpGhostText Conceal
-highlight! link BlinkCmpKind Blue
 for kind in g:sonokai_lsp_kind_color
   execute "highlight! link BlinkCmpKind" . kind[0] . " " . kind[1]
 endfor
