@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Apr 16 15:46:20 UTC 2025'
+let s:last_modified = 'Wed Apr 16 19:28:04 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1245,6 +1245,7 @@ highlight! link BufferInactiveADDED BufferInactiveSign
 highlight! link BufferInactiveDELETED BufferInactiveSign
 highlight! link BufferInactiveCHANGED BufferInactiveSign
 call sonokai#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
+call sonokai#highlight('BufferTabpagesSep', s:palette.grey_dim, s:palette.bg_dim, 'bold')
 call sonokai#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
 " rcarriga/nvim-notify {{{
