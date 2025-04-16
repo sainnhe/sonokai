@@ -1226,8 +1226,8 @@ highlight! link RainbowDelimiterViolet Purple
 call sonokai#highlight('BufferCurrent', s:palette.fg, s:palette.bg0)
 call sonokai#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg0)
 call sonokai#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg0)
-call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg0)
 call sonokai#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg0, 'bold')
+call sonokai#highlight('BufferCurrentSign', s:palette.red, s:palette.bg0)
 call sonokai#highlight('BufferCurrentADDED', s:palette.green, s:palette.bg0)
 call sonokai#highlight('BufferCurrentDELETED', s:palette.red, s:palette.bg0)
 call sonokai#highlight('BufferCurrentCHANGED', s:palette.blue, s:palette.bg0)
@@ -1239,11 +1239,11 @@ call sonokai#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg_dim
 call sonokai#highlight('BufferInactive', s:palette.grey, s:palette.bg_dim)
 call sonokai#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg_dim)
 call sonokai#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg_dim)
-call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
 call sonokai#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg_dim, 'bold')
-call sonokai#highlight('BufferInactiveADDED', s:palette.grey_dim, s:palette.bg_dim)
-call sonokai#highlight('BufferInactiveDELETED', s:palette.grey_dim, s:palette.bg_dim)
-call sonokai#highlight('BufferInactiveCHANGED', s:palette.grey_dim, s:palette.bg_dim)
+call sonokai#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
+highlight! link BufferInactiveADDED BufferInactiveSign
+highlight! link BufferInactiveDELETED BufferInactiveSign
+highlight! link BufferInactiveCHANGED BufferInactiveSign
 call sonokai#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
 call sonokai#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
