@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Apr 16 19:28:04 UTC 2025'
+let s:last_modified = '2025年 06月 22日 星期日 06:02:45 UTC'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -763,6 +763,7 @@ highlight! link CocGitChangeRemovedSign PurpleSign
 highlight! link CocGitChangedSign BlueSign
 highlight! link CocGitRemovedSign RedSign
 highlight! link CocGitTopRemovedSign RedSign
+highlight! link CocInlineVirtualText Grey
 " }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtualText VirtualTextError
