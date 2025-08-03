@@ -194,6 +194,8 @@ if has('nvim')
     call sonokai#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.bg_blue, 'undercurl', s:palette.blue)
     call sonokai#highlight('DiagnosticHint', s:palette.purple, s:palette.bg_purple)
     call sonokai#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.bg_purple, 'undercurl', s:palette.purple)
+    call sonokai#highlight('DiagnosticOk', s:palette.green, s:palette.bg_green)
+    call sonokai#highlight('DiagnosticUnderlineOk', s:palette.none, s:palette.bg_green, 'undercurl', s:palette.green)
   else
     call sonokai#highlight('DiagnosticError', s:palette.red, s:palette.none)
     call sonokai#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
@@ -203,19 +205,24 @@ if has('nvim')
     call sonokai#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
     call sonokai#highlight('DiagnosticHint', s:palette.purple, s:palette.none)
     call sonokai#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.none, 'undercurl', s:palette.purple)
+    call sonokai#highlight('DiagnosticOk', s:palette.green, s:palette.none)
+    call sonokai#highlight('DiagnosticUnderlineOk', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
   endif
   highlight! link DiagnosticFloatingError ErrorFloat
   highlight! link DiagnosticFloatingWarn WarningFloat
   highlight! link DiagnosticFloatingInfo InfoFloat
   highlight! link DiagnosticFloatingHint HintFloat
+  highlight! link DiagnosticFloatingOk OkFloat
   highlight! link DiagnosticVirtualTextError VirtualTextError
   highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
   highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
   highlight! link DiagnosticVirtualTextHint VirtualTextHint
+  highlight! link DiagnosticVirtualTextOk VirtualTextOk
   highlight! link DiagnosticSignError RedSign
   highlight! link DiagnosticSignWarn YellowSign
   highlight! link DiagnosticSignInfo BlueSign
   highlight! link DiagnosticSignHint PurpleSign
+  highlight! link DiagnosticSignOk GreenSign
   highlight! link LspDiagnosticsFloatingError DiagnosticFloatingError
   highlight! link LspDiagnosticsFloatingWarning DiagnosticFloatingWarn
   highlight! link LspDiagnosticsFloatingInformation DiagnosticFloatingInfo
@@ -359,21 +366,25 @@ if s:configuration.diagnostic_virtual_text ==# 'grey'
   highlight! link VirtualTextError Grey
   highlight! link VirtualTextInfo Grey
   highlight! link VirtualTextHint Grey
+  highlight! link VirtualTextOk Grey
 elseif s:configuration.diagnostic_virtual_text ==# 'colored'
   highlight! link VirtualTextWarning Yellow
   highlight! link VirtualTextError Red
   highlight! link VirtualTextInfo Blue
   highlight! link VirtualTextHint Purple
+  highlight! link VirtualTextOk Green
 else
   call sonokai#highlight('VirtualTextWarning', s:palette.yellow, s:palette.bg_yellow)
   call sonokai#highlight('VirtualTextError', s:palette.red, s:palette.bg_red)
   call sonokai#highlight('VirtualTextInfo', s:palette.blue, s:palette.bg_blue)
   call sonokai#highlight('VirtualTextHint', s:palette.purple, s:palette.bg_purple)
+  call sonokai#highlight('VirtualTextOk', s:palette.green, s:palette.bg_green)
 endif
 call sonokai#highlight('ErrorFloat', s:palette.red, s:palette.none)
 call sonokai#highlight('WarningFloat', s:palette.yellow, s:palette.none)
 call sonokai#highlight('InfoFloat', s:palette.blue, s:palette.none)
 call sonokai#highlight('HintFloat', s:palette.purple, s:palette.none)
+call sonokai#highlight('OkFloat', s:palette.green, s:palette.none)
 if &diff
   call sonokai#highlight('CurrentWord', s:palette.bg0, s:palette.green)
 elseif s:configuration.current_word ==# 'grey background'
