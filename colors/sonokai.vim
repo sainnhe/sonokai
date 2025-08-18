@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Aug  1 03:58:15 UTC 2025'
+let s:last_modified = 'Mon Aug 18 10:45:52 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -708,6 +708,7 @@ if has('nvim-0.9')
   highlight! link @lsp.type.typeParameter TSTypeDefinition
   highlight! link @lsp.type.variable TSVariable
   call sonokai#highlight('DiagnosticUnnecessary', s:palette.grey, s:palette.none)
+  call sonokai#highlight('DiagnosticDeprecated', s:palette.none, s:palette.none, 'strikethrough', s:palette.fg)
 endif
 highlight! link TSModuleInfoGood Green
 highlight! link TSModuleInfoBad Red
