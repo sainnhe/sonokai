@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 11:06:11 UTC 2025'
+let s:last_modified = 'Thu Nov  6 11:07:33 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1372,10 +1372,16 @@ call sonokai#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 
 call sonokai#highlight('MiniJump2dSpot', s:palette.red, s:palette.none, 'bold,nocombine')
 call sonokai#highlight('MiniJump2dSpotAhead', s:palette.blue, s:palette.none, 'nocombine')
 call sonokai#highlight('MiniJump2dSpotUnique', s:palette.yellow, s:palette.none, 'bold,nocombine')
+highlight! link MiniPickPrompt NormalFloat
 if s:configuration.float_style ==# 'dim'
-  call sonokai#highlight('MiniPickPrompt', s:palette.blue, s:palette.bg_dim)
+  call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg_dim)
+  call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg_dim)
+elseif s:configuration.float_style ==# 'none'
+  call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg0)
+  call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
 else
-  call sonokai#highlight('MiniPickPrompt', s:palette.blue, s:palette.bg2)
+  call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg2)
+  call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg2)
 endif
 call sonokai#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
 call sonokai#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg3)
@@ -1438,18 +1444,7 @@ highlight! link MiniNotifyBorder FloatBorder
 highlight! link MiniNotifyNormal NormalFloat
 highlight! link MiniNotifyTitle FloatTitle
 highlight! link MiniOperatorsExchangeFrom IncSearch
-highlight! link MiniPickBorder FloatBorder
-highlight! link MiniPickBorderBusy DiagnosticFloatingWarn
-highlight! link MiniPickBorderText FloatTitle
-highlight! link MiniPickHeader DiagnosticFloatingHint
-highlight! link MiniPickIconDirectory Directory
-highlight! link MiniPickIconFile MiniPickNormal
-highlight! link MiniPickMatchCurrent CursorLine
 highlight! link MiniPickMatchMarked DiffChange
-highlight! link MiniPickMatchRanges DiagnosticFloatingHint
-highlight! link MiniPickNormal NormalFloat
-highlight! link MiniPickPreviewLine CursorLine
-highlight! link MiniPickPreviewRegion IncSearch
 highlight! link MiniStarterFooter Yellow
 highlight! link MiniStarterHeader Purple
 highlight! link MiniStarterInactive Comment
