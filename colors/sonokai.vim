@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 11:04:16 UTC 2025'
+let s:last_modified = 'Thu Nov  6 11:06:11 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1348,11 +1348,12 @@ call sonokai#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 " echasnovski/mini.nvim {{{
 call sonokai#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
-call sonokai#highlight('MiniFilesFile', s:palette.fg, s:palette.none)
 if s:configuration.float_style ==# 'dim'
-  call sonokai#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg_dim, 'bold')
+  call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg0)
+elseif s:configuration.float_style ==# 'none'
+  call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
 else
-  call sonokai#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg2, 'bold')
+  call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg4)
 endif
 call sonokai#highlight('MiniHipatternsFixme', s:palette.bg0, s:palette.red, 'bold')
 call sonokai#highlight('MiniHipatternsHack', s:palette.bg0, s:palette.yellow, 'bold')
@@ -1426,12 +1427,6 @@ highlight! link MiniDiffOverDelete DiffDelete
 highlight! link MiniDiffSignAdd GreenSign
 highlight! link MiniDiffSignChange BlueSign
 highlight! link MiniDiffSignDelete RedSign
-highlight! link MiniFilesBorder FloatBorder
-highlight! link MiniFilesBorderModified DiagnosticFloatingWarn
-highlight! link MiniFilesCursorLine CursorLine
-highlight! link MiniFilesDirectory Directory
-highlight! link MiniFilesNormal NormalFloat
-highlight! link MiniFilesTitle FloatTitle
 highlight! link MiniIndentscopeSymbol Grey
 highlight! link MiniJump Search
 highlight! link MiniJump2dDim Comment
