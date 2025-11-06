@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 11:07:33 UTC 2025'
+let s:last_modified = 'Thu Nov  6 11:43:11 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -715,9 +715,7 @@ highlight! link TSModuleInfoBad Red
 " }}}
 " nvim-treesitter/nvim-treesitter-context {{{
 call sonokai#highlight('TreesitterContext', s:palette.fg, s:palette.bg2)
-if !s:configuration.dim_inactive_windows || s:configuration.transparent_background >= 1
-  highlight! link TreesitterContextLineNumber LineNr
-else
+if s:configuration.dim_inactive_windows && !s:configuration.transparent_background
   call sonokai#highlight('TreesitterContextLineNumber', s:palette.grey_dim, s:palette.bg0)
 endif
 " github/copilot.vim {{{
