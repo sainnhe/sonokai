@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Aug 18 10:45:52 UTC 2025'
+let s:last_modified = 'Thu Nov  6 10:56:15 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -129,9 +129,9 @@ if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg_dim, 'bold')
 elseif s:configuration.float_style ==# 'none'
-  call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.none)
-  call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.none)
-  call sonokai#highlight('FloatTitle', s:palette.red, s:palette.none, 'bold')
+  call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
+  call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
+  call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg0, 'bold')
 else
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
