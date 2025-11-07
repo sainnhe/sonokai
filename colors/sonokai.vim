@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Nov  7 20:09:27 UTC 2025'
+let s:last_modified = 'Fri Nov  7 20:27:32 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -28,7 +28,7 @@ endif
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
-if s:configuration.transparent_background >= 1
+if s:configuration.transparent_background
   call sonokai#highlight('Normal', s:palette.fg, s:palette.none)
   call sonokai#highlight('NormalNC', s:palette.fg, s:palette.none)
   call sonokai#highlight('Terminal', s:palette.fg, s:palette.none)
@@ -129,9 +129,15 @@ if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg0, 'bold')
 elseif s:configuration.float_style ==# 'blend'
-  call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
-  call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
-  call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg1, 'bold')
+  if s:configuration.transparent_background
+    highlight! link NormalFloat Normal
+    highlight! link FloatBorder Grey
+    call sonokai#highlight('FloatTitle', s:palette.red, s:palette.none, 'bold')
+  else
+    call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
+    call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
+    call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg1, 'bold')
+  endif
 else
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
@@ -1350,7 +1356,11 @@ call sonokai#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'rev
 if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg0)
 elseif s:configuration.float_style ==# 'blend'
-  call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
+  if s:configuration.transparent_background
+    highlight! link MiniFilesTitle Grey
+  else
+    call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
+  endif
 else
   call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg4)
 endif
@@ -1376,8 +1386,13 @@ if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg_dim)
   call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg_dim)
 elseif s:configuration.float_style ==# 'blend'
-  call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg0)
-  call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
+  if s:configuration.transparent_background
+    highlight! link MiniPickPromptPrefix Red
+    highlight! link MiniPickPromptCaret Blue
+  else
+    call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg0)
+    call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
+  endif
 else
   call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg2)
   call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg2)
