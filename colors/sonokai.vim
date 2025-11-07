@@ -1674,10 +1674,9 @@ highlight! link NvimTreeFolderIcon Blue
 highlight! link NvimTreeEmptyFolderName Green
 highlight! link NvimTreeOpenedFolderName Green
 highlight! link NvimTreeExecFile Fg
-highlight! link NvimTreeOpenedFile Fg
+highlight! link NvimTreeOpenedHL Fg
 highlight! link NvimTreeSpecialFile Fg
 highlight! link NvimTreeImageFile Fg
-highlight! link NvimTreeMarkdownFile Fg
 highlight! link NvimTreeIndentMarker Grey
 highlight! link NvimTreeGitDirtyIcon Yellow
 highlight! link NvimTreeGitStagedIcon Blue
