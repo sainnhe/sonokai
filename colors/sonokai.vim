@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 14:12:25 UTC 2025'
+let s:last_modified = 'Fri Nov  7 20:09:27 UTC 2025'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -128,7 +128,7 @@ if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg0, 'bold')
-elseif s:configuration.float_style ==# 'none'
+elseif s:configuration.float_style ==# 'blend'
   call sonokai#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
   call sonokai#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
   call sonokai#highlight('FloatTitle', s:palette.red, s:palette.bg1, 'bold')
@@ -1349,7 +1349,7 @@ call sonokai#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 call sonokai#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
 if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg0)
-elseif s:configuration.float_style ==# 'none'
+elseif s:configuration.float_style ==# 'blend'
   call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
 else
   call sonokai#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg4)
@@ -1375,7 +1375,7 @@ highlight! link MiniPickPrompt NormalFloat
 if s:configuration.float_style ==# 'dim'
   call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg_dim)
   call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg_dim)
-elseif s:configuration.float_style ==# 'none'
+elseif s:configuration.float_style ==# 'blend'
   call sonokai#highlight('MiniPickPromptPrefix', s:palette.red, s:palette.bg0)
   call sonokai#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
 else

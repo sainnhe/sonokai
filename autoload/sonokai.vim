@@ -7,6 +7,12 @@
 " =============================================================================
 
 function! sonokai#get_configuration() "{{{
+  let float_style = get(g:, 'sonokai_float_style', 'bright')
+  if float_style ==# 'none'
+    let float_style = 'blend'
+    echoerr "g:sonokai_float_style='none' was renamed to 'blend'"
+  endif
+
   return {
         \ 'style': get(g:, 'sonokai_style', 'default'),
         \ 'colors_override': get(g:, 'sonokai_colors_override', {}),
@@ -18,7 +24,7 @@ function! sonokai#get_configuration() "{{{
         \ 'menu_selection_background': get(g:, 'sonokai_menu_selection_background', 'blue'),
         \ 'spell_foreground': get(g:, 'sonokai_spell_foreground', 'none'),
         \ 'show_eob': get(g:, 'sonokai_show_eob', 1),
-        \ 'float_style': get(g:, 'sonokai_float_style', 'bright'),
+        \ 'float_style': float_style,
         \ 'current_word': get(g:, 'sonokai_current_word', get(g:, 'sonokai_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
         \ 'inlay_hints_background': get(g:, 'sonokai_inlay_hints_background', 'none'),
         \ 'lightline_disable_bold': get(g:, 'sonokai_lightline_disable_bold', 0),
