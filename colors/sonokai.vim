@@ -10,7 +10,7 @@
 let s:configuration = sonokai#get_configuration()
 let s:palette = sonokai#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Nov  7 20:27:32 UTC 2025'
+let s:last_modified = '2025年 12月 06日 星期六 05:11:42 UTC'
 let g:sonokai_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'sonokai' && s:configuration.better_performance)
@@ -1151,6 +1151,10 @@ highlight! link BookmarkSign BlueSign
 highlight! link BookmarkAnnotationSign GreenSign
 highlight! link BookmarkLine DiffChange
 highlight! link BookmarkAnnotationLine DiffAdd
+" }}}
+" ggml-org/llama.vim {{{
+highlight! link llama_hl_hint CocInlineVirtualText
+highlight! link llama_hl_info InlayHints
 " }}}
 if has('nvim')
 " hrsh7th/nvim-cmp {{{
