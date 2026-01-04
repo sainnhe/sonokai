@@ -20,7 +20,7 @@ function! sonokai#get_configuration() "{{{
         \ 'dim_inactive_windows': get(g:, 'sonokai_dim_inactive_windows', 0),
         \ 'disable_italic_comment': get(g:, 'sonokai_disable_italic_comment', 0),
         \ 'enable_italic': get(g:, 'sonokai_enable_italic', 0),
-        \ 'cursor': get(g:, 'sonokai_cursor', 'auto'),
+        \ 'cursor': get(g:, 'sonokai_cursor', ''),
         \ 'menu_selection_background': get(g:, 'sonokai_menu_selection_background', 'blue'),
         \ 'spell_foreground': get(g:, 'sonokai_spell_foreground', 'none'),
         \ 'show_eob': get(g:, 'sonokai_show_eob', 1),
